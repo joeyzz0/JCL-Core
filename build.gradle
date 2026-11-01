@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+version = '2.0.0'
+group = 'net.joeyscobblemon'
+
+base {
+    archivesName = 'jcl_core'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+}
+
+// Flat layout: every file sits next to this one, so the whole repo can be uploaded in one drag.
+// The build copies textures, models, the language file and default configs into the right jar folders.
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+        resources {
+            srcDirs = []
+        }
+    }
+}
+
+processResources {
+    from('neoforge.mods.toml') { into 'META-INF' }
+    from(['poke_key.png', 'great_key.png', 'ultra_key.png', 'master_key.png']) { into 'assets/jcl_gts/textures/item' }
+    from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json']) { into 'assets/jcl_gts/models/item' }
+    from('en_us.json') { into 'assets/jcl_gts/lang' }
+    from(['crates.json', 'shop.json']) { into 'jcl_defaults' }
+}
+
+neoForge {
+    version = '21.1.262'
+    runs {
+        server {
+            server()
+            programArguments.add('--nogui')
+        }
+    }
+    mods {
+        jcl_gts {
+            sourceSet sourceSets.main
+        }
+    }
+}

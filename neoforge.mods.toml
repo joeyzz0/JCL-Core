@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "jcl_gts"
+version = "2.0.0"
+displayName = "JCL Core"
+authors = "Joey"
+description = '''
+The all-in-one server mod for Joey's Cobblemon League: GTS, Wonder Trade, shop,
+crates and keys, custom tab list, chat announcements and spawn alerts.
+'''
+
+[[dependencies.jcl_gts]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jcl_gts]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

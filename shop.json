@@ -1,0 +1,326 @@
+{
+  "categories": [
+    {
+      "name": "§c§lPoké Balls",
+      "icon": "cobblemon:poke_ball",
+      "items": [
+        {
+          "name": "Poké Ball x8",
+          "icon": "cobblemon:poke_ball",
+          "price": 400,
+          "description": "",
+          "item": "cobblemon:poke_ball",
+          "count": 8
+        },
+        {
+          "name": "Great Ball x8",
+          "icon": "cobblemon:great_ball",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:great_ball",
+          "count": 8
+        },
+        {
+          "name": "Ultra Ball x8",
+          "icon": "cobblemon:ultra_ball",
+          "price": 2400,
+          "description": "",
+          "item": "cobblemon:ultra_ball",
+          "count": 8
+        },
+        {
+          "name": "Quick Ball x4",
+          "icon": "cobblemon:quick_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:quick_ball",
+          "count": 4
+        },
+        {
+          "name": "Dusk Ball x4",
+          "icon": "cobblemon:dusk_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:dusk_ball",
+          "count": 4
+        },
+        {
+          "name": "Timer Ball x4",
+          "icon": "cobblemon:timer_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:timer_ball",
+          "count": 4
+        },
+        {
+          "name": "Luxury Ball x4",
+          "icon": "cobblemon:luxury_ball",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:luxury_ball",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "name": "§a§lHealing",
+      "icon": "cobblemon:hyper_potion",
+      "items": [
+        {
+          "name": "Potion x4",
+          "icon": "cobblemon:potion",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:potion",
+          "count": 4
+        },
+        {
+          "name": "Super Potion x4",
+          "icon": "cobblemon:super_potion",
+          "price": 500,
+          "description": "",
+          "item": "cobblemon:super_potion",
+          "count": 4
+        },
+        {
+          "name": "Hyper Potion x4",
+          "icon": "cobblemon:hyper_potion",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:hyper_potion",
+          "count": 4
+        },
+        {
+          "name": "Max Potion x2",
+          "icon": "cobblemon:max_potion",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:max_potion",
+          "count": 2
+        },
+        {
+          "name": "Revive x2",
+          "icon": "cobblemon:revive",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:revive",
+          "count": 2
+        },
+        {
+          "name": "Full Restore",
+          "icon": "cobblemon:full_restore",
+          "price": 1000,
+          "description": "",
+          "item": "cobblemon:full_restore",
+          "count": 1
+        },
+        {
+          "name": "Ether x3",
+          "icon": "cobblemon:ether",
+          "price": 600,
+          "description": "",
+          "item": "cobblemon:ether",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "§e§lTraining",
+      "icon": "cobblemon:rare_candy",
+      "items": [
+        {
+          "name": "EXP Candy S x5",
+          "icon": "cobblemon:exp_candy_s",
+          "price": 300,
+          "description": "",
+          "item": "cobblemon:exp_candy_s",
+          "count": 5
+        },
+        {
+          "name": "EXP Candy M x5",
+          "icon": "cobblemon:exp_candy_m",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:exp_candy_m",
+          "count": 5
+        },
+        {
+          "name": "EXP Candy L x3",
+          "icon": "cobblemon:exp_candy_l",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:exp_candy_l",
+          "count": 3
+        },
+        {
+          "name": "Rare Candy",
+          "icon": "cobblemon:rare_candy",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:rare_candy",
+          "count": 1,
+          "limit": 10,
+          "period": "week"
+        },
+        {
+          "name": "Fire Stone",
+          "icon": "cobblemon:fire_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:fire_stone",
+          "count": 1
+        },
+        {
+          "name": "Water Stone",
+          "icon": "cobblemon:water_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:water_stone",
+          "count": 1
+        },
+        {
+          "name": "Thunder Stone",
+          "icon": "cobblemon:thunder_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:thunder_stone",
+          "count": 1
+        },
+        {
+          "name": "Leaf Stone",
+          "icon": "cobblemon:leaf_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:leaf_stone",
+          "count": 1
+        },
+        {
+          "name": "Moon Stone",
+          "icon": "cobblemon:moon_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:moon_stone",
+          "count": 1
+        },
+        {
+          "name": "Sun Stone",
+          "icon": "cobblemon:sun_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:sun_stone",
+          "count": 1
+        },
+        {
+          "name": "Dusk Stone",
+          "icon": "cobblemon:dusk_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:dusk_stone",
+          "count": 1
+        },
+        {
+          "name": "Dawn Stone",
+          "icon": "cobblemon:dawn_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:dawn_stone",
+          "count": 1
+        },
+        {
+          "name": "Shiny Stone",
+          "icon": "cobblemon:shiny_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:shiny_stone",
+          "count": 1
+        },
+        {
+          "name": "Ice Stone",
+          "icon": "cobblemon:ice_stone",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:ice_stone",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "§6§lCrate Keys",
+      "icon": "jcl_gts:master_key",
+      "items": [
+        {
+          "name": "Poké Ball Key",
+          "icon": "jcl_gts:poke_key",
+          "price": 4000,
+          "description": "",
+          "item": "jcl_gts:poke_key",
+          "count": 1
+        },
+        {
+          "name": "Great Ball Key",
+          "icon": "jcl_gts:great_key",
+          "price": 25000,
+          "description": "",
+          "item": "jcl_gts:great_key",
+          "count": 1,
+          "limit": 5,
+          "period": "week"
+        },
+        {
+          "name": "Ultra Ball Key",
+          "icon": "jcl_gts:ultra_key",
+          "price": 120000,
+          "description": "",
+          "item": "jcl_gts:ultra_key",
+          "count": 1,
+          "limit": 1,
+          "period": "week"
+        },
+        {
+          "name": "Master Ball Key",
+          "icon": "jcl_gts:master_key",
+          "price": 500000,
+          "description": "",
+          "item": "jcl_gts:master_key",
+          "count": 1,
+          "limit": 1,
+          "period": "month"
+        }
+      ]
+    },
+    {
+      "name": "§d§lRanks",
+      "icon": "minecraft:name_tag",
+      "items": [
+        {
+          "name": "Rank: Trainer+",
+          "icon": "minecraft:name_tag",
+          "price": 50000,
+          "description": "A shiny new chat prefix. Looks only, no gameplay perks.",
+          "commands": [
+            "lp user {player} parent add trainerplus"
+          ],
+          "limit": 1,
+          "period": "once"
+        }
+      ]
+    },
+    {
+      "name": "§b§lCosmetics",
+      "icon": "minecraft:leather_helmet",
+      "items": [
+        {
+          "name": "Name Colour: Gold",
+          "icon": "minecraft:gold_ingot",
+          "price": 25000,
+          "description": "Example cosmetic. Edit config/jcl_shop.json to add your own.",
+          "commands": [
+            "lp user {player} meta setsuffix 10 \"&6\""
+          ],
+          "limit": 1,
+          "period": "once"
+        }
+      ]
+    }
+  ]
+}

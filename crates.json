@@ -1,0 +1,998 @@
+{
+  "announceRarities": [
+    "epic",
+    "legendary"
+  ],
+  "discordRarities": [
+    "legendary"
+  ],
+  "crates": {
+    "poke": {
+      "name": "Poké Crate",
+      "color": "§c",
+      "pity": 60,
+      "rewards": [
+        {
+          "name": "Super Potion",
+          "rarity": "common",
+          "weight": 10,
+          "type": "item",
+          "items": [
+            "cobblemon:super_potion"
+          ],
+          "count": 4
+        },
+        {
+          "name": "EXP Candy S",
+          "rarity": "common",
+          "weight": 10,
+          "type": "item",
+          "items": [
+            "cobblemon:exp_candy_s"
+          ],
+          "count": 5
+        },
+        {
+          "name": "1,500 CobbleDollars",
+          "rarity": "common",
+          "weight": 7.5,
+          "type": "money",
+          "money": 1500
+        },
+        {
+          "name": "Revive",
+          "rarity": "common",
+          "weight": 7,
+          "type": "item",
+          "items": [
+            "cobblemon:revive"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Great Ball",
+          "rarity": "common",
+          "weight": 7,
+          "type": "item",
+          "items": [
+            "cobblemon:great_ball"
+          ],
+          "count": 8
+        },
+        {
+          "name": "Random Apricorns",
+          "rarity": "common",
+          "weight": 7,
+          "type": "item",
+          "items": [
+            "cobblemon:red_apricorn",
+            "cobblemon:yellow_apricorn",
+            "cobblemon:green_apricorn",
+            "cobblemon:blue_apricorn",
+            "cobblemon:pink_apricorn",
+            "cobblemon:black_apricorn",
+            "cobblemon:white_apricorn"
+          ],
+          "count": 8
+        },
+        {
+          "name": "Oran Berry",
+          "rarity": "common",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:oran_berry"
+          ],
+          "count": 8
+        },
+        {
+          "name": "EXP Candy M",
+          "rarity": "common",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:exp_candy_m"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Sitrus Berry",
+          "rarity": "common",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:sitrus_berry"
+          ],
+          "count": 4
+        },
+        {
+          "name": "Ether",
+          "rarity": "common",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:ether"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Poké Snack",
+          "rarity": "common",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:poke_snack"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Evolution Stone",
+          "rarity": "rare",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:fire_stone",
+            "cobblemon:water_stone",
+            "cobblemon:thunder_stone",
+            "cobblemon:leaf_stone",
+            "cobblemon:moon_stone",
+            "cobblemon:sun_stone",
+            "cobblemon:dusk_stone",
+            "cobblemon:dawn_stone",
+            "cobblemon:shiny_stone",
+            "cobblemon:ice_stone"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Luxury Ball",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:luxury_ball"
+          ],
+          "count": 4
+        },
+        {
+          "name": "Quick Ball",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:quick_ball"
+          ],
+          "count": 4
+        },
+        {
+          "name": "Random Vitamin",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:hp_up",
+            "cobblemon:protein",
+            "cobblemon:iron",
+            "cobblemon:calcium",
+            "cobblemon:zinc",
+            "cobblemon:carbos"
+          ],
+          "count": 1
+        },
+        {
+          "name": "3,000 CobbleDollars",
+          "rarity": "rare",
+          "weight": 3,
+          "type": "money",
+          "money": 3000
+        },
+        {
+          "name": "Random Nature Mint",
+          "rarity": "epic",
+          "weight": 2,
+          "type": "item",
+          "items": [
+            "cobblemon:adamant_mint",
+            "cobblemon:bold_mint",
+            "cobblemon:brave_mint",
+            "cobblemon:calm_mint",
+            "cobblemon:careful_mint",
+            "cobblemon:gentle_mint",
+            "cobblemon:hasty_mint",
+            "cobblemon:impish_mint",
+            "cobblemon:jolly_mint",
+            "cobblemon:lax_mint",
+            "cobblemon:lonely_mint",
+            "cobblemon:mild_mint",
+            "cobblemon:modest_mint",
+            "cobblemon:naive_mint",
+            "cobblemon:naughty_mint",
+            "cobblemon:quiet_mint",
+            "cobblemon:rash_mint",
+            "cobblemon:relaxed_mint",
+            "cobblemon:sassy_mint",
+            "cobblemon:serious_mint",
+            "cobblemon:timid_mint"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Great Ball Key",
+          "rarity": "legendary",
+          "weight": 3,
+          "type": "key",
+          "key": "great",
+          "count": 1
+        },
+        {
+          "name": "JACKPOT: 50,000 CobbleDollars",
+          "rarity": "legendary",
+          "weight": 0.5,
+          "type": "money",
+          "money": 50000,
+          "jackpot": true
+        }
+      ]
+    },
+    "great": {
+      "name": "Great Crate",
+      "color": "§9",
+      "pity": 40,
+      "rewards": [
+        {
+          "name": "Hyper Potion",
+          "rarity": "common",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:hyper_potion"
+          ],
+          "count": 4
+        },
+        {
+          "name": "EXP Candy L",
+          "rarity": "common",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:exp_candy_l"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Ultra Ball",
+          "rarity": "common",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:ultra_ball"
+          ],
+          "count": 8
+        },
+        {
+          "name": "8,000 CobbleDollars",
+          "rarity": "common",
+          "weight": 7.5,
+          "type": "money",
+          "money": 8000
+        },
+        {
+          "name": "Max Revive",
+          "rarity": "common",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:max_revive"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Full Restore",
+          "rarity": "common",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:full_restore"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Sitrus Berry",
+          "rarity": "common",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:sitrus_berry"
+          ],
+          "count": 8
+        },
+        {
+          "name": "Lum Berry",
+          "rarity": "common",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:lum_berry"
+          ],
+          "count": 4
+        },
+        {
+          "name": "Rare Candy",
+          "rarity": "rare",
+          "weight": 7,
+          "type": "item",
+          "items": [
+            "cobblemon:rare_candy"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Random Nature Mint",
+          "rarity": "rare",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:adamant_mint",
+            "cobblemon:bold_mint",
+            "cobblemon:brave_mint",
+            "cobblemon:calm_mint",
+            "cobblemon:careful_mint",
+            "cobblemon:gentle_mint",
+            "cobblemon:hasty_mint",
+            "cobblemon:impish_mint",
+            "cobblemon:jolly_mint",
+            "cobblemon:lax_mint",
+            "cobblemon:lonely_mint",
+            "cobblemon:mild_mint",
+            "cobblemon:modest_mint",
+            "cobblemon:naive_mint",
+            "cobblemon:naughty_mint",
+            "cobblemon:quiet_mint",
+            "cobblemon:rash_mint",
+            "cobblemon:relaxed_mint",
+            "cobblemon:sassy_mint",
+            "cobblemon:serious_mint",
+            "cobblemon:timid_mint"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Evolution Stones",
+          "rarity": "rare",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:fire_stone",
+            "cobblemon:water_stone",
+            "cobblemon:thunder_stone",
+            "cobblemon:leaf_stone",
+            "cobblemon:moon_stone",
+            "cobblemon:sun_stone",
+            "cobblemon:dusk_stone",
+            "cobblemon:dawn_stone",
+            "cobblemon:shiny_stone",
+            "cobblemon:ice_stone"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Random Power Item",
+          "rarity": "rare",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:power_weight",
+            "cobblemon:power_bracer",
+            "cobblemon:power_belt",
+            "cobblemon:power_lens",
+            "cobblemon:power_band",
+            "cobblemon:power_anklet"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Vitamins",
+          "rarity": "rare",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:hp_up",
+            "cobblemon:protein",
+            "cobblemon:iron",
+            "cobblemon:calcium",
+            "cobblemon:zinc",
+            "cobblemon:carbos"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Dusk, Timer or Quick Balls",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:dusk_ball",
+            "cobblemon:timer_ball",
+            "cobblemon:quick_ball"
+          ],
+          "count": 8
+        },
+        {
+          "name": "PP Up",
+          "rarity": "rare",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon:pp_up"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Lucky Egg",
+          "rarity": "rare",
+          "weight": 2,
+          "type": "item",
+          "items": [
+            "cobblemon:lucky_egg"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Ability Capsule",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon:ability_capsule"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Destiny Knot",
+          "rarity": "epic",
+          "weight": 2,
+          "type": "item",
+          "items": [
+            "cobblemon:destiny_knot"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Ability Patch",
+          "rarity": "epic",
+          "weight": 1,
+          "type": "item",
+          "items": [
+            "cobblemon:ability_patch"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Ultra Ball Key",
+          "rarity": "legendary",
+          "weight": 5,
+          "type": "key",
+          "key": "ultra",
+          "count": 1
+        },
+        {
+          "name": "JACKPOT: 350,000 CobbleDollars",
+          "rarity": "legendary",
+          "weight": 0.5,
+          "type": "money",
+          "money": 350000,
+          "jackpot": true
+        }
+      ]
+    },
+    "ultra": {
+      "name": "Ultra Crate",
+      "color": "§e",
+      "pity": 25,
+      "rewards": [
+        {
+          "name": "25,000 CobbleDollars",
+          "rarity": "common",
+          "weight": 8.6,
+          "type": "money",
+          "money": 25000
+        },
+        {
+          "name": "Rare Candy",
+          "rarity": "common",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:rare_candy"
+          ],
+          "count": 5
+        },
+        {
+          "name": "EXP Candy XL",
+          "rarity": "common",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:exp_candy_xl"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Max Elixir",
+          "rarity": "common",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:max_elixir"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Full Restore",
+          "rarity": "common",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon:full_restore"
+          ],
+          "count": 4
+        },
+        {
+          "name": "Random Battle Item",
+          "rarity": "rare",
+          "weight": 10,
+          "type": "item",
+          "items": [
+            "cobblemon:choice_band",
+            "cobblemon:choice_specs",
+            "cobblemon:choice_scarf",
+            "cobblemon:life_orb",
+            "cobblemon:leftovers",
+            "cobblemon:focus_sash",
+            "cobblemon:assault_vest"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Silver Stat Cap",
+          "rarity": "rare",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:hpsilvercap",
+            "cobblemon_utility:atksilvercap",
+            "cobblemon_utility:defsilvercap",
+            "cobblemon_utility:spatksilvercap",
+            "cobblemon_utility:spdefsilvercap",
+            "cobblemon_utility:speedsilvercap"
+          ],
+          "count": 1
+        },
+        {
+          "name": "PP Max",
+          "rarity": "rare",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:pp_max"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Destiny Knot",
+          "rarity": "rare",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon:destiny_knot"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Z-Crystal",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "mega_showdown:buginium_z",
+            "mega_showdown:darkinium_z",
+            "mega_showdown:dragonium_z",
+            "mega_showdown:electrium_z",
+            "mega_showdown:fairium_z",
+            "mega_showdown:fightinium_z",
+            "mega_showdown:firium_z",
+            "mega_showdown:flyinium_z",
+            "mega_showdown:ghostium_z",
+            "mega_showdown:grassium_z",
+            "mega_showdown:groundium_z",
+            "mega_showdown:icium_z",
+            "mega_showdown:normalium_z",
+            "mega_showdown:poisonium_z",
+            "mega_showdown:psychium_z",
+            "mega_showdown:rockium_z",
+            "mega_showdown:steelium_z",
+            "mega_showdown:waterium_z"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Tera Shard",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "mega_showdown:bug_tera_shard",
+            "mega_showdown:dark_tera_shard",
+            "mega_showdown:dragon_tera_shard",
+            "mega_showdown:electric_tera_shard",
+            "mega_showdown:fairy_tera_shard",
+            "mega_showdown:fighting_tera_shard",
+            "mega_showdown:fire_tera_shard",
+            "mega_showdown:flying_tera_shard",
+            "mega_showdown:ghost_tera_shard",
+            "mega_showdown:grass_tera_shard",
+            "mega_showdown:ground_tera_shard",
+            "mega_showdown:ice_tera_shard",
+            "mega_showdown:normal_tera_shard",
+            "mega_showdown:poison_tera_shard",
+            "mega_showdown:psychic_tera_shard",
+            "mega_showdown:rock_tera_shard",
+            "mega_showdown:steel_tera_shard",
+            "mega_showdown:water_tera_shard"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Dynamax Candy",
+          "rarity": "rare",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "mega_showdown:dynamax_candy"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Max Mushroom",
+          "rarity": "rare",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "mega_showdown:max_mushroom"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Ability Patch",
+          "rarity": "epic",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:ability_patch"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Beast Ball",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon:beast_ball"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Coloured Mega Bracelet or Z-Ring",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "mega_showdown:mega_bracelet_red",
+            "mega_showdown:mega_bracelet_blue",
+            "mega_showdown:mega_bracelet_green",
+            "mega_showdown:mega_bracelet_pink",
+            "mega_showdown:mega_bracelet_yellow",
+            "mega_showdown:mega_bracelet_black",
+            "mega_showdown:z_ring_red",
+            "mega_showdown:z_ring_blue",
+            "mega_showdown:z_ring_green",
+            "mega_showdown:z_ring_pink",
+            "mega_showdown:z_ring_yellow",
+            "mega_showdown:z_ring_black"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Obsidian Stat Cap",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:hpobsidiancap",
+            "cobblemon_utility:atkobsidiancap",
+            "cobblemon_utility:defobsidiancap",
+            "cobblemon_utility:spatkobsidiancap",
+            "cobblemon_utility:spdefobsidiancap",
+            "cobblemon_utility:speedobsidiancap"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Shiny Pokémon (Lv. 30)",
+          "rarity": "legendary",
+          "weight": 5,
+          "type": "pokemon",
+          "level": 30,
+          "shiny": true,
+          "legendary": false
+        },
+        {
+          "name": "Master Ball Key",
+          "rarity": "legendary",
+          "weight": 3,
+          "type": "key",
+          "key": "master",
+          "count": 1
+        },
+        {
+          "name": "JACKPOT: 1,750,000 CobbleDollars",
+          "rarity": "legendary",
+          "weight": 0.4,
+          "type": "money",
+          "money": 1750000,
+          "jackpot": true
+        }
+      ]
+    },
+    "master": {
+      "name": "Master Crate",
+      "color": "§5",
+      "pity": 15,
+      "rewards": [
+        {
+          "name": "75,000 CobbleDollars",
+          "rarity": "rare",
+          "weight": 9.7,
+          "type": "money",
+          "money": 75000
+        },
+        {
+          "name": "Rare Candy",
+          "rarity": "rare",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:rare_candy"
+          ],
+          "count": 10
+        },
+        {
+          "name": "Ability Patch",
+          "rarity": "rare",
+          "weight": 8,
+          "type": "item",
+          "items": [
+            "cobblemon:ability_patch"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Random Battle Items",
+          "rarity": "rare",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:choice_band",
+            "cobblemon:choice_specs",
+            "cobblemon:choice_scarf",
+            "cobblemon:life_orb",
+            "cobblemon:leftovers",
+            "cobblemon:focus_sash",
+            "cobblemon:assault_vest"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Random Silver Stat Caps",
+          "rarity": "rare",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:hpsilvercap",
+            "cobblemon_utility:atksilvercap",
+            "cobblemon_utility:defsilvercap",
+            "cobblemon_utility:spatksilvercap",
+            "cobblemon_utility:spdefsilvercap",
+            "cobblemon_utility:speedsilvercap"
+          ],
+          "count": 3
+        },
+        {
+          "name": "PP Max",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon:pp_max"
+          ],
+          "count": 5
+        },
+        {
+          "name": "Random Obsidian Stat Caps",
+          "rarity": "rare",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:hpobsidiancap",
+            "cobblemon_utility:atkobsidiancap",
+            "cobblemon_utility:defobsidiancap",
+            "cobblemon_utility:spatkobsidiancap",
+            "cobblemon_utility:spdefobsidiancap",
+            "cobblemon_utility:speedobsidiancap"
+          ],
+          "count": 2
+        },
+        {
+          "name": "Random Shiny Pokémon (Lv. 50)",
+          "rarity": "epic",
+          "weight": 7,
+          "type": "pokemon",
+          "level": 50,
+          "shiny": true,
+          "legendary": false
+        },
+        {
+          "name": "Golden Cap",
+          "rarity": "epic",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:goldencap"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Master Candy",
+          "rarity": "epic",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:mastercandy"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Cobblemax",
+          "rarity": "epic",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:cobblemax"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Stellar Tera Shard",
+          "rarity": "epic",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "mega_showdown:stellar_tera_shard"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Omni Ring",
+          "rarity": "epic",
+          "weight": 4,
+          "type": "item",
+          "items": [
+            "mega_showdown:omni_ring"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Beast Ball",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "item",
+          "items": [
+            "cobblemon:beast_ball"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Cherish Ball",
+          "rarity": "epic",
+          "weight": 2,
+          "type": "item",
+          "items": [
+            "cobblemon:cherish_ball"
+          ],
+          "count": 3
+        },
+        {
+          "name": "Master Ball",
+          "rarity": "legendary",
+          "weight": 6,
+          "type": "item",
+          "items": [
+            "cobblemon:master_ball"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Shiny Card",
+          "rarity": "legendary",
+          "weight": 5,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:shinycard"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Random Legendary Pokémon (Lv. 50)",
+          "rarity": "legendary",
+          "weight": 4,
+          "type": "pokemon",
+          "level": 50,
+          "shiny": false,
+          "legendary": true
+        },
+        {
+          "name": "Ancient Origin Ball",
+          "rarity": "legendary",
+          "weight": 2,
+          "type": "item",
+          "items": [
+            "cobblemon:ancient_origin_ball"
+          ],
+          "count": 1
+        },
+        {
+          "name": "Void Cap",
+          "rarity": "legendary",
+          "weight": 1,
+          "type": "item",
+          "items": [
+            "cobblemon_utility:voidcap"
+          ],
+          "count": 1
+        },
+        {
+          "name": "JACKPOT: 6,500,000 CobbleDollars",
+          "rarity": "legendary",
+          "weight": 0.3,
+          "type": "money",
+          "money": 6500000,
+          "jackpot": true
+        }
+      ]
+    }
+  },
+  "merges": {
+    "great": {
+      "from": "poke",
+      "keys": 5,
+      "money": 7500,
+      "item": "cobblemon:great_ball",
+      "itemCount": 32
+    },
+    "ultra": {
+      "from": "great",
+      "keys": 5,
+      "money": 30000,
+      "item": "cobblemon:ultra_ball",
+      "itemCount": 32
+    },
+    "master": {
+      "from": "ultra",
+      "keys": 4,
+      "money": 100000,
+      "item": "cobblemon:ability_patch",
+      "itemCount": 1
+    }
+  }
+}
