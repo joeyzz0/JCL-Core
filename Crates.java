@@ -424,7 +424,7 @@ public final class Crates {
                 if (pk == null) { Economy.give(p, 50000); return r.name + " (refunded: 50,000)"; }
                 if (r.shiny) try { call(pk, "setShiny", true); } catch (Throwable ignored) {}
                 String name = CobblemonBridge.snapshot(pk, server.registryAccess()).title;
-                if (!CobblemonBridge.give(p, pk)) {
+                if (!CobblemonBridge.give(p, pk)) try {
                     ClaimEntry ce = new ClaimEntry();
                     ce.type = ClaimEntry.Type.POKEMON;
                     ce.pokemonSnbt = CobblemonBridge.toNbt(pk, server.registryAccess()).toString();
@@ -432,6 +432,10 @@ public final class Crates {
                     ce.title = name; ce.reason = "Crate reward";
                     Market.data.claimsOf(p.getUUID()).add(ce); Market.markDirty();
                     p.sendSystemMessage(Component.literal("§eYour party and PC are full, so it's waiting in /gts claims."));
+                } catch (Exception ex) {
+                    GtsMod.LOG.error("[JCL] Could not store a crate Pokémon in claims", ex);
+                    Economy.give(p, 50000);
+                    p.sendSystemMessage(Component.literal("§cYour Pokémon couldn't be delivered, so you were refunded 50,000 CobbleDollars. Tell an admin."));
                 }
                 return name.replaceAll("§.", "");
             }
