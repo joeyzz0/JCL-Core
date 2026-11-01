@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "categories": [
     {
       "name": "§c§lPoké Balls",
@@ -29,6 +30,14 @@
           "count": 8
         },
         {
+          "name": "Premier Ball x8",
+          "icon": "cobblemon:premier_ball",
+          "price": 600,
+          "description": "",
+          "item": "cobblemon:premier_ball",
+          "count": 8
+        },
+        {
           "name": "Quick Ball x4",
           "icon": "cobblemon:quick_ball",
           "price": 1500,
@@ -53,11 +62,209 @@
           "count": 4
         },
         {
+          "name": "Net Ball x4",
+          "icon": "cobblemon:net_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:net_ball",
+          "count": 4
+        },
+        {
+          "name": "Nest Ball x4",
+          "icon": "cobblemon:nest_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:nest_ball",
+          "count": 4
+        },
+        {
+          "name": "Dive Ball x4",
+          "icon": "cobblemon:dive_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:dive_ball",
+          "count": 4
+        },
+        {
+          "name": "Repeat Ball x4",
+          "icon": "cobblemon:repeat_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:repeat_ball",
+          "count": 4
+        },
+        {
           "name": "Luxury Ball x4",
           "icon": "cobblemon:luxury_ball",
-          "price": 1200,
+          "price": 1500,
           "description": "",
           "item": "cobblemon:luxury_ball",
+          "count": 4
+        },
+        {
+          "name": "Heal Ball x4",
+          "icon": "cobblemon:heal_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:heal_ball",
+          "count": 4
+        },
+        {
+          "name": "Friend Ball x4",
+          "icon": "cobblemon:friend_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:friend_ball",
+          "count": 4
+        },
+        {
+          "name": "Level Ball x4",
+          "icon": "cobblemon:level_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:level_ball",
+          "count": 4
+        },
+        {
+          "name": "Lure Ball x4",
+          "icon": "cobblemon:lure_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:lure_ball",
+          "count": 4
+        },
+        {
+          "name": "Heavy Ball x4",
+          "icon": "cobblemon:heavy_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:heavy_ball",
+          "count": 4
+        },
+        {
+          "name": "Love Ball x4",
+          "icon": "cobblemon:love_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:love_ball",
+          "count": 4
+        },
+        {
+          "name": "Fast Ball x4",
+          "icon": "cobblemon:fast_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:fast_ball",
+          "count": 4
+        },
+        {
+          "name": "Moon Ball x4",
+          "icon": "cobblemon:moon_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:moon_ball",
+          "count": 4
+        },
+        {
+          "name": "Dream Ball x4",
+          "icon": "cobblemon:dream_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:dream_ball",
+          "count": 4
+        },
+        {
+          "name": "Sport Ball x4",
+          "icon": "cobblemon:sport_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:sport_ball",
+          "count": 4
+        },
+        {
+          "name": "Safari Ball x4",
+          "icon": "cobblemon:safari_ball",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:safari_ball",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "name": "§6§lAncient Balls",
+      "icon": "cobblemon:ancient_poke_ball",
+      "items": [
+        {
+          "name": "Ancient Poké Ball x4",
+          "icon": "cobblemon:ancient_poke_ball",
+          "price": 300,
+          "description": "",
+          "item": "cobblemon:ancient_poke_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Great Ball x4",
+          "icon": "cobblemon:ancient_great_ball",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:ancient_great_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Ultra Ball x4",
+          "icon": "cobblemon:ancient_ultra_ball",
+          "price": 1800,
+          "description": "",
+          "item": "cobblemon:ancient_ultra_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Heavy Ball x4",
+          "icon": "cobblemon:ancient_heavy_ball",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:ancient_heavy_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Leaden Ball x4",
+          "icon": "cobblemon:ancient_leaden_ball",
+          "price": 1800,
+          "description": "",
+          "item": "cobblemon:ancient_leaden_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Gigaton Ball x4",
+          "icon": "cobblemon:ancient_gigaton_ball",
+          "price": 2400,
+          "description": "",
+          "item": "cobblemon:ancient_gigaton_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Feather Ball x4",
+          "icon": "cobblemon:ancient_feather_ball",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:ancient_feather_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Wing Ball x4",
+          "icon": "cobblemon:ancient_wing_ball",
+          "price": 1800,
+          "description": "",
+          "item": "cobblemon:ancient_wing_ball",
+          "count": 4
+        },
+        {
+          "name": "Ancient Jet Ball x4",
+          "icon": "cobblemon:ancient_jet_ball",
+          "price": 2400,
+          "description": "",
+          "item": "cobblemon:ancient_jet_ball",
           "count": 4
         }
       ]
@@ -99,6 +306,14 @@
           "count": 2
         },
         {
+          "name": "Full Restore",
+          "icon": "cobblemon:full_restore",
+          "price": 1000,
+          "description": "",
+          "item": "cobblemon:full_restore",
+          "count": 1
+        },
+        {
           "name": "Revive x2",
           "icon": "cobblemon:revive",
           "price": 800,
@@ -107,11 +322,11 @@
           "count": 2
         },
         {
-          "name": "Full Restore",
-          "icon": "cobblemon:full_restore",
-          "price": 1000,
+          "name": "Max Revive",
+          "icon": "cobblemon:max_revive",
+          "price": 1500,
           "description": "",
-          "item": "cobblemon:full_restore",
+          "item": "cobblemon:max_revive",
           "count": 1
         },
         {
@@ -121,6 +336,78 @@
           "description": "",
           "item": "cobblemon:ether",
           "count": 3
+        },
+        {
+          "name": "Max Ether x2",
+          "icon": "cobblemon:max_ether",
+          "price": 1200,
+          "description": "",
+          "item": "cobblemon:max_ether",
+          "count": 2
+        },
+        {
+          "name": "Elixir x2",
+          "icon": "cobblemon:elixir",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:elixir",
+          "count": 2
+        },
+        {
+          "name": "Max Elixir",
+          "icon": "cobblemon:max_elixir",
+          "price": 2000,
+          "description": "",
+          "item": "cobblemon:max_elixir",
+          "count": 1
+        },
+        {
+          "name": "Full Heal x4",
+          "icon": "cobblemon:full_heal",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:full_heal",
+          "count": 4
+        },
+        {
+          "name": "Antidote x4",
+          "icon": "cobblemon:antidote",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:antidote",
+          "count": 4
+        },
+        {
+          "name": "Paralyze Heal x4",
+          "icon": "cobblemon:paralyze_heal",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:paralyze_heal",
+          "count": 4
+        },
+        {
+          "name": "Awakening x4",
+          "icon": "cobblemon:awakening",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:awakening",
+          "count": 4
+        },
+        {
+          "name": "Burn Heal x4",
+          "icon": "cobblemon:burn_heal",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:burn_heal",
+          "count": 4
+        },
+        {
+          "name": "Ice Heal x4",
+          "icon": "cobblemon:ice_heal",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:ice_heal",
+          "count": 4
         }
       ]
     },
@@ -128,6 +415,14 @@
       "name": "§e§lTraining",
       "icon": "cobblemon:rare_candy",
       "items": [
+        {
+          "name": "EXP Candy XS x10",
+          "icon": "cobblemon:exp_candy_xs",
+          "price": 200,
+          "description": "",
+          "item": "cobblemon:exp_candy_xs",
+          "count": 10
+        },
         {
           "name": "EXP Candy S x5",
           "icon": "cobblemon:exp_candy_s",
@@ -153,6 +448,14 @@
           "count": 3
         },
         {
+          "name": "EXP Candy XL",
+          "icon": "cobblemon:exp_candy_xl",
+          "price": 1500,
+          "description": "",
+          "item": "cobblemon:exp_candy_xl",
+          "count": 1
+        },
+        {
           "name": "Rare Candy",
           "icon": "cobblemon:rare_candy",
           "price": 2500,
@@ -162,6 +465,166 @@
           "limit": 10,
           "period": "week"
         },
+        {
+          "name": "Hp Up",
+          "icon": "cobblemon:hp_up",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:hp_up",
+          "count": 1
+        },
+        {
+          "name": "Protein",
+          "icon": "cobblemon:protein",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:protein",
+          "count": 1
+        },
+        {
+          "name": "Iron",
+          "icon": "cobblemon:iron",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:iron",
+          "count": 1
+        },
+        {
+          "name": "Calcium",
+          "icon": "cobblemon:calcium",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:calcium",
+          "count": 1
+        },
+        {
+          "name": "Zinc",
+          "icon": "cobblemon:zinc",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:zinc",
+          "count": 1
+        },
+        {
+          "name": "Carbos",
+          "icon": "cobblemon:carbos",
+          "price": 2500,
+          "description": "",
+          "item": "cobblemon:carbos",
+          "count": 1
+        },
+        {
+          "name": "Health Feather x8",
+          "icon": "cobblemon:health_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:health_feather",
+          "count": 8
+        },
+        {
+          "name": "Muscle Feather x8",
+          "icon": "cobblemon:muscle_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:muscle_feather",
+          "count": 8
+        },
+        {
+          "name": "Resist Feather x8",
+          "icon": "cobblemon:resist_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:resist_feather",
+          "count": 8
+        },
+        {
+          "name": "Genius Feather x8",
+          "icon": "cobblemon:genius_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:genius_feather",
+          "count": 8
+        },
+        {
+          "name": "Clever Feather x8",
+          "icon": "cobblemon:clever_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:clever_feather",
+          "count": 8
+        },
+        {
+          "name": "Swift Feather x8",
+          "icon": "cobblemon:swift_feather",
+          "price": 800,
+          "description": "",
+          "item": "cobblemon:swift_feather",
+          "count": 8
+        },
+        {
+          "name": "Power Weight",
+          "icon": "cobblemon:power_weight",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_weight",
+          "count": 1
+        },
+        {
+          "name": "Power Bracer",
+          "icon": "cobblemon:power_bracer",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_bracer",
+          "count": 1
+        },
+        {
+          "name": "Power Belt",
+          "icon": "cobblemon:power_belt",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_belt",
+          "count": 1
+        },
+        {
+          "name": "Power Lens",
+          "icon": "cobblemon:power_lens",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_lens",
+          "count": 1
+        },
+        {
+          "name": "Power Band",
+          "icon": "cobblemon:power_band",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_band",
+          "count": 1
+        },
+        {
+          "name": "Power Anklet",
+          "icon": "cobblemon:power_anklet",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:power_anklet",
+          "count": 1
+        },
+        {
+          "name": "PP Up",
+          "icon": "cobblemon:pp_up",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:pp_up",
+          "count": 1,
+          "limit": 5,
+          "period": "week"
+        }
+      ]
+    },
+    {
+      "name": "§b§lEvolution Items",
+      "icon": "cobblemon:thunder_stone",
+      "items": [
         {
           "name": "Fire Stone",
           "icon": "cobblemon:fire_stone",
@@ -241,6 +704,584 @@
           "description": "",
           "item": "cobblemon:ice_stone",
           "count": 1
+        },
+        {
+          "name": "Dragon Scale",
+          "icon": "cobblemon:dragon_scale",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:dragon_scale",
+          "count": 1
+        },
+        {
+          "name": "Metal Coat",
+          "icon": "cobblemon:metal_coat",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:metal_coat",
+          "count": 1
+        },
+        {
+          "name": "Kings Rock",
+          "icon": "cobblemon:kings_rock",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:kings_rock",
+          "count": 1
+        },
+        {
+          "name": "Upgrade",
+          "icon": "cobblemon:upgrade",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:upgrade",
+          "count": 1
+        },
+        {
+          "name": "Dubious Disc",
+          "icon": "cobblemon:dubious_disc",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:dubious_disc",
+          "count": 1
+        },
+        {
+          "name": "Protector",
+          "icon": "cobblemon:protector",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:protector",
+          "count": 1
+        },
+        {
+          "name": "Electirizer",
+          "icon": "cobblemon:electirizer",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:electirizer",
+          "count": 1
+        },
+        {
+          "name": "Magmarizer",
+          "icon": "cobblemon:magmarizer",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:magmarizer",
+          "count": 1
+        },
+        {
+          "name": "Reaper Cloth",
+          "icon": "cobblemon:reaper_cloth",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:reaper_cloth",
+          "count": 1
+        },
+        {
+          "name": "Razor Claw",
+          "icon": "cobblemon:razor_claw",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:razor_claw",
+          "count": 1
+        },
+        {
+          "name": "Razor Fang",
+          "icon": "cobblemon:razor_fang",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:razor_fang",
+          "count": 1
+        },
+        {
+          "name": "Oval Stone",
+          "icon": "cobblemon:oval_stone",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:oval_stone",
+          "count": 1
+        },
+        {
+          "name": "Prism Scale",
+          "icon": "cobblemon:prism_scale",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:prism_scale",
+          "count": 1
+        },
+        {
+          "name": "Sachet",
+          "icon": "cobblemon:sachet",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:sachet",
+          "count": 1
+        },
+        {
+          "name": "Whipped Dream",
+          "icon": "cobblemon:whipped_dream",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:whipped_dream",
+          "count": 1
+        },
+        {
+          "name": "Deep Sea Tooth",
+          "icon": "cobblemon:deep_sea_tooth",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:deep_sea_tooth",
+          "count": 1
+        },
+        {
+          "name": "Deep Sea Scale",
+          "icon": "cobblemon:deep_sea_scale",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:deep_sea_scale",
+          "count": 1
+        },
+        {
+          "name": "Black Augurite",
+          "icon": "cobblemon:black_augurite",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:black_augurite",
+          "count": 1
+        },
+        {
+          "name": "Peat Block",
+          "icon": "cobblemon:peat_block",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:peat_block",
+          "count": 1
+        },
+        {
+          "name": "Galarica Cuff",
+          "icon": "cobblemon:galarica_cuff",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:galarica_cuff",
+          "count": 1
+        },
+        {
+          "name": "Galarica Wreath",
+          "icon": "cobblemon:galarica_wreath",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:galarica_wreath",
+          "count": 1
+        },
+        {
+          "name": "Sweet Apple",
+          "icon": "cobblemon:sweet_apple",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:sweet_apple",
+          "count": 1
+        },
+        {
+          "name": "Tart Apple",
+          "icon": "cobblemon:tart_apple",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:tart_apple",
+          "count": 1
+        },
+        {
+          "name": "Syrupy Apple",
+          "icon": "cobblemon:syrupy_apple",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:syrupy_apple",
+          "count": 1
+        },
+        {
+          "name": "Auspicious Armor",
+          "icon": "cobblemon:auspicious_armor",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:auspicious_armor",
+          "count": 1
+        },
+        {
+          "name": "Malicious Armor",
+          "icon": "cobblemon:malicious_armor",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:malicious_armor",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "§4§lBattle Items",
+      "icon": "cobblemon:x_attack",
+      "items": [
+        {
+          "name": "X Attack x3",
+          "icon": "cobblemon:x_attack",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_attack",
+          "count": 3
+        },
+        {
+          "name": "X Defense x3",
+          "icon": "cobblemon:x_defence",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_defence",
+          "count": 3
+        },
+        {
+          "name": "X Special Attack x3",
+          "icon": "cobblemon:x_special_attack",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_special_attack",
+          "count": 3
+        },
+        {
+          "name": "X Special Defense x3",
+          "icon": "cobblemon:x_special_defence",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_special_defence",
+          "count": 3
+        },
+        {
+          "name": "X Speed x3",
+          "icon": "cobblemon:x_speed",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_speed",
+          "count": 3
+        },
+        {
+          "name": "X Accuracy x3",
+          "icon": "cobblemon:x_accuracy",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:x_accuracy",
+          "count": 3
+        },
+        {
+          "name": "Dire Hit x3",
+          "icon": "cobblemon:dire_hit",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:dire_hit",
+          "count": 3
+        },
+        {
+          "name": "Guard Spec x3",
+          "icon": "cobblemon:guard_spec",
+          "price": 900,
+          "description": "",
+          "item": "cobblemon:guard_spec",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "name": "§3§lTrainer Gear",
+      "icon": "cobblemon:pc",
+      "items": [
+        {
+          "name": "PC",
+          "icon": "cobblemon:pc",
+          "price": 5000,
+          "description": "",
+          "item": "cobblemon:pc",
+          "count": 1
+        },
+        {
+          "name": "Healing Machine",
+          "icon": "cobblemon:healing_machine",
+          "price": 8000,
+          "description": "",
+          "item": "cobblemon:healing_machine",
+          "count": 1
+        },
+        {
+          "name": "Pasture Block",
+          "icon": "cobblemon:pasture",
+          "price": 4000,
+          "description": "",
+          "item": "cobblemon:pasture",
+          "count": 1
+        },
+        {
+          "name": "Display Case",
+          "icon": "cobblemon:display_case",
+          "price": 2000,
+          "description": "",
+          "item": "cobblemon:display_case",
+          "count": 1
+        },
+        {
+          "name": "Gilded Chest",
+          "icon": "cobblemon:gilded_chest",
+          "price": 3000,
+          "description": "",
+          "item": "cobblemon:gilded_chest",
+          "count": 1
+        },
+        {
+          "name": "Fossil Analyzer",
+          "icon": "cobblemon:fossil_analyzer",
+          "price": 10000,
+          "description": "",
+          "item": "cobblemon:fossil_analyzer",
+          "count": 1
+        },
+        {
+          "name": "Restoration Tank",
+          "icon": "cobblemon:restoration_tank",
+          "price": 10000,
+          "description": "",
+          "item": "cobblemon:restoration_tank",
+          "count": 1
+        },
+        {
+          "name": "Monitor",
+          "icon": "cobblemon:monitor",
+          "price": 10000,
+          "description": "",
+          "item": "cobblemon:monitor",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "§d§lPoké Dolls",
+      "icon": "pokeblocks:pokedoll_eevee",
+      "items": [
+        {
+          "name": "Eevee Doll",
+          "icon": "pokeblocks:pokedoll_eevee",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_eevee",
+          "count": 1
+        },
+        {
+          "name": "Charmander Doll",
+          "icon": "pokeblocks:pokedoll_charmander",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_charmander",
+          "count": 1
+        },
+        {
+          "name": "Bulbasaur Doll",
+          "icon": "pokeblocks:pokedoll_bulbasaur",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_bulbasaur",
+          "count": 1
+        },
+        {
+          "name": "Cyndaquil Doll",
+          "icon": "pokeblocks:pokedoll_cyndaquil",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_cyndaquil",
+          "count": 1
+        },
+        {
+          "name": "Rowlet Doll",
+          "icon": "pokeblocks:pokedoll_rowlet",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_rowlet",
+          "count": 1
+        },
+        {
+          "name": "Riolu Doll",
+          "icon": "pokeblocks:pokedoll_riolu",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_riolu",
+          "count": 1
+        },
+        {
+          "name": "Mimikyu Doll",
+          "icon": "pokeblocks:pokedoll_mimikyu",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_mimikyu",
+          "count": 1
+        },
+        {
+          "name": "Gengar Doll",
+          "icon": "pokeblocks:pokedoll_gengar",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_gengar",
+          "count": 1
+        },
+        {
+          "name": "Gastly Doll",
+          "icon": "pokeblocks:pokedoll_gastly",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_gastly",
+          "count": 1
+        },
+        {
+          "name": "Jigglypuff Doll",
+          "icon": "pokeblocks:pokedoll_jigglypuff",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_jigglypuff",
+          "count": 1
+        },
+        {
+          "name": "Clefairy Doll",
+          "icon": "pokeblocks:pokedoll_clefairy",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_clefairy",
+          "count": 1
+        },
+        {
+          "name": "Munchlax Doll",
+          "icon": "pokeblocks:pokedoll_munchlax",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_munchlax",
+          "count": 1
+        },
+        {
+          "name": "Lechonk Doll",
+          "icon": "pokeblocks:pokedoll_lechonk",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_lechonk",
+          "count": 1
+        },
+        {
+          "name": "Absol Doll",
+          "icon": "pokeblocks:pokedoll_absol",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_absol",
+          "count": 1
+        },
+        {
+          "name": "Ampharos Doll",
+          "icon": "pokeblocks:pokedoll_ampharos",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_ampharos",
+          "count": 1
+        },
+        {
+          "name": "Blastoise Doll",
+          "icon": "pokeblocks:pokedoll_blastoise",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_blastoise",
+          "count": 1
+        },
+        {
+          "name": "Corviknight Doll",
+          "icon": "pokeblocks:pokedoll_corviknight",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_corviknight",
+          "count": 1
+        },
+        {
+          "name": "Gholdengo Doll",
+          "icon": "pokeblocks:pokedoll_gholdengo",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_gholdengo",
+          "count": 1
+        },
+        {
+          "name": "Happiny Doll",
+          "icon": "pokeblocks:pokedoll_happiny",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_happiny",
+          "count": 1
+        },
+        {
+          "name": "Mareep Doll",
+          "icon": "pokeblocks:pokedoll_mareep",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_mareep",
+          "count": 1
+        },
+        {
+          "name": "Drifloon Doll",
+          "icon": "pokeblocks:pokedoll_drifloon",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_drifloon",
+          "count": 1
+        },
+        {
+          "name": "Furret Doll",
+          "icon": "pokeblocks:pokedoll_furret",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_furret",
+          "count": 1
+        },
+        {
+          "name": "Quagsire Doll",
+          "icon": "pokeblocks:pokedoll_quagsire",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_quagsire",
+          "count": 1
+        },
+        {
+          "name": "Sableye Doll",
+          "icon": "pokeblocks:pokedoll_sableye",
+          "price": 5000,
+          "description": "",
+          "item": "pokeblocks:pokedoll_sableye",
+          "count": 1
+        },
+        {
+          "name": "Magikarp Fishbowl",
+          "icon": "pokeblocks:magikarp_fishbowl",
+          "price": 8000,
+          "description": "",
+          "item": "pokeblocks:magikarp_fishbowl",
+          "count": 1
+        },
+        {
+          "name": "Luvdisc Cushion",
+          "icon": "pokeblocks:luvdisc_cushion",
+          "price": 6000,
+          "description": "",
+          "item": "pokeblocks:luvdisc_cushion",
+          "count": 1
+        },
+        {
+          "name": "Applin Basket",
+          "icon": "pokeblocks:applin_basket",
+          "price": 6000,
+          "description": "",
+          "item": "pokeblocks:applin_basket",
+          "count": 1
+        },
+        {
+          "name": "Pokémon Trophy",
+          "icon": "pokeblocks:pokemon_trophy",
+          "price": 20000,
+          "description": "",
+          "item": "pokeblocks:pokemon_trophy",
+          "count": 1
         }
       ]
     },
@@ -289,16 +1330,16 @@
       ]
     },
     {
-      "name": "§d§lTitles",
+      "name": "§5§lTitles",
       "icon": "minecraft:name_tag",
       "items": [
         {
           "name": "Title: Youngster",
           "icon": "minecraft:name_tag",
           "price": 15000,
-          "description": "Unlocks the Youngster title. Equip it with /titles.",
+          "description": "Shows as §8[§aYoungster§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.youngster true"
+            "titles grant {player} youngster"
           ],
           "limit": 1,
           "period": "once"
@@ -307,9 +1348,9 @@
           "name": "Title: Lass",
           "icon": "minecraft:name_tag",
           "price": 15000,
-          "description": "Unlocks the Lass title. Equip it with /titles.",
+          "description": "Shows as §8[§dLass§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.lass true"
+            "titles grant {player} lass"
           ],
           "limit": 1,
           "period": "once"
@@ -318,9 +1359,9 @@
           "name": "Title: Bug Catcher",
           "icon": "minecraft:name_tag",
           "price": 20000,
-          "description": "Unlocks the Bug Catcher title. Equip it with /titles.",
+          "description": "Shows as §8[§2Bug Catcher§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.bug_catcher true"
+            "titles grant {player} bug_catcher"
           ],
           "limit": 1,
           "period": "once"
@@ -329,9 +1370,9 @@
           "name": "Title: Hiker",
           "icon": "minecraft:name_tag",
           "price": 25000,
-          "description": "Unlocks the Hiker title. Equip it with /titles.",
+          "description": "Shows as §8[§6Hiker§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.hiker true"
+            "titles grant {player} hiker"
           ],
           "limit": 1,
           "period": "once"
@@ -340,9 +1381,9 @@
           "name": "Title: Swimmer",
           "icon": "minecraft:name_tag",
           "price": 25000,
-          "description": "Unlocks the Swimmer title. Equip it with /titles.",
+          "description": "Shows as §8[§bSwimmer§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.swimmer true"
+            "titles grant {player} swimmer"
           ],
           "limit": 1,
           "period": "once"
@@ -351,9 +1392,9 @@
           "name": "Title: Fisherman",
           "icon": "minecraft:name_tag",
           "price": 30000,
-          "description": "Unlocks the Fisherman title. Equip it with /titles.",
+          "description": "Shows as §8[§3Fisherman§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.fisherman true"
+            "titles grant {player} fisherman"
           ],
           "limit": 1,
           "period": "once"
@@ -362,9 +1403,9 @@
           "name": "Title: Black Belt",
           "icon": "minecraft:name_tag",
           "price": 40000,
-          "description": "Unlocks the Black Belt title. Equip it with /titles.",
+          "description": "Shows as §8[§4Black Belt§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.black_belt true"
+            "titles grant {player} black_belt"
           ],
           "limit": 1,
           "period": "once"
@@ -373,9 +1414,9 @@
           "name": "Title: Psychic",
           "icon": "minecraft:name_tag",
           "price": 40000,
-          "description": "Unlocks the Psychic title. Equip it with /titles.",
+          "description": "Shows as §8[§5Psychic§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.psychic true"
+            "titles grant {player} psychic"
           ],
           "limit": 1,
           "period": "once"
@@ -384,9 +1425,9 @@
           "name": "Title: Beauty",
           "icon": "minecraft:name_tag",
           "price": 50000,
-          "description": "Unlocks the Beauty title. Equip it with /titles.",
+          "description": "Shows as §8[§dBeauty§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.beauty true"
+            "titles grant {player} beauty"
           ],
           "limit": 1,
           "period": "once"
@@ -395,9 +1436,9 @@
           "name": "Title: Gentleman",
           "icon": "minecraft:name_tag",
           "price": 75000,
-          "description": "Unlocks the Gentleman title. Equip it with /titles.",
+          "description": "Shows as §8[§7Gentleman§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.gentleman true"
+            "titles grant {player} gentleman"
           ],
           "limit": 1,
           "period": "once"
@@ -406,9 +1447,9 @@
           "name": "Title: Poké Maniac",
           "icon": "minecraft:name_tag",
           "price": 100000,
-          "description": "Unlocks the Poké Maniac title. Equip it with /titles.",
+          "description": "Shows as §8[§ePoké Maniac§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.poke_maniac true"
+            "titles grant {player} poke_maniac"
           ],
           "limit": 1,
           "period": "once"
@@ -417,9 +1458,9 @@
           "name": "Title: Ace Trainer",
           "icon": "minecraft:name_tag",
           "price": 150000,
-          "description": "Unlocks the Ace Trainer title. Equip it with /titles.",
+          "description": "Shows as §8[§b§lAce Trainer§8]§7. Wear it with /titles.",
           "commands": [
-            "lp user {player} permission set jcl.title.ace_trainer true"
+            "titles grant {player} ace_trainer"
           ],
           "limit": 1,
           "period": "once"
@@ -427,16 +1468,159 @@
       ]
     },
     {
-      "name": "§b§lCosmetics",
-      "icon": "minecraft:leather_helmet",
+      "name": "§d§lName Colours",
+      "icon": "minecraft:magenta_dye",
       "items": [
         {
-          "name": "Name Colour: Gold",
-          "icon": "minecraft:gold_ingot",
-          "price": 25000,
-          "description": "Example cosmetic. Edit config/jcl_shop.json to add your own.",
+          "name": "Name Colour: Green",
+          "icon": "minecraft:lime_dye",
+          "price": 10000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
           "commands": [
-            "lp user {player} meta setsuffix 10 \"&6\""
+            "titles grantcolor {player} green"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Aqua",
+          "icon": "minecraft:light_blue_dye",
+          "price": 10000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} aqua"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Yellow",
+          "icon": "minecraft:yellow_dye",
+          "price": 10000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} yellow"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Pink",
+          "icon": "minecraft:pink_dye",
+          "price": 15000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} pink"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Red",
+          "icon": "minecraft:red_dye",
+          "price": 15000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} red"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Blue",
+          "icon": "minecraft:blue_dye",
+          "price": 15000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} blue"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Gold",
+          "icon": "minecraft:orange_dye",
+          "price": 30000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} gold"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Purple",
+          "icon": "minecraft:purple_dye",
+          "price": 30000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} purple"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Dark Green",
+          "icon": "minecraft:green_dye",
+          "price": 20000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} dark_green"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Teal",
+          "icon": "minecraft:cyan_dye",
+          "price": 20000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} dark_aqua"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Silver",
+          "icon": "minecraft:light_gray_dye",
+          "price": 8000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} gray"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Bold Gold",
+          "icon": "minecraft:orange_dye",
+          "price": 75000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} bold_gold"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Bold Aqua",
+          "icon": "minecraft:light_blue_dye",
+          "price": 75000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} bold_aqua"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Name Colour: Bold Red",
+          "icon": "minecraft:red_dye",
+          "price": 75000,
+          "description": "Colours your name in chat and the tab list. Use it with /titles color.",
+          "commands": [
+            "titles grantcolor {player} bold_red"
           ],
           "limit": 1,
           "period": "once"

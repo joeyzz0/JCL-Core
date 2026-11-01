@@ -86,8 +86,7 @@ public final class SpawnAlerts {
     }
 
     private static void alert(ServerLevel level, BlockPos pos, String name, int lvl, boolean shiny, String kind, boolean rare) {
-        String label = label(shiny, kind, rare);
-        String colour = kind != null ? "§6" : shiny ? "§e" : "§b";
+        String label = labelColoured(shiny, kind, rare);
         String biome = "";
         // Personal alerts for nearby players, with distance and direction.
         for (ServerPlayer p : server.getPlayerList().getPlayers()) {
@@ -96,7 +95,7 @@ public final class SpawnAlerts {
             if (dist > cfg.nearbyRadius) continue;
             if (biome.isEmpty()) biome = biomeName(level, pos);
             String where = (int) dist + " blocks " + direction(p.blockPosition(), pos) + (biome.isEmpty() ? "" : " §8(" + biome + "§8)");
-            MutableComponent msg = Component.literal("§d§l✦ §r" + colour + label + " " + name + " §7Lv. " + lvl + " §7spawned near you! §f" + where);
+            MutableComponent msg = Component.literal("§d§l✦ §r" + label + " §f" + name + " §7(Lv. " + lvl + ") spawned near you! §f" + where);
             if (cfg.showCoordinates) msg.append(Component.literal(" §8[" + pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + "]"));
             p.sendSystemMessage(msg);
             if (cfg.playSound) p.playNotifySound(kind != null ? SoundEvents.ENDER_DRAGON_GROWL : SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.MASTER, kind != null ? 0.4f : 1f, 1.2f);
@@ -104,13 +103,24 @@ public final class SpawnAlerts {
         String k = kind != null ? kind : shiny ? "shiny" : "rare";
         boolean wide = cfg.broadcast.contains(k) || (shiny && cfg.broadcast.contains("shiny")) || (rare && cfg.broadcastRare);
         if (wide) {
-            MutableComponent all = Component.literal("§d§l✦ §r" + colour + "A wild " + label + " " + name + " §7(Lv. " + lvl + ")§7 has appeared somewhere in the world!");
+            MutableComponent all = Component.literal("§d§l✦ §r§7A wild " + label + " §f" + name + " §7(Lv. " + lvl + ") has appeared somewhere in the world!");
             all.withStyle(st -> st.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal("§7Keep your eyes open, trainer."))));
             for (ServerPlayer p : server.getPlayerList().getPlayers()) {
                 if (p.serverLevel() != level || Math.sqrt(p.blockPosition().distSqr(pos)) > cfg.nearbyRadius) p.sendSystemMessage(all);
             }
         }
         if (cfg.discord.contains(k)) discord("✨ A wild **" + label.replaceAll("§.", "") + " " + name + "** (Lv. " + lvl + ") just appeared on the server!");
+    }
+
+    /** Each kind gets its own colour; the Pokémon's name itself stays white. */
+    private static String labelColoured(boolean shiny, String kind, boolean rare) {
+        StringBuilder b = new StringBuilder();
+        if (shiny) b.append("§e§l✦ Shiny§r ");
+        if (kind != null) b.append(switch (kind) {
+            case "legendary" -> "§6§lLegendary"; case "mythical" -> "§d§lMythical"; case "ultra_beast" -> "§b§lUltra Beast"; case "paradox" -> "§5§lParadox"; default -> "";
+        }).append("§r ");
+        if (kind == null && rare && !shiny) b.append("§9§lRare§r ");
+        return b.toString().trim();
     }
 
     private static String label(boolean shiny, String kind, boolean rare) {

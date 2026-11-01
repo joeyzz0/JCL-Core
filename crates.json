@@ -1026,5 +1026,6 @@
       "item": "cobblemon:ability_patch",
       "itemCount": 1
     }
-  }
+  },
+  "version": 2
 }

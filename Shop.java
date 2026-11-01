@@ -28,7 +28,7 @@ import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 
 /**
- * The server shop, paid in CobbleDollars. Open with /shop (point /trigger shop at it too).
+ * The server shop, paid in CobbleDollars. Open with /shop. /sell sells items at the bank price list.
  * Everything is in config/jcl_shop.json: categories, items, prices, purchase limits, and
  * command rewards for ranks and cosmetics ({player} is replaced with the buyer's name).
  */
@@ -51,7 +51,7 @@ public final class Shop {
         public List<Entry> items = new ArrayList<>();
     }
 
-    public static final class Config { public List<Category> categories = new ArrayList<>(); }
+    public static final class Config { public int version; public List<Category> categories = new ArrayList<>(); }
 
     /** player -> "category/entry@period" -> times bought */
     public static final class Data { public Map<String, Map<String, Integer>> bought = new HashMap<>(); }
@@ -66,15 +66,11 @@ public final class Shop {
 
     static void load() {
         try {
-            Path f = Path.of("config", "jcl_shop.json");
-            if (!Files.exists(f)) {
-                String d = Crates.readDefault("shop.json");
-                Files.createDirectories(f.getParent());
-                if (d != null) Files.writeString(f, d);
-            }
-            Config c = GSON.fromJson(Files.readString(f), Config.class);
+            String json = Defaults.load("jcl_shop.json");
+            Config c = json == null ? null : GSON.fromJson(json, Config.class);
             if (c != null) cfg = c;
         } catch (Exception e) { GtsMod.LOG.error("[JCL] Could not read config/jcl_shop.json", e); }
+        loadPrices();
         try {
             Path f = dataFile();
             if (Files.exists(f)) { Data d = GSON.fromJson(Files.readString(f), Data.class); if (d != null) data = d; }
@@ -94,6 +90,11 @@ public final class Shop {
     public static void onCommands(RegisterCommandsEvent e) {
         e.getDispatcher().register(Commands.literal("shop").executes(c -> { main(c.getSource().getPlayerOrException()); return 1; })
                 .then(Commands.literal("reload").requires(s -> s.hasPermission(2)).executes(c -> { load(); c.getSource().sendSuccess(() -> Component.literal("§aShop reloaded."), true); return 1; })));
+        e.getDispatcher().register(Commands.literal("sell")
+                .executes(c -> { sell(c.getSource().getPlayerOrException(), false); return 1; })
+                .then(Commands.literal("hand").executes(c -> { sell(c.getSource().getPlayerOrException(), false); return 1; }))
+                .then(Commands.literal("all").executes(c -> { sell(c.getSource().getPlayerOrException(), true); return 1; }))
+                .then(Commands.literal("price").executes(c -> { price(c.getSource().getPlayerOrException()); return 1; })));
         e.getDispatcher().register(Commands.literal("jclshop").executes(c -> { main(c.getSource().getPlayerOrException()); return 1; }));
     }
 
@@ -133,17 +134,22 @@ public final class Shop {
             int idx = i;
             s.set(slots[i], Gui.icon(Crates.resolve(c.icon), c.name, "§7" + c.items.size() + " items", "", "§e▶ Click to browse"), pl -> category(pl, idx));
         }
-        s.set(31, Gui.icon(Items.ANVIL, "§d§lMerge crate keys", "§7Upgrade your keys for a fee."), pl -> Crates.mergeMenu(pl));
+        s.set(30, Gui.icon(Items.ANVIL, "§d§lMerge crate keys", "§7Upgrade your keys for a fee."), pl -> Crates.mergeMenu(pl));
+        s.set(32, Gui.icon(Items.HOPPER, "§a§lSell items", "§7Hold an item and type:", "§f/sell §7sells the stack in your hand", "§f/sell all §7sells every one you carry", "§f/sell price §7shows what it's worth"));
         Gui.open(p, s);
     }
 
-    static void category(ServerPlayer p, int cat) {
+    static void category(ServerPlayer p, int cat) { category(p, cat, 0); }
+
+    static void category(ServerPlayer p, int cat, int page) {
         Category c = cfg.categories.get(cat);
         Gui.Screen s = new Gui.Screen("§6§l🛒 " + c.name.replaceAll("§.", ""), 6);
         s.frame(Items.ORANGE_STAINED_GLASS_PANE, Items.YELLOW_STAINED_GLASS_PANE);
         long bal = Economy.balance(p);
         s.set(4, Gui.icon(Crates.resolve(c.icon), c.name, "§7Your balance: §6" + (bal >= 0 ? Fmt.cd(bal) : "?")));
-        int n = 0;
+        int pages = Math.max(1, (c.items.size() + 27) / 28);
+        int pg = Math.max(0, Math.min(page, pages - 1));
+        int n = pg * 28;
         for (int r = 1; r <= 4; r++) for (int col = 1; col <= 7; col++) {
             if (n >= c.items.size()) break;
             Entry e = c.items.get(n++);
@@ -159,31 +165,80 @@ public final class Shop {
             lore.add("");
             lore.add(armed ? "§6§l⚠ Click again to confirm" : bal >= e.price ? "§a▶ Click to buy" : "§cYou can't afford this yet.");
             ItemStack icon = Gui.named(new ItemStack(Crates.resolve(e.icon), Math.max(1, Math.min(64, e.count))), "§f" + e.name, lore.toArray(new String[0]));
-            s.set(slot, armed ? Gui.glow(icon) : icon, pl -> buy(pl, cat, e));
+            s.set(slot, armed ? Gui.glow(icon) : icon, pl -> buy(pl, cat, e, pg));
         }
+        if (pg > 0) s.set(48, Gui.icon(Items.ARROW, "§e« Previous page", "§7Page " + pg + " of " + pages), pl -> category(pl, cat, pg - 1));
+        if (pg < pages - 1) s.set(50, Gui.icon(Items.ARROW, "§eNext page »", "§7Page " + (pg + 2) + " of " + pages), pl -> category(pl, cat, pg + 1));
         s.set(45, Gui.icon(Items.ARROW, "§e« Back"), pl -> { CONFIRM.remove(pl.getUUID().toString()); main(pl); });
         Gui.open(p, s);
     }
 
-    static void buy(ServerPlayer p, int cat, Entry e) {
+    static void buy(ServerPlayer p, int cat, Entry e, int page) {
         String id = p.getUUID().toString();
         String tag = cat + "/" + e.name;
-        if (!tag.equals(CONFIRM.get(id))) { CONFIRM.put(id, tag); p.playNotifySound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.MASTER, 0.6f, 1.4f); category(p, cat); return; }
+        if (!tag.equals(CONFIRM.get(id))) { CONFIRM.put(id, tag); p.playNotifySound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.MASTER, 0.6f, 1.4f); category(p, cat, page); return; }
         CONFIRM.remove(id);
-        if (e.limit > 0 && bought(p, cat, e) >= e.limit) { fail(p, "You've reached the limit for " + e.name + " " + periodWord(e.period) + "."); category(p, cat); return; }
+        if (e.limit > 0 && bought(p, cat, e) >= e.limit) { fail(p, "You've reached the limit for " + e.name + " " + periodWord(e.period) + "."); category(p, cat, page); return; }
         long bal = Economy.balance(p);
-        if (bal < e.price) { fail(p, "You need " + Fmt.cd(e.price) + " but have " + Fmt.cd(Math.max(0, bal)) + "."); category(p, cat); return; }
-        if (!Economy.take(p, e.price)) { fail(p, "The payment didn't go through. You weren't charged."); category(p, cat); return; }
+        if (bal < e.price) { fail(p, "You need " + Fmt.cd(e.price) + " but have " + Fmt.cd(Math.max(0, bal)) + "."); category(p, cat, page); return; }
+        if (!Economy.take(p, e.price)) { fail(p, "The payment didn't go through. You weren't charged."); category(p, cat, page); return; }
         if (e.item != null && !e.item.isEmpty()) Crates.giveStack(p, new ItemStack(Crates.resolve(e.item), e.count));
         for (String cmd : e.commands) server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), cmd.replace("{player}", p.getGameProfile().getName()));
         if (e.limit > 0) { data.bought.computeIfAbsent(id, k -> new HashMap<>()).merge(key(cat, e), 1, Integer::sum); save(); }
         p.playNotifySound(SoundEvents.PLAYER_LEVELUP, SoundSource.MASTER, 0.6f, 1.3f);
         p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aYou bought §f" + e.name + "§a for §6" + Fmt.cd(e.price) + "§a."));
-        category(p, cat);
+        category(p, cat, page);
     }
 
     private static void fail(ServerPlayer p, String msg) {
         p.playNotifySound(SoundEvents.VILLAGER_NO, SoundSource.MASTER, 0.6f, 1f);
         p.sendSystemMessage(Component.literal("§6§l[Shop] §r§c" + msg));
+    }
+
+    // ================================================================== selling (uses the CobbleDollars bank price list)
+
+    static final Map<String, Long> PRICES = new HashMap<>();
+
+    static void loadPrices() {
+        PRICES.clear();
+        try {
+            Path f = Path.of("config", "cobbledollars", "default_bank.json");
+            if (!Files.exists(f)) return;
+            com.google.gson.JsonArray arr = com.google.gson.JsonParser.parseString(Files.readString(f)).getAsJsonArray();
+            for (var el : arr) {
+                var o = el.getAsJsonObject();
+                if (!o.has("item") || !o.has("price")) continue;
+                try { PRICES.put(o.get("item").getAsString(), Long.parseLong(o.get("price").getAsString().trim())); } catch (Exception ignored) {}
+            }
+            GtsMod.LOG.info("[JCL] Loaded {} sell prices.", PRICES.size());
+        } catch (Exception ex) { GtsMod.LOG.error("[JCL] Could not read the bank price list", ex); }
+    }
+
+    static long priceOf(ItemStack s) {
+        if (s.isEmpty() || s.isDamaged() || s.has(net.minecraft.core.component.DataComponents.CUSTOM_NAME)) return -1;
+        Long v = PRICES.get(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(s.getItem()).toString());
+        return v == null ? -1 : v;
+    }
+
+    static void price(ServerPlayer p) {
+        ItemStack s = p.getMainHandItem();
+        long v = priceOf(s);
+        if (v < 0) { fail(p, "That item can't be sold."); return; }
+        p.sendSystemMessage(Component.literal("§6§l[Shop] §r§f" + s.getHoverName().getString() + " §7sells for §6" + Fmt.cd(v) + "§7 each (§6" + Fmt.cd(v * s.getCount()) + "§7 for this stack)."));
+    }
+
+    static void sell(ServerPlayer p, boolean all) {
+        ItemStack hand = p.getMainHandItem();
+        long each = priceOf(hand);
+        if (each < 0) { fail(p, hand.isEmpty() ? "Hold the item you want to sell." : "That item can't be sold."); return; }
+        int count = 0;
+        if (all) {
+            var item = hand.getItem();
+            for (ItemStack st : p.getInventory().items) if (st.is(item) && priceOf(st) == each) { count += st.getCount(); st.setCount(0); }
+        } else { count = hand.getCount(); hand.setCount(0); }
+        long total = each * count;
+        Economy.give(p, total);
+        p.playNotifySound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.MASTER, 0.6f, 1.1f);
+        p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aSold §f" + count + "x " + hand.getHoverName().getString() + "§a for §6" + Fmt.cd(total) + "§a."));
     }
 }

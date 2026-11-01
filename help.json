@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "start",
+      "name": "Getting Started",
+      "icon": "minecraft:compass",
+      "commands": [
+        [
+          "/help",
+          "This menu. Click a category to see its commands."
+        ],
+        [
+          "/jobs",
+          "Your active jobs and where to go next."
+        ],
+        [
+          "/jobs all",
+          "Every job on the server."
+        ],
+        [
+          "Quest book",
+          "Open it from the button in your inventory. Every quest pays CobbleDollars."
+        ],
+        [
+          "Trainer Association",
+          "Find one in any village to start a trainer series and raise your Level Cap."
+        ]
+      ]
+    },
+    {
+      "id": "trading",
+      "name": "Trading",
+      "icon": "minecraft:emerald",
+      "commands": [
+        [
+          "/gts",
+          "Buy, sell and auction Pokémon and items."
+        ],
+        [
+          "/gts claims",
+          "Collect sales, refunds and won auctions."
+        ],
+        [
+          "/gts mine",
+          "See and cancel your listings."
+        ],
+        [
+          "/wondertrade",
+          "Swap a Pokémon for a random one, anonymously."
+        ]
+      ]
+    },
+    {
+      "id": "money",
+      "name": "Money and Shop",
+      "icon": "minecraft:gold_ingot",
+      "commands": [
+        [
+          "/shop",
+          "Poké Balls, healing, training, keys, titles and more."
+        ],
+        [
+          "/sell",
+          "Sell the item in your hand."
+        ],
+        [
+          "/sell all",
+          "Sell every one of the held item you carry."
+        ],
+        [
+          "/sell price",
+          "See what the item in your hand is worth."
+        ]
+      ]
+    },
+    {
+      "id": "crates",
+      "name": "Crates and Keys",
+      "icon": "jcl_gts:great_key",
+      "commands": [
+        [
+          "Left-click a crate",
+          "See every reward, its chance and your pity."
+        ],
+        [
+          "Right-click with a key",
+          "Open the crate."
+        ],
+        [
+          "/crate preview <tier>",
+          "Preview a crate from anywhere: poke, great, ultra or master."
+        ],
+        [
+          "/crate merge",
+          "Merge keys into a higher tier, for a fee."
+        ]
+      ]
+    },
+    {
+      "id": "titles",
+      "name": "Titles and Colours",
+      "icon": "minecraft:name_tag",
+      "commands": [
+        [
+          "/titles",
+          "Pick a title to show in chat and the tab list."
+        ],
+        [
+          "/titles list",
+          "Every title you've unlocked."
+        ],
+        [
+          "/titles color",
+          "Pick a colour for your name."
+        ],
+        [
+          "/titles clear",
+          "Take your title off."
+        ]
+      ]
+    },
+    {
+      "id": "pokemon",
+      "name": "Pokémon",
+      "icon": "cobblemon:poke_ball",
+      "commands": [
+        [
+          "Spawn alerts",
+          "You get a ping when something rare spawns near you."
+        ],
+        [
+          "Chores",
+          "Daily, weekly and monthly goals in the quest book. Finishing all of one tier pays crate keys."
+        ],
+        [
+          "Fight or Flight",
+          "Wild Pokémon your team knocks out still count toward chores."
+        ]
+      ]
+    }
+  ]
+}

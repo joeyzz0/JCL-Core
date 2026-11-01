@@ -301,5 +301,92 @@
       "category": "staff",
       "how": "Helped test the server before launch."
     }
+  ],
+  "version": 2,
+  "colors": [
+    {
+      "id": "green",
+      "code": "&a",
+      "name": "Green",
+      "how": "Buy it in /shop for 10,000 CobbleDollars."
+    },
+    {
+      "id": "aqua",
+      "code": "&b",
+      "name": "Aqua",
+      "how": "Buy it in /shop for 10,000 CobbleDollars."
+    },
+    {
+      "id": "yellow",
+      "code": "&e",
+      "name": "Yellow",
+      "how": "Buy it in /shop for 10,000 CobbleDollars."
+    },
+    {
+      "id": "pink",
+      "code": "&d",
+      "name": "Pink",
+      "how": "Buy it in /shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "red",
+      "code": "&c",
+      "name": "Red",
+      "how": "Buy it in /shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "blue",
+      "code": "&9",
+      "name": "Blue",
+      "how": "Buy it in /shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "gold",
+      "code": "&6",
+      "name": "Gold",
+      "how": "Buy it in /shop for 30,000 CobbleDollars."
+    },
+    {
+      "id": "purple",
+      "code": "&5",
+      "name": "Purple",
+      "how": "Buy it in /shop for 30,000 CobbleDollars."
+    },
+    {
+      "id": "dark_green",
+      "code": "&2",
+      "name": "Dark Green",
+      "how": "Buy it in /shop for 20,000 CobbleDollars."
+    },
+    {
+      "id": "dark_aqua",
+      "code": "&3",
+      "name": "Teal",
+      "how": "Buy it in /shop for 20,000 CobbleDollars."
+    },
+    {
+      "id": "gray",
+      "code": "&7",
+      "name": "Silver",
+      "how": "Buy it in /shop for 8,000 CobbleDollars."
+    },
+    {
+      "id": "bold_gold",
+      "code": "&6&l",
+      "name": "Bold Gold",
+      "how": "Buy it in /shop for 75,000 CobbleDollars."
+    },
+    {
+      "id": "bold_aqua",
+      "code": "&b&l",
+      "name": "Bold Aqua",
+      "how": "Buy it in /shop for 75,000 CobbleDollars."
+    },
+    {
+      "id": "bold_red",
+      "code": "&c&l",
+      "name": "Bold Red",
+      "how": "Buy it in /shop for 75,000 CobbleDollars."
+    }
   ]
 }

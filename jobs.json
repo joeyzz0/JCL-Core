@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "npcs": [
+    {
+      "id": "guide",
+      "name": "&bGuide Mae",
+      "profession": "minecraft:cartographer",
+      "idle": [
+        "Welcome to Port Azure! Lost? Type /help any time.",
+        "The crates are east of the plaza. Left-click one to see what's inside!",
+        "Every quest pays CobbleDollars. Check your quest book often!"
+      ]
+    },
+    {
+      "id": "nurse",
+      "name": "&dNurse Joy",
+      "profession": "minecraft:cleric",
+      "idle": [
+        "Your Pokémon are looking healthy today!",
+        "The healing machine is behind the counter. Help yourself!"
+      ]
+    },
+    {
+      "id": "clerk",
+      "name": "&aClerk Ollie",
+      "profession": "minecraft:librarian",
+      "idle": [
+        "Fresh stock every day! Well, the same stock, but fresh.",
+        "Hold an item and type /sell to sell it."
+      ]
+    },
+    {
+      "id": "crates",
+      "name": "&6Crate Keeper Rin",
+      "profession": "minecraft:toolsmith",
+      "idle": [
+        "Feeling lucky? Left-click a crate to see the odds.",
+        "Five keys merge into one of the next tier. For a fee, of course."
+      ]
+    },
+    {
+      "id": "archivist",
+      "name": "&3Archivist Wren",
+      "profession": "minecraft:librarian",
+      "type": "minecraft:snow",
+      "idle": [
+        "The leaderboards reset at the start of each month. Mostly.",
+        "Pin your base on the map board so friends can visit!"
+      ]
+    },
+    {
+      "id": "coach",
+      "name": "&cEV Coach Tess",
+      "profession": "minecraft:armorer",
+      "idle": [
+        "Every stat has a training spot. Step through the gate to start!",
+        "Power items make EV training much faster."
+      ]
+    },
+    {
+      "id": "referee",
+      "name": "&9Referee Kai",
+      "profession": "minecraft:weaponsmith",
+      "idle": [
+        "Challenge a friend on the court. Fair play only!",
+        "The red box and the blue box are where trainers stand."
+      ]
+    },
+    {
+      "id": "captain",
+      "name": "&eCaptain Marlo",
+      "profession": "minecraft:fisherman",
+      "type": "minecraft:swamp",
+      "idle": [
+        "The sea's calm today. Good day for a ride.",
+        "Treat that Lapras well and it'll carry you anywhere."
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "welcome_tour",
+      "name": "Welcome Tour",
+      "description": "Meet everyone in Port Azure.",
+      "repeatable": false,
+      "steps": [
+        {
+          "npc": "guide",
+          "where": "by the fountain in the spawn plaza",
+          "lines": [
+            "Welcome to Port Azure, {player}! I'm Mae, and I help new trainers find their feet.",
+            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the building with the red roof.",
+            "Meet everyone, then find Captain Marlo at the docks. He has a gift for you!"
+          ]
+        },
+        {
+          "npc": "nurse",
+          "where": "inside the Pokémon Center (red roof, north-west)",
+          "lines": [
+            "Hello, and welcome to the Pokémon Center!",
+            "Use the healing machine whenever you like. The GTS and Wonder Trade kiosks are here too.",
+            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, just south of here."
+          ]
+        },
+        {
+          "npc": "clerk",
+          "where": "inside the Poké Mart (teal roof, west of the plaza)",
+          "lines": [
+            "Welcome to the Poké Mart! Type /shop to see everything we sell.",
+            "Poké Balls, healing, keys, titles and name colours. And /sell buys your extras.",
+            "Rin runs the crates across the plaza. Go take a look!"
+          ]
+        },
+        {
+          "npc": "crates",
+          "where": "at the Crate Plaza (east of the plaza)",
+          "lines": [
+            "Crates! Left-click one to see every reward and its exact chance.",
+            "Hold a key and right-click to open. Keys come from chores, quests, loot balls and the shop.",
+            "Wren keeps the records up north. Go see your name on the leaderboards!"
+          ]
+        },
+        {
+          "npc": "archivist",
+          "where": "by the leaderboards (north-east)",
+          "lines": [
+            "These boards track the most Pokémon caught, the most trainers beaten and the richest trainers.",
+            "The map board is next door. Pin your base so friends can find you!",
+            "Tess trains Pokémon down by the beach. She'll teach you about EVs."
+          ]
+        },
+        {
+          "npc": "coach",
+          "where": "at the EV Training gate (south-west beach)",
+          "lines": [
+            "Want stronger Pokémon? EVs are the secret.",
+            "Step through this gate to reach the training grounds. Each area trains a different stat.",
+            "Kai referees battles at the Trainer Court across town. Go meet him!"
+          ]
+        },
+        {
+          "npc": "referee",
+          "where": "at the Trainer Court (south-east)",
+          "lines": [
+            "This is where trainers settle things. Challenge a friend any time!",
+            "Battle fair, and shake hands after.",
+            "Last stop: Captain Marlo at the harbour. I hear he has something special for you."
+          ]
+        },
+        {
+          "npc": "captain",
+          "where": "at the end of the harbour pier",
+          "lines": [
+            "Ahoy! So you've met the whole town, eh? Mae said you'd come.",
+            "This Lapras has been waiting for a trainer worth sailing with. She's yours.",
+            "Her riding stats are maxed out. Take her anywhere the sea goes!"
+          ]
+        }
+      ],
+      "reward": {
+        "money": 2500,
+        "commands": [],
+        "pokemon": {
+          "species": "lapras",
+          "level": 25,
+          "shiny": false,
+          "maxRideStats": true
+        },
+        "message": "You received a Lapras with maxed riding stats, and 2,500 CobbleDollars!"
+      }
+    }
+  ]
+}

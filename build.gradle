@@ -32,10 +32,10 @@ sourceSets {
 
 processResources {
     from('neoforge.mods.toml') { into 'META-INF' }
-    from(['poke_key.png', 'great_key.png', 'ultra_key.png', 'master_key.png']) { into 'assets/jcl_gts/textures/item' }
-    from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json']) { into 'assets/jcl_gts/models/item' }
+    from(['poke_key.png', 'great_key.png', 'ultra_key.png', 'master_key.png', 'crate_remover.png']) { into 'assets/jcl_gts/textures/item' }
+    from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json', 'crate_remover.json']) { into 'assets/jcl_gts/models/item' }
     from('en_us.json') { into 'assets/jcl_gts/lang' }
-    from(['crates.json', 'shop.json', 'titles.json']) { into 'jcl_defaults' }
+    from(['crates.json', 'shop.json', 'titles.json', 'jobs.json', 'help.json']) { into 'jcl_defaults' }
 }
 
 neoForge {

@@ -31,6 +31,7 @@ public final class Tablist {
     private Tablist() {}
 
     public static final class Config {
+        public int version = 2;
         public boolean enabled = true;
         public int refreshSeconds = 3;
         public String timeZone = "America/New_York";
@@ -44,7 +45,7 @@ public final class Tablist {
                 "§7Online: §a{online}§7/§a{max}   §7Ping: §b{ping}ms   §7TPS: §a{tps}",
                 "§7Balance: §6{balance}   §7Time: §f{time}",
                 "",
-                "§d/gts §8• §d/wondertrade §8• §e/trigger shop §8• §a/trigger bank",
+                "§e/shop §8• §a/sell §8• §d/gts §8• §b/titles §8• §f/help",
                 "§9discord.gg/4hHNvcJagV   §5twitch.tv/joeyzz0",
                 "");
         public boolean useLuckPermsPrefix = true;
@@ -65,7 +66,13 @@ public final class Tablist {
         Path p = Path.of("config", name);
         T out = dflt;
         try {
-            if (Files.exists(p)) { T read = GSON.fromJson(Files.readString(p), type); if (read != null) out = read; }
+            if (Files.exists(p)) {
+                T read = GSON.fromJson(Files.readString(p), type);
+                int have = 0, want = 0;
+                try { have = read == null ? 0 : read.getClass().getField("version").getInt(read); want = dflt.getClass().getField("version").getInt(dflt); } catch (Exception ignored) {}
+                if (read != null && have >= want) out = read;
+                else Files.writeString(p.resolveSibling(name + ".bak"), Files.readString(p));
+            }
             Files.createDirectories(p.getParent());
             Files.writeString(p, GSON.toJson(out));
         } catch (Exception ex) { GtsMod.LOG.error("[JCL] Could not read config/" + name + ", using defaults", ex); }
@@ -91,8 +98,8 @@ public final class Tablist {
     @SubscribeEvent
     public static void onTabName(PlayerEvent.TabListNameFormat e) {
         if (!cfg.enabled) return;
-        String title = Titles.prefix(e.getEntity());
-        if (title != null) { e.setDisplayName(Component.literal(title + " §r").append(e.getEntity().getName())); return; }
+        Component decorated = Titles.decorated(e.getEntity());
+        if (decorated != null) { e.setDisplayName(decorated); return; }
         if (!cfg.useLuckPermsPrefix) return;
         String prefix = luckPermsPrefix(e.getEntity().getUUID());
         if (prefix == null || prefix.isEmpty()) return;

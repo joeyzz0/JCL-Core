@@ -24,6 +24,14 @@ public final class Keys {
     public static final DeferredItem<Item> MASTER = ITEMS.register("master_key", () -> new KeyItem("master", new Item.Properties().rarity(Rarity.EPIC)
             .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
+    /** Admin tool: hit a crate with it to turn the crate back into a normal block. */
+    public static final DeferredItem<Item> CRATE_REMOVER = ITEMS.register("crate_remover", () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)) {
+        @Override
+        public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> lines, TooltipFlag flag) {
+            lines.add(Component.literal("§7Admin tool. Left-click a crate to remove it."));
+        }
+    });
+
     static Item item(String tier) {
         return switch (tier) {
             case "poke" -> POKE.get();

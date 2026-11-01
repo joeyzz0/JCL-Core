@@ -97,6 +97,7 @@ public final class Crates {
     }
 
     public static final class Config {
+        public int version;
         public List<String> announceRarities = List.of("epic", "legendary");
         public List<String> discordRarities = List.of("legendary");
         public Map<String, Crate> crates = new LinkedHashMap<>();
@@ -127,13 +128,8 @@ public final class Crates {
 
     static void load() {
         try {
-            Path f = cfgFile();
-            if (!Files.exists(f)) {
-                String d = readDefault("crates.json");
-                Files.createDirectories(f.getParent());
-                if (d != null) Files.writeString(f, d);
-            }
-            Config c = GSON.fromJson(Files.readString(f), Config.class);
+            String json = Defaults.load("jcl_crates.json");
+            Config c = json == null ? null : GSON.fromJson(json, Config.class);
             if (c != null) cfg = c;
         } catch (Exception e) { GtsMod.LOG.error("[JCL] Could not read config/jcl_crates.json", e); }
         try {
@@ -173,10 +169,17 @@ public final class Crates {
     @SubscribeEvent
     public static void onLeftClick(PlayerInteractEvent.LeftClickBlock e) {
         if (e.getLevel().isClientSide() || !(e.getEntity() instanceof ServerPlayer p)) return;
-        String tier = data.blocks.get(posKey(p, e.getPos()));
+        String key = posKey(p, e.getPos());
+        String tier = data.blocks.get(key);
         if (tier == null) return;
         e.setCanceled(true);
-        if (e.getAction() == PlayerInteractEvent.LeftClickBlock.Action.START) preview(p, tier);
+        if (e.getAction() != PlayerInteractEvent.LeftClickBlock.Action.START) return;
+        if (p.getMainHandItem().is(Keys.CRATE_REMOVER.get()) && p.hasPermissions(2)) {
+            data.blocks.remove(key); save(); removeHologram(p, e.getPos());
+            p.sendSystemMessage(Component.literal("§aCrate removed. The block is normal again."));
+            return;
+        }
+        preview(p, tier);
     }
 
     @SubscribeEvent
@@ -185,8 +188,35 @@ public final class Crates {
         String tier = data.blocks.get(posKey(p, e.getPos()));
         if (tier == null) return;
         e.setCanceled(true);
-        if (tier.equals(Keys.tierOf(p.getMainHandItem()))) open(p, tier);
-        else preview(p, tier);
+        if (tier.equals(Keys.tierOf(p.getMainHandItem()))) { open(p, tier); return; }
+        sound(p, SoundEvents.VILLAGER_NO, 1f);
+        p.sendSystemMessage(Component.literal("§7Hold a §f" + new ItemStack(Keys.item(tier)).getHoverName().getString() + "§7 and right-click to open. §eLeft-click§7 to see the rewards."));
+    }
+
+    // ------------------------------------------------------------------ floating text above crates
+
+    private static String holoTag(BlockPos pos) { return "jclc_" + pos.getX() + "_" + pos.getY() + "_" + pos.getZ(); }
+
+    static void spawnHologram(ServerPlayer p, BlockPos pos, String tier) {
+        Crate c = cfg.crates.get(tier);
+        if (c == null) return;
+        removeHologram(p, pos);
+        double x = pos.getX() + 0.5, z = pos.getZ() + 0.5;
+        summonText(p, x, pos.getY() + 1.85, z, c.color + "§l" + c.name, holoTag(pos), 1.2f);
+        summonText(p, x, pos.getY() + 1.55, z, "§7Left-click to preview", holoTag(pos), 0.8f);
+        summonText(p, x, pos.getY() + 1.32, z, "§8Right-click with a key to open", holoTag(pos), 0.7f);
+    }
+
+    private static void summonText(ServerPlayer p, double x, double y, double z, String text, String tag, float scale) {
+        JsonObject t = new JsonObject(); t.addProperty("text", text);
+        String cmd = String.format(java.util.Locale.ROOT, "summon minecraft:text_display %.3f %.3f %.3f {text:'%s',billboard:\"center\",see_through:0b,shadow:1b,background:1073741824,transformation:{scale:[%.2ff,%.2ff,%.2ff],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},Tags:[\"jcl_crate\",\"%s\"]}",
+                x, y, z, t.toString().replace("'", "\\'"), scale, scale, scale, tag);
+        server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withLevel(p.serverLevel()).withSuppressedOutput(), cmd);
+    }
+
+    static void removeHologram(ServerPlayer p, BlockPos pos) {
+        server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withLevel(p.serverLevel()).withSuppressedOutput(),
+                "kill @e[type=minecraft:text_display,tag=" + holoTag(pos) + "]");
     }
 
     // ================================================================== commands
@@ -216,7 +246,7 @@ public final class Crates {
                             String t = StringArgumentType.getString(c, "tier");
                             BlockPos pos = lookedAt(p);
                             if (pos == null || !cfg.crates.containsKey(t)) { c.getSource().sendFailure(Component.literal("Look at a block within 6 blocks, and use poke, great, ultra or master.")); return 0; }
-                            data.blocks.put(posKey(p, pos), t); save();
+                            data.blocks.put(posKey(p, pos), t); save(); spawnHologram(p, pos, t);
                             p.sendSystemMessage(Component.literal("§aThat block is now a " + cfg.crates.get(t).name + "."));
                             return 1;
                         })))
@@ -224,9 +254,21 @@ public final class Crates {
                     ServerPlayer p = c.getSource().getPlayerOrException();
                     BlockPos pos = lookedAt(p);
                     if (pos == null || data.blocks.remove(posKey(p, pos)) == null) { c.getSource().sendFailure(Component.literal("You're not looking at a crate.")); return 0; }
-                    save(); p.sendSystemMessage(Component.literal("§aCrate removed. The block is normal again."));
+                    save(); removeHologram(p, pos); p.sendSystemMessage(Component.literal("§aCrate removed. The block is normal again."));
                     return 1;
                 }))
+                .then(Commands.literal("holograms").requires(s -> s.hasPermission(2)).executes(c -> {
+                    ServerPlayer p = c.getSource().getPlayerOrException();
+                    int n = 0;
+                    for (Map.Entry<String, String> en : data.blocks.entrySet()) {
+                        String[] k = en.getKey().split("\\|");
+                        if (!k[0].equals(p.level().dimension().location().toString())) continue;
+                        spawnHologram(p, new BlockPos(Integer.parseInt(k[1]), Integer.parseInt(k[2]), Integer.parseInt(k[3])), en.getValue()); n++;
+                    }
+                    int fn = n; c.getSource().sendSuccess(() -> Component.literal("§aRefreshed the floating text on " + fn + " crates."), true);
+                    return 1;
+                }))
+                .then(Commands.literal("remover").requires(s -> s.hasPermission(2)).executes(c -> { giveStack(c.getSource().getPlayerOrException(), new ItemStack(Keys.CRATE_REMOVER.get())); return 1; }))
                 .then(Commands.literal("reload").requires(s -> s.hasPermission(2)).executes(c -> { load(); c.getSource().sendSuccess(() -> Component.literal("§aCrate config reloaded."), true); return 1; }))
                 .then(Commands.literal("pity").requires(s -> s.hasPermission(2)).then(Commands.argument("player", EntityArgument.player()).executes(c -> {
                     ServerPlayer t = EntityArgument.getPlayer(c, "player");
