@@ -1,0 +1,305 @@
+{
+  "titles": [
+    {
+      "id": "rookie",
+      "prefix": "&8[&fRookie&8]",
+      "name": "Rookie",
+      "category": "quest",
+      "how": "Finish \"Welcome to the League\" in the quest book."
+    },
+    {
+      "id": "kanto_champion",
+      "prefix": "&8[&c🏆 Kanto Champion&8]",
+      "name": "Kanto Champion",
+      "category": "quest",
+      "how": "Defeat Champion Terry in Radical Red."
+    },
+    {
+      "id": "sinnoh_champion",
+      "prefix": "&8[&b🏆 Sinnoh Champion&8]",
+      "name": "Sinnoh Champion",
+      "category": "quest",
+      "how": "Defeat Champion Cynthia in Brilliant Diamond."
+    },
+    {
+      "id": "hoenn_champion",
+      "prefix": "&8[&9🏆 Hoenn Champion&8]",
+      "name": "Hoenn Champion",
+      "category": "quest",
+      "how": "Defeat Champion Steven in the Hoenn League."
+    },
+    {
+      "id": "unova_champion",
+      "prefix": "&8[&f🏆 Unova Champion&8]",
+      "name": "Unova Champion",
+      "category": "quest",
+      "how": "Defeat Champion Alder or Champion Iris."
+    },
+    {
+      "id": "kalos_champion",
+      "prefix": "&8[&d🏆 Kalos Champion&8]",
+      "name": "Kalos Champion",
+      "category": "quest",
+      "how": "Defeat Champion Diantha in the Kalos League."
+    },
+    {
+      "id": "paldea_champion",
+      "prefix": "&8[&6🏆 Paldea Champion&8]",
+      "name": "Paldea Champion",
+      "category": "quest",
+      "how": "Defeat Champion Geeta in the Paldea Elite Four."
+    },
+    {
+      "id": "borrius_champion",
+      "prefix": "&8[&a🏆 Borrius Champion&8]",
+      "name": "Borrius Champion",
+      "category": "quest",
+      "how": "Defeat Champion Jax in Unbound."
+    },
+    {
+      "id": "aqua_buster",
+      "prefix": "&8[&3🌊 Aqua Buster&8]",
+      "name": "Aqua Buster",
+      "category": "quest",
+      "how": "Finish the Team Aqua series."
+    },
+    {
+      "id": "magma_buster",
+      "prefix": "&8[&c🌋 Magma Buster&8]",
+      "name": "Magma Buster",
+      "category": "quest",
+      "how": "Finish the Team Magma series."
+    },
+    {
+      "id": "plasma_breaker",
+      "prefix": "&8[&b⚡ Plasma Breaker&8]",
+      "name": "Plasma Breaker",
+      "category": "quest",
+      "how": "Finish the Neo Team Plasma series."
+    },
+    {
+      "id": "star_struck",
+      "prefix": "&8[&d★ Star Struck&8]",
+      "name": "Star Struck",
+      "category": "quest",
+      "how": "Finish the Starfall Street series."
+    },
+    {
+      "id": "grand_slammer",
+      "prefix": "&8[&e⭐ Grand Slammer&8]",
+      "name": "Grand Slammer",
+      "category": "quest",
+      "how": "Complete the Grand Slam chore."
+    },
+    {
+      "id": "master_chef",
+      "prefix": "&8[&6🍳 Master Chef&8]",
+      "name": "Master Chef",
+      "category": "quest",
+      "how": "Finish the Pokémon Cooking chapter."
+    },
+    {
+      "id": "engineer",
+      "prefix": "&8[&6⚙ Engineer&8]",
+      "name": "Engineer",
+      "category": "quest",
+      "how": "Finish the Create chapter."
+    },
+    {
+      "id": "network_architect",
+      "prefix": "&8[&3⌘ Network Architect&8]",
+      "name": "Network Architect",
+      "category": "quest",
+      "how": "Finish the AE2 Automation chapter."
+    },
+    {
+      "id": "master",
+      "prefix": "&5[&d&l✦ MASTER ✦&5]",
+      "name": "Master",
+      "category": "quest",
+      "how": "Earn the Master Ribbon by beating every trainer series."
+    },
+    {
+      "id": "youngster",
+      "prefix": "&8[&aYoungster&8]",
+      "name": "Youngster",
+      "category": "shop",
+      "how": "Buy it in the shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "lass",
+      "prefix": "&8[&dLass&8]",
+      "name": "Lass",
+      "category": "shop",
+      "how": "Buy it in the shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "bug_catcher",
+      "prefix": "&8[&2Bug Catcher&8]",
+      "name": "Bug Catcher",
+      "category": "shop",
+      "how": "Buy it in the shop for 20,000 CobbleDollars."
+    },
+    {
+      "id": "hiker",
+      "prefix": "&8[&6Hiker&8]",
+      "name": "Hiker",
+      "category": "shop",
+      "how": "Buy it in the shop for 25,000 CobbleDollars."
+    },
+    {
+      "id": "swimmer",
+      "prefix": "&8[&bSwimmer&8]",
+      "name": "Swimmer",
+      "category": "shop",
+      "how": "Buy it in the shop for 25,000 CobbleDollars."
+    },
+    {
+      "id": "fisherman",
+      "prefix": "&8[&3Fisherman&8]",
+      "name": "Fisherman",
+      "category": "shop",
+      "how": "Buy it in the shop for 30,000 CobbleDollars."
+    },
+    {
+      "id": "black_belt",
+      "prefix": "&8[&4Black Belt&8]",
+      "name": "Black Belt",
+      "category": "shop",
+      "how": "Buy it in the shop for 40,000 CobbleDollars."
+    },
+    {
+      "id": "psychic",
+      "prefix": "&8[&5Psychic&8]",
+      "name": "Psychic",
+      "category": "shop",
+      "how": "Buy it in the shop for 40,000 CobbleDollars."
+    },
+    {
+      "id": "beauty",
+      "prefix": "&8[&dBeauty&8]",
+      "name": "Beauty",
+      "category": "shop",
+      "how": "Buy it in the shop for 50,000 CobbleDollars."
+    },
+    {
+      "id": "gentleman",
+      "prefix": "&8[&7Gentleman&8]",
+      "name": "Gentleman",
+      "category": "shop",
+      "how": "Buy it in the shop for 75,000 CobbleDollars."
+    },
+    {
+      "id": "poke_maniac",
+      "prefix": "&8[&ePoké Maniac&8]",
+      "name": "Poké Maniac",
+      "category": "shop",
+      "how": "Buy it in the shop for 100,000 CobbleDollars."
+    },
+    {
+      "id": "ace_trainer",
+      "prefix": "&8[&b&lAce Trainer&8]",
+      "name": "Ace Trainer",
+      "category": "shop",
+      "how": "Buy it in the shop for 150,000 CobbleDollars."
+    },
+    {
+      "id": "gambler",
+      "prefix": "&8[&9🎲 Gambler&8]",
+      "name": "Gambler",
+      "category": "crate",
+      "how": "A rare pull from the Great Crate."
+    },
+    {
+      "id": "lucky",
+      "prefix": "&8[&a☘ Lucky&8]",
+      "name": "Lucky",
+      "category": "crate",
+      "how": "A rare pull from the Ultra Crate."
+    },
+    {
+      "id": "high_roller",
+      "prefix": "&8[&e💰 High Roller&8]",
+      "name": "High Roller",
+      "category": "crate",
+      "how": "A rare pull from the Master Crate."
+    },
+    {
+      "id": "golden",
+      "prefix": "&6[&e&l★ GOLDEN ★&6]",
+      "name": "Golden",
+      "category": "crate",
+      "how": "The rarest pull in the Master Crate."
+    },
+    {
+      "id": "owner",
+      "prefix": "&4[&c&lOWNER&4]",
+      "name": "Owner",
+      "category": "staff",
+      "how": "Server owner."
+    },
+    {
+      "id": "admin",
+      "prefix": "&4[&cAdmin&4]",
+      "name": "Admin",
+      "category": "staff",
+      "how": "Server administrator."
+    },
+    {
+      "id": "moderator",
+      "prefix": "&3[&bMod&3]",
+      "name": "Moderator",
+      "category": "staff",
+      "how": "Server moderator."
+    },
+    {
+      "id": "builder",
+      "prefix": "&2[&aBuilder&2]",
+      "name": "Builder",
+      "category": "staff",
+      "how": "Server builder."
+    },
+    {
+      "id": "streamer",
+      "prefix": "&5[&d📺 Streamer&5]",
+      "name": "Streamer",
+      "category": "staff",
+      "how": "Content creator."
+    },
+    {
+      "id": "tournament_champion",
+      "prefix": "&6[&e&l👑 Tournament Champion&6]",
+      "name": "Tournament Champion",
+      "category": "staff",
+      "how": "Win an official server tournament."
+    },
+    {
+      "id": "tournament_finalist",
+      "prefix": "&8[&e🥈 Finalist&8]",
+      "name": "Tournament Finalist",
+      "category": "staff",
+      "how": "Reach the final of an official tournament."
+    },
+    {
+      "id": "event_winner",
+      "prefix": "&8[&d🎉 Event Winner&8]",
+      "name": "Event Winner",
+      "category": "staff",
+      "how": "Win a server event."
+    },
+    {
+      "id": "founder",
+      "prefix": "&6[&eFounder&6]",
+      "name": "Founder",
+      "category": "staff",
+      "how": "One of the server's first players."
+    },
+    {
+      "id": "beta_tester",
+      "prefix": "&8[&7Beta Tester&8]",
+      "name": "Beta Tester",
+      "category": "staff",
+      "how": "Helped test the server before launch."
+    }
+  ]
+}

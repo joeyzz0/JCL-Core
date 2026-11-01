@@ -272,7 +272,7 @@
         {
           "name": "8,000 CobbleDollars",
           "rarity": "common",
-          "weight": 7.5,
+          "weight": 6.5,
           "type": "money",
           "money": 8000
         },
@@ -482,6 +482,14 @@
           "type": "money",
           "money": 350000,
           "jackpot": true
+        },
+        {
+          "name": "Title: Gambler",
+          "rarity": "rare",
+          "weight": 1,
+          "type": "title",
+          "title": "gambler",
+          "money": 10000
         }
       ]
     },
@@ -493,7 +501,7 @@
         {
           "name": "25,000 CobbleDollars",
           "rarity": "common",
-          "weight": 8.6,
+          "weight": 6.6,
           "type": "money",
           "money": 25000
         },
@@ -742,6 +750,14 @@
           "type": "money",
           "money": 1750000,
           "jackpot": true
+        },
+        {
+          "name": "Title: Lucky",
+          "rarity": "epic",
+          "weight": 2,
+          "type": "title",
+          "title": "lucky",
+          "money": 40000
         }
       ]
     },
@@ -753,7 +769,7 @@
         {
           "name": "75,000 CobbleDollars",
           "rarity": "rare",
-          "weight": 9.7,
+          "weight": 5.7,
           "type": "money",
           "money": 75000
         },
@@ -968,6 +984,22 @@
           "type": "money",
           "money": 6500000,
           "jackpot": true
+        },
+        {
+          "name": "Title: High Roller",
+          "rarity": "epic",
+          "weight": 3,
+          "type": "title",
+          "title": "high_roller",
+          "money": 150000
+        },
+        {
+          "name": "Title: Golden",
+          "rarity": "legendary",
+          "weight": 1,
+          "type": "title",
+          "title": "golden",
+          "money": 400000
         }
       ]
     }

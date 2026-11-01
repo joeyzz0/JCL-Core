@@ -77,6 +77,7 @@ public final class Crates {
         public long money;
         public List<String> commands = new ArrayList<>();
         public String key;
+        public String title;
         public int level = 30;
         public boolean shiny, legendary, jackpot;
     }
@@ -261,7 +262,7 @@ public final class Crates {
             case "money" -> new ItemStack(r.jackpot ? Items.GOLD_BLOCK : Items.SUNFLOWER);
             case "key" -> new ItemStack(Keys.item(r.key));
             case "pokemon" -> new ItemStack(r.legendary ? Items.TOTEM_OF_UNDYING : Items.NETHER_STAR);
-            case "command" -> new ItemStack(Items.NAME_TAG);
+            case "command", "title" -> new ItemStack(Items.NAME_TAG);
             default -> r.items.isEmpty() ? new ItemStack(Items.CHEST) : new ItemStack(resolve(r.items.get(0)), Math.max(1, Math.min(64, r.count)));
         };
     }
@@ -329,6 +330,7 @@ public final class Crates {
             lore.add("§7Chance: §f" + pct(r.weight, tot) + " §8(1 in " + Math.max(1, Math.round(tot / Math.max(r.weight, 0.0001))) + ")");
             if ("item".equals(r.type) && r.items.size() > 1) lore.add("§7One random pick from §f" + r.items.size() + "§7 items");
             if ("item".equals(r.type) || "key".equals(r.type)) lore.add("§7Amount: §f" + r.count);
+            if ("title".equals(r.type)) { lore.add("§7Unlocks a chat title. Equip it with §f/titles§7."); lore.add("§8Already have it? You get " + Fmt.cd(r.money) + " instead."); }
             if ("pokemon".equals(r.type)) lore.add("§7Level §f" + r.level + (r.shiny ? " §e✦ Shiny" : "") + (r.legendary ? " §6Legendary" : ""));
             if (r.jackpot) lore.add("§8Pity never gives a jackpot. Pure luck!");
             ItemStack icon = Gui.named(iconFor(r), rarityColor(r.rarity) + r.name, lore.toArray(new String[0]));
@@ -415,6 +417,11 @@ public final class Crates {
         switch (r.type) {
             case "money" -> { Economy.give(p, r.money); return Fmt.cd(r.money); }
             case "key" -> { ItemStack k = new ItemStack(Keys.item(r.key), r.count); giveStack(p, k.copy()); return (r.count > 1 ? r.count + "x " : "") + k.getHoverName().getString(); }
+            case "title" -> {
+                if (Titles.has(p, r.title)) { Economy.give(p, r.money); return r.name + " (already owned, refunded " + Fmt.cd(r.money) + ")"; }
+                Titles.grant(p, r.title);
+                return r.name;
+            }
             case "command" -> {
                 for (String cmd : r.commands) server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), cmd.replace("{player}", p.getGameProfile().getName()));
                 return r.name;

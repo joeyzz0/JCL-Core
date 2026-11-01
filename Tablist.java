@@ -90,7 +90,10 @@ public final class Tablist {
     /** Puts the player's LuckPerms prefix in front of their name in the tab list. */
     @SubscribeEvent
     public static void onTabName(PlayerEvent.TabListNameFormat e) {
-        if (!cfg.enabled || !cfg.useLuckPermsPrefix) return;
+        if (!cfg.enabled) return;
+        String title = Titles.prefix(e.getEntity());
+        if (title != null) { e.setDisplayName(Component.literal(title + " §r").append(e.getEntity().getName())); return; }
+        if (!cfg.useLuckPermsPrefix) return;
         String prefix = luckPermsPrefix(e.getEntity().getUUID());
         if (prefix == null || prefix.isEmpty()) return;
         e.setDisplayName(Component.literal(prefix.replace('&', '§') + "§r").append(e.getEntity().getName()));

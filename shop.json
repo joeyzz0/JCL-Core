@@ -289,16 +289,137 @@
       ]
     },
     {
-      "name": "§d§lRanks",
+      "name": "§d§lTitles",
       "icon": "minecraft:name_tag",
       "items": [
         {
-          "name": "Rank: Trainer+",
+          "name": "Title: Youngster",
+          "icon": "minecraft:name_tag",
+          "price": 15000,
+          "description": "Unlocks the Youngster title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.youngster true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Lass",
+          "icon": "minecraft:name_tag",
+          "price": 15000,
+          "description": "Unlocks the Lass title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.lass true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Bug Catcher",
+          "icon": "minecraft:name_tag",
+          "price": 20000,
+          "description": "Unlocks the Bug Catcher title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.bug_catcher true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Hiker",
+          "icon": "minecraft:name_tag",
+          "price": 25000,
+          "description": "Unlocks the Hiker title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.hiker true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Swimmer",
+          "icon": "minecraft:name_tag",
+          "price": 25000,
+          "description": "Unlocks the Swimmer title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.swimmer true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Fisherman",
+          "icon": "minecraft:name_tag",
+          "price": 30000,
+          "description": "Unlocks the Fisherman title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.fisherman true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Black Belt",
+          "icon": "minecraft:name_tag",
+          "price": 40000,
+          "description": "Unlocks the Black Belt title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.black_belt true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Psychic",
+          "icon": "minecraft:name_tag",
+          "price": 40000,
+          "description": "Unlocks the Psychic title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.psychic true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Beauty",
           "icon": "minecraft:name_tag",
           "price": 50000,
-          "description": "A shiny new chat prefix. Looks only, no gameplay perks.",
+          "description": "Unlocks the Beauty title. Equip it with /titles.",
           "commands": [
-            "lp user {player} parent add trainerplus"
+            "lp user {player} permission set jcl.title.beauty true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Gentleman",
+          "icon": "minecraft:name_tag",
+          "price": 75000,
+          "description": "Unlocks the Gentleman title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.gentleman true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Poké Maniac",
+          "icon": "minecraft:name_tag",
+          "price": 100000,
+          "description": "Unlocks the Poké Maniac title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.poke_maniac true"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Ace Trainer",
+          "icon": "minecraft:name_tag",
+          "price": 150000,
+          "description": "Unlocks the Ace Trainer title. Equip it with /titles.",
+          "commands": [
+            "lp user {player} permission set jcl.title.ace_trainer true"
           ],
           "limit": 1,
           "period": "once"
