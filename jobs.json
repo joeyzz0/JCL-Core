@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "npcs": [
     {
       "id": "guide",
@@ -86,25 +86,25 @@
       "steps": [
         {
           "npc": "guide",
-          "where": "by the fountain in the spawn plaza",
+          "where": "by the fountain in the Grand Plaza",
           "lines": [
             "Welcome to Port Azure, {player}! I'm Mae, and I help new trainers find their feet.",
-            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the building with the red roof.",
+            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the big red-roofed building north of here.",
             "Meet everyone, then find Captain Marlo at the docks. He has a gift for you!"
           ]
         },
         {
           "npc": "nurse",
-          "where": "inside the Pokémon Center (red roof, north-west)",
+          "where": "inside the Pokémon Center (big red roof, north of the plaza)",
           "lines": [
             "Hello, and welcome to the Pokémon Center!",
             "Use the healing machine whenever you like. The GTS and Wonder Trade kiosks are here too.",
-            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, just south of here."
+            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, the teal building to the north-west."
           ]
         },
         {
           "npc": "clerk",
-          "where": "inside the Poké Mart (teal roof, west of the plaza)",
+          "where": "inside the Poké Mart (teal roof, north-west)",
           "lines": [
             "Welcome to the Poké Mart! Type /shop to see everything we sell.",
             "Poké Balls, healing, keys, titles and name colours. And /sell buys your extras.",
@@ -113,7 +113,7 @@
         },
         {
           "npc": "crates",
-          "where": "at the Crate Plaza (east of the plaza)",
+          "where": "at the Crate Pavilion (east of the plaza)",
           "lines": [
             "Crates! Left-click one to see every reward and its exact chance.",
             "Hold a key and right-click to open. Keys come from chores, quests, loot balls and the shop.",
@@ -122,16 +122,16 @@
         },
         {
           "npc": "archivist",
-          "where": "by the leaderboards (north-east)",
+          "where": "at the Leaderboard Hall (north-east)",
           "lines": [
             "These boards track the most Pokémon caught, the most trainers beaten and the richest trainers.",
             "The map board is next door. Pin your base so friends can find you!",
-            "Tess trains Pokémon down by the beach. She'll teach you about EVs."
+            "Tess trains Pokémon at the gate on the west side of town. She'll teach you about EVs."
           ]
         },
         {
           "npc": "coach",
-          "where": "at the EV Training gate (south-west beach)",
+          "where": "at the EV Training gate (west side)",
           "lines": [
             "Want stronger Pokémon? EVs are the secret.",
             "Step through this gate to reach the training grounds. Each area trains a different stat.",
@@ -149,7 +149,7 @@
         },
         {
           "npc": "captain",
-          "where": "at the end of the harbour pier",
+          "where": "at the end of the harbour pier (south)",
           "lines": [
             "Ahoy! So you've met the whole town, eh? Mae said you'd come.",
             "This Lapras has been waiting for a trainer worth sailing with. She's yours.",

@@ -31,7 +31,7 @@ public final class Tablist {
     private Tablist() {}
 
     public static final class Config {
-        public int version = 2;
+        public int version = 3;
         public boolean enabled = true;
         public int refreshSeconds = 3;
         public String timeZone = "America/New_York";
@@ -67,11 +67,16 @@ public final class Tablist {
         T out = dflt;
         try {
             if (Files.exists(p)) {
-                T read = GSON.fromJson(Files.readString(p), type);
+                String raw = Files.readString(p);
+                T read = GSON.fromJson(raw, type);
                 int have = 0, want = 0;
-                try { have = read == null ? 0 : read.getClass().getField("version").getInt(read); want = dflt.getClass().getField("version").getInt(dflt); } catch (Exception ignored) {}
+                try {
+                    com.google.gson.JsonObject o = com.google.gson.JsonParser.parseString(raw).getAsJsonObject();
+                    have = o.has("version") ? o.get("version").getAsInt() : 0;
+                    want = dflt.getClass().getField("version").getInt(dflt);
+                } catch (Exception ignored) {}
                 if (read != null && have >= want) out = read;
-                else Files.writeString(p.resolveSibling(name + ".bak"), Files.readString(p));
+                else Files.writeString(p.resolveSibling(name + ".bak"), raw);
             }
             Files.createDirectories(p.getParent());
             Files.writeString(p, GSON.toJson(out));

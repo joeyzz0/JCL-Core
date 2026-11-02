@@ -272,7 +272,7 @@
         {
           "name": "8,000 CobbleDollars",
           "rarity": "common",
-          "weight": 6.5,
+          "weight": 5.7,
           "type": "money",
           "money": 8000
         },
@@ -490,6 +490,14 @@
           "type": "title",
           "title": "gambler",
           "money": 10000
+        },
+        {
+          "name": "Title: Unown",
+          "rarity": "rare",
+          "weight": 0.8,
+          "type": "title",
+          "title": "unown",
+          "money": 10000
         }
       ]
     },
@@ -501,7 +509,7 @@
         {
           "name": "25,000 CobbleDollars",
           "rarity": "common",
-          "weight": 6.6,
+          "weight": 5.1,
           "type": "money",
           "money": 25000
         },
@@ -758,6 +766,14 @@
           "type": "title",
           "title": "lucky",
           "money": 40000
+        },
+        {
+          "name": "Title: Chosen One",
+          "rarity": "epic",
+          "weight": 1.5,
+          "type": "title",
+          "title": "chosen_one",
+          "money": 40000
         }
       ]
     },
@@ -769,7 +785,7 @@
         {
           "name": "75,000 CobbleDollars",
           "rarity": "rare",
-          "weight": 5.7,
+          "weight": 4.7,
           "type": "money",
           "money": 75000
         },
@@ -896,7 +912,7 @@
           "items": [
             "mega_showdown:stellar_tera_shard"
           ],
-          "count": 1
+          "count": 3
         },
         {
           "name": "Omni Ring",
@@ -968,12 +984,17 @@
           "count": 1
         },
         {
-          "name": "Void Cap",
+          "name": "Random Void Cap",
           "rarity": "legendary",
           "weight": 1,
           "type": "item",
           "items": [
-            "cobblemon_utility:voidcap"
+            "cobblemon_utility:hpvoidcap",
+            "cobblemon_utility:atkvoidcap",
+            "cobblemon_utility:defvoidcap",
+            "cobblemon_utility:spatkvoidcap",
+            "cobblemon_utility:spdefvoidcap",
+            "cobblemon_utility:speedvoidcap"
           ],
           "count": 1
         },
@@ -999,6 +1020,14 @@
           "weight": 1,
           "type": "title",
           "title": "golden",
+          "money": 400000
+        },
+        {
+          "name": "Title: Shiny Charm",
+          "rarity": "legendary",
+          "weight": 1,
+          "type": "title",
+          "title": "shiny_charm",
           "money": 400000
         }
       ]
@@ -1027,5 +1056,5 @@
       "itemCount": 1
     }
   },
-  "version": 2
+  "version": 3
 }

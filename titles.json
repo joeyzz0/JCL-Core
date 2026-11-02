@@ -300,9 +300,212 @@
       "name": "Beta Tester",
       "category": "staff",
       "how": "Helped test the server before launch."
+    },
+    {
+      "id": "magikarp_fan",
+      "prefix": "&8[&6🐟 Magikarp Fan&8]",
+      "name": "Magikarp Fan",
+      "category": "shop",
+      "how": "Buy it in the shop for 10,000 CobbleDollars."
+    },
+    {
+      "id": "villager",
+      "prefix": "&8[&7Hmm.&8]",
+      "name": "Villager",
+      "category": "shop",
+      "how": "Buy it in the shop for 15,000 CobbleDollars."
+    },
+    {
+      "id": "apricorn_farmer",
+      "prefix": "&8[&aApricorn Farmer&8]",
+      "name": "Apricorn Farmer",
+      "category": "shop",
+      "how": "Buy it in the shop for 20,000 CobbleDollars."
+    },
+    {
+      "id": "steve",
+      "prefix": "&8[&bSteve&8]",
+      "name": "Steve",
+      "category": "shop",
+      "how": "Buy it in the shop for 25,000 CobbleDollars."
+    },
+    {
+      "id": "alex",
+      "prefix": "&8[&6Alex&8]",
+      "name": "Alex",
+      "category": "shop",
+      "how": "Buy it in the shop for 25,000 CobbleDollars."
+    },
+    {
+      "id": "snorlax_napper",
+      "prefix": "&8[&3💤 Snorlax Napper&8]",
+      "name": "Snorlax Napper",
+      "category": "shop",
+      "how": "Buy it in the shop for 30,000 CobbleDollars."
+    },
+    {
+      "id": "creeper_hugger",
+      "prefix": "&8[&a💥 Creeper Hugger&8]",
+      "name": "Creeper Hugger",
+      "category": "shop",
+      "how": "Buy it in the shop for 35,000 CobbleDollars."
+    },
+    {
+      "id": "ditto",
+      "prefix": "&8[&dDitto&8]",
+      "name": "Ditto",
+      "category": "shop",
+      "how": "Buy it in the shop for 40,000 CobbleDollars."
+    },
+    {
+      "id": "diamond_digger",
+      "prefix": "&8[&b💎 Diamond Digger&8]",
+      "name": "Diamond Digger",
+      "category": "shop",
+      "how": "Buy it in the shop for 50,000 CobbleDollars."
+    },
+    {
+      "id": "rocket_grunt",
+      "prefix": "&8[&cR &7Rocket Grunt&8]",
+      "name": "Rocket Grunt",
+      "category": "shop",
+      "how": "Buy it in the shop for 60,000 CobbleDollars."
+    },
+    {
+      "id": "galactic_grunt",
+      "prefix": "&8[&bG &7Galactic Grunt&8]",
+      "name": "Galactic Grunt",
+      "category": "shop",
+      "how": "Buy it in the shop for 60,000 CobbleDollars."
+    },
+    {
+      "id": "ender_walker",
+      "prefix": "&8[&5Ender Walker&8]",
+      "name": "Ender Walker",
+      "category": "shop",
+      "how": "Buy it in the shop for 60,000 CobbleDollars."
+    },
+    {
+      "id": "youngster_joey",
+      "prefix": "&8[&a🩳 Top Percentage&8]",
+      "name": "Youngster Joey",
+      "category": "shop",
+      "how": "Buy it in the shop for 77,777 CobbleDollars."
+    },
+    {
+      "id": "pokemon_ranger",
+      "prefix": "&8[&2Pokémon Ranger&8]",
+      "name": "Pokémon Ranger",
+      "category": "shop",
+      "how": "Buy it in the shop for 90,000 CobbleDollars."
+    },
+    {
+      "id": "professor",
+      "prefix": "&8[&f🔬 Professor&8]",
+      "name": "Professor",
+      "category": "shop",
+      "how": "Buy it in the shop for 200,000 CobbleDollars."
+    },
+    {
+      "id": "netherite_knight",
+      "prefix": "&8[&8&lNetherite Knight&8]",
+      "name": "Netherite Knight",
+      "category": "shop",
+      "how": "Buy it in the shop for 250,000 CobbleDollars."
+    },
+    {
+      "id": "breeder",
+      "prefix": "&8[&d🥚 Breeder&8]",
+      "name": "Breeder",
+      "category": "quest",
+      "how": "Finish the Breeding and Pasture guide."
+    },
+    {
+      "id": "raid_leader",
+      "prefix": "&8[&c⚔ Raid Leader&8]",
+      "name": "Raid Leader",
+      "category": "quest",
+      "how": "Finish the Raid Dens guide."
+    },
+    {
+      "id": "legend_seeker",
+      "prefix": "&8[&6✦ Legend Seeker&8]",
+      "name": "Legend Seeker",
+      "category": "quest",
+      "how": "Finish the Legendary Pokémon guide."
+    },
+    {
+      "id": "dex_master",
+      "prefix": "&8[&c📕 Dex Master&8]",
+      "name": "Dex Master",
+      "category": "quest",
+      "how": "Reach the final Pokédex milestone."
+    },
+    {
+      "id": "unown",
+      "prefix": "&8[&8? Unown ?&8]",
+      "name": "Unown",
+      "category": "crate",
+      "how": "A rare pull from the Great Crate."
+    },
+    {
+      "id": "chosen_one",
+      "prefix": "&8[&e⚡ Chosen One&8]",
+      "name": "Chosen One",
+      "category": "crate",
+      "how": "A rare pull from the Ultra Crate."
+    },
+    {
+      "id": "shiny_charm",
+      "prefix": "&6[&e✨ Shiny Charm ✨&6]",
+      "name": "Shiny Charm",
+      "category": "crate",
+      "how": "A very rare pull from the Master Crate."
+    },
+    {
+      "id": "content_creator",
+      "prefix": "&5[&dCreator&5]",
+      "name": "Content Creator",
+      "category": "staff",
+      "how": "Makes videos or streams about the server."
+    },
+    {
+      "id": "helper",
+      "prefix": "&2[&aHelper&2]",
+      "name": "Helper",
+      "category": "staff",
+      "how": "Helps new players."
+    },
+    {
+      "id": "event_host",
+      "prefix": "&6[&eEvent Host&6]",
+      "name": "Event Host",
+      "category": "staff",
+      "how": "Ran a server event."
+    },
+    {
+      "id": "season_one",
+      "prefix": "&8[&b✦ Season 1&8]",
+      "name": "Season 1 Veteran",
+      "category": "staff",
+      "how": "Played during the first season."
+    },
+    {
+      "id": "bug_hunter",
+      "prefix": "&8[&a🐛 Bug Hunter&8]",
+      "name": "Bug Hunter",
+      "category": "staff",
+      "how": "Reported a real bug."
+    },
+    {
+      "id": "shiny_showdown",
+      "prefix": "&6[&e✨ Shiny Showdown&6]",
+      "name": "Shiny Showdown Winner",
+      "category": "staff",
+      "how": "Won a shiny hunting event."
     }
   ],
-  "version": 2,
+  "version": 3,
   "colors": [
     {
       "id": "green",

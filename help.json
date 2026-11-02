@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "categories": [
     {
       "id": "start",
@@ -12,11 +12,11 @@
         ],
         [
           "/jobs",
-          "Your active jobs and where to go next."
+          "Open your jobs: progress, next step and rewards."
         ],
         [
-          "/jobs all",
-          "Every job on the server."
+          "/jobs list",
+          "Your active jobs, in chat."
         ],
         [
           "Quest book",
@@ -58,11 +58,15 @@
       "commands": [
         [
           "/shop",
-          "Poké Balls, healing, training, keys, titles and more."
+          "Poké Balls, healing, training, dolls, keys, titles and more."
         ],
         [
           "/sell",
-          "Sell the item in your hand."
+          "Open the sell box: drop items in and sell them all at once."
+        ],
+        [
+          "/sell hand",
+          "Quickly sell the stack in your hand."
         ],
         [
           "/sell all",

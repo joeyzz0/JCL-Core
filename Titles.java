@@ -246,7 +246,9 @@ public final class Titles {
         if (n == 0) p.sendSystemMessage(Component.literal(" §7None yet. Open §f/titles§7 to see how to unlock them."));
     }
 
-    static void menu(ServerPlayer p) {
+    static void menu(ServerPlayer p) { menu(p, 0); }
+
+    static void menu(ServerPlayer p, int page) {
         List<Title> list = new ArrayList<>(cfg.titles);
         list.sort((a, b) -> {
             boolean ha = has(p, a.id), hb = has(p, b.id);
@@ -256,19 +258,23 @@ public final class Titles {
         String current = data.chosen.get(p.getUUID().toString());
         int owned = 0;
         for (Title t : list) if (has(p, t.id)) owned++;
-        Gui.Screen s = new Gui.Screen("§6§l✦ Titles §8(" + owned + "/" + list.size() + ")", 6);
-        for (int i = 0; i < Math.min(45, list.size()); i++) {
-            Title t = list.get(i);
+        int pages = Math.max(1, (list.size() + 44) / 45);
+        int pg = Math.max(0, Math.min(page, pages - 1));
+        Gui.Screen s = new Gui.Screen("§6§l✦ Titles §8(" + owned + "/" + list.size() + ")" + (pages > 1 ? " §8" + (pg + 1) + "/" + pages : ""), 6);
+        for (int i = 0; i < Math.min(45, list.size() - pg * 45); i++) {
+            Title t = list.get(pg * 45 + i);
             boolean unlocked = has(p, t.id), on = t.id.equals(current);
             String[] lore = unlocked
                     ? new String[]{catName(t.category), "", "§7Looks like:", colour(t.prefix) + " §f" + p.getGameProfile().getName(), "", on ? "§a✔ Wearing" : "§e▶ Click to wear"}
                     : new String[]{catName(t.category), "", "§7How to unlock:", "§f" + t.how};
             var icon = Gui.icon(unlocked ? (on ? Items.NAME_TAG : Items.PAPER) : Items.GRAY_DYE, unlocked ? colour(t.prefix) : "§8🔒 §7" + t.name, lore);
-            s.set(i, on ? Gui.glow(icon) : icon, pl -> { if (has(pl, t.id)) { set(pl, t.id); menu(pl); } else pl.playNotifySound(SoundEvents.VILLAGER_NO, SoundSource.MASTER, 0.6f, 1f); });
+            s.set(i, on ? Gui.glow(icon) : icon, pl -> { if (has(pl, t.id)) { set(pl, t.id); menu(pl, pg); } else pl.playNotifySound(SoundEvents.VILLAGER_NO, SoundSource.MASTER, 0.6f, 1f); });
         }
         for (int i = 45; i < 54; i++) s.set(i, Gui.pane(Items.BLACK_STAINED_GLASS_PANE));
         s.set(45, Gui.icon(Items.BOOK, "§e§lAbout titles", "§7Earn titles from quests, buy them", "§7in §f/shop§7, pull them from crates,", "§7or win them at events.", "", "§7Your title shows in chat and", "§7in the tab list."));
-        s.set(49, Gui.icon(Items.BARRIER, "§c§lTake off title", "§7Show your name without a title."), pl -> { set(pl, null); menu(pl); });
+        s.set(49, Gui.icon(Items.BARRIER, "§c§lTake off title", "§7Show your name without a title."), pl -> { set(pl, null); menu(pl, pg); });
+        if (pg > 0) s.set(48, Gui.icon(Items.ARROW, "§e« Previous page"), pl -> menu(pl, pg - 1));
+        if (pg < pages - 1) s.set(50, Gui.icon(Items.ARROW, "§eNext page »"), pl -> menu(pl, pg + 1));
         s.set(53, Gui.glow(Gui.icon(Items.MAGENTA_DYE, "§d§lName colours", "§7Pick a colour for your name.")), Titles::colorMenu);
         Gui.open(p, s);
     }

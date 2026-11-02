@@ -200,7 +200,8 @@ public final class Jobs {
     @SubscribeEvent
     public static void onCommands(RegisterCommandsEvent e) {
         e.getDispatcher().register(Commands.literal("jobs")
-                .executes(c -> { show(c.getSource().getPlayerOrException(), false); return 1; })
+                .executes(c -> { menu(c.getSource().getPlayerOrException()); return 1; })
+                .then(Commands.literal("list").executes(c -> { show(c.getSource().getPlayerOrException(), false); return 1; }))
                 .then(Commands.literal("all").executes(c -> { show(c.getSource().getPlayerOrException(), true); return 1; }))
                 .then(Commands.literal("npc").requires(s -> s.hasPermission(2))
                         .then(Commands.literal("spawn").then(Commands.argument("id", StringArgumentType.word())
@@ -254,6 +255,104 @@ public final class Jobs {
             p.sendSystemMessage(Component.literal(" §e▶ §f" + c(j.name) + " §8· §7step " + (at + 1) + "/" + j.steps.size()));
             p.sendSystemMessage(Component.literal("   §7Next: talk to §e" + (n == null ? s.npc : c(n.name)) + (s.where == null ? "" : " §7" + c(s.where))));
         }
-        if (shown == 0) p.sendSystemMessage(Component.literal(" §7No active jobs. ").append(Component.literal("§e§n[See every job]").withStyle(st -> st.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/jobs all")))));
+        if (shown == 0) p.sendSystemMessage(Component.literal(" §7No active jobs. ").append(Component.literal("§e§n[See every job]").withStyle(st -> st.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/jobs")))));
+    }
+
+    // ------------------------------------------------------------------ menus
+
+    static void menu(ServerPlayer p) {
+        Map<String, Integer> prog = progress(p);
+        Gui.Screen s = new Gui.Screen("§6§l✦ Jobs", 6);
+        s.frame(net.minecraft.world.item.Items.ORANGE_STAINED_GLASS_PANE, net.minecraft.world.item.Items.YELLOW_STAINED_GLASS_PANE);
+        int active = 0, done = 0;
+        for (Job j : cfg.jobs) { int at = prog.getOrDefault(j.id, -1); if (at >= j.steps.size()) done++; else if (at >= 0) active++; }
+        s.set(4, Gui.glow(Gui.icon(net.minecraft.world.item.Items.WRITABLE_BOOK, "§6§lYour Jobs",
+                "§7Active: §e" + active + "   §7Complete: §a" + done + "§7/§f" + cfg.jobs.size(), "",
+                "§7Talk to townsfolk to start jobs.", "§7Click a job to see every step.")));
+        int[] slots = new int[28]; int n = 0;
+        for (int r = 1; r <= 4; r++) for (int c = 1; c <= 7; c++) slots[n++] = r * 9 + c;
+        List<Job> list = new ArrayList<>(cfg.jobs);
+        list.sort((a, b) -> Integer.compare(order(prog, a), order(prog, b)));
+        for (int i = 0; i < Math.min(slots.length, list.size()); i++) {
+            Job j = list.get(i);
+            int at = prog.getOrDefault(j.id, -1);
+            boolean finished = at >= j.steps.size();
+            List<String> lore = new ArrayList<>();
+            lore.add("§7" + c(j.description)); lore.add("");
+            if (finished) lore.add("§a✔ Complete");
+            else if (at < 0) {
+                Npc first = npc(j.steps.get(0).npc);
+                lore.add("§7Not started."); lore.add("§7Start by talking to §e" + (first == null ? "?" : c(first.name)));
+                if (j.steps.get(0).where != null) lore.add("§8" + c(j.steps.get(0).where));
+            } else {
+                Step st = j.steps.get(at); Npc nn = npc(st.npc);
+                lore.add("§eStep " + (at + 1) + " of " + j.steps.size()); lore.add(bar(at, j.steps.size()));
+                lore.add("§7Next: talk to §e" + (nn == null ? st.npc : c(nn.name)));
+                if (st.where != null) lore.add("§8" + c(st.where));
+            }
+            lore.add(""); lore.add("§8Click for details");
+            var item = finished ? net.minecraft.world.item.Items.ENCHANTED_BOOK : at >= 0 ? net.minecraft.world.item.Items.WRITABLE_BOOK : net.minecraft.world.item.Items.BOOK;
+            var icon = Gui.icon(item, (finished ? "§a" : at >= 0 ? "§e§l" : "§f") + c(j.name), lore.toArray(new String[0]));
+            s.set(slots[i], at >= 0 && !finished ? Gui.glow(icon) : icon, pl -> detail(pl, j));
+        }
+        s.set(49, Gui.icon(net.minecraft.world.item.Items.BARRIER, "§cClose"), pl -> pl.closeContainer());
+        Gui.open(p, s);
+    }
+
+    static int order(Map<String, Integer> prog, Job j) {
+        int at = prog.getOrDefault(j.id, -1);
+        return at >= j.steps.size() ? 2 : at >= 0 ? 0 : 1;
+    }
+
+    static String bar(int done, int total) {
+        StringBuilder b = new StringBuilder("§a");
+        int filled = (int) Math.round(20.0 * done / Math.max(1, total));
+        for (int i = 0; i < 20; i++) { if (i == filled) b.append("§8"); b.append("|"); }
+        return b.toString();
+    }
+
+    static void detail(ServerPlayer p, Job j) {
+        int at = progress(p).getOrDefault(j.id, -1);
+        Gui.Screen s = new Gui.Screen("§6§l✦ " + c(j.name).replaceAll("§.", ""), 6);
+        s.frame(net.minecraft.world.item.Items.ORANGE_STAINED_GLASS_PANE, net.minecraft.world.item.Items.YELLOW_STAINED_GLASS_PANE);
+        s.set(4, Gui.icon(net.minecraft.world.item.Items.WRITABLE_BOOK, "§6§l" + c(j.name), "§7" + c(j.description)));
+        int[] slots = new int[28]; int n = 0;
+        for (int r = 1; r <= 4; r++) for (int c = 1; c <= 7; c++) slots[n++] = r * 9 + c;
+        for (int i = 0; i < Math.min(slots.length, j.steps.size()); i++) {
+            Step st = j.steps.get(i); Npc nn = npc(st.npc);
+            String who = nn == null ? st.npc : c(nn.name);
+            boolean doneStep = at > i, current = at == i || (at < 0 && i == 0);
+            var item = doneStep ? net.minecraft.world.item.Items.LIME_DYE : current ? net.minecraft.world.item.Items.YELLOW_DYE : net.minecraft.world.item.Items.GRAY_DYE;
+            String[] lore = doneStep ? new String[]{"§a✔ Done"} : current ? new String[]{"§eYour next step", "§7Talk to " + who, "§8" + (st.where == null ? "" : c(st.where))} : new String[]{"§8Later"};
+            var icon = Gui.icon(item, (doneStep ? "§a" : current ? "§e§l" : "§7") + "Step " + (i + 1) + ": " + (doneStep || current ? who : "§8???"), lore);
+            s.set(slots[i], current ? Gui.glow(icon) : icon);
+        }
+        Reward r = j.reward;
+        List<String> rl = new ArrayList<>();
+        if (r.money > 0) rl.add("§6" + Fmt.cd(r.money));
+        if (r.pokemon != null) rl.add("§fA Pokémon: §e" + r.pokemon.species.substring(0, 1).toUpperCase() + r.pokemon.species.substring(1) + (r.pokemon.maxRideStats ? " §7(max riding stats)" : ""));
+        if (!r.commands.isEmpty()) rl.add("§fA special reward");
+        s.set(49, Gui.icon(net.minecraft.world.item.Items.CHEST, "§6§lReward", rl.toArray(new String[0])));
+        s.set(45, Gui.icon(net.minecraft.world.item.Items.ARROW, "§e« Back to jobs"), Jobs::menu);
+        Gui.open(p, s);
+    }
+
+    // ------------------------------------------------------------------ NPCs can't be hurt (only /kill or /jobs npc remove)
+
+    static boolean isNpc(net.minecraft.world.entity.Entity e) { return e != null && e.getTags().contains("jcl_npc"); }
+
+    @SubscribeEvent
+    public static void onAttack(net.neoforged.neoforge.event.entity.player.AttackEntityEvent e) {
+        if (isNpc(e.getTarget())) e.setCanceled(true);
+    }
+
+    @SubscribeEvent
+    public static void onHurt(net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent e) {
+        if (isNpc(e.getEntity()) && !e.getSource().is(net.minecraft.world.damagesource.DamageTypes.GENERIC_KILL)) e.setCanceled(true);
+    }
+
+    @SubscribeEvent
+    public static void onLightning(net.neoforged.neoforge.event.entity.EntityStruckByLightningEvent e) {
+        if (isNpc(e.getEntity())) e.setCanceled(true);
     }
 }

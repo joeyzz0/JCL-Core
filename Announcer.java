@@ -32,7 +32,7 @@ public final class Announcer {
     }
 
     public static final class Config {
-        public int version = 2;
+        public int version = 3;
         public boolean enabled = true;
         public int intervalMinutes = 8;
         public int minPlayersOnline = 1;

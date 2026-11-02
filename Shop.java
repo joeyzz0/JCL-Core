@@ -91,7 +91,7 @@ public final class Shop {
         e.getDispatcher().register(Commands.literal("shop").executes(c -> { main(c.getSource().getPlayerOrException()); return 1; })
                 .then(Commands.literal("reload").requires(s -> s.hasPermission(2)).executes(c -> { load(); c.getSource().sendSuccess(() -> Component.literal("§aShop reloaded."), true); return 1; })));
         e.getDispatcher().register(Commands.literal("sell")
-                .executes(c -> { sell(c.getSource().getPlayerOrException(), false); return 1; })
+                .executes(c -> { Sell.open(c.getSource().getPlayerOrException()); return 1; })
                 .then(Commands.literal("hand").executes(c -> { sell(c.getSource().getPlayerOrException(), false); return 1; }))
                 .then(Commands.literal("all").executes(c -> { sell(c.getSource().getPlayerOrException(), true); return 1; }))
                 .then(Commands.literal("price").executes(c -> { price(c.getSource().getPlayerOrException()); return 1; })));
@@ -135,7 +135,7 @@ public final class Shop {
             s.set(slots[i], Gui.icon(Crates.resolve(c.icon), c.name, "§7" + c.items.size() + " items", "", "§e▶ Click to browse"), pl -> category(pl, idx));
         }
         s.set(30, Gui.icon(Items.ANVIL, "§d§lMerge crate keys", "§7Upgrade your keys for a fee."), pl -> Crates.mergeMenu(pl));
-        s.set(32, Gui.icon(Items.HOPPER, "§a§lSell items", "§7Hold an item and type:", "§f/sell §7sells the stack in your hand", "§f/sell all §7sells every one you carry", "§f/sell price §7shows what it's worth"));
+        s.set(32, Gui.glow(Gui.icon(Items.HOPPER, "§a§lSell items", "§7Open the sell box and drop", "§7in everything you want to sell.", "", "§8Also: /sell, /sell hand, /sell all")), Sell::open);
         Gui.open(p, s);
     }
 
@@ -231,6 +231,7 @@ public final class Shop {
         ItemStack hand = p.getMainHandItem();
         long each = priceOf(hand);
         if (each < 0) { fail(p, hand.isEmpty() ? "Hold the item you want to sell." : "That item can't be sold."); return; }
+        String name = hand.getHoverName().getString();
         int count = 0;
         if (all) {
             var item = hand.getItem();
@@ -239,6 +240,6 @@ public final class Shop {
         long total = each * count;
         Economy.give(p, total);
         p.playNotifySound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.MASTER, 0.6f, 1.1f);
-        p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aSold §f" + count + "x " + hand.getHoverName().getString() + "§a for §6" + Fmt.cd(total) + "§a."));
+        p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aSold §f" + count + "x " + name + "§a for §6" + Fmt.cd(total) + "§a."));
     }
 }

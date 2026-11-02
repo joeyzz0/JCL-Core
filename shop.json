@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "categories": [
     {
       "name": "§c§lPoké Balls",
@@ -198,7 +198,7 @@
         {
           "name": "Ancient Poké Ball x4",
           "icon": "cobblemon:ancient_poke_ball",
-          "price": 300,
+          "price": 200,
           "description": "",
           "item": "cobblemon:ancient_poke_ball",
           "count": 4
@@ -206,7 +206,7 @@
         {
           "name": "Ancient Great Ball x4",
           "icon": "cobblemon:ancient_great_ball",
-          "price": 900,
+          "price": 600,
           "description": "",
           "item": "cobblemon:ancient_great_ball",
           "count": 4
@@ -214,7 +214,7 @@
         {
           "name": "Ancient Ultra Ball x4",
           "icon": "cobblemon:ancient_ultra_ball",
-          "price": 1800,
+          "price": 1200,
           "description": "",
           "item": "cobblemon:ancient_ultra_ball",
           "count": 4
@@ -1060,228 +1060,2664 @@
       "icon": "pokeblocks:pokedoll_eevee",
       "items": [
         {
-          "name": "Eevee Doll",
-          "icon": "pokeblocks:pokedoll_eevee",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_eevee",
-          "count": 1
-        },
-        {
-          "name": "Charmander Doll",
-          "icon": "pokeblocks:pokedoll_charmander",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_charmander",
-          "count": 1
-        },
-        {
-          "name": "Bulbasaur Doll",
-          "icon": "pokeblocks:pokedoll_bulbasaur",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_bulbasaur",
-          "count": 1
-        },
-        {
-          "name": "Cyndaquil Doll",
-          "icon": "pokeblocks:pokedoll_cyndaquil",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_cyndaquil",
-          "count": 1
-        },
-        {
-          "name": "Rowlet Doll",
-          "icon": "pokeblocks:pokedoll_rowlet",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_rowlet",
-          "count": 1
-        },
-        {
-          "name": "Riolu Doll",
-          "icon": "pokeblocks:pokedoll_riolu",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_riolu",
-          "count": 1
-        },
-        {
-          "name": "Mimikyu Doll",
-          "icon": "pokeblocks:pokedoll_mimikyu",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_mimikyu",
-          "count": 1
-        },
-        {
-          "name": "Gengar Doll",
-          "icon": "pokeblocks:pokedoll_gengar",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_gengar",
-          "count": 1
-        },
-        {
-          "name": "Gastly Doll",
-          "icon": "pokeblocks:pokedoll_gastly",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_gastly",
-          "count": 1
-        },
-        {
-          "name": "Jigglypuff Doll",
-          "icon": "pokeblocks:pokedoll_jigglypuff",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_jigglypuff",
-          "count": 1
-        },
-        {
-          "name": "Clefairy Doll",
-          "icon": "pokeblocks:pokedoll_clefairy",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_clefairy",
-          "count": 1
-        },
-        {
-          "name": "Munchlax Doll",
-          "icon": "pokeblocks:pokedoll_munchlax",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_munchlax",
-          "count": 1
-        },
-        {
-          "name": "Lechonk Doll",
-          "icon": "pokeblocks:pokedoll_lechonk",
-          "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_lechonk",
-          "count": 1
-        },
-        {
           "name": "Absol Doll",
           "icon": "pokeblocks:pokedoll_absol",
-          "price": 5000,
-          "description": "",
+          "price": 8000,
           "item": "pokeblocks:pokedoll_absol",
-          "count": 1
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Ampharos Doll",
           "icon": "pokeblocks:pokedoll_ampharos",
           "price": 5000,
-          "description": "",
           "item": "pokeblocks:pokedoll_ampharos",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Arboliva Doll",
+          "icon": "pokeblocks:pokedoll_arboliva",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_arboliva",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Beartic Doll",
+          "icon": "pokeblocks:pokedoll_beartic",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_beartic",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Bellossom Doll",
+          "icon": "pokeblocks:pokedoll_bellossom",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_bellossom",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Blastoise Doll",
           "icon": "pokeblocks:pokedoll_blastoise",
-          "price": 5000,
-          "description": "",
+          "price": 8000,
           "item": "pokeblocks:pokedoll_blastoise",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Bulbasaur Doll",
+          "icon": "pokeblocks:pokedoll_bulbasaur",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_bulbasaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Bulbasaur Posed Doll",
+          "icon": "pokeblocks:pokedoll_bulbasaur_posed",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_bulbasaur_posed",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Calyrex Doll",
+          "icon": "pokeblocks:pokedoll_calyrex",
+          "price": 25000,
+          "item": "pokeblocks:pokedoll_calyrex",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Calyrex (animated) Doll",
+          "icon": "pokeblocks:pokedoll_calyrex_animated",
+          "price": 35000,
+          "item": "pokeblocks:pokedoll_calyrex_animated",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Cetoddle Doll",
+          "icon": "pokeblocks:pokedoll_cetoddle",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_cetoddle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Charmander Doll",
+          "icon": "pokeblocks:pokedoll_charmander",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_charmander",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Charmeleon Doll",
+          "icon": "pokeblocks:pokedoll_charmeleon",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_charmeleon",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Clefairy Doll",
+          "icon": "pokeblocks:pokedoll_clefairy",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_clefairy",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Cloyster Doll",
+          "icon": "pokeblocks:pokedoll_cloyster",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_cloyster",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Corviknight Doll",
           "icon": "pokeblocks:pokedoll_corviknight",
-          "price": 5000,
-          "description": "",
+          "price": 8000,
           "item": "pokeblocks:pokedoll_corviknight",
-          "count": 1
+          "count": 1,
+          "description": ""
         },
         {
-          "name": "Gholdengo Doll",
-          "icon": "pokeblocks:pokedoll_gholdengo",
+          "name": "Corvisquire Doll",
+          "icon": "pokeblocks:pokedoll_corvisquire",
           "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_gholdengo",
-          "count": 1
+          "item": "pokeblocks:pokedoll_corvisquire",
+          "count": 1,
+          "description": ""
         },
         {
-          "name": "Happiny Doll",
-          "icon": "pokeblocks:pokedoll_happiny",
+          "name": "Cubchoo Doll",
+          "icon": "pokeblocks:pokedoll_cubchoo",
           "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_happiny",
-          "count": 1
+          "item": "pokeblocks:pokedoll_cubchoo",
+          "count": 1,
+          "description": ""
         },
         {
-          "name": "Mareep Doll",
-          "icon": "pokeblocks:pokedoll_mareep",
+          "name": "Cubchoo (animated) Doll",
+          "icon": "pokeblocks:pokedoll_cubchoo_animated",
+          "price": 9000,
+          "item": "pokeblocks:pokedoll_cubchoo_animated",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Cyndaquil Doll",
+          "icon": "pokeblocks:pokedoll_cyndaquil",
           "price": 5000,
-          "description": "",
-          "item": "pokeblocks:pokedoll_mareep",
-          "count": 1
+          "item": "pokeblocks:pokedoll_cyndaquil",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Delibird Doll",
+          "icon": "pokeblocks:pokedoll_delibird",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_delibird",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Dolliv Doll",
+          "icon": "pokeblocks:pokedoll_dolliv",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_dolliv",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Drifloon Doll",
           "icon": "pokeblocks:pokedoll_drifloon",
           "price": 5000,
-          "description": "",
           "item": "pokeblocks:pokedoll_drifloon",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Eevee Doll",
+          "icon": "pokeblocks:pokedoll_eevee",
+          "price": 8000,
+          "item": "pokeblocks:pokedoll_eevee",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Eiscue Doll",
+          "icon": "pokeblocks:pokedoll_eiscue",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_eiscue",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Eiscue Noice Doll",
+          "icon": "pokeblocks:pokedoll_eiscue_noice",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_eiscue_noice",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Flaaffy Doll",
+          "icon": "pokeblocks:pokedoll_flaaffy",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_flaaffy",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Frigibax Doll",
+          "icon": "pokeblocks:pokedoll_frigibax",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_frigibax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Froslass Doll",
+          "icon": "pokeblocks:pokedoll_froslass",
+          "price": 7000,
+          "item": "pokeblocks:pokedoll_froslass",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Furret Doll",
           "icon": "pokeblocks:pokedoll_furret",
           "price": 5000,
-          "description": "",
           "item": "pokeblocks:pokedoll_furret",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Gastly Doll",
+          "icon": "pokeblocks:pokedoll_gastly",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_gastly",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Gengar Doll",
+          "icon": "pokeblocks:pokedoll_gengar",
+          "price": 8000,
+          "item": "pokeblocks:pokedoll_gengar",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Gholdengo Doll",
+          "icon": "pokeblocks:pokedoll_gholdengo",
+          "price": 10000,
+          "item": "pokeblocks:pokedoll_gholdengo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Glalie Doll",
+          "icon": "pokeblocks:pokedoll_glalie",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_glalie",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Happiny Doll",
+          "icon": "pokeblocks:pokedoll_happiny",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_happiny",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Igglybuff Doll",
+          "icon": "pokeblocks:pokedoll_igglybuff",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_igglybuff",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Ivysaur Doll",
+          "icon": "pokeblocks:pokedoll_ivysaur",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_ivysaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Jigglypuff Doll",
+          "icon": "pokeblocks:pokedoll_jigglypuff",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_jigglypuff",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Kyogre Doll",
+          "icon": "pokeblocks:pokedoll_kyogre",
+          "price": 30000,
+          "item": "pokeblocks:pokedoll_kyogre",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Lechonk Doll",
+          "icon": "pokeblocks:pokedoll_lechonk",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_lechonk",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Lickitung Doll",
+          "icon": "pokeblocks:pokedoll_lickitung",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_lickitung",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Luvdisc Doll",
+          "icon": "pokeblocks:pokedoll_luvdisc",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_luvdisc",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Mareep Doll",
+          "icon": "pokeblocks:pokedoll_mareep",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_mareep",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Marshadow Doll",
+          "icon": "pokeblocks:pokedoll_marshadow",
+          "price": 25000,
+          "item": "pokeblocks:pokedoll_marshadow",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Marshadow Zenith Doll",
+          "icon": "pokeblocks:pokedoll_marshadow_zenith",
+          "price": 35000,
+          "item": "pokeblocks:pokedoll_marshadow_zenith",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Mimikyu Doll",
+          "icon": "pokeblocks:pokedoll_mimikyu",
+          "price": 8000,
+          "item": "pokeblocks:pokedoll_mimikyu",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Munchlax Doll",
+          "icon": "pokeblocks:pokedoll_munchlax",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_munchlax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Netherite Gholdengo Doll",
+          "icon": "pokeblocks:pokedoll_netherite_gholdengo",
+          "price": 40000,
+          "item": "pokeblocks:pokedoll_netherite_gholdengo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Palossand Doll",
+          "icon": "pokeblocks:pokedoll_palossand",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_palossand",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Phantump Doll",
+          "icon": "pokeblocks:pokedoll_phantump",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_phantump",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Piloswine Doll",
+          "icon": "pokeblocks:pokedoll_piloswine",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_piloswine",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Pumpkaboo Doll",
+          "icon": "pokeblocks:pokedoll_pumpkaboo",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_pumpkaboo",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Quagsire Doll",
           "icon": "pokeblocks:pokedoll_quagsire",
           "price": 5000,
-          "description": "",
           "item": "pokeblocks:pokedoll_quagsire",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Rabsca Doll",
+          "icon": "pokeblocks:pokedoll_rabsca",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_rabsca",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Rellor Doll",
+          "icon": "pokeblocks:pokedoll_rellor",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_rellor",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Riolu Doll",
+          "icon": "pokeblocks:pokedoll_riolu",
+          "price": 7000,
+          "item": "pokeblocks:pokedoll_riolu",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Rookidee Doll",
+          "icon": "pokeblocks:pokedoll_rookidee",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_rookidee",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Rowlet Doll",
+          "icon": "pokeblocks:pokedoll_rowlet",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_rowlet",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Sableye Doll",
           "icon": "pokeblocks:pokedoll_sableye",
           "price": 5000,
-          "description": "",
           "item": "pokeblocks:pokedoll_sableye",
-          "count": 1
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Sandygast Doll",
+          "icon": "pokeblocks:pokedoll_sandygast",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_sandygast",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Sentret Doll",
+          "icon": "pokeblocks:pokedoll_sentret",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_sentret",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shellder Doll",
+          "icon": "pokeblocks:pokedoll_shellder",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_shellder",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shuckle Doll",
+          "icon": "pokeblocks:pokedoll_shuckle",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_shuckle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Skibidi Mewlet Doll",
+          "icon": "pokeblocks:pokedoll_skibidi_mewlet",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_skibidi_mewlet",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Smoliv Doll",
+          "icon": "pokeblocks:pokedoll_smoliv",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_smoliv",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Snorlax Doll",
+          "icon": "pokeblocks:pokedoll_snorlax",
+          "price": 8000,
+          "item": "pokeblocks:pokedoll_snorlax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Snorunt Doll",
+          "icon": "pokeblocks:pokedoll_snorunt",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_snorunt",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Snorunt Family Doll",
+          "icon": "pokeblocks:pokedoll_snorunt_family",
+          "price": 12000,
+          "item": "pokeblocks:pokedoll_snorunt_family",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Spheal Doll",
+          "icon": "pokeblocks:pokedoll_spheal",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_spheal",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Squirtle Doll",
+          "icon": "pokeblocks:pokedoll_squirtle",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_squirtle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Stonjourner Doll",
+          "icon": "pokeblocks:pokedoll_stonjourner",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_stonjourner",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Swinub Doll",
+          "icon": "pokeblocks:pokedoll_swinub",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_swinub",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Treecko Doll",
+          "icon": "pokeblocks:pokedoll_treecko",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_treecko",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Trevenant Doll",
+          "icon": "pokeblocks:pokedoll_trevenant",
+          "price": 7000,
+          "item": "pokeblocks:pokedoll_trevenant",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Tropius Doll",
+          "icon": "pokeblocks:pokedoll_tropius",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_tropius",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Venonat Doll",
+          "icon": "pokeblocks:pokedoll_venonat",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_venonat",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Venusaur Doll",
+          "icon": "pokeblocks:pokedoll_venusaur",
+          "price": 8000,
+          "item": "pokeblocks:pokedoll_venusaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Wailmer Doll",
+          "icon": "pokeblocks:pokedoll_wailmer",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_wailmer",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Wailord Doll",
+          "icon": "pokeblocks:pokedoll_wailord",
+          "price": 9000,
+          "item": "pokeblocks:pokedoll_wailord",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Wartortle Doll",
+          "icon": "pokeblocks:pokedoll_wartortle",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_wartortle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Washing Machine Doll",
+          "icon": "pokeblocks:pokedoll_washing_machine",
+          "price": 12000,
+          "item": "pokeblocks:pokedoll_washing_machine",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Wooper Doll",
+          "icon": "pokeblocks:pokedoll_wooper",
+          "price": 5000,
+          "item": "pokeblocks:pokedoll_wooper",
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Magikarp Fishbowl",
           "icon": "pokeblocks:magikarp_fishbowl",
           "price": 8000,
-          "description": "",
           "item": "pokeblocks:magikarp_fishbowl",
-          "count": 1
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Luvdisc Cushion",
           "icon": "pokeblocks:luvdisc_cushion",
           "price": 6000,
-          "description": "",
           "item": "pokeblocks:luvdisc_cushion",
-          "count": 1
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Applin Basket",
           "icon": "pokeblocks:applin_basket",
           "price": 6000,
-          "description": "",
           "item": "pokeblocks:applin_basket",
-          "count": 1
+          "count": 1,
+          "description": ""
         },
         {
           "name": "Pokémon Trophy",
           "icon": "pokeblocks:pokemon_trophy",
           "price": 20000,
-          "description": "",
           "item": "pokeblocks:pokemon_trophy",
-          "count": 1
+          "count": 1,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "§e§lShiny Poké Dolls",
+      "icon": "pokeblocks:pokedoll_shiny_eevee",
+      "items": [
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_absol",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_absol",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Os Doll",
+          "icon": "pokeblocks:pokedoll_ampharos",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_ampharos",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Va Doll",
+          "icon": "pokeblocks:pokedoll_arboliva",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_arboliva",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny C Doll",
+          "icon": "pokeblocks:pokedoll_beartic",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_beartic",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Som Doll",
+          "icon": "pokeblocks:pokedoll_bellossom",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_bellossom",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ise Doll",
+          "icon": "pokeblocks:pokedoll_blastoise",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_blastoise",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Aur Doll",
+          "icon": "pokeblocks:pokedoll_bulbasaur",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_bulbasaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Aur Posed Doll",
+          "icon": "pokeblocks:pokedoll_bulbasaur_posed",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_bulbasaur_posed",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny X Doll",
+          "icon": "pokeblocks:pokedoll_calyrex",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_calyrex",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny X (animated) Doll",
+          "icon": "pokeblocks:pokedoll_calyrex_animated",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_calyrex_animated",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Le Doll",
+          "icon": "pokeblocks:pokedoll_cetoddle",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_cetoddle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Nder Doll",
+          "icon": "pokeblocks:pokedoll_charmander",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_charmander",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Leon Doll",
+          "icon": "pokeblocks:pokedoll_charmeleon",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_charmeleon",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ry Doll",
+          "icon": "pokeblocks:pokedoll_clefairy",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_clefairy",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Er Doll",
+          "icon": "pokeblocks:pokedoll_cloyster",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_cloyster",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Night Doll",
+          "icon": "pokeblocks:pokedoll_corviknight",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_corviknight",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Quire Doll",
+          "icon": "pokeblocks:pokedoll_corvisquire",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_corvisquire",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny O Doll",
+          "icon": "pokeblocks:pokedoll_cubchoo",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_cubchoo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny O (animated) Doll",
+          "icon": "pokeblocks:pokedoll_cubchoo_animated",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_cubchoo_animated",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Uil Doll",
+          "icon": "pokeblocks:pokedoll_cyndaquil",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_cyndaquil",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Rd Doll",
+          "icon": "pokeblocks:pokedoll_delibird",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_delibird",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_dolliv",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_dolliv",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny On Doll",
+          "icon": "pokeblocks:pokedoll_drifloon",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_drifloon",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_eevee",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_eevee",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_eiscue",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_eiscue",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Noice Doll",
+          "icon": "pokeblocks:pokedoll_eiscue_noice",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_eiscue_noice",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Y Doll",
+          "icon": "pokeblocks:pokedoll_flaaffy",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_flaaffy",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ax Doll",
+          "icon": "pokeblocks:pokedoll_frigibax",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_frigibax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ss Doll",
+          "icon": "pokeblocks:pokedoll_froslass",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_froslass",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_furret",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_furret",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_gastly",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_gastly",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_gengar",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_gengar",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ngo Doll",
+          "icon": "pokeblocks:pokedoll_gholdengo",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_gholdengo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_glalie",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_glalie",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Y Doll",
+          "icon": "pokeblocks:pokedoll_happiny",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_happiny",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Uff Doll",
+          "icon": "pokeblocks:pokedoll_igglybuff",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_igglybuff",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny R Doll",
+          "icon": "pokeblocks:pokedoll_ivysaur",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_ivysaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Puff Doll",
+          "icon": "pokeblocks:pokedoll_jigglypuff",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_jigglypuff",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_kyogre",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_kyogre",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny K Doll",
+          "icon": "pokeblocks:pokedoll_lechonk",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_lechonk",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ung Doll",
+          "icon": "pokeblocks:pokedoll_lickitung",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_lickitung",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny C Doll",
+          "icon": "pokeblocks:pokedoll_luvdisc",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_luvdisc",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_mareep",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_mareep",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Dow Doll",
+          "icon": "pokeblocks:pokedoll_marshadow",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_marshadow",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Dow Zenith Doll",
+          "icon": "pokeblocks:pokedoll_marshadow_zenith",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_marshadow_zenith",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny U Doll",
+          "icon": "pokeblocks:pokedoll_mimikyu",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_mimikyu",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ax Doll",
+          "icon": "pokeblocks:pokedoll_munchlax",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_munchlax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ite Gholdengo Doll",
+          "icon": "pokeblocks:pokedoll_netherite_gholdengo",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_netherite_gholdengo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny And Doll",
+          "icon": "pokeblocks:pokedoll_palossand",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_palossand",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Mp Doll",
+          "icon": "pokeblocks:pokedoll_phantump",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_phantump",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ine Doll",
+          "icon": "pokeblocks:pokedoll_piloswine",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_piloswine",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny N Trophy Doll",
+          "icon": "pokeblocks:pokedoll_pokemon_trophy",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_pokemon_trophy",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Boo Doll",
+          "icon": "pokeblocks:pokedoll_pumpkaboo",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_pumpkaboo",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Re Doll",
+          "icon": "pokeblocks:pokedoll_quagsire",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_quagsire",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_rabsca",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_rabsca",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_rellor",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_rellor",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_riolu",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_riolu",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ee Doll",
+          "icon": "pokeblocks:pokedoll_rookidee",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_rookidee",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_rowlet",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_rowlet",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny E Doll",
+          "icon": "pokeblocks:pokedoll_sableye",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_sableye",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ast Doll",
+          "icon": "pokeblocks:pokedoll_sandygast",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_sandygast",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny T Doll",
+          "icon": "pokeblocks:pokedoll_sentret",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_sentret",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Er Doll",
+          "icon": "pokeblocks:pokedoll_shellder",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_shellder",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny E Doll",
+          "icon": "pokeblocks:pokedoll_shuckle",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_shuckle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_smoliv",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_smoliv",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny X Doll",
+          "icon": "pokeblocks:pokedoll_snorlax",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_snorlax",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny T Doll",
+          "icon": "pokeblocks:pokedoll_snorunt",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_snorunt",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny T Family Doll",
+          "icon": "pokeblocks:pokedoll_snorunt_family",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_snorunt_family",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_spheal",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_spheal",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Le Doll",
+          "icon": "pokeblocks:pokedoll_squirtle",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_squirtle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Urner Doll",
+          "icon": "pokeblocks:pokedoll_stonjourner",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_stonjourner",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_swinub",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_swinub",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny O Doll",
+          "icon": "pokeblocks:pokedoll_treecko",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_treecko",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ant Doll",
+          "icon": "pokeblocks:pokedoll_trevenant",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_trevenant",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny S Doll",
+          "icon": "pokeblocks:pokedoll_tropius",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_tropius",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny T Doll",
+          "icon": "pokeblocks:pokedoll_venonat",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_venonat",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Ur Doll",
+          "icon": "pokeblocks:pokedoll_venusaur",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_venusaur",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny R Doll",
+          "icon": "pokeblocks:pokedoll_wailmer",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_wailmer",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny D Doll",
+          "icon": "pokeblocks:pokedoll_wailord",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_wailord",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny Tle Doll",
+          "icon": "pokeblocks:pokedoll_wartortle",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_wartortle",
+          "count": 1,
+          "description": ""
+        },
+        {
+          "name": "Shiny  Doll",
+          "icon": "pokeblocks:pokedoll_wooper",
+          "price": 15000,
+          "item": "pokeblocks:pokedoll_wooper",
+          "count": 1,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "§5§lGigantic Dolls",
+      "icon": "pokeblocks:gigantic_pokedoll_snorlax",
+      "items": [
+        {
+          "name": "Gigantic Absol Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_absol",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_absol",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Ampharos Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_ampharos",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_ampharos",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Arboliva Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_arboliva",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_arboliva",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Beartic Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_beartic",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_beartic",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Bellossom Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_bellossom",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_bellossom",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Blastoise Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_blastoise",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_blastoise",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Bulbasaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_bulbasaur",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_bulbasaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Bulbasaur Posed Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_bulbasaur_posed",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_bulbasaur_posed",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Calyrex Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_calyrex",
+          "price": 112500,
+          "item": "pokeblocks:gigantic_pokedoll_calyrex",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Calyrex (animated) Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_calyrex_animated",
+          "price": 157500,
+          "item": "pokeblocks:gigantic_pokedoll_calyrex_animated",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Cetoddle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_cetoddle",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_cetoddle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Charmander Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_charmander",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_charmander",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Charmeleon Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_charmeleon",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_charmeleon",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Clefairy Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_clefairy",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_clefairy",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Cloyster Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_cloyster",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_cloyster",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Corviknight Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_corviknight",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_corviknight",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Corvisquire Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_corvisquire",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_corvisquire",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Cubchoo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_cubchoo",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_cubchoo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Cubchoo (animated) Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_cubchoo_animated",
+          "price": 40500,
+          "item": "pokeblocks:gigantic_pokedoll_cubchoo_animated",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Cyndaquil Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_cyndaquil",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_cyndaquil",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Delibird Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_delibird",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_delibird",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Dolliv Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_dolliv",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_dolliv",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Drifloon Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_drifloon",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_drifloon",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Eevee Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_eevee",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_eevee",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Eiscue Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_eiscue",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_eiscue",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Eiscue Noice Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_eiscue_noice",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_eiscue_noice",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Flaaffy Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_flaaffy",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_flaaffy",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Frigibax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_frigibax",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_frigibax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Froslass Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_froslass",
+          "price": 31500,
+          "item": "pokeblocks:gigantic_pokedoll_froslass",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Furret Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_furret",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_furret",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Gastly Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_gastly",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_gastly",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Gengar Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_gengar",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_gengar",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Gholdengo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_gholdengo",
+          "price": 45000,
+          "item": "pokeblocks:gigantic_pokedoll_gholdengo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Glalie Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_glalie",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_glalie",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Happiny Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_happiny",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_happiny",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Headpile Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_headpile",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_headpile",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Igglybuff Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_igglybuff",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_igglybuff",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Ivysaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_ivysaur",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_ivysaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Jigglypuff Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_jigglypuff",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_jigglypuff",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Kyogre Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_kyogre",
+          "price": 135000,
+          "item": "pokeblocks:gigantic_pokedoll_kyogre",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Lechonk Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_lechonk",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_lechonk",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Lickitung Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_lickitung",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_lickitung",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Luvdisc Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_luvdisc",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_luvdisc",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Mareep Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_mareep",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_mareep",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Marshadow Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_marshadow",
+          "price": 112500,
+          "item": "pokeblocks:gigantic_pokedoll_marshadow",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Marshadow Zenith Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_marshadow_zenith",
+          "price": 157500,
+          "item": "pokeblocks:gigantic_pokedoll_marshadow_zenith",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Mimikyu Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_mimikyu",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_mimikyu",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Munchlax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_munchlax",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_munchlax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Netherite Gholdengo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_netherite_gholdengo",
+          "price": 180000,
+          "item": "pokeblocks:gigantic_pokedoll_netherite_gholdengo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Palossand Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_palossand",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_palossand",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Phantump Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_phantump",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_phantump",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Piloswine Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_piloswine",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_piloswine",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Pumpkaboo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_pumpkaboo",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_pumpkaboo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Quagsire Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_quagsire",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_quagsire",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Rabsca Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_rabsca",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_rabsca",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Rellor Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_rellor",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_rellor",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Riolu Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_riolu",
+          "price": 31500,
+          "item": "pokeblocks:gigantic_pokedoll_riolu",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Rookidee Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_rookidee",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_rookidee",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Rowlet Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_rowlet",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_rowlet",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Sableye Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_sableye",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_sableye",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Sandygast Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_sandygast",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_sandygast",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Sentret Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_sentret",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_sentret",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shellder Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shellder",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_shellder",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Absol Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_absol",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_absol",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Ampharos Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_ampharos",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_ampharos",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Arboliva Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_arboliva",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_arboliva",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Beartic Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_beartic",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_beartic",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Bellossom Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_bellossom",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_bellossom",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Blastoise Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_blastoise",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_blastoise",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Bulbasaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Bulbasaur Posed Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur_posed",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur_posed",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Calyrex Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_calyrex",
+          "price": 337500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_calyrex",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Calyrex (animated) Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_calyrex_animated",
+          "price": 472500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_calyrex_animated",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Cetoddle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_cetoddle",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_cetoddle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Charmander Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_charmander",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_charmander",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Charmeleon Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_charmeleon",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_charmeleon",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Clefairy Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_clefairy",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_clefairy",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Cloyster Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_cloyster",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_cloyster",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Corviknight Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_corviknight",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_corviknight",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Corvisquire Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_corvisquire",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_corvisquire",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Cubchoo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_cubchoo",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_cubchoo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Cubchoo (animated) Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_cubchoo_animated",
+          "price": 121500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_cubchoo_animated",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Cyndaquil Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_cyndaquil",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_cyndaquil",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Delibird Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_delibird",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_delibird",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Dolliv Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_dolliv",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_dolliv",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Drifloon Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_drifloon",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_drifloon",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Eevee Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_eevee",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_eevee",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Eiscue Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_eiscue",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_eiscue",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Eiscue Noice Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_eiscue_noice",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_eiscue_noice",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Flaaffy Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_flaaffy",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_flaaffy",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Frigibax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_frigibax",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_frigibax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Froslass Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_froslass",
+          "price": 94500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_froslass",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Furret Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_furret",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_furret",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Gastly Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_gastly",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_gastly",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Gengar Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_gengar",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_gengar",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Gholdengo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_gholdengo",
+          "price": 135000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_gholdengo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Glalie Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_glalie",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_glalie",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Happiny Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_happiny",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_happiny",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Headpile Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_headpile",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_headpile",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Igglybuff Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_igglybuff",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_igglybuff",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Ivysaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_ivysaur",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_ivysaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Jigglypuff Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_jigglypuff",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_jigglypuff",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Kyogre Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_kyogre",
+          "price": 405000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_kyogre",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Lechonk Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_lechonk",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_lechonk",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Lickitung Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_lickitung",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_lickitung",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Luvdisc Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_luvdisc",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_luvdisc",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Mareep Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_mareep",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_mareep",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Marshadow Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_marshadow",
+          "price": 337500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_marshadow",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Marshadow Zenith Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_marshadow_zenith",
+          "price": 472500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_marshadow_zenith",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Mimikyu Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_mimikyu",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_mimikyu",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Munchlax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_munchlax",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_munchlax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Netherite Gholdengo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_netherite_gholdengo",
+          "price": 540000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_netherite_gholdengo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Palossand Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_palossand",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_palossand",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Phantump Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_phantump",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_phantump",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Piloswine Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_piloswine",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_piloswine",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Pumpkaboo Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_pumpkaboo",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_pumpkaboo",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Quagsire Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_quagsire",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_quagsire",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Rabsca Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_rabsca",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_rabsca",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Rellor Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_rellor",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_rellor",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Riolu Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_riolu",
+          "price": 94500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_riolu",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Rookidee Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_rookidee",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_rookidee",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Rowlet Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_rowlet",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_rowlet",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Sableye Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_sableye",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_sableye",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Sandygast Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_sandygast",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_sandygast",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Sentret Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_sentret",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_sentret",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Shellder Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_shellder",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_shellder",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Shuckle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_shuckle",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_shuckle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Smoliv Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_smoliv",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_smoliv",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Snorlax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorlax",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_snorlax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Snorunt Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorunt",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_snorunt",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Snorunt Family Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorunt_family",
+          "price": 162000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_snorunt_family",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Spheal Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_spheal",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_spheal",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Squirtle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_squirtle",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_squirtle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Stonjourner Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_stonjourner",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_stonjourner",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Swinub Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_swinub",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_swinub",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Treecko Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_treecko",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_treecko",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Trevenant Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_trevenant",
+          "price": 94500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_trevenant",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Tropius Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_tropius",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_tropius",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Venonat Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_venonat",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_venonat",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Venusaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_venusaur",
+          "price": 108000,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_venusaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Wailmer Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_wailmer",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_wailmer",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Wailord Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_wailord",
+          "price": 121500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_wailord",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Wartortle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_wartortle",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_wartortle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shiny Wooper Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shiny_wooper",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_shiny_wooper",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Shuckle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_shuckle",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_shuckle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Skibidi Mewlet Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_skibidi_mewlet",
+          "price": 67500,
+          "item": "pokeblocks:gigantic_pokedoll_skibidi_mewlet",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Smoliv Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_smoliv",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_smoliv",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Snorlax Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_snorlax",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_snorlax",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Snorunt Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_snorunt",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_snorunt",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Snorunt Family Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_snorunt_family",
+          "price": 54000,
+          "item": "pokeblocks:gigantic_pokedoll_snorunt_family",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Spheal Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_spheal",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_spheal",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Squirtle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_squirtle",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_squirtle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Stonjourner Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_stonjourner",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_stonjourner",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Swinub Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_swinub",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_swinub",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Treecko Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_treecko",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_treecko",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Trevenant Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_trevenant",
+          "price": 31500,
+          "item": "pokeblocks:gigantic_pokedoll_trevenant",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Tropius Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_tropius",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_tropius",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Venonat Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_venonat",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_venonat",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Venusaur Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_venusaur",
+          "price": 36000,
+          "item": "pokeblocks:gigantic_pokedoll_venusaur",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Wailmer Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_wailmer",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_wailmer",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Wailord Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_wailord",
+          "price": 40500,
+          "item": "pokeblocks:gigantic_pokedoll_wailord",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Wartortle Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_wartortle",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_wartortle",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Washing Machine Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_washing_machine",
+          "price": 54000,
+          "item": "pokeblocks:gigantic_pokedoll_washing_machine",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
+        },
+        {
+          "name": "Gigantic Wooper Doll",
+          "icon": "pokeblocks:gigantic_pokedoll_wooper",
+          "price": 22500,
+          "item": "pokeblocks:gigantic_pokedoll_wooper",
+          "count": 1,
+          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
         }
       ]
     },
@@ -1334,6 +3770,17 @@
       "icon": "minecraft:name_tag",
       "items": [
         {
+          "name": "Title: Magikarp Fan",
+          "icon": "minecraft:name_tag",
+          "price": 10000,
+          "description": "\"Splash!\" It did nothing. You love it anyway.",
+          "commands": [
+            "titles grant {player} magikarp_fan"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
           "name": "Title: Youngster",
           "icon": "minecraft:name_tag",
           "price": 15000,
@@ -1356,12 +3803,34 @@
           "period": "once"
         },
         {
+          "name": "Title: Villager",
+          "icon": "minecraft:name_tag",
+          "price": 15000,
+          "description": "Hmm.",
+          "commands": [
+            "titles grant {player} villager"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
           "name": "Title: Bug Catcher",
           "icon": "minecraft:name_tag",
           "price": 20000,
           "description": "Shows as §8[§2Bug Catcher§8]§7. Wear it with /titles.",
           "commands": [
             "titles grant {player} bug_catcher"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Apricorn Farmer",
+          "icon": "minecraft:name_tag",
+          "price": 20000,
+          "description": "Every Poké Ball starts in your orchard.",
+          "commands": [
+            "titles grant {player} apricorn_farmer"
           ],
           "limit": 1,
           "period": "once"
@@ -1389,12 +3858,56 @@
           "period": "once"
         },
         {
+          "name": "Title: Steve",
+          "icon": "minecraft:name_tag",
+          "price": 25000,
+          "description": "The original.",
+          "commands": [
+            "titles grant {player} steve"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Alex",
+          "icon": "minecraft:name_tag",
+          "price": 25000,
+          "description": "The other original.",
+          "commands": [
+            "titles grant {player} alex"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
           "name": "Title: Fisherman",
           "icon": "minecraft:name_tag",
           "price": 30000,
           "description": "Shows as §8[§3Fisherman§8]§7. Wear it with /titles.",
           "commands": [
             "titles grant {player} fisherman"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Snorlax Napper",
+          "icon": "minecraft:name_tag",
+          "price": 30000,
+          "description": "Blocking the road since Gen 1.",
+          "commands": [
+            "titles grant {player} snorlax_napper"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Creeper Hugger",
+          "icon": "minecraft:name_tag",
+          "price": 35000,
+          "description": "Thatsss a very nice house you have.",
+          "commands": [
+            "titles grant {player} creeper_hugger"
           ],
           "limit": 1,
           "period": "once"
@@ -1422,6 +3935,17 @@
           "period": "once"
         },
         {
+          "name": "Title: Ditto",
+          "icon": "minecraft:name_tag",
+          "price": 40000,
+          "description": "Could be anyone, really.",
+          "commands": [
+            "titles grant {player} ditto"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
           "name": "Title: Beauty",
           "icon": "minecraft:name_tag",
           "price": 50000,
@@ -1433,12 +3957,78 @@
           "period": "once"
         },
         {
+          "name": "Title: Diamond Digger",
+          "icon": "minecraft:name_tag",
+          "price": 50000,
+          "description": "Diamonds!",
+          "commands": [
+            "titles grant {player} diamond_digger"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Rocket Grunt",
+          "icon": "minecraft:name_tag",
+          "price": 60000,
+          "description": "Prepare for trouble...",
+          "commands": [
+            "titles grant {player} rocket_grunt"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Galactic Grunt",
+          "icon": "minecraft:name_tag",
+          "price": 60000,
+          "description": "For a new world!",
+          "commands": [
+            "titles grant {player} galactic_grunt"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Ender Walker",
+          "icon": "minecraft:name_tag",
+          "price": 60000,
+          "description": "Don't look it in the eye.",
+          "commands": [
+            "titles grant {player} ender_walker"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
           "name": "Title: Gentleman",
           "icon": "minecraft:name_tag",
           "price": 75000,
           "description": "Shows as §8[§7Gentleman§8]§7. Wear it with /titles.",
           "commands": [
             "titles grant {player} gentleman"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Youngster Joey",
+          "icon": "minecraft:name_tag",
+          "price": 77777,
+          "description": "My Rattata is in the top percentage of Rattata.",
+          "commands": [
+            "titles grant {player} youngster_joey"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Pokémon Ranger",
+          "icon": "minecraft:name_tag",
+          "price": 90000,
+          "description": "Protector of wild Pokémon.",
+          "commands": [
+            "titles grant {player} pokemon_ranger"
           ],
           "limit": 1,
           "period": "once"
@@ -1461,6 +4051,28 @@
           "description": "Shows as §8[§b§lAce Trainer§8]§7. Wear it with /titles.",
           "commands": [
             "titles grant {player} ace_trainer"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Professor",
+          "icon": "minecraft:name_tag",
+          "price": 200000,
+          "description": "Are you a boy or a girl?",
+          "commands": [
+            "titles grant {player} professor"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Title: Netherite Knight",
+          "icon": "minecraft:name_tag",
+          "price": 250000,
+          "description": "Fireproof and fabulous.",
+          "commands": [
+            "titles grant {player} netherite_knight"
           ],
           "limit": 1,
           "period": "once"
