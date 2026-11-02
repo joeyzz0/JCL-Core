@@ -5,10 +5,8 @@ import java.util.List;
 
 import com.google.gson.Gson;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.arguments.StringArgumentType;
 
 import net.minecraft.commands.Commands;
-import net.minecraft.commands.SharedSuggestionProvider;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
@@ -43,13 +41,17 @@ public final class Help {
 
     @SubscribeEvent
     public static void onCommands(RegisterCommandsEvent e) {
-        e.getDispatcher().register(Commands.literal("help")
-                .executes(c -> { index(c.getSource().getPlayerOrException()); return 1; })
-                .then(Commands.argument("category", StringArgumentType.word())
-                        .suggests((c, b) -> SharedSuggestionProvider.suggest(cfg.categories.stream().map(x -> x.id), b))
-                        .executes(c -> { page(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "category"), 1); return 1; })
-                        .then(Commands.argument("page", IntegerArgumentType.integer(1))
-                                .executes(c -> { page(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "category"), IntegerArgumentType.getInteger(c, "page")); return 1; }))));
+        load();
+        // Each category is its own word after /help, so it always wins over vanilla's "/help <command>".
+        var root = Commands.literal("help").executes(c -> { index(c.getSource().getPlayerOrException()); return 1; });
+        for (Category cat : cfg.categories) {
+            String id = cat.id;
+            root.then(Commands.literal(id)
+                    .executes(c -> { page(c.getSource().getPlayerOrException(), id, 1); return 1; })
+                    .then(Commands.argument("page", IntegerArgumentType.integer(1))
+                            .executes(c -> { page(c.getSource().getPlayerOrException(), id, IntegerArgumentType.getInteger(c, "page")); return 1; })));
+        }
+        e.getDispatcher().register(root);
     }
 
     static MutableComponent button(String text, String cmd, String hover) {

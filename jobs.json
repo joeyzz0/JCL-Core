@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 5,
   "npcs": [
     {
       "id": "guide",
@@ -89,22 +89,22 @@
           "where": "by the fountain in the Grand Plaza",
           "lines": [
             "Welcome to Port Azure, {player}! I'm Mae, and I help new trainers find their feet.",
-            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the big red-roofed building north of here.",
+            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the big building with the red roof, north of the plaza.",
             "Meet everyone, then find Captain Marlo at the docks. He has a gift for you!"
           ]
         },
         {
           "npc": "nurse",
-          "where": "inside the Pokémon Center (big red roof, north of the plaza)",
+          "where": "inside the Pokémon Center (red roof, north of the plaza)",
           "lines": [
             "Hello, and welcome to the Pokémon Center!",
             "Use the healing machine whenever you like. The GTS and Wonder Trade kiosks are here too.",
-            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, the teal building to the north-west."
+            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, the building with the blue roof, north-west of the plaza."
           ]
         },
         {
           "npc": "clerk",
-          "where": "inside the Poké Mart (teal roof, north-west)",
+          "where": "inside the Poké Mart (blue roof, north-west of the plaza)",
           "lines": [
             "Welcome to the Poké Mart! Type /shop to see everything we sell.",
             "Poké Balls, healing, keys, titles and name colours. And /sell buys your extras.",
@@ -117,12 +117,12 @@
           "lines": [
             "Crates! Left-click one to see every reward and its exact chance.",
             "Hold a key and right-click to open. Keys come from chores, quests, loot balls and the shop.",
-            "Wren keeps the records up north. Go see your name on the leaderboards!"
+            "Wren keeps the records up north. Go see your name on the Hall of Fame!"
           ]
         },
         {
           "npc": "archivist",
-          "where": "at the Leaderboard Hall (north-east)",
+          "where": "at the Hall of Fame (north-east)",
           "lines": [
             "These boards track the most Pokémon caught, the most trainers beaten and the richest trainers.",
             "The map board is next door. Pin your base so friends can find you!",
@@ -131,7 +131,7 @@
         },
         {
           "npc": "coach",
-          "where": "at the EV Training gate (west side)",
+          "where": "at the EV Training gate (west side of town)",
           "lines": [
             "Want stronger Pokémon? EVs are the secret.",
             "Step through this gate to reach the training grounds. Each area trains a different stat.",
