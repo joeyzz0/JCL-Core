@@ -63,11 +63,12 @@ public final class Npcs {
     static void applySkin(Entity e, String skin) {
         try {
             Path f = skinDir().resolve(skin + ".png");
-            if (!Files.exists(f)) return;
+            if (!Files.exists(f)) { GtsMod.LOG.warn("[JCL] No skin file at {}", f); return; }
             Class<?> modelType = Class.forName("com.cobblemon.mod.common.entity.npc.NPCPlayerModelType");
             Object def = modelType.getField("DEFAULT").get(null);
             Method load = e.getClass().getMethod("loadTexture", java.net.URI.class, modelType);
             load.invoke(e, f.toUri(), def);
+            GtsMod.LOG.info("[JCL] Applied skin {} to an NPC.", skin);
         } catch (Throwable t) { GtsMod.LOG.warn("[JCL] Could not apply skin {} to an NPC", skin, t); }
     }
 
@@ -79,24 +80,29 @@ public final class Npcs {
 
     // ------------------------------------------------------------------ spawning
 
-    /** Spawns Cobblemon NPC class jcl_gts:<cls> at a spot, facing yaw, tags it and gives it its skin. */
+    /** Spawns Cobblemon NPC class jcl_gts:<cls> at a spot, facing yaw, tags it and gives it its skin.
+     *  Built directly the same way Cobblemon's own /spawnnpc does it, so there's no searching for it afterwards. */
     static Entity spawn(ServerLevel level, String cls, double x, double y, double z, float yaw, String... tags) {
-        var src = server.createCommandSourceStack().withLevel(level).withSuppressedOutput().withPermission(4);
-        server.getCommands().performPrefixedCommand(src, String.format(Locale.ROOT, "spawnnpcat %.2f %.2f %.2f jcl_gts:%s 1", x, y, z, cls));
-        Entity found = null; double best = 9;
-        for (Entity en : level.getEntities((Entity) null, new AABB(x - 2, y - 2, z - 2, x + 2, y + 3, z + 2), Npcs::isCobblemonNpc)) {
-            if (en.getTags().stream().anyMatch(t -> t.startsWith("jcl_"))) continue;
-            double d = en.distanceToSqr(x, y, z);
-            if (d < best) { best = d; found = en; }
+        try {
+            Class<?> classes = Class.forName("com.cobblemon.mod.common.api.npc.NPCClasses");
+            Object npcClass = classes.getMethod("getByIdentifier", net.minecraft.resources.ResourceLocation.class)
+                    .invoke(null, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("jcl_gts", cls));
+            if (npcClass == null) { GtsMod.LOG.warn("[JCL] NPC class jcl_gts:{} isn't loaded. Check the server log for Cobblemon data errors.", cls); return null; }
+            Class<?> npcType = Class.forName("com.cobblemon.mod.common.entity.npc.NPCEntity");
+            Entity npc = (Entity) npcType.getConstructor(net.minecraft.world.level.Level.class).newInstance(level);
+            npc.moveTo(x, y, z, yaw, 0f);
+            npcType.getMethod("setNpc", Class.forName("com.cobblemon.mod.common.api.npc.NPCClass")).invoke(npc, npcClass);
+            npcType.getMethod("initialize", int.class).invoke(npc, 1);
+            if (npc instanceof LivingEntity le) { le.setYHeadRot(yaw); le.setYBodyRot(yaw); }
+            for (String t : tags) npc.addTag(t);
+            npc.addTag("jcl_skin_" + cls);
+            level.addFreshEntity(npc);
+            applySkin(npc, cls);
+            return npc;
+        } catch (Throwable t) {
+            GtsMod.LOG.error("[JCL] Could not spawn NPC jcl_gts:{}", cls, t);
+            return null;
         }
-        if (found == null) { GtsMod.LOG.warn("[JCL] Cobblemon didn't spawn NPC class jcl_gts:{}. Is the class loaded?", cls); return null; }
-        found.teleportTo(x, y, z);
-        found.setYRot(yaw); found.setXRot(0);
-        if (found instanceof LivingEntity le) { le.setYHeadRot(yaw); le.setYBodyRot(yaw); }
-        for (String t : tags) found.addTag(t);
-        found.addTag("jcl_skin_" + cls);
-        applySkin(found, cls);
-        return found;
     }
 
     static int removeAll(ServerLevel level, double x, double z, double radius) {
