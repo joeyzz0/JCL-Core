@@ -1,0 +1,37 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Sp. Def Coach Faye",
+      "color": "green"
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "jcl_gts:ev_spd"
+  },
+  "battleConfiguration": {
+    "canChallenge": false,
+    "healAfterwards": false
+  },
+  "autoHealParty": true,
+  "skill": 0,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "florges level=1",
+      "florges level=1",
+      "florges level=1",
+      "florges level=1",
+      "florges level=1",
+      "florges level=1"
+    ]
+  }
+}

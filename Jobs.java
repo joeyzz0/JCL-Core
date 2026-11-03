@@ -47,8 +47,8 @@ import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 public final class Jobs {
     private Jobs() {}
 
-    public static final class Npc { public String id, name, profession = "minecraft:none", type = "minecraft:plains"; public List<String> idle = new ArrayList<>(); }
-    public static final class Step { public String npc, where; public List<String> lines = new ArrayList<>(); }
+    public static final class Npc { public String id, name, profession = "minecraft:none", type = "minecraft:plains"; public List<String> idle = new ArrayList<>(); public List<String> done = new ArrayList<>(); }
+    public static final class Step { public String npc, where; public List<String> lines = new ArrayList<>(); public List<String> after = new ArrayList<>(); }
     public static final class PokemonReward { public String species; public int level = 25; public boolean shiny, maxRideStats; }
     public static final class Reward { public long money; public List<String> commands = new ArrayList<>(); public PokemonReward pokemon; public String message; }
     public static final class Job { public String id, name, description; public boolean repeatable; public List<Step> steps = new ArrayList<>(); public Reward reward = new Reward(); }
@@ -109,38 +109,76 @@ public final class Jobs {
     }
 
     static void say(ServerPlayer p, Npc n, String line) {
-        p.sendSystemMessage(Component.literal("§e§l" + c(n.name) + "§r§7: §f" + c(line).replace("{player}", p.getGameProfile().getName())));
+        String t = c(line).replace("{player}", p.getGameProfile().getName());
+        if (t.startsWith("> ")) p.sendSystemMessage(Component.literal("§7§oYou: " + t.substring(2)));     // the player's side of the chat
+        else p.sendSystemMessage(Component.literal("§e§l" + c(n.name) + "§r§7: §f" + t));
+    }
+
+    /** A conversation plays one line at a time with a short pause, then runs its ending. */
+    static final class Convo { ServerPlayer p; java.util.ArrayDeque<Runnable> steps = new java.util.ArrayDeque<>(); int wait; }
+    static final Map<java.util.UUID, Convo> TALKING = new HashMap<>();
+
+    static void converse(ServerPlayer p, Npc n, List<String> lines, Runnable done) {
+        Convo cv = new Convo(); cv.p = p;
+        for (String l : lines) cv.steps.add(() -> { say(p, n, l); p.playNotifySound(SoundEvents.VILLAGER_AMBIENT, SoundSource.MASTER, 0.35f, 1.3f); });
+        if (done != null) cv.steps.add(done);
+        TALKING.put(p.getUUID(), cv);
+    }
+
+    @SubscribeEvent
+    public static void onTick(net.neoforged.neoforge.event.tick.ServerTickEvent.Post e) {
+        if (TALKING.isEmpty()) return;
+        var it = TALKING.values().iterator();
+        while (it.hasNext()) {
+            Convo cv = it.next();
+            if (cv.p.hasDisconnected()) { it.remove(); continue; }
+            if (cv.wait-- > 0) continue;
+            Runnable r = cv.steps.poll();
+            if (r == null) { it.remove(); continue; }
+            r.run();
+            cv.wait = 50;                                   // 2.5 seconds between lines
+        }
     }
 
     static void talk(ServerPlayer p, String npcId) {
         Npc n = npc(npcId);
         if (n == null) return;
+        if (TALKING.containsKey(p.getUUID())) return;      // let the current conversation finish first
         Map<String, Integer> prog = progress(p);
         for (Job j : cfg.jobs) {
             if (j.steps.isEmpty()) continue;
             int at = prog.getOrDefault(j.id, -1);
-            boolean done = at >= j.steps.size();
-            if (done && !j.repeatable) continue;
-            if (done) at = -1;
+            boolean finished = at >= j.steps.size();
+            if (finished && !j.repeatable) continue;
+            if (finished) at = -1;
             int next = Math.max(at, 0);
-            if (at == -1 && !j.steps.get(0).npc.equals(npcId)) continue;     // jobs start at their first NPC
-            Step s = j.steps.get(next);
-            if (!s.npc.equals(npcId)) continue;
-            p.playNotifySound(SoundEvents.VILLAGER_AMBIENT, SoundSource.MASTER, 0.6f, 1.1f);
-            for (String line : s.lines) say(p, n, line);
-            if (at == -1) p.sendSystemMessage(Component.literal("§6§l✦ New job: §e" + c(j.name) + "§7 · " + c(j.description)));
-            prog.put(j.id, next + 1);
-            save();
-            if (next + 1 >= j.steps.size()) finish(p, j);
-            else update(p, j);
+            if (at == -1 && !j.steps.get(0).npc.equals(npcId)) continue;
+            Step st = j.steps.get(next);
+            if (!st.npc.equals(npcId)) continue;
+            final boolean starting = at == -1;
+            final int step = next;
+            converse(p, n, st.lines, () -> {
+                if (starting) p.sendSystemMessage(Component.literal("§6§l✦ New job: §e" + c(j.name) + "§7 · " + c(j.description)));
+                progress(p).put(j.id, step + 1);
+                save();
+                if (step + 1 >= j.steps.size()) {
+                    finish(p, j);
+                    if (!st.after.isEmpty()) converse(p, n, st.after, null);
+                } else update(p, j);
+            });
             return;
         }
-        // Nothing for this NPC right now: idle chatter, plus a nudge toward the player's current task.
-        if (!n.idle.isEmpty()) say(p, n, n.idle.get((int) (Math.random() * n.idle.size())));
-        for (Job j : cfg.jobs) {
-            int at = prog.getOrDefault(j.id, -1);
-            if (at >= 0 && at < j.steps.size()) { update(p, j); break; }
-        }
+        // Nothing for this NPC right now: a little chat, then a nudge toward the player's current task.
+        List<String> pool = n.idle;
+        boolean allDone = cfg.jobs.stream().allMatch(j -> prog.getOrDefault(j.id, -1) >= j.steps.size());
+        if (allDone && !n.done.isEmpty()) pool = n.done;
+        String chat = pool.isEmpty() ? "Hello there!" : pool.get((int) (Math.random() * pool.size()));
+        converse(p, n, List.of(chat.split("\\|")), () -> {
+            for (Job j : cfg.jobs) {
+                int at = prog.getOrDefault(j.id, -1);
+                if (at >= 0 && at < j.steps.size()) { update(p, j); break; }
+            }
+        });
     }
 
     static void update(ServerPlayer p, Job j) {
@@ -209,7 +247,10 @@ public final class Jobs {
                                 .executes(c -> { spawnNpc(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "id")); return 1; })))
                         .then(Commands.literal("remove").executes(c -> {
                             ServerPlayer p = c.getSource().getPlayerOrException();
-                            server.getCommands().performPrefixedCommand(p.createCommandSourceStack().withSuppressedOutput().withPermission(4), "kill @e[tag=jcl_npc,distance=..3,limit=1,sort=nearest]");
+                            net.minecraft.world.entity.Entity near = null; double best = 9;
+                            for (net.minecraft.world.entity.Entity en : p.serverLevel().getEntities((net.minecraft.world.entity.Entity) null, p.getBoundingBox().inflate(3), Jobs::isNpc)) {
+                                double d = en.distanceToSqr(p); if (d < best) { best = d; near = en; } }
+                            if (near != null) near.discard();
                             p.sendSystemMessage(Component.literal("§aRemoved the nearest NPC (within 3 blocks)."));
                             return 1;
                         })))
@@ -226,11 +267,8 @@ public final class Jobs {
     static void spawnNpc(ServerPlayer p, String id) {
         Npc n = npc(id);
         if (n == null) { p.sendSystemMessage(Component.literal("§cNo NPC called " + id + " in config/jcl_jobs.json.")); return; }
-        JsonObject name = new JsonObject(); name.addProperty("text", c(n.name));
-        String cmd = String.format(java.util.Locale.ROOT,
-                "summon minecraft:villager %.2f %.2f %.2f {NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,CustomNameVisible:1b,Rotation:[%.1ff,0f],CustomName:'%s',VillagerData:{profession:\"%s\",type:\"%s\",level:5},Offers:{Recipes:[]},Tags:[\"jcl_npc\",\"jcl_npc_%s\"]}",
-                p.getX(), p.getY(), p.getZ(), p.getYRot(), name.toString().replace("'", "\\'"), n.profession, n.type, n.id);
-        server.getCommands().performPrefixedCommand(p.createCommandSourceStack().withSuppressedOutput().withPermission(4), cmd);
+        var e = Npcs.spawn(p.serverLevel(), id, p.getX(), p.getY(), p.getZ(), p.getYRot(), "jcl_npc", "jcl_npc_" + id);
+        if (e == null) { p.sendSystemMessage(Component.literal("§cCouldn't spawn " + c(n.name) + ". Check the server log.")); return; }
         p.sendSystemMessage(Component.literal("§aSpawned " + c(n.name) + "§a here. Remove it with §f/jobs npc remove§a while standing next to it."));
     }
 
@@ -339,7 +377,7 @@ public final class Jobs {
 
     // ------------------------------------------------------------------ NPCs can't be hurt (only /kill or /jobs npc remove)
 
-    static boolean isNpc(net.minecraft.world.entity.Entity e) { return e != null && e.getTags().contains("jcl_npc"); }
+    static boolean isNpc(net.minecraft.world.entity.Entity e) { return e != null && (e.getTags().contains("jcl_npc") || e.getTags().contains("jcl_ev")); }
 
     @SubscribeEvent
     public static void onAttack(net.neoforged.neoforge.event.entity.player.AttackEntityEvent e) {

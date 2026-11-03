@@ -1,0 +1,18 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Archivist Wren",
+      "color": "dark_aqua"
+    }
+  ],
+  "interaction": {
+    "type": "none"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "HP Coach Holly",
+      "color": "red"
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "jcl_gts:ev_hp"
+  },
+  "battleConfiguration": {
+    "canChallenge": false,
+    "healAfterwards": false
+  },
+  "autoHealParty": true,
+  "skill": 0,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "blissey level=1",
+      "blissey level=1",
+      "blissey level=1",
+      "blissey level=1",
+      "blissey level=1",
+      "blissey level=1"
+    ]
+  }
+}

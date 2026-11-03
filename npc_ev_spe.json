@@ -1,0 +1,37 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Speed Coach Zip",
+      "color": "light_purple"
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "jcl_gts:ev_spe"
+  },
+  "battleConfiguration": {
+    "canChallenge": false,
+    "healAfterwards": false
+  },
+  "autoHealParty": true,
+  "skill": 0,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "talonflame level=1",
+      "talonflame level=1",
+      "talonflame level=1",
+      "talonflame level=1",
+      "talonflame level=1",
+      "talonflame level=1"
+    ]
+  }
+}

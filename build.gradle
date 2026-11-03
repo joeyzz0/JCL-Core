@@ -36,6 +36,10 @@ processResources {
     from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json', 'crate_remover.json']) { into 'assets/jcl_gts/models/item' }
     from('en_us.json') { into 'assets/jcl_gts/lang' }
     from(['crates.json', 'shop.json', 'titles.json', 'jobs.json', 'help.json']) { into 'jcl_defaults' }
+    from('.') { include 'npc_*.json'; into 'data/jcl_gts/npcs'; rename('npc_(.*)', '$1') }
+    from('.') { include 'dialogue_*.json'; into 'data/jcl_gts/dialogues'; rename('dialogue_(.*)', '$1') }
+    from('.') { include 'skin_*.png'; into 'jcl_skins'; rename('skin_(.*)', '$1') }
+    from('spawn_layout.json') { into 'jcl' }
 }
 
 neoForge {

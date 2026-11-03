@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 4,
   "categories": [
     {
       "id": "start",
@@ -25,6 +25,49 @@
         [
           "Trainer Association",
           "Find one in any village to start a trainer series and raise your Level Cap."
+        ],
+        [
+          "/leaderboard",
+          "See the top trainers and your own rank."
+        ]
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "Getting Around",
+      "icon": "minecraft:compass",
+      "commands": [
+        [
+          "/spawn",
+          "Go back to Port Azure."
+        ],
+        [
+          "/warp",
+          "Open the warp menu: spawn, EV training, crates, shop and more."
+        ],
+        [
+          "/rtp",
+          "Teleport somewhere random in the wild."
+        ],
+        [
+          "/tpa <player>",
+          "Ask to teleport to a friend."
+        ],
+        [
+          "/tpahere <player>",
+          "Ask a friend to teleport to you."
+        ],
+        [
+          "/tpaccept",
+          "Accept a teleport request."
+        ],
+        [
+          "/tpdeny",
+          "Deny a teleport request."
+        ],
+        [
+          "Sharestones",
+          "The black sharestone links official safe zones. Red ones are community-built. Both can take you to spawn."
         ]
       ]
     },

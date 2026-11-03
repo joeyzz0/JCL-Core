@@ -1,0 +1,63 @@
+{
+  "speakers": {
+    "npc": {
+      "face": "q.npc.face();",
+      "name": {
+        "expression": "q.npc.name",
+        "type": "expression"
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "expression": "q.player.username",
+        "type": "expression"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "Hi there! I'm Holly, and I train HP.",
+        "My team is six level 1 Blissey. Beat them all for 18 HP EVs (36 with a Power item).",
+        "One training battle costs 1,000 CobbleDollars. Ready?"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "value": "battle",
+            "text": "Battle! (1,000 CobbleDollars)",
+            "action": [
+              "q.dialogue.close();",
+              "q.npc.start_battle(q.player, 'single');"
+            ]
+          },
+          {
+            "value": "info",
+            "text": "How does EV training work?",
+            "action": "q.dialogue.set_page('info');"
+          },
+          {
+            "value": "bye",
+            "text": "Maybe later.",
+            "action": "q.dialogue.close();"
+          }
+        ]
+      }
+    },
+    {
+      "id": "info",
+      "speaker": "npc",
+      "lines": [
+        "Every Pokémon you defeat trains one of your team's stats a little. Those points are called EVs.",
+        "My Blissey only give HP EVs, so nothing else gets in the way.",
+        "A Pokémon can hold up to 252 EVs in one stat and 510 in total. Hold a Power item to train twice as fast!"
+      ],
+      "input": "q.dialogue.set_page('greeting');"
+    }
+  ]
+}

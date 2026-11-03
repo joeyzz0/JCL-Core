@@ -1,0 +1,37 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Defense Coach Dora",
+      "color": "yellow"
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "jcl_gts:ev_def"
+  },
+  "battleConfiguration": {
+    "canChallenge": false,
+    "healAfterwards": false
+  },
+  "autoHealParty": true,
+  "skill": 0,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "golem level=1",
+      "golem level=1",
+      "golem level=1",
+      "golem level=1",
+      "golem level=1",
+      "golem level=1"
+    ]
+  }
+}

@@ -1,14 +1,18 @@
 {
-  "version": 5,
+  "version": 6,
   "npcs": [
     {
       "id": "guide",
       "name": "&bGuide Mae",
       "profession": "minecraft:cartographer",
       "idle": [
-        "Welcome to Port Azure! Lost? Type /help any time.",
-        "The crates are east of the plaza. Left-click one to see what's inside!",
-        "Every quest pays CobbleDollars. Check your quest book often!"
+        "Lovely day in Port Azure, isn't it?|The sea breeze keeps the Wingull happy.",
+        "Lost? Type /help any time.|And /warp will take you anywhere important.",
+        "See the black sharestone near the plaza?|It links every official safe zone. Red ones are built by the community!"
+      ],
+      "done": [
+        "Look at you, a real local now!|If you ever get lost, the black sharestone will bring you home.",
+        "Off on an adventure? Remember, /spawn brings you right back here."
       ]
     },
     {
@@ -16,8 +20,11 @@
       "name": "&dNurse Joy",
       "profession": "minecraft:cleric",
       "idle": [
-        "Your Pokémon are looking healthy today!",
-        "The healing machine is behind the counter. Help yourself!"
+        "Welcome to the Pokémon Center!|Your Pokémon are looking healthy today.",
+        "We heal Pokémon free of charge.|It's our pleasure!"
+      ],
+      "done": [
+        "Back again? Rest easy, your team's in good hands.|We hope to see you again!"
       ]
     },
     {
@@ -25,8 +32,11 @@
       "name": "&aClerk Ollie",
       "profession": "minecraft:librarian",
       "idle": [
-        "Fresh stock every day! Well, the same stock, but fresh.",
-        "Hold an item and type /sell to sell it."
+        "Ah, a customer! Type /shop to browse.",
+        "Got too much stuff?|Open /sell and drop it all in the box."
+      ],
+      "done": [
+        "Keys, balls, dolls... we've got it all.|Come back when your wallet's full!"
       ]
     },
     {
@@ -34,8 +44,11 @@
       "name": "&6Crate Keeper Rin",
       "profession": "minecraft:toolsmith",
       "idle": [
-        "Feeling lucky? Left-click a crate to see the odds.",
-        "Five keys merge into one of the next tier. For a fee, of course."
+        "Feeling lucky?|Left-click any crate to see the odds.",
+        "Five keys merge into one of the next tier.|For a small fee, of course."
+      ],
+      "done": [
+        "Every crate has a jackpot.|I've seen it happen... once."
       ]
     },
     {
@@ -44,8 +57,11 @@
       "profession": "minecraft:librarian",
       "type": "minecraft:snow",
       "idle": [
-        "The leaderboards reset at the start of each month. Mostly.",
-        "Pin your base on the map board so friends can visit!"
+        "The boards update every minute.|Who will top them this month?",
+        "Catch Pokémon and beat trainers to climb the boards."
+      ],
+      "done": [
+        "Your name could be up there one day.|Keep training!"
       ]
     },
     {
@@ -53,8 +69,11 @@
       "name": "&cEV Coach Tess",
       "profession": "minecraft:armorer",
       "idle": [
-        "Every stat has a training spot. Step through the gate to start!",
-        "Power items make EV training much faster."
+        "EVs make a good Pokémon great.|Hold a Power item to train faster.",
+        "Each pillar marks a stat.|HP, Attack, Defense, Sp. Atk, Sp. Def and Speed."
+      ],
+      "done": [
+        "Ready for another session?|Step through the gate and get to work!"
       ]
     },
     {
@@ -62,8 +81,11 @@
       "name": "&9Referee Kai",
       "profession": "minecraft:weaponsmith",
       "idle": [
-        "Challenge a friend on the court. Fair play only!",
-        "The red box and the blue box are where trainers stand."
+        "Looking for a battle?|Challenge a friend right here on the court.",
+        "Fair play only on my court!"
+      ],
+      "done": [
+        "The court's always open.|Bring your best team!"
       ]
     },
     {
@@ -72,8 +94,11 @@
       "profession": "minecraft:fisherman",
       "type": "minecraft:swamp",
       "idle": [
-        "The sea's calm today. Good day for a ride.",
-        "Treat that Lapras well and it'll carry you anywhere."
+        "The sea's calm today.|Perfect weather for sailing.",
+        "Ahoy! Mind the rope, it's slippery."
+      ],
+      "done": [
+        "How's that Lapras treating you?|Fair winds, trainer!"
       ]
     }
   ],
@@ -88,72 +113,114 @@
           "npc": "guide",
           "where": "by the fountain in the Grand Plaza",
           "lines": [
-            "Welcome to Port Azure, {player}! I'm Mae, and I help new trainers find their feet.",
-            "The best way to learn the town is to meet everyone. Start with Nurse Joy in the Pokémon Center, the big building with the red roof, north of the plaza.",
-            "Meet everyone, then find Captain Marlo at the docks. He has a gift for you!"
-          ]
+            "Oh! A new face! Welcome to Port Azure, {player}!",
+            "> Thanks! Where am I?",
+            "You're on our little island town in the middle of the sea.",
+            "I'm Mae, the town guide. I help new trainers find their feet.",
+            "The best way to learn the town is to meet everyone who runs it.",
+            "Start with Nurse Joy at the Pokémon Center. It's the big building with the red roof, north of here.",
+            "Oh, and one more thing...",
+            "Once you've met everyone, find Captain Marlo down at the docks. He has a surprise for you!"
+          ],
+          "after": []
         },
         {
           "npc": "nurse",
           "where": "inside the Pokémon Center (red roof, north of the plaza)",
           "lines": [
             "Hello, and welcome to the Pokémon Center!",
-            "Use the healing machine whenever you like. The GTS and Wonder Trade kiosks are here too.",
-            "The rules are posted on the wall. Next, say hi to Ollie in the Poké Mart, the building with the blue roof, north-west of the plaza."
-          ]
+            "> Mae sent me. I'm new in town!",
+            "How wonderful! We heal Pokémon here, free of charge, any time you need.",
+            "You'll find the GTS and Wonder Trade kiosks here too, for trading with other trainers.",
+            "And please do read the server rules on the wall.",
+            "Next, you should meet Ollie at the Poké Mart. It's the building with the blue roof, to the north-west."
+          ],
+          "after": []
         },
         {
           "npc": "clerk",
           "where": "inside the Poké Mart (blue roof, north-west of the plaza)",
           "lines": [
-            "Welcome to the Poké Mart! Type /shop to see everything we sell.",
-            "Poké Balls, healing, keys, titles and name colours. And /sell buys your extras.",
-            "Rin runs the crates across the plaza. Go take a look!"
-          ]
+            "Welcome to the Poké Mart! What can I get you?",
+            "> Just looking around. Nurse Joy sent me.",
+            "Ah, a newcomer! Let me tell you how things work.",
+            "Type /shop to see everything we sell: Poké Balls, healing, keys, titles, all sorts.",
+            "And if your bag's getting heavy, /sell opens a box you can drop everything into.",
+            "Rin runs the crates across the plaza. Go and try your luck!"
+          ],
+          "after": []
         },
         {
           "npc": "crates",
           "where": "at the Crate Pavilion (east of the plaza)",
           "lines": [
-            "Crates! Left-click one to see every reward and its exact chance.",
-            "Hold a key and right-click to open. Keys come from chores, quests, loot balls and the shop.",
-            "Wren keeps the records up north. Go see your name on the Hall of Fame!"
-          ]
+            "Step right up! Feeling lucky?",
+            "> What are these crates?",
+            "Each one holds prizes. Master Balls, shiny Pokémon, even legendaries!",
+            "Left-click any crate to see every reward and its exact chance.",
+            "Hold the matching key and right-click to open it.",
+            "Keys come from chores, quests, loot balls and the shop.",
+            "Wren keeps the Hall of Fame up north-east. Go see who's on top!"
+          ],
+          "after": []
         },
         {
           "npc": "archivist",
           "where": "at the Hall of Fame (north-east)",
           "lines": [
-            "These boards track the most Pokémon caught, the most trainers beaten and the richest trainers.",
-            "The map board is next door. Pin your base so friends can find you!",
-            "Tess trains Pokémon at the gate on the west side of town. She'll teach you about EVs."
-          ]
+            "Ah, a visitor to the Hall of Fame.",
+            "> What are all these boards?",
+            "These boards track the town's greatest trainers.",
+            "Most Pokémon caught, most trainers beaten, and the richest trainers of all time.",
+            "The first two reset every month, so anyone can make it up here.",
+            "The world map board sits by the south road, if you want to pin your base.",
+            "Tess trains Pokémon at the EV gate on the west side of town. She can make your team stronger."
+          ],
+          "after": []
         },
         {
           "npc": "coach",
           "where": "at the EV Training gate (west side of town)",
           "lines": [
-            "Want stronger Pokémon? EVs are the secret.",
+            "Ready to get stronger?",
+            "> Wren said you could help me train.",
+            "She's right! Do you know about EVs?",
+            "Every Pokémon you defeat gives your team a little training in one stat.",
             "Step through this gate to reach the training grounds. Each area trains a different stat.",
-            "Kai referees battles at the Trainer Court across town. Go meet him!"
-          ]
+            "Pair it with a Power item and you'll train twice as fast.",
+            "Kai referees battles at the Trainer Court. Go and say hi!"
+          ],
+          "after": []
         },
         {
           "npc": "referee",
           "where": "at the Trainer Court (south-east)",
           "lines": [
-            "This is where trainers settle things. Challenge a friend any time!",
-            "Battle fair, and shake hands after.",
-            "Last stop: Captain Marlo at the harbour. I hear he has something special for you."
-          ]
+            "Halt! Who goes there?",
+            "> I'm {player}. I'm new in town.",
+            "Ha! Just kidding. Welcome!",
+            "This is the Trainer Court, where trainers settle their battles.",
+            "Challenge a friend any time. Battle fair, and shake hands after.",
+            "I think you've met just about everyone now.",
+            "Except one. Head down to the harbour and find Captain Marlo at the end of the pier."
+          ],
+          "after": []
         },
         {
           "npc": "captain",
           "where": "at the end of the harbour pier (south)",
           "lines": [
-            "Ahoy! So you've met the whole town, eh? Mae said you'd come.",
-            "This Lapras has been waiting for a trainer worth sailing with. She's yours.",
-            "Her riding stats are maxed out. Take her anywhere the sea goes!"
+            "Ahoy there! You must be the newcomer everyone's talking about.",
+            "> Mae said you had a surprise for me?",
+            "Ha! That I do. But first, let me look at you...",
+            "You've met the whole town. That's the mark of a real Port Azure local.",
+            "There's a friend of mine who's been waiting a long time for a trainer worth sailing with.",
+            "I think that trainer is you."
+          ],
+          "after": [
+            "Her name's up to you, but she's yours now.",
+            "Her riding stats are maxed out, so she'll carry you across any sea.",
+            "Fair winds, {player}. Come visit the old captain sometime!"
           ]
         }
       ],
@@ -166,7 +233,7 @@
           "shiny": false,
           "maxRideStats": true
         },
-        "message": "You received a Lapras with maxed riding stats, and 2,500 CobbleDollars!"
+        "message": "Captain Marlo gave you a Lapras with maxed riding stats, and 2,500 CobbleDollars!"
       }
     }
   ]

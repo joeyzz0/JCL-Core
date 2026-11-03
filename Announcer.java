@@ -32,7 +32,7 @@ public final class Announcer {
     }
 
     public static final class Config {
-        public int version = 3;
+        public int version = 4;
         public boolean enabled = true;
         public int intervalMinutes = 8;
         public int minPlayersOnline = 1;
@@ -87,6 +87,34 @@ public final class Announcer {
                 new Message(true,
                         "§e§lTip: Shiny alerts",
                         "§7You get a ping when something rare spawns near you. Keep a Poké Ball ready!"),
+                new Message(true,
+                        "§0§l◆ §8§lThe Black Sharestone",
+                        "§7The black sharestone at spawn links every §fofficial§7 safe zone on the server.",
+                        "§7Craft your own, or use the one in Port Azure to travel."),
+                new Message(true,
+                        "§c§l◆ Red Sharestones",
+                        "§7Red sharestones mark §fcommunity-built§7 safe zones. Both kinds can take you back to spawn."),
+                new Message(true,
+                        "§b§lTip: Getting around",
+                        "§7Use §f/warp§7 for spawn, EV training, crates and the shop, §f/rtp§7 for the wild,",
+                        "§7and §f/tpa <player>§7 to visit a friend."),
+                new Message(true,
+                        "§e§lTip: Jobs",
+                        "§7Townsfolk with jobs for you will tell you where to go next. Check your progress with §f/jobs§7."),
+                new Message(true,
+                        "§6§lTip: Your first steps",
+                        "§7Pick a trainer series at a Trainer Association, then beat gym leaders to earn badges",
+                        "§7and raise your Level Cap."),
+                new Message(true,
+                        "§d§lTip: The Master Ribbon",
+                        "§7Beat every trainer series on the server to earn the legendary §6Master Ribbon§7."),
+                new Message(true,
+                        "§a§lTip: Shiny hunting",
+                        "§7Season Poké Bait with a Starf Berry or a Golden Apple to boost your shiny odds.",
+                        "§7The Pokémon Cooking chapter in the quest book has the best recipes."),
+                new Message(true,
+                        "§9§lTip: EV training",
+                        "§7Head to the EV Training gate at spawn and hold a Power item to train twice as fast."),
                 new Message(true,
                         "§6§lNever pay-to-win",
                         "§7Every rank, title and cosmetic here is earned in game. Always."));

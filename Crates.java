@@ -208,15 +208,11 @@ public final class Crates {
     }
 
     private static void summonText(ServerPlayer p, double x, double y, double z, String text, String tag, float scale) {
-        JsonObject t = new JsonObject(); t.addProperty("text", text);
-        String cmd = String.format(java.util.Locale.ROOT, "summon minecraft:text_display %.3f %.3f %.3f {text:'%s',billboard:\"center\",see_through:0b,shadow:1b,background:1073741824,transformation:{scale:[%.2ff,%.2ff,%.2ff],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},Tags:[\"jcl_crate\",\"%s\"]}",
-                x, y, z, t.toString().replace("'", "\\'"), scale, scale, scale, tag);
-        server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withLevel(p.serverLevel()).withSuppressedOutput(), cmd);
+        Holo.spawn(p.serverLevel(), x, y, z, Component.literal(text), tag, scale, true);
     }
 
     static void removeHologram(ServerPlayer p, BlockPos pos) {
-        server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withLevel(p.serverLevel()).withSuppressedOutput(),
-                "kill @e[type=minecraft:text_display,tag=" + holoTag(pos) + "]");
+        Holo.remove(p.serverLevel(), holoTag(pos));
     }
 
     // ================================================================== commands

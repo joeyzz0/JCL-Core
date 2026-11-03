@@ -1,0 +1,18 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Referee Kai",
+      "color": "blue"
+    }
+  ],
+  "interaction": {
+    "type": "none"
+  }
+}

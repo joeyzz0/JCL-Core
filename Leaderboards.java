@@ -113,6 +113,7 @@ public final class Leaderboards {
                     boolean trainer = false;
                     for (Object loser : (List<Object>) call(e, "getLosers")) {
                         String n = loser.getClass().getSimpleName();
+                        if (Npcs.isEvTrainer(Npcs.npcOf(loser))) continue;     // EV training battles don't count
                         if (!n.equals("PlayerBattleActor") && !n.equals("PokemonBattleActor") && !n.equals("MultiPokemonBattleActor")) trainer = true;
                     }
                     if (!trainer) return;
@@ -198,18 +199,20 @@ public final class Leaderboards {
         ServerLevel level = null;
         for (ServerLevel l : server.getAllLevels()) if (l.dimension().location().toString().equals(sp.dim)) level = l;
         if (level == null) return;
-        var src = server.createCommandSourceStack().withLevel(level).withSuppressedOutput().withPermission(4);
-        server.getCommands().performPrefixedCommand(src, "kill @e[type=minecraft:text_display,tag=jcl_lb_" + b + "]");
+        Holo.remove(level, "jcl_lb_" + b);
         List<String> ls = lines(b);
         for (int i = 0; i < ls.size(); i++) {
             if (ls.get(i).isEmpty()) continue;
-            JsonObject t = new JsonObject(); t.addProperty("text", ls.get(i));
-            double y = sp.y - i * 0.3;
-            float scale = i == 0 ? 1.4f : 1.0f;
-            server.getCommands().performPrefixedCommand(src, String.format(Locale.ROOT,
-                    "summon minecraft:text_display %.3f %.3f %.3f {text:'%s',billboard:\"center\",shadow:1b,background:0,transformation:{scale:[%.2ff,%.2ff,%.2ff],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},Tags:[\"jcl_lb\",\"jcl_lb_%s\"]}",
-                    sp.x, y, sp.z, t.toString().replace("'", "\\'"), scale, scale, scale, b));
+            double y = sp.y - (i == 0 ? 0 : 0.6 + i * 0.42);
+            float scale = i == 0 ? 2.4f : (i == 1 ? 1.3f : 1.6f);
+            Holo.spawn(level, sp.x, y, sp.z, Component.literal(ls.get(i)), "jcl_lb_" + b, scale, i == 0);
         }
+    }
+
+    static void place(String b, ServerLevel lvl, double x, double y, double z) {
+        Spot sp = new Spot(); sp.dim = lvl.dimension().location().toString(); sp.x = x; sp.y = y; sp.z = z;
+        for (ServerLevel lv : server.getAllLevels()) Holo.remove(lv, "jcl_lb_" + b);
+        data.spots.put(b, sp); save(); refresh(b);
     }
 
     // ------------------------------------------------------------------ commands
@@ -228,7 +231,7 @@ public final class Leaderboards {
                                     ServerPlayer p = c.getSource().getPlayerOrException(); String b = StringArgumentType.getString(c, "board");
                                     if (!BOARDS.contains(b)) { c.getSource().sendFailure(Component.literal("Use caught, trainers or money.")); return 0; }
                                     Spot sp = new Spot(); sp.dim = p.level().dimension().location().toString();
-                                    sp.x = p.getX(); sp.y = p.getEyeY() + 0.5; sp.z = p.getZ();
+                                    sp.x = p.getX(); sp.y = p.getEyeY() + 2.5; sp.z = p.getZ();
                                     data.spots.put(b, sp); save(); refresh(b);
                                     p.sendSystemMessage(Component.literal("§aThe " + b + " leaderboard now floats here. It refreshes every minute."));
                                     return 1;
@@ -237,7 +240,7 @@ public final class Leaderboards {
                         .then(Commands.argument("board", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(BOARDS, b))
                                 .executes(c -> {
                                     String b = StringArgumentType.getString(c, "board");
-                                    server.getCommands().performPrefixedCommand(c.getSource().withSuppressedOutput().withPermission(4), "kill @e[type=minecraft:text_display,tag=jcl_lb_" + b + "]");
+                                    for (ServerLevel lv : server.getAllLevels()) Holo.remove(lv, "jcl_lb_" + b);
                                     data.spots.remove(b); save();
                                     c.getSource().sendSuccess(() -> Component.literal("§aRemoved the " + b + " leaderboard."), true); return 1;
                                 })))

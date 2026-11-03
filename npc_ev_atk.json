@@ -1,0 +1,37 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    {
+      "text": "Attack Coach Axel",
+      "color": "gold"
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "jcl_gts:ev_atk"
+  },
+  "battleConfiguration": {
+    "canChallenge": false,
+    "healAfterwards": false
+  },
+  "autoHealParty": true,
+  "skill": 0,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "machamp level=1",
+      "machamp level=1",
+      "machamp level=1",
+      "machamp level=1",
+      "machamp level=1",
+      "machamp level=1"
+    ]
+  }
+}
