@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Defense Coach Dora",
-      "color": "yellow"
-    }
+    "Defense Coach Dora"
   ],
   "interaction": {
     "type": "dialogue",

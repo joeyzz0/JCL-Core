@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Sp. Def Coach Faye",
-      "color": "green"
-    }
+    "Sp. Def Coach Faye"
   ],
   "interaction": {
     "type": "dialogue",

@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Captain Marlo",
-      "color": "yellow"
-    }
+    "Captain Marlo"
   ],
   "interaction": {
     "type": "none"

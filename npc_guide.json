@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Guide Mae",
-      "color": "aqua"
-    }
+    "Guide Mae"
   ],
   "interaction": {
     "type": "none"

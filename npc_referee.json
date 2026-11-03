@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Referee Kai",
-      "color": "blue"
-    }
+    "Referee Kai"
   ],
   "interaction": {
     "type": "none"

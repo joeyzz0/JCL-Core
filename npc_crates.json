@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Crate Keeper Rin",
-      "color": "gold"
-    }
+    "Crate Keeper Rin"
   ],
   "interaction": {
     "type": "none"

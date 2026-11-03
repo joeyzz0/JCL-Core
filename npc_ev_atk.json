@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Attack Coach Axel",
-      "color": "gold"
-    }
+    "Attack Coach Axel"
   ],
   "interaction": {
     "type": "dialogue",

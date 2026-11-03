@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "EV Coach Tess",
-      "color": "red"
-    }
+    "EV Coach Tess"
   ],
   "interaction": {
     "type": "none"

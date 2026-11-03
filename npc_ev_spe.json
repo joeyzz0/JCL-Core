@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Speed Coach Zip",
-      "color": "light_purple"
-    }
+    "Speed Coach Zip"
   ],
   "interaction": {
     "type": "dialogue",

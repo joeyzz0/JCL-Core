@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Nurse Joy",
-      "color": "light_purple"
-    }
+    "Nurse Joy"
   ],
   "interaction": {
     "type": "none"

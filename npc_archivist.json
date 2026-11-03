@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Archivist Wren",
-      "color": "dark_aqua"
-    }
+    "Archivist Wren"
   ],
   "interaction": {
     "type": "none"

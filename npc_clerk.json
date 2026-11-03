@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Clerk Ollie",
-      "color": "green"
-    }
+    "Clerk Ollie"
   ],
   "interaction": {
     "type": "none"

@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "Sp. Atk Coach Sage",
-      "color": "blue"
-    }
+    "Sp. Atk Coach Sage"
   ],
   "interaction": {
     "type": "dialogue",

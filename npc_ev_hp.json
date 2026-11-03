@@ -7,10 +7,7 @@
   "allowProjectileHits": false,
   "hideNameTag": false,
   "names": [
-    {
-      "text": "HP Coach Holly",
-      "color": "red"
-    }
+    "HP Coach Holly"
   ],
   "interaction": {
     "type": "dialogue",
