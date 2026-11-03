@@ -67,11 +67,11 @@ public final class Teleports {
     }
 
     public static final class Warp {
-        public String name, dim, icon = "minecraft:ender_pearl", description = "";
+        public String name, dim, icon = "minecraft:ender_pearl", description = "", display = "";
         public double x, y, z; public float yaw, pitch;
     }
 
-    public static final class Data { public Map<String, Warp> warps = new LinkedHashMap<>(); }
+    public static final class Data { public int presets = 0; public Map<String, Warp> warps = new LinkedHashMap<>(); }
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
     static Config cfg = new Config();
@@ -87,6 +87,29 @@ public final class Teleports {
         cfg = Tablist.loadConfig("jcl_teleport.json", Config.class, new Config());
         try { if (Files.exists(file())) { Data d = GSON.fromJson(Files.readString(file()), Data.class); if (d != null && d.warps != null) data = d; } }
         catch (Exception ex) { GtsMod.LOG.error("[JCL] Could not read warps", ex); }
+        if (data.presets < 1) { presetWarps(); data.presets = 1; save(); }
+    }
+
+    /** The Port Azure warps, set up the first time the server starts with this version. */
+    static void presetWarps() {
+        // name, x, y, z, facing yaw (S = 0, W = 90, N = 180, E = -90), icon, description
+        Object[][] w = {
+            {"evs", -74, 67, 206, 0f, "minecraft:experience_bottle", "Battle the EV trainers and train your team."},
+            {"crates", 46, 67, 208, 180f, "jcl_gts:master_key", "Open crates with your keys."},
+            {"shop", -63, 69, 162, 90f, "cobblemon:poke_ball", "The Poké Mart: buy with /shop, sell with /sell."},
+            {"pokecenter", -13, 69, 163, 180f, "cobblemon:healing_machine", "Heal your team, trade on the GTS and Wonder Trade."},
+            {"hall", 40, 74, 146, 180f, "minecraft:totem_of_undying", "The Hall of Fame and this month's leaderboards."},
+            {"court", 48, 70, 243, 90f, "minecraft:iron_sword", "PvP battles: challenge a friend!"},
+            {"harbor", -13, 68, 321, 0f, "minecraft:oak_boat", "The docks, ships and Captain Marlo."},
+            {"lighthouse", 8, 65, 339, -90f, "minecraft:lantern", "The Port Azure lighthouse."}};
+        for (Object[] r : w) {
+            Warp x = new Warp(); x.name = (String) r[0]; x.dim = "minecraft:overworld";
+            x.x = (int) r[1] + 0.5; x.y = (int) r[2]; x.z = (int) r[3] + 0.5; x.yaw = (float) r[4]; x.pitch = 0;
+            x.icon = (String) r[5]; x.description = (String) r[6];
+            x.display = DEFAULT_NAMES.getOrDefault(x.name, "");
+            data.warps.put(x.name, x);
+        }
+        GtsMod.LOG.info("[JCL] Set up the Port Azure warps.");
     }
 
     @SubscribeEvent public static void onStop(ServerStoppingEvent e) { save(); }
@@ -135,6 +158,23 @@ public final class Teleports {
         p.playNotifySound(SoundEvents.ENDERMAN_TELEPORT, SoundSource.MASTER, 0.6f, 1.2f);
     }
 
+    /** Coloured names for the standard warps; any warp can be renamed with /setwarpname. */
+    static final java.util.Map<String, String> DEFAULT_NAMES = java.util.Map.of(
+            "evs", "&5&l✦ &d&lEV Training &5&l✦",
+            "crates", "&6&l★ &e&lCrates &6&l★",
+            "shop", "&9&l● &b&lPoké Mart &9&l●",
+            "pokecenter", "&c&l✚ &f&lPokémon Center &c&l✚",
+            "hall", "&6&l♛ &e&lHall of Fame &6&l♛",
+            "court", "&a&l⚔ &2&lTrainer Court &a&l⚔",
+            "harbour", "&3&l⚓ &b&lHarbour &3&l⚓",
+            "harbor", "&3&l⚓ &b&lHarbor &3&l⚓",
+            "lighthouse", "&c&l☀ &f&lLighthouse &c&l☀");
+
+    static String nameOf(Warp w) {
+        String d = w.display != null && !w.display.isEmpty() ? w.display : DEFAULT_NAMES.getOrDefault(w.name, "&b&l" + w.name);
+        return d.replace('&', '§');
+    }
+
     static void msg(ServerPlayer p, String s) { p.sendSystemMessage(Component.literal("§b§l[Travel] §r" + s)); }
 
     // ------------------------------------------------------------------ spawn + warps
@@ -152,19 +192,19 @@ public final class Teleports {
         ServerLevel lvl = server.getLevel(ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(w.dim)));
         if (lvl == null) { msg(p, "§cThat warp's dimension isn't loaded."); return; }
         if (onCooldown(p, "warp", cfg.warpCooldownSeconds)) return;
-        warmup(p, w.name, () -> tp(p, lvl, w.x, w.y, w.z, w.yaw, w.pitch));
+        warmup(p, nameOf(w) + "§7", () -> tp(p, lvl, w.x, w.y, w.z, w.yaw, w.pitch));
     }
 
     static void menu(ServerPlayer p) {
         Gui.Screen s = new Gui.Screen("§b§l✈ Warps", 4);
         s.frame(Items.LIGHT_BLUE_STAINED_GLASS_PANE, Items.CYAN_STAINED_GLASS_PANE);
-        s.set(10, Gui.glow(Gui.icon(Items.COMPASS, "§e§lSpawn", "§7Back to Port Azure.", "", "§e▶ Click to teleport")), pl -> { pl.closeContainer(); spawn(pl); });
+        s.set(10, Gui.glow(Gui.icon(Items.COMPASS, "§e§l⌂ §6§lSpawn §e§l⌂", "§7Back to Port Azure.", "", "§e▶ Click to teleport")), pl -> { pl.closeContainer(); spawn(pl); });
         int[] slots = {11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25};
         int i = 0;
         for (Warp w : data.warps.values()) {
             if (i >= slots.length) break;
             ItemStack icon = new ItemStack(Crates.resolve(w.icon));
-            s.set(slots[i++], Gui.named(icon, "§b§l" + w.name, w.description.isEmpty() ? "§7Teleport here." : "§7" + w.description, "", "§e▶ Click to teleport"),
+            s.set(slots[i++], Gui.named(icon, nameOf(w), w.description.isEmpty() ? "§7Teleport here." : "§7" + w.description, "", "§e▶ Click to teleport"),
                     pl -> { pl.closeContainer(); warp(pl, w.name); });
         }
         s.set(28, Gui.icon(Items.ENDER_EYE, "§d§lRandom teleport", "§7Somewhere wild and far from spawn.", "§8Cooldown: " + cfg.rtpCooldownSeconds / 60 + " min", "", "§e▶ Click to teleport"),
@@ -255,7 +295,7 @@ public final class Teleports {
             Warp w = new Warp(); w.name = n; w.dim = p.level().dimension().location().toString(); w.x = p.getX(); w.y = p.getY(); w.z = p.getZ(); w.yaw = p.getYRot(); w.pitch = p.getXRot();
             ItemStack hand = p.getMainHandItem();
             if (!hand.isEmpty()) w.icon = net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(hand.getItem()).toString();
-            Warp old = data.warps.get(n); if (old != null) w.description = old.description;
+            Warp old = data.warps.get(n); if (old != null) { w.description = old.description; w.display = old.display; }
             data.warps.put(n, w); save();
             msg(p, "§aWarp §f" + n + "§a set here" + (hand.isEmpty() ? "" : " with the item in your hand as its icon") + ". Add a description with §f/setwarpdesc " + n + " <text>§a.");
             return 1;
@@ -266,6 +306,13 @@ public final class Teleports {
                     if (w == null) { c.getSource().sendFailure(Component.literal("No such warp.")); return 0; }
                     w.description = StringArgumentType.getString(c, "text"); save();
                     c.getSource().sendSuccess(() -> Component.literal("§aDescription saved."), false); return 1;
+                }))));
+        d.register(Commands.literal("setwarpname").requires(s -> s.hasPermission(2)).then(Commands.argument("name", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(data.warps.keySet(), b))
+                .then(Commands.argument("display", StringArgumentType.greedyString()).executes(c -> {
+                    Warp w = data.warps.get(StringArgumentType.getString(c, "name").toLowerCase());
+                    if (w == null) { c.getSource().sendFailure(Component.literal("No such warp.")); return 0; }
+                    w.display = StringArgumentType.getString(c, "display"); save();
+                    c.getSource().sendSuccess(() -> Component.literal("§aRenamed to " + nameOf(w)), false); return 1;
                 }))));
         d.register(Commands.literal("delwarp").requires(s -> s.hasPermission(2)).then(Commands.argument("name", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(data.warps.keySet(), b))
                 .executes(c -> { boolean ok = data.warps.remove(StringArgumentType.getString(c, "name").toLowerCase()) != null; save();
