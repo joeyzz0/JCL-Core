@@ -87,13 +87,15 @@ public final class WorldMap {
 
     static void renderChunk(Job j, int cxIdx, int czIdx) {
         int wx = j.x0 + cxIdx * 16, wz = j.z0 + czIdx * 16;
-        ChunkAccess ch = j.level.getChunk(wx >> 4, wz >> 4, ChunkStatus.FULL, true);
+        // The picture's 16x16 squares don't line up with real chunks, so each pixel looks up its own chunk.
+        ChunkAccess ch = null; int lastCx = Integer.MIN_VALUE, lastCz = Integer.MIN_VALUE;
         int W = j.cols * 128;
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
         for (int dz = 0; dz < 16; dz++) {
             for (int dx = 0; dx < 16; dx++) {
                 int px = cxIdx * 16 + dx, pz = czIdx * 16 + dz;
                 int x = wx + dx, z = wz + dz;
+                if ((x >> 4) != lastCx || (z >> 4) != lastCz) { lastCx = x >> 4; lastCz = z >> 4; ch = j.level.getChunk(lastCx, lastCz, ChunkStatus.FULL, true); }
                 int y = ch.getHeight(Heightmap.Types.WORLD_SURFACE, x & 15, z & 15);
                 BlockState st; MapColor mc;
                 do { pos.set(x, y, z); st = ch.getBlockState(pos); mc = st.getMapColor(j.level, pos); y--; }
