@@ -22,6 +22,7 @@ import net.minecraft.commands.SharedSuggestionProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.storage.LevelResource;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -110,18 +111,22 @@ public final class Leaderboards {
             subscribe(ev.getField("BATTLE_VICTORY").get(null), e -> {
                 try {
                     if (Boolean.TRUE.equals(call(e, "getWasWildCapture"))) return;
-                    boolean trainer = false;
+                    boolean trainer = false, pvp = false;
                     for (Object loser : (List<Object>) call(e, "getLosers")) {
+                        if (loser.getClass().getSimpleName().equals("PlayerBattleActor")) pvp = true;
                         String n = loser.getClass().getSimpleName();
                         if (Npcs.isEvTrainer(Npcs.npcOf(loser))) continue;     // EV training battles don't count
+                        { var npcE = Npcs.npcOf(loser); if (npcE != null && npcE.getTags().contains("jcl_frontier")) continue; }   // nor do Battle Frontier rooms
                         if (!n.equals("PlayerBattleActor") && !n.equals("PokemonBattleActor") && !n.equals("MultiPokemonBattleActor")) trainer = true;
                     }
-                    if (!trainer) return;
+                    if (!trainer && !pvp) return;
                     for (Object w : (List<Object>) call(e, "getWinners")) {
                         if (!w.getClass().getSimpleName().equals("PlayerBattleActor")) continue;
                         UUID id = (UUID) call(w, "getUuid");
                         ServerPlayer sp = server.getPlayerList().getPlayer(id);
-                        if (sp != null) add("trainers", sp, 1);
+                        if (sp == null) continue;
+                        if (trainer) add("trainers", sp, 1);
+                        Jobs.onBattleWin(sp);                 // job steps that need a win (trainer or player)
                     }
                 } catch (Throwable ignored) {}
             });
@@ -176,7 +181,7 @@ public final class Leaderboards {
         return switch (b) { case "caught" -> "§c§lPokémon Caught"; case "trainers" -> "§9§lTrainers Defeated"; default -> "§6§lMost PokéDollars"; };
     }
 
-    static String sub(String b) { return b.equals("money") ? "§7All-time" : "§7This month · resets on the 1st"; }
+    static String sub(String b) { return b.equals("money") ? "§7All-time" : "§7This month · Resets on the 1st"; }
 
     static String value(String b, long v) { return b.equals("money") ? Fmt.cd(v) : String.format(Locale.ROOT, "%,d", v); }
 
@@ -199,6 +204,9 @@ public final class Leaderboards {
         ServerLevel level = null;
         for (ServerLevel l : server.getAllLevels()) if (l.dimension().location().toString().equals(sp.dim)) level = l;
         if (level == null) return;
+        // only redraw where the board's chunk is loaded: in an unloaded chunk the old text can't be found to remove,
+        // and drawing again would stack a duplicate on top of it
+        if (!level.hasChunkAt(net.minecraft.core.BlockPos.containing(sp.x, sp.y, sp.z))) return;
         Holo.remove(level, "jcl_lb_" + b);
         List<String> ls = lines(b);
         for (int i = 0; i < ls.size(); i++) {
@@ -209,8 +217,30 @@ public final class Leaderboards {
         }
     }
 
+    /** Removes every leaderboard inside an area (loading its chunks so nothing is missed) and forgets its spot. */
+    static int clearIn(ServerLevel lvl, int x0, int z0, int x1, int z1) {
+        int n = 0;
+        for (String b : new java.util.ArrayList<>(data.spots.keySet())) {
+            Spot sp = data.spots.get(b);
+            if (sp == null || !lvl.dimension().location().toString().equals(sp.dim)) continue;
+            if (sp.x < x0 || sp.x > x1 || sp.z < z0 || sp.z > z1) continue;
+            final String tag = "jcl_lb_" + b;
+            EntityClear.area(lvl, (int) sp.x - 8, (int) sp.z - 8, (int) sp.x + 8, (int) sp.z + 8, e -> e.getTags().contains(tag));
+            data.spots.remove(b); n++;
+        }
+        if (n > 0) save();
+        return n;
+    }
+
     static void place(String b, ServerLevel lvl, double x, double y, double z) {
         Spot sp = new Spot(); sp.dim = lvl.dimension().location().toString(); sp.x = x; sp.y = y; sp.z = z;
+        // the board's old spot may be in unloaded chunks: load them and clear its text there too
+        Spot old = data.spots.get(b);
+        if (old != null) for (ServerLevel lv : server.getAllLevels()) {
+            if (!lv.dimension().location().toString().equals(old.dim)) continue;
+            final String tag = "jcl_lb_" + b;
+            EntityClear.area(lv, (int) old.x - 8, (int) old.z - 8, (int) old.x + 8, (int) old.z + 8, e -> e.getTags().contains(tag));
+        }
         for (ServerLevel lv : server.getAllLevels()) Holo.remove(lv, "jcl_lb_" + b);
         data.spots.put(b, sp); save(); refresh(b);
     }
@@ -244,6 +274,20 @@ public final class Leaderboards {
                                     data.spots.remove(b); save();
                                     c.getSource().sendSuccess(() -> Component.literal("§aRemoved the " + b + " leaderboard."), true); return 1;
                                 })))
+                .then(Commands.literal("clearold").requires(s -> s.hasPermission(2)).executes(c -> {
+                    // leftover board text from earlier builds: anything within 128 blocks that isn't at a board's current spot
+                    ServerPlayer p = c.getSource().getPlayerOrException(); ServerLevel lv = p.serverLevel();
+                    int n = 0;
+                    for (Entity ent : lv.getEntities((Entity) null, p.getBoundingBox().inflate(128), x -> x.getTags().stream().anyMatch(t -> t.startsWith("jcl_lb_")))) {
+                        String b2 = ent.getTags().stream().filter(t -> t.startsWith("jcl_lb_")).findFirst().get().substring(7);
+                        Spot cur = data.spots.get(b2);
+                        boolean current = cur != null && cur.dim.equals(lv.dimension().location().toString())
+                                && Math.abs(ent.getX() - cur.x) < 3 && Math.abs(ent.getZ() - cur.z) < 3;
+                        if (!current) { ent.discard(); n++; }
+                    }
+                    final int removed = n;
+                    c.getSource().sendSuccess(() -> Component.literal("§aRemoved " + removed + " leftover leaderboard line" + (removed == 1 ? "" : "s") + " near you."), true); return 1;
+                }))
                 .then(Commands.literal("refresh").requires(s -> s.hasPermission(2)).executes(c -> {
                     for (ServerPlayer p : server.getPlayerList().getPlayers()) sampleMoney(p);
                     for (String b : BOARDS) refresh(b);
@@ -259,11 +303,11 @@ public final class Leaderboards {
             List<Map.Entry<String, Long>> t = top(b, 3);
             StringBuilder sb = new StringBuilder(" " + title(b) + "§r§7: ");
             for (int i = 0; i < t.size(); i++) sb.append(i == 0 ? "§6" : "§7").append(data.names.getOrDefault(t.get(i).getKey(), "?")).append(" §8(").append(value(b, t.get(i).getValue())).append(")§7").append(i < t.size() - 1 ? ", " : "");
-            if (t.isEmpty()) sb.append("§8nobody yet");
+            if (t.isEmpty()) sb.append("§8Nobody yet");
             List<Map.Entry<String, Long>> all = top(b, 100000);
             int rank = -1; for (int i = 0; i < all.size(); i++) if (all.get(i).getKey().equals(me)) rank = i + 1;
             p.sendSystemMessage(Component.literal(sb.toString()));
-            p.sendSystemMessage(Component.literal("   §7You: " + (rank > 0 ? "§f#" + rank + " §8(" + value(b, all.get(rank - 1).getValue()) + ")" : "§8not ranked yet")));
+            p.sendSystemMessage(Component.literal("   §7You: " + (rank > 0 ? "§f#" + rank + " §8(" + value(b, all.get(rank - 1).getValue()) + ")" : "§8Not ranked yet")));
         }
     }
 }

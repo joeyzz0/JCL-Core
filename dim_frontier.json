@@ -1,0 +1,13 @@
+{
+ "type": "jcl_gts:frontier",
+ "generator": {
+  "type": "minecraft:flat",
+  "settings": {
+   "biome": "jcl_gts:battle_frontier",
+   "layers": [],
+   "lakes": false,
+   "features": false,
+   "structure_overrides": []
+  }
+ }
+}

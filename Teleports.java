@@ -55,20 +55,23 @@ public final class Teleports {
     private Teleports() {}
 
     public static final class Config {
-        public int version = 1;
+        public int version = 2;
         public int warmupSeconds = 3;
         public int spawnCooldownSeconds = 10;
         public int warpCooldownSeconds = 10;
         public int tpaCooldownSeconds = 30;
         public int tpaExpireSeconds = 60;
         public int rtpCooldownSeconds = 300;
-        public int rtpMinDistance = 1500;
-        public int rtpMaxDistance = 6000;
+        public int rtpMinDistance = 3000;
+        public int rtpMaxDistance = 15000;
+        public int rtpNetherMin = 500, rtpNetherMax = 3000, rtpEndMin = 1500, rtpEndMax = 8000;
     }
 
     public static final class Warp {
         public String name, dim, icon = "minecraft:ender_pearl", description = "", display = "";
         public double x, y, z; public float yaw, pitch;
+        /** Community warps (player-built safe zones) live in their own submenu. */
+        public boolean community = false;
     }
 
     public static final class Data { public int presets = 0; public Map<String, Warp> warps = new LinkedHashMap<>(); }
@@ -130,10 +133,15 @@ public final class Teleports {
         long until = COOLDOWN.getOrDefault(p.getUUID() + kind, 0L), now = System.currentTimeMillis();
         if (until > now) { msg(p, "§cYou can use that again in " + ((until - now) / 1000 + 1) + "s."); return true; }
         COOLDOWN.put(p.getUUID() + kind, now + seconds * 1000L);
+        LAST_COOLDOWN.put(p.getUUID(), p.getUUID() + kind);
         return false;
     }
 
+    /** The cooldown a pending teleport started, so cancelling it (by moving) gives the cooldown back. */
+    static final Map<UUID, String> LAST_COOLDOWN = new HashMap<>();
+
     static void warmup(ServerPlayer p, String what, Runnable go) {
+        if (Frontier.inRun(p)) { p.sendSystemMessage(Component.literal("§cFinish or leave your Frontier run first (§f/frontier leave§c).")); return; }
         if (p.hasPermissions(2) || cfg.warmupSeconds <= 0) { go.run(); return; }
         Pending pd = new Pending(); pd.p = p; pd.from = p.position(); pd.ticks = cfg.warmupSeconds * 20; pd.go = go; pd.what = what;
         PENDING.put(p.getUUID(), pd);
@@ -147,13 +155,50 @@ public final class Teleports {
         while (it.hasNext()) {
             Pending pd = it.next();
             if (pd.p.hasDisconnected()) { it.remove(); continue; }
-            if (pd.p.position().distanceToSqr(pd.from) > 0.25) { it.remove(); msg(pd.p, "§cTeleport cancelled because you moved."); continue; }
+            if (pd.p.position().distanceToSqr(pd.from) > 0.25) {
+                it.remove();
+                String cd = LAST_COOLDOWN.remove(pd.p.getUUID());
+                if (cd != null) COOLDOWN.remove(cd);       // a cancelled teleport doesn't cost you the cooldown
+                msg(pd.p, "§cTeleport cancelled because you moved.");
+                continue;
+            }
             if (--pd.ticks <= 0) { it.remove(); pd.go.run(); }
         }
         TPA.values().removeIf(r -> r.expires < System.currentTimeMillis());
     }
 
+    // ------------------------------------------------------------------ /back: the spot you were at before your last teleport
+
+    record Spot(String dim, double x, double y, double z, float yaw, float pitch) {}
+    static final Map<UUID, Spot> BACK = new HashMap<>();
+    static final int BACK_COOLDOWN = 60;
+
+    static boolean frontierDim(String dim) { return dim.contains("frontier"); }
+
+    /** Remembers where a player is standing, just before they're moved somewhere else. */
+    static void rememberBack(ServerPlayer p) {
+        String dim = p.level().dimension().location().toString();
+        if (frontierDim(dim)) return;                       // never back into a Battle Frontier room
+        BACK.put(p.getUUID(), new Spot(dim, p.getX(), p.getY(), p.getZ(), p.getYRot(), p.getXRot()));
+    }
+
+    static void back(ServerPlayer p) {
+        Spot s = BACK.get(p.getUUID());
+        if (s == null) { msg(p, "§7There's nowhere to go back to yet."); return; }
+        if (onCooldown(p, "back", BACK_COOLDOWN)) return;
+        ServerLevel lvl = server.getLevel(ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(s.dim())));
+        if (lvl == null) { msg(p, "§cThat place isn't available any more."); return; }
+        warmup(p, "your last spot", () -> tp(p, lvl, s.x(), s.y(), s.z(), s.yaw(), s.pitch()));
+    }
+
+    /** Vanilla teleports (/tp and the like) count for /back too. */
+    @SubscribeEvent
+    public static void onVanillaTeleport(net.neoforged.neoforge.event.entity.EntityTeleportEvent.TeleportCommand e) {
+        if (e.getEntity() instanceof ServerPlayer p) rememberBack(p);
+    }
+
     static void tp(ServerPlayer p, ServerLevel level, double x, double y, double z, float yaw, float pitch) {
+        rememberBack(p);
         p.teleportTo(level, x, y, z, yaw, pitch);
         p.playNotifySound(SoundEvents.ENDERMAN_TELEPORT, SoundSource.MASTER, 0.6f, 1.2f);
     }
@@ -186,9 +231,23 @@ public final class Teleports {
         warmup(p, "spawn", () -> tp(p, ow, s.getX() + 0.5, s.getY(), s.getZ() + 0.5, ow.getSharedSpawnAngle(), 0));
     }
 
+    /** The Battle Frontier warp opens once the player has earned their ticket (staff can always use it). */
+    static boolean frontierLocked(ServerPlayer p, String name) {
+        return name.equalsIgnoreCase("frontier") && !p.hasPermissions(2) && !Jobs.done(p, "frontier_ticket");
+    }
+
+    /** Straight to a warp: no warm-up, no cooldown, no lock (used when the ferry arrives). */
+    static void arrive(ServerPlayer p, String name) {
+        Warp w = data.warps.get(name.toLowerCase());
+        if (w == null) return;
+        ServerLevel lvl = server.getLevel(ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(w.dim)));
+        if (lvl != null) tp(p, lvl, w.x, w.y, w.z, w.yaw, w.pitch);
+    }
+
     static void warp(ServerPlayer p, String name) {
         Warp w = data.warps.get(name.toLowerCase());
         if (w == null) { msg(p, "§cThere's no warp called " + name + ". Open §f/warp§c to see them all."); return; }
+        if (frontierLocked(p, name)) { msg(p, "§cThe Battle Frontier is across the sea. Earn your passage with the §e\"Ticket to the Frontier\" §cjob: talk to §eCaptain Marlo§c at the ferry pier."); return; }
         ServerLevel lvl = server.getLevel(ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse(w.dim)));
         if (lvl == null) { msg(p, "§cThat warp's dimension isn't loaded."); return; }
         if (onCooldown(p, "warp", cfg.warpCooldownSeconds)) return;
@@ -202,35 +261,84 @@ public final class Teleports {
         int[] slots = {11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25};
         int i = 0;
         for (Warp w : data.warps.values()) {
+            if (w.community) continue;
             if (i >= slots.length) break;
             ItemStack icon = new ItemStack(Crates.resolve(w.icon));
+            if (frontierLocked(p, w.name)) {
+                s.set(slots[i++], Gui.named(new ItemStack(Items.BARRIER), nameOf(w), w.description.isEmpty() ? "§7Teleport here." : "§7" + w.description, "",
+                        "§c✖ Requires: §eTicket to the Frontier", "§7Talk to §eCaptain Marlo §7at the ferry pier."), pl -> warp(pl, w.name));
+                continue;
+            }
             s.set(slots[i++], Gui.named(icon, nameOf(w), w.description.isEmpty() ? "§7Teleport here." : "§7" + w.description, "", "§e▶ Click to teleport"),
                     pl -> { pl.closeContainer(); warp(pl, w.name); });
         }
-        s.set(28, Gui.icon(Items.ENDER_EYE, "§d§lRandom teleport", "§7Somewhere wild and far from spawn.", "§8Cooldown: " + cfg.rtpCooldownSeconds / 60 + " min", "", "§e▶ Click to teleport"),
+        s.set(28, Gui.icon(Items.ENDER_EYE, "§d§lRandom teleport", "§7Somewhere wild and far from spawn.", "§8Cooldown: " + cfg.rtpCooldownSeconds / 60 + " min", "", "§e▶ Click to teleport", "§8Works in the Overworld, Nether and End"),
                 pl -> { pl.closeContainer(); rtp(pl); });
-        s.set(34, Gui.icon(Items.BLACK_DYE, "§8§lSharestones", "§7The §0§lblack sharestone§7 at spawn links every", "§7official safe zone. §c§lRed sharestones§7 are",
-                "§7community-built safe zones. Craft one or", "§7use the one at spawn. Both can take you", "§7back to spawn."));
+        long nCommunity = data.warps.values().stream().filter(w -> w.community).count();
+        s.set(31, Gui.icon(Items.RED_DYE, "§c§l◆ §f§lCommunity Warps §c§l◆", "§7Safe zones built by players.", "§7" + nCommunity + " to visit.", "",
+                "§8Built something for everyone? Ask an", "§8admin or mod to make it a Community Warp!", "", "§e▶ Click to open"), pl -> communityMenu(pl, 0));
+        s.set(34, Gui.icon(Items.RED_BED, "§b§lYour Homes", "§7Save up to 3 homes with §f/sethome§7,", "§7and buy more (up to 30).", "", "§e▶ Click to open"), pl -> Homes.menu(pl));
+        Gui.open(p, s);
+    }
+
+    static void communityMenu(ServerPlayer p, int page) {
+        List<Warp> list = new ArrayList<>();
+        for (Warp w : data.warps.values()) if (w.community) list.add(w);
+        Gui.Screen s = new Gui.Screen("§c§l◆ §f§lCommunity Warps", 6);
+        s.frame(Items.RED_STAINED_GLASS_PANE, Items.ORANGE_STAINED_GLASS_PANE);
+        int[] slots = {10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34, 37, 38, 39, 40, 41, 42, 43};
+        int per = slots.length, pages = Math.max(1, (list.size() + per - 1) / per), pg = Math.max(0, Math.min(page, pages - 1));
+        for (int k = 0; k < per && pg * per + k < list.size(); k++) {
+            Warp w = list.get(pg * per + k);
+            s.set(slots[k], Gui.named(new ItemStack(Crates.resolve(w.icon)), nameOf(w), w.description.isEmpty() ? "§7A community safe zone." : "§7" + w.description, "", "§e▶ Click to teleport"),
+                    pl -> { pl.closeContainer(); warp(pl, w.name); });
+        }
+        if (list.isEmpty()) s.set(22, Gui.icon(Items.BARRIER, "§7No Community Warps yet", "§7Built a safe zone for everyone?", "§7Ask an admin or mod to add it!"));
+        s.set(4, Gui.icon(Items.RED_DYE, "§c§lCommunity Warps", "§7Safe zones built by the community.", "§7Want yours here? Ask an admin or mod."));
+        s.set(49, Gui.icon(Items.ARROW, "§e« Back to Warps"), Teleports::menu);
+        if (pg > 0) s.set(48, Gui.icon(Items.ARROW, "§e« Previous page"), pl -> communityMenu(pl, pg - 1));
+        if (pg < pages - 1) s.set(50, Gui.icon(Items.ARROW, "§eNext page »"), pl -> communityMenu(pl, pg + 1));
         Gui.open(p, s);
     }
 
     // ------------------------------------------------------------------ random teleport
 
-    static void rtp(ServerPlayer p) {
-        ServerLevel ow = server.overworld();
-        if (p.level() != ow && !p.hasPermissions(2)) { msg(p, "§cRandom teleport only works in the overworld."); return; }
+    static void rtp(ServerPlayer p) { rtp(p, p.level().dimension().location().toString()); }
+
+    static final java.util.Set<String> RTP_DIMS = java.util.Set.of("minecraft:overworld", "minecraft:the_nether", "minecraft:the_end");
+
+    /** Random teleport in the Overworld, the Nether or the End, to a safe spot well away from spawn. */
+    static void rtp(ServerPlayer p, String where) {
+        // /rtp always works in the dimension you're standing in (Overworld, Nether or End only)
+        String dim = where;
+        if (!RTP_DIMS.contains(dim)) { msg(p, "§cRandom teleport only works in the Overworld, the Nether and the End."); return; }
+        ServerLevel lvl = server.getLevel(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.DIMENSION, net.minecraft.resources.ResourceLocation.parse(dim)));
+        if (lvl == null) { msg(p, "§cThat dimension isn't available."); return; }
+        if (p.level().dimension().location().toString().equals(Frontier.DIM)) { msg(p, "§cYou can't random teleport out of the Battle Frontier."); return; }
         if (onCooldown(p, "rtp", cfg.rtpCooldownSeconds)) return;
-        BlockPos spawn = ow.getSharedSpawnPos();
-        for (int attempt = 0; attempt < 12; attempt++) {
-            double ang = RNG.nextDouble() * Math.PI * 2, dist = cfg.rtpMinDistance + RNG.nextDouble() * (cfg.rtpMaxDistance - cfg.rtpMinDistance);
-            int x = spawn.getX() + (int) (Math.cos(ang) * dist), z = spawn.getZ() + (int) (Math.sin(ang) * dist);
-            if (ow.getBiome(new BlockPos(x, 64, z)).is(BiomeTags.IS_OCEAN)) continue;
-            ow.getChunk(x >> 4, z >> 4);
-            int y = ow.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
+        boolean nether = dim.endsWith("the_nether"), end = dim.endsWith("the_end");
+        int min = nether ? cfg.rtpNetherMin : end ? cfg.rtpEndMin : cfg.rtpMinDistance, max = nether ? cfg.rtpNetherMax : end ? cfg.rtpEndMax : cfg.rtpMaxDistance;
+        BlockPos centre = nether || end ? BlockPos.ZERO : lvl.getSharedSpawnPos();
+        for (int attempt = 0; attempt < (end ? 40 : 20); attempt++) {
+            double ang = RNG.nextDouble() * Math.PI * 2, dist = min + RNG.nextDouble() * (max - min);
+            int x = centre.getX() + (int) (Math.cos(ang) * dist), z = centre.getZ() + (int) (Math.sin(ang) * dist);
+            if (!nether && !end && lvl.getBiome(new BlockPos(x, 64, z)).is(BiomeTags.IS_OCEAN)) continue;
+            lvl.getChunk(x >> 4, z >> 4);
+            int y = -1;
+            if (nether) {
+                // find a pocket: solid floor, two blocks of air, no lava, under the bedrock roof
+                for (int yy = 100; yy > 32; yy--) {
+                    BlockPos f = new BlockPos(x, yy - 1, z);
+                    if (lvl.getBlockState(f).isSolid() && lvl.getFluidState(f).isEmpty() && lvl.getBlockState(f.above()).isAir() && lvl.getBlockState(f.above(2)).isAir()
+                            && lvl.getFluidState(f.below()).isEmpty()) { y = yy; break; }
+                }
+            } else y = lvl.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
+            if (y < 0) continue;
             BlockPos ground = new BlockPos(x, y - 1, z);
-            if (y <= ow.getMinBuildHeight() + 1 || !ow.getFluidState(ground).isEmpty() || !ow.getBlockState(ground).isSolid()) continue;
+            if (y <= lvl.getMinBuildHeight() + 1 || !lvl.getFluidState(ground).isEmpty() || !lvl.getBlockState(ground).isSolid()) continue;
             final int fx = x, fy = y, fz = z;
-            warmup(p, "the wild", () -> { tp(p, ow, fx + 0.5, fy, fz + 0.5, p.getYRot(), 0); msg(p, "§aWelcome to the wild! §7(" + fx + ", " + fy + ", " + fz + ")"); });
+            String name = nether ? "the Nether" : end ? "the End" : "the wild";
+            warmup(p, name, () -> { tp(p, lvl, fx + 0.5, fy, fz + 0.5, p.getYRot(), 0); msg(p, "§aWelcome to " + name + "! §7(" + fx + ", " + fy + ", " + fz + ")"); });
             return;
         }
         COOLDOWN.remove(p.getUUID() + "rtp");
@@ -284,12 +392,23 @@ public final class Teleports {
     public static void onCommands(RegisterCommandsEvent e) {
         var d = e.getDispatcher();
         d.register(Commands.literal("spawn").executes(c -> { spawn(c.getSource().getPlayerOrException()); return 1; }));
-        d.register(Commands.literal("rtp").executes(c -> { rtp(c.getSource().getPlayerOrException()); return 1; }));
+        d.register(Commands.literal("rtp").executes(c -> { ServerPlayer p = c.getSource().getPlayerOrException(); rtp(p, p.level().dimension().location().toString()); return 1; }));
         d.register(Commands.literal("wild").executes(c -> { rtp(c.getSource().getPlayerOrException()); return 1; }));
         d.register(Commands.literal("warp").executes(c -> { menu(c.getSource().getPlayerOrException()); return 1; })
                 .then(Commands.argument("name", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(data.warps.keySet(), b))
                         .executes(c -> { warp(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "name")); return 1; })));
         d.register(Commands.literal("warps").executes(c -> { menu(c.getSource().getPlayerOrException()); return 1; }));
+        d.register(Commands.literal("setcommunitywarp").requires(s -> s.hasPermission(2)).then(Commands.argument("name", StringArgumentType.word()).executes(c -> {
+            ServerPlayer p = c.getSource().getPlayerOrException(); String n = StringArgumentType.getString(c, "name").toLowerCase();
+            Warp w = new Warp(); w.name = n; w.dim = p.level().dimension().location().toString(); w.x = p.getX(); w.y = p.getY(); w.z = p.getZ(); w.yaw = p.getYRot(); w.pitch = p.getXRot();
+            w.community = true; w.icon = "minecraft:red_dye"; w.description = "A community safe zone.";
+            ItemStack hand = p.getMainHandItem();
+            if (!hand.isEmpty()) w.icon = net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(hand.getItem()).toString();
+            Warp old = data.warps.get(n); if (old != null) { w.description = old.description; w.display = old.display; }
+            data.warps.put(n, w); save();
+            msg(p, "§aCommunity Warp §f" + n + "§a set here. §7Players find it in §f/warp §7→ Community Warps. Rename it with §f/setwarpname§7, describe it with §f/setwarpdesc§7.");
+            return 1; })));
+        d.register(Commands.literal("back").executes(c -> { back(c.getSource().getPlayerOrException()); return 1; }));
         d.register(Commands.literal("setwarp").requires(s -> s.hasPermission(2)).then(Commands.argument("name", StringArgumentType.word()).executes(c -> {
             ServerPlayer p = c.getSource().getPlayerOrException(); String n = StringArgumentType.getString(c, "name").toLowerCase();
             Warp w = new Warp(); w.name = n; w.dim = p.level().dimension().location().toString(); w.x = p.getX(); w.y = p.getY(); w.z = p.getZ(); w.yaw = p.getYRot(); w.pitch = p.getXRot();

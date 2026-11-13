@@ -31,22 +31,22 @@ public final class Tablist {
     private Tablist() {}
 
     public static final class Config {
-        public int version = 3;
+        public int version = 4;
         public boolean enabled = true;
         public int refreshSeconds = 3;
         public String timeZone = "America/New_York";
         public List<String> header = List.of(
                 "",
-                "§6§l✦ §e§lJOEY'S COBBLEMON LEAGUE §6§l✦",
-                "§7Gotta catch 'em all, together.",
+                "      §6§l✦ §e§lJOEY'S COBBLEMON LEAGUE §6§l✦      ",
+                "      §7Gotta catch 'em all, together.      ",
                 "");
         public List<String> footer = List.of(
                 "",
-                "§7Online: §a{online}§7/§a{max}   §7Ping: §b{ping}ms   §7TPS: §a{tps}",
-                "§7Balance: §6{balance}   §7Time: §f{time}",
+                "      §7Online: §a{online}§7/§a{max}   §7Ping: §b{ping}ms   §7TPS: §a{tps}      ",
+                "      §7Balance: §6{balance}   §7Time: §f{time}      ",
                 "",
-                "§e/shop §8• §a/sell §8• §d/gts §8• §b/titles §8• §f/help",
-                "§9discord.gg/4hHNvcJagV   §5twitch.tv/joeyzz0",
+                "      §e/shop §8• §a/sell §8• §d/gts §8• §b/titles §8• §f/help      ",
+                "      §9discord.gg/QgD4WfJ9t6   §5twitch.tv/joeyzz0      ",
                 "");
         public boolean useLuckPermsPrefix = true;
     }

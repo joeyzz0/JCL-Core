@@ -45,6 +45,8 @@ public final class Admin {
 
     @SubscribeEvent
     public static void onCommands(RegisterCommandsEvent e) {
+        e.getDispatcher().register(Commands.literal("jcl").then(Commands.literal("version").executes(c -> {
+            c.getSource().sendSuccess(() -> net.minecraft.network.chat.Component.literal("§6JCL Core §f" + GtsMod.VERSION + " §7(build " + GtsMod.BUILD + ")"), false); return 1; })));
         e.getDispatcher().register(Commands.literal("jcl").requires(s -> s.hasPermission(2))
                 .then(Commands.literal("reload").executes(c -> {
                     Crates.load(); Shop.load(); Titles.load(); Jobs.load(); Help.load();

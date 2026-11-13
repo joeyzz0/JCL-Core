@@ -74,14 +74,16 @@ public final class Setup {
     static void holograms(ServerPlayer p, Layout l) {
         ServerLevel lvl = p.serverLevel(); BlockPos o = p.blockPosition();
         int n = 0;
+        boolean town = SpawnCity.savedOrigin(p.server.overworld()) != null;
         for (HoloSpot h : l.holograms) {
+            if (town && SpawnCity.OLD_LAYOUT_HOLOS.contains(h.preset)) continue;        // the town places these itself, on its own spots
             String[] lines = Holos.PRESETS.get(h.preset);
             if (lines == null) continue;
             Holos.put(h.preset, lvl, o.getX() + h.pos[0], o.getY() + h.pos[1], o.getZ() + h.pos[2], h.preset.startsWith("ev_") || h.preset.startsWith("podium") ? 1.4f : 1.2f, List.of(lines));
             n++;
         }
         tell(p, "Placed " + n + " floating texts. Fine-tune any of them with /holo move <id> or /holo scale <id> <size>.");
-        tell(p, "§7Place the black sharestone on the dark pedestal beside the spawn point. The floating text above it explains it.");
+
     }
 
     static void leaderboards(ServerPlayer p, Layout l) {

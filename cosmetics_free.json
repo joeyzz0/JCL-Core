@@ -1,0 +1,1620 @@
+{
+ "version": 1,
+ "free": [
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:big_malasada",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:black_glasses",
+   "pokemon": [
+    "squirtle",
+    "wartortle",
+    "blastoise",
+    "sandile",
+    "krokorok",
+    "krookodile",
+    "pancham",
+    "pangoro"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:bundle",
+   "pokemon": [
+    "dragonite"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:casteliacone",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:chest",
+   "pokemon": [
+    "dragonite"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:cocoa_beans",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:compass",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:composter",
+   "pokemon": [
+    "sneasler"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:white_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:orange_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:magenta_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_blue_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:yellow_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:lime_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:pink_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:gray_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_gray_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:cyan_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:purple_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:blue_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:brown_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:green_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:red_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:black_concrete",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:white_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:orange_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:magenta_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_blue_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:yellow_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:lime_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:pink_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:gray_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_gray_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:cyan_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:purple_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:blue_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:brown_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:green_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:red_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:black_concrete_powder",
+   "pokemon": [
+    "conkeldurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:white_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:orange_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:magenta_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_blue_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:yellow_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:lime_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:pink_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:gray_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:light_gray_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:cyan_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:purple_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:blue_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:brown_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:green_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:red_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:black_dye",
+   "pokemon": [
+    "electrode hisuian=false",
+    "furfrou",
+    "alakazam",
+    "gengar",
+    "jigglypuff",
+    "smeargle"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:ender_pearl",
+   "pokemon": [
+    "spoink"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:yellow_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:green_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:blue_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:pink_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:black_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:white_gilded_chest",
+   "pokemon": [
+    "gimmighoul roaming=false",
+    "gholdengo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:golden_helmet",
+   "pokemon": [
+    "sudowoodo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:golden_chestplate",
+   "pokemon": [
+    "sudowoodo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:golden_leggings",
+   "pokemon": [
+    "sudowoodo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:golden_boots",
+   "pokemon": [
+    "sudowoodo"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:copper_ingot",
+   "pokemon": [
+    "gurdurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:iron_ingot",
+   "pokemon": [
+    "gurdurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:gold_ingot",
+   "pokemon": [
+    "gurdurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:netherite_ingot",
+   "pokemon": [
+    "gurdurr"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:lava_cookie",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:leather_helmet",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:oak_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:spruce_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:birch_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:jungle_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:acacia_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:dark_oak_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:mangrove_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:azalea_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:flowering_azalea_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:cherry_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:apricorn_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:saccharine_leaves",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#cobblemon:apricorn_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#cobblemon:saccharine_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:oak_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:spruce_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:birch_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:jungle_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:acacia_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:dark_oak_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:mangrove_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:crimson_stems",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:warped_stems",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "#minecraft:cherry_logs",
+   "pokemon": [
+    "timburr",
+    "komala"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:lumiose_galette",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:jukebox",
+   "pokemon": [
+    "pichu",
+    "tinkatink",
+    "tinkatuff",
+    "tinkaton"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:note_block",
+   "pokemon": [
+    "pichu",
+    "tinkatink",
+    "tinkatuff",
+    "tinkaton"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:old_gateau",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:paper",
+   "pokemon": [
+    "pikachu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:pewter_crunchies",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:rage_candy_bar",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:shears",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:silk_scarf",
+   "pokemon": [
+    "braixen",
+    "delphox"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:sinister_tea",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:smoked_tail_curry",
+   "pokemon": [
+    "pikachu",
+    "raichu",
+    "pichu"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "minecraft:stick",
+   "pokemon": [
+    "treecko",
+    "grovyle",
+    "sceptile"
+   ]
+  },
+  {
+   "src": "Cobblemon",
+   "item": "cobblemon:wise_glasses",
+   "pokemon": [
+    "squirtle",
+    "wartortle",
+    "blastoise"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:max_soup",
+   "pokemon": [
+    "alcremie",
+    "appletun",
+    "blastoise",
+    "butterfree",
+    "centiskorch",
+    "charizard",
+    "cinderace",
+    "coalossal",
+    "copperajah",
+    "corviknight",
+    "drednaw",
+    "duraludon",
+    "eevee",
+    "flapple",
+    "garbodor",
+    "gengar",
+    "grimmsnarl",
+    "hatterene",
+    "inteleon",
+    "kingler",
+    "lapras",
+    "machamp",
+    "melmetal",
+    "meowth",
+    "orbeetle",
+    "pikachu",
+    "rillaboom",
+    "sandaconda",
+    "snorlax",
+    "toxtricity",
+    "venusaur"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:sweet_max_soup",
+   "pokemon": [
+    "urshifu"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:abomasite",
+   "pokemon": [
+    "abomasnow"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:absolite",
+   "pokemon": [
+    "absol"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:absolite_z",
+   "pokemon": [
+    "absol"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:aerodactylite",
+   "pokemon": [
+    "aerodactyl"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:aggronite",
+   "pokemon": [
+    "aggron"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:alakazite",
+   "pokemon": [
+    "alakazam"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:altarianite",
+   "pokemon": [
+    "altaria"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:ampharosite",
+   "pokemon": [
+    "ampharos"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:audinite",
+   "pokemon": [
+    "audino"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:banettite",
+   "pokemon": [
+    "banette"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:barbaracite",
+   "pokemon": [
+    "barbaracle"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:baxcalibrite",
+   "pokemon": [
+    "baxcalibur"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:beedrillite",
+   "pokemon": [
+    "beedrill"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:blastoisinite",
+   "pokemon": [
+    "blastoise"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:blazikenite",
+   "pokemon": [
+    "blaziken"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:cameruptite",
+   "pokemon": [
+    "camerupt"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:chandelurite",
+   "pokemon": [
+    "chandelure"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:charizardite_x",
+   "pokemon": [
+    "charizard"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:charizardite_y",
+   "pokemon": [
+    "charizard"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:chesnaughtite",
+   "pokemon": [
+    "chesnaught"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:chimechite",
+   "pokemon": [
+    "chimecho"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:clefablite",
+   "pokemon": [
+    "clefable"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:crabominite",
+   "pokemon": [
+    "crabominable"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:delphoxite",
+   "pokemon": [
+    "delphox"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:diancite",
+   "pokemon": [
+    "diancie"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:dragalgite",
+   "pokemon": [
+    "dragalge"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:dragoninite",
+   "pokemon": [
+    "dragonite"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:drampanite",
+   "pokemon": [
+    "drampa"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:eelektrossite",
+   "pokemon": [
+    "eelektross"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:emboarite",
+   "pokemon": [
+    "emboar"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:excadrite",
+   "pokemon": [
+    "excadrill"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:falinksite",
+   "pokemon": [
+    "falinks"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:feraligite",
+   "pokemon": [
+    "feraligatr"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:floettite",
+   "pokemon": [
+    "floette flower=eternal"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:froslassite",
+   "pokemon": [
+    "froslass"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:galladite",
+   "pokemon": [
+    "gallade"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:garchompite",
+   "pokemon": [
+    "garchomp"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:garchompite_z",
+   "pokemon": [
+    "garchomp"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:gardevoirite",
+   "pokemon": [
+    "gardevoir"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:gengarite",
+   "pokemon": [
+    "gengar"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:glalitite",
+   "pokemon": [
+    "glalie"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:glimmoranite",
+   "pokemon": [
+    "glimmora"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:golisopite",
+   "pokemon": [
+    "golisopod"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:golurkite",
+   "pokemon": [
+    "golurk"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:greninjite",
+   "pokemon": [
+    "greninja"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:gyaradosite",
+   "pokemon": [
+    "gyarados"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:hawluchanite",
+   "pokemon": [
+    "hawlucha"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:heracronite",
+   "pokemon": [
+    "heracross"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:houndoominite",
+   "pokemon": [
+    "houndoom"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:kangaskhanite",
+   "pokemon": [
+    "kangaskhan"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:latiasite",
+   "pokemon": [
+    "latias"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:latiosite",
+   "pokemon": [
+    "latios"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:lopunnite",
+   "pokemon": [
+    "lopunny"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:lucarionite",
+   "pokemon": [
+    "lucario"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:lucarionite_z",
+   "pokemon": [
+    "lucario"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:malamarite",
+   "pokemon": [
+    "malamar"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:manectite",
+   "pokemon": [
+    "manectric"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:mawilite",
+   "pokemon": [
+    "mawile"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:medichamite",
+   "pokemon": [
+    "medicham"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:meganiumite",
+   "pokemon": [
+    "meganium"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:meowsticite",
+   "pokemon": [
+    "meowstic"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:metagrossite",
+   "pokemon": [
+    "metagross"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:mewtwonite_x",
+   "pokemon": [
+    "mewtwo"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:mewtwonite_y",
+   "pokemon": [
+    "mewtwo"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:pidgeotite",
+   "pokemon": [
+    "pidgeot"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:pinsirite",
+   "pokemon": [
+    "pinsir"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:pyroarite",
+   "pokemon": [
+    "pyroar"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:raichunite_x",
+   "pokemon": [
+    "raichu"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:raichunite_y",
+   "pokemon": [
+    "raichu"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:mega_stone",
+   "pokemon": [
+    "rayquaza"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:sablenite",
+   "pokemon": [
+    "sableye"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:salamencite",
+   "pokemon": [
+    "salamence"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:sceptilite",
+   "pokemon": [
+    "sceptile"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:scizorite",
+   "pokemon": [
+    "scizor"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:scolipite",
+   "pokemon": [
+    "scolipede"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:scovillainite",
+   "pokemon": [
+    "scovillain"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:scraftinite",
+   "pokemon": [
+    "scrafty"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:sharpedonite",
+   "pokemon": [
+    "sharpedo"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:skarmorite",
+   "pokemon": [
+    "skarmory"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:slowbronite",
+   "pokemon": [
+    "slowbro"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:staraptite",
+   "pokemon": [
+    "staraptor"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:starminite",
+   "pokemon": [
+    "starmie"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:steelixite",
+   "pokemon": [
+    "steelix"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:swampertite",
+   "pokemon": [
+    "swampert"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:tyranitarite",
+   "pokemon": [
+    "tyranitar"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:venusaurite",
+   "pokemon": [
+    "venusaur"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "mega_showdown:victreebelite",
+   "pokemon": [
+    "victreebel"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:darkranite",
+   "pokemon": [
+    "darkrai"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:heatranite",
+   "pokemon": [
+    "heatran"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:magearnite",
+   "pokemon": [
+    "magearna"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:tatsugirinite",
+   "pokemon": [
+    "tatsugiri"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:zeraorite",
+   "pokemon": [
+    "zeraora"
+   ]
+  },
+  {
+   "src": "Cosmetic Forms",
+   "item": "zamega:zygardite",
+   "pokemon": [
+    "zygarde"
+   ]
+  }
+ ]
+}

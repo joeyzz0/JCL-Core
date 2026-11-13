@@ -24,6 +24,8 @@ public final class Keys {
     public static final DeferredItem<Item> MASTER = ITEMS.register("master_key", () -> new KeyItem("master", new Item.Properties().rarity(Rarity.EPIC)
             .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
+    public static final DeferredItem<Item> STYLE = ITEMS.register("style_key", () -> new KeyItem("style", new Item.Properties().rarity(Rarity.RARE)));
+
     /** Admin tool: hit a crate with it to turn the crate back into a normal block. */
     public static final DeferredItem<Item> CRATE_REMOVER = ITEMS.register("crate_remover", () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)) {
         @Override
@@ -38,6 +40,7 @@ public final class Keys {
             case "great" -> GREAT.get();
             case "ultra" -> ULTRA.get();
             case "master" -> MASTER.get();
+            case "style" -> STYLE.get();
             default -> null;
         };
     }
@@ -46,7 +49,7 @@ public final class Keys {
         return s.getItem() instanceof KeyItem k ? k.tier : null;
     }
 
-    static final Map<String, String> NAMES = Map.of("poke", "Poké Crate", "great", "Great Crate", "ultra", "Ultra Crate", "master", "Master Crate");
+    static final Map<String, String> NAMES = Map.of("poke", "Poké Crate", "great", "Great Crate", "ultra", "Ultra Crate", "master", "Master Crate", "style", "Style Crate");
 
     public static final class KeyItem extends Item {
         final String tier;

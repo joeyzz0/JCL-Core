@@ -1,14 +1,18 @@
 {
-  "version": 4,
+  "version": 11,
   "categories": [
     {
       "id": "start",
       "name": "Getting Started",
-      "icon": "minecraft:compass",
+      "icon": "minecraft:book",
       "commands": [
         [
           "/help",
           "This menu. Click a category to see its commands."
+        ],
+        [
+          "/quests",
+          "Open the quest book (or press L). Every quest pays CobbleDollars."
         ],
         [
           "/jobs",
@@ -19,16 +23,32 @@
           "Your active jobs, in chat."
         ],
         [
-          "Quest book",
-          "Open it from the button in your inventory. Every quest pays CobbleDollars."
-        ],
-        [
           "Trainer Association",
           "Find one in any village to start a trainer series and raise your Level Cap."
         ],
         [
           "/leaderboard",
           "See the top trainers and your own rank."
+        ],
+        [
+          "/wardrobe",
+          "Equip trails and give your Pokémon auras."
+        ],
+        [
+          "/cosmetics",
+          "Browse every cosmetic and how to get it."
+        ],
+        [
+          "/afk",
+          "Let everyone know you're away. Move or chat to come back."
+        ],
+        [
+          "/discord",
+          "Get our Discord invite."
+        ],
+        [
+          "/keys reset",
+          "Put the server's keybind layout back."
         ]
       ]
     },
@@ -50,6 +70,10 @@
           "Teleport somewhere random in the wild."
         ],
         [
+          "/back",
+          "Return to where you were before your last teleport."
+        ],
+        [
           "/tpa <player>",
           "Ask to teleport to a friend."
         ],
@@ -66,8 +90,16 @@
           "Deny a teleport request."
         ],
         [
-          "Sharestones",
-          "The black sharestone links official safe zones. Red ones are community-built. Both can take you to spawn."
+          "/home [name]",
+          "Go to one of your homes. Set one with /sethome [name]; see them all with /homes (3 free, buy up to 30)."
+        ],
+        [
+          "/delhome <name>",
+          "Delete one of your homes."
+        ],
+        [
+          "Community Warps",
+          "Player-built safe zones, in /warp. Ask an admin or mod to add yours."
         ]
       ]
     },
@@ -101,7 +133,7 @@
       "commands": [
         [
           "/shop",
-          "Poké Balls, healing, training, dolls, keys, titles and more."
+          "Poké Balls, healing, training, Mega Stones, held items, keys, titles and more."
         ],
         [
           "/sell",
@@ -146,7 +178,7 @@
     },
     {
       "id": "titles",
-      "name": "Titles and Colours",
+      "name": "Titles and Colors",
       "icon": "minecraft:name_tag",
       "commands": [
         [
@@ -159,7 +191,7 @@
         ],
         [
           "/titles color",
-          "Pick a colour for your name."
+          "Pick a color for your name."
         ],
         [
           "/titles clear",
@@ -173,6 +205,14 @@
       "icon": "cobblemon:poke_ball",
       "commands": [
         [
+          "/challenge <player>",
+          "Challenge another trainer to a battle: pick the level, Singles or Doubles, and an optional wager."
+        ],
+        [
+          "/pokerus",
+          "See which of your Pokémon have Pokérus."
+        ],
+        [
           "Spawn alerts",
           "You get a ping when something rare spawns near you."
         ],
@@ -183,6 +223,49 @@
         [
           "Fight or Flight",
           "Wild Pokémon your team knocks out still count toward chores."
+        ]
+      ]
+    },
+    {
+      "id": "frontier",
+      "name": "Battle Frontier",
+      "icon": "minecraft:nether_star",
+      "commands": [
+        [
+          "/warp frontier",
+          "Travel to the Battle Frontier (once you've earned your Ticket to the Frontier)."
+        ],
+        [
+          "/frontier",
+          "Set up a run (in the Frontier lobby)."
+        ],
+        [
+          "/frontier continue",
+          "Reopen the door choice or room menu."
+        ],
+        [
+          "/frontier leave",
+          "Leave your run and bank your rewards (/frontier quit works too)."
+        ],
+        [
+          "/frontier shop",
+          "Open the BP Exchange (in the lobby)."
+        ],
+        [
+          "/frontier bp",
+          "See your BP balance."
+        ],
+        [
+          "/frontier stats",
+          "Your Frontier stats."
+        ],
+        [
+          "/frontier guide",
+          "Titles, Symbols and how to earn them."
+        ],
+        [
+          "/frontier leaderboard",
+          "Infinite Mode rankings."
         ]
       ]
     }

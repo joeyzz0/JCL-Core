@@ -1,0 +1,1149 @@
+{
+ "version": 4,
+ "brackets": [
+  {
+   "id": "rookie",
+   "name": "Rookie Cup",
+   "level": 15,
+   "mode": "cap",
+   "cd": 400,
+   "bp": 1,
+   "unlock": "",
+   "icon": "cobblemon:poke_ball"
+  },
+  {
+   "id": "junior",
+   "name": "Junior Cup",
+   "level": 30,
+   "mode": "cap",
+   "cd": 900,
+   "bp": 2,
+   "unlock": "rookie:sprint",
+   "icon": "cobblemon:great_ball"
+  },
+  {
+   "id": "challenger",
+   "name": "Challenger Cup",
+   "level": 50,
+   "mode": "cap",
+   "cd": 1800,
+   "bp": 3,
+   "unlock": "junior:sprint",
+   "icon": "cobblemon:ultra_ball"
+  },
+  {
+   "id": "ace",
+   "name": "Ace Cup",
+   "level": 75,
+   "mode": "cap",
+   "cd": 3000,
+   "bp": 4,
+   "unlock": "challenger:standard",
+   "icon": "cobblemon:dusk_ball"
+  },
+  {
+   "id": "master",
+   "name": "Master Cup",
+   "level": 100,
+   "mode": "flat",
+   "cd": 5000,
+   "bp": 6,
+   "unlock": "ace:standard|title:kanto_champion|title:sinnoh_champion|title:hoenn_champion|title:unova_champion|title:kalos_champion|title:paldea_champion|title:borrius_champion",
+   "icon": "cobblemon:master_ball"
+  },
+  {
+   "id": "little",
+   "name": "Little Cup",
+   "level": 5,
+   "mode": "flat",
+   "cd": 1000,
+   "bp": 2,
+   "unlock": "",
+   "icon": "cobblemon:premier_ball",
+   "littleCup": true
+  },
+  {
+   "id": "flat50",
+   "name": "Flat 50",
+   "level": 50,
+   "mode": "flat",
+   "cd": 2500,
+   "bp": 4,
+   "unlock": "challenger:sprint",
+   "icon": "cobblemon:cherish_ball"
+  }
+ ],
+ "formats": [
+  {
+   "id": "singles",
+   "name": "Singles",
+   "team": 3,
+   "mult": 1.0,
+   "icon": "minecraft:iron_sword"
+  },
+  {
+   "id": "doubles",
+   "name": "Doubles",
+   "team": 4,
+   "mult": 1.15,
+   "icon": "minecraft:golden_sword"
+  },
+  {
+   "id": "coop",
+   "name": "Co-op Doubles",
+   "team": 3,
+   "mult": 1.2,
+   "icon": "minecraft:shield"
+  }
+ ],
+ "lengths": [
+  {
+   "id": "sprint",
+   "name": "Sprint",
+   "rooms": 7,
+   "clearBonus": 3,
+   "icon": "minecraft:feather"
+  },
+  {
+   "id": "standard",
+   "name": "Standard",
+   "rooms": 21,
+   "clearBonus": 10,
+   "icon": "minecraft:book"
+  },
+  {
+   "id": "marathon",
+   "name": "Marathon",
+   "rooms": 50,
+   "clearBonus": 30,
+   "icon": "minecraft:clock"
+  },
+  {
+   "id": "infinite",
+   "name": "Infinite",
+   "rooms": 0,
+   "clearBonus": 0,
+   "icon": "minecraft:ender_eye"
+  }
+ ],
+ "gimmicks": [
+  {
+   "id": "mega",
+   "name": "Mega Evolution",
+   "enemy": 0.2,
+   "player": -0.15,
+   "icon": "mega_showdown:mega_bracelet"
+  },
+  {
+   "id": "zmove",
+   "name": "Z-Moves",
+   "enemy": 0.2,
+   "player": -0.15,
+   "icon": "mega_showdown:z_ring"
+  },
+  {
+   "id": "dynamax",
+   "name": "Dynamax",
+   "enemy": 0.2,
+   "player": -0.15,
+   "icon": "mega_showdown:dynamax_band"
+  },
+  {
+   "id": "tera",
+   "name": "Terastal",
+   "enemy": 0.25,
+   "player": -0.15,
+   "icon": "mega_showdown:tera_orb"
+  }
+ ],
+ "modifiers": [
+  {
+   "id": "elite",
+   "name": "Elite Opponents",
+   "bonus": 0.35,
+   "icon": "minecraft:netherite_sword",
+   "desc": "Opponents have perfect training, full competitive sets and play smart."
+  },
+  {
+   "id": "levelgap",
+   "name": "Level Gap",
+   "bonus": 0.25,
+   "icon": "minecraft:experience_bottle",
+   "desc": "Opponents are 5 levels above the bracket level."
+  },
+  {
+   "id": "nohealing",
+   "name": "No Healing",
+   "bonus": 0.25,
+   "icon": "minecraft:poisonous_potato",
+   "desc": "HP and PP carry over between rooms. You are healed every 7 rooms."
+  },
+  {
+   "id": "noitems",
+   "name": "No Held Items",
+   "bonus": 0.15,
+   "icon": "minecraft:barrier",
+   "desc": "Nobody holds an item, on either side."
+  },
+  {
+   "id": "monotype",
+   "name": "Monotype",
+   "bonus": 0.2,
+   "icon": "minecraft:prismarine_crystals",
+   "desc": "Your whole team must share one type."
+  },
+  {
+   "id": "inverse",
+   "name": "Inverse Battles",
+   "bonus": 0.2,
+   "icon": "minecraft:redstone_torch",
+   "desc": "The type chart is flipped."
+  },
+  {
+   "id": "bigteams",
+   "name": "Full Teams",
+   "bonus": 0.25,
+   "icon": "minecraft:totem_of_undying",
+   "desc": "Opponents always bring a full team of 6."
+  },
+  {
+   "id": "suddendeath",
+   "name": "Sudden Death",
+   "bonus": 0.6,
+   "icon": "minecraft:wither_skeleton_skull",
+   "desc": "If any of your Pokémon faints, the run ends after that battle."
+  },
+  {
+   "id": "gauntlet",
+   "name": "Champion's Gauntlet",
+   "bonus": 0.4,
+   "icon": "minecraft:golden_helmet",
+   "desc": "Champion rooms appear three times as often."
+  },
+  {
+   "id": "weaker",
+   "name": "Weaker Foes",
+   "bonus": -0.25,
+   "icon": "minecraft:wooden_sword",
+   "desc": "Opponents are 5 levels below the bracket level."
+  },
+  {
+   "id": "basicai",
+   "name": "Basic AI",
+   "bonus": -0.3,
+   "icon": "minecraft:pumpkin",
+   "desc": "Opponents pick their moves at random."
+  },
+  {
+   "id": "smallteams",
+   "name": "Small Teams",
+   "bonus": -0.2,
+   "icon": "minecraft:stick",
+   "desc": "Opponents bring one fewer Pokémon."
+  },
+  {
+   "id": "scouting",
+   "name": "Scouting",
+   "bonus": -0.1,
+   "icon": "minecraft:spyglass",
+   "desc": "Doors show the next opponent's team."
+  },
+  {
+   "id": "secondchance",
+   "name": "Second Chance",
+   "bonus": -0.3,
+   "icon": "minecraft:golden_apple",
+   "desc": "Once per run, losing a battle lets you retry it."
+  }
+ ],
+ "legendaryMult": 0.2,
+ "rentalMult": 1.0,
+ "minMult": 0.1,
+ "floorScale": 0.05,
+ "floorCap": 8.0,
+ "streakEvery": 7,
+ "streakBonus": 0.1,
+ "streakCap": 0.5,
+ "dailySoftCap": 150,
+ "dailySoftMult": 0.5,
+ "rooms": [
+  {
+   "id": "battle",
+   "w": 40,
+   "name": "Battle Room",
+   "icon": "minecraft:iron_sword"
+  },
+  {
+   "id": "type",
+   "w": 30,
+   "name": "Type Room",
+   "icon": "minecraft:prismarine_crystals"
+  },
+  {
+   "id": "doubles",
+   "w": 8,
+   "name": "Double Trouble",
+   "icon": "minecraft:golden_sword",
+   "minFloor": 4
+  },
+  {
+   "id": "elite",
+   "w": 8,
+   "name": "Elite Room",
+   "icon": "minecraft:netherite_sword",
+   "minFloor": 5,
+   "mult": 1.5
+  },
+  {
+   "id": "champion",
+   "w": 3,
+   "name": "Champion Room",
+   "icon": "minecraft:golden_helmet",
+   "minFloor": 8,
+   "mult": 3.0
+  },
+  {
+   "id": "loot",
+   "w": 7,
+   "name": "Loot Room",
+   "icon": "minecraft:chest"
+  },
+  {
+   "id": "heal",
+   "w": 2,
+   "name": "Healing Spring",
+   "icon": "minecraft:honey_bottle",
+   "minFloor": 3
+  },
+  {
+   "id": "luckyroll",
+   "w": 2,
+   "name": "Lucky Roll",
+   "icon": "minecraft:rabbit_foot"
+  },
+  {
+   "id": "clover",
+   "w": 2,
+   "name": "Lucky Clover",
+   "icon": "minecraft:emerald",
+   "minFloor": 3
+  },
+  {
+   "id": "shrine",
+   "w": 2,
+   "name": "Shrine",
+   "icon": "minecraft:beacon",
+   "minFloor": 5
+  },
+  {
+   "id": "merchant",
+   "w": 4,
+   "name": "Wandering Merchant",
+   "icon": "minecraft:villager_spawn_egg",
+   "minFloor": 3
+  },
+  {
+   "id": "gamble",
+   "w": 2,
+   "name": "Gamble Room",
+   "icon": "minecraft:gold_nugget",
+   "minFloor": 6
+  },
+  {
+   "id": "cursed",
+   "w": 4,
+   "name": "Cursed Room",
+   "icon": "minecraft:wither_rose",
+   "minFloor": 6
+  },
+  {
+   "id": "mystery",
+   "w": 5,
+   "name": "? Mystery",
+   "icon": "minecraft:ender_pearl",
+   "minFloor": 2,
+   "mult": 1.25
+  }
+ ],
+ "loot": [
+  {
+   "item": "cobblemon:rare_candy",
+   "count": 3,
+   "w": 10
+  },
+  {
+   "item": "cobblemon:exp_candy_xl",
+   "count": 2,
+   "w": 10
+  },
+  {
+   "item": "cobblemon:pp_up",
+   "count": 2,
+   "w": 8
+  },
+  {
+   "item": "cobblemon:ability_capsule",
+   "count": 1,
+   "w": 3
+  },
+  {
+   "item": "cobblemon_utility:hpsilvercap",
+   "count": 1,
+   "w": 4
+  },
+  {
+   "item": "jcl_gts:poke_key",
+   "count": 1,
+   "w": 6
+  },
+  {
+   "item": "jcl_gts:great_key",
+   "count": 1,
+   "w": 2
+  },
+  {
+   "item": "jcl_gts:style_key",
+   "count": 1,
+   "w": 1
+  },
+  {
+   "item": "mega_showdown:mega_stone",
+   "count": 1,
+   "w": 3
+  },
+  {
+   "item": "mega_showdown:blank_z",
+   "count": 1,
+   "w": 3
+  },
+  {
+   "item": "mega_showdown:keystone",
+   "count": 1,
+   "w": 2
+  },
+  {
+   "item": "cobblemon:full_restore",
+   "count": 2,
+   "w": 8
+  },
+  {
+   "item": "cobblemon:max_revive",
+   "count": 1,
+   "w": 8
+  },
+  {
+   "item": "cobblemon:hp_up",
+   "count": 2,
+   "w": 6
+  },
+  {
+   "item": "cobblemon:protein",
+   "count": 2,
+   "w": 6
+  },
+  {
+   "item": "cobblemon:iron",
+   "count": 2,
+   "w": 6
+  },
+  {
+   "item": "cobblemon:calcium",
+   "count": 2,
+   "w": 6
+  },
+  {
+   "item": "cobblemon:zinc",
+   "count": 2,
+   "w": 6
+  },
+  {
+   "item": "cobblemon:carbos",
+   "count": 2,
+   "w": 6
+  }
+ ],
+ "merchant": [
+  {
+   "id": "heal",
+   "name": "Full team heal",
+   "bp": 40,
+   "icon": "minecraft:honey_bottle"
+  },
+  {
+   "id": "revive",
+   "name": "Revive every fainted Pokémon",
+   "bp": 25,
+   "icon": "cobblemon:revive"
+  },
+  {
+   "id": "skip",
+   "name": "Skip the next battle (no reward)",
+   "bp": 60,
+   "icon": "minecraft:ender_pearl"
+  }
+ ],
+ "boons": [
+  {
+   "id": "secondwind",
+   "name": "Second Wind",
+   "desc": "Heal 25% after every win.",
+   "icon": "minecraft:golden_carrot"
+  },
+  {
+   "id": "treasure",
+   "name": "Treasure Hunter",
+   "desc": "Loot rooms give one extra roll.",
+   "icon": "minecraft:chest"
+  },
+  {
+   "id": "luckycoin",
+   "name": "Lucky Coin",
+   "desc": "+15% CobbleDollars for the rest of the run.",
+   "icon": "minecraft:gold_ingot"
+  },
+  {
+   "id": "focus",
+   "name": "Battle Focus",
+   "desc": "+10% BP for the rest of the run.",
+   "icon": "minecraft:blaze_powder"
+  },
+  {
+   "id": "insight",
+   "name": "Insight",
+   "desc": "See every door's opponent team.",
+   "icon": "minecraft:spyglass"
+  }
+ ],
+ "supply": [
+  {
+   "item": "cobblemon:full_restore",
+   "count": 2,
+   "w": 10
+  },
+  {
+   "item": "cobblemon:rare_candy",
+   "count": 2,
+   "w": 10
+  },
+  {
+   "item": "jcl_gts:poke_key",
+   "count": 1,
+   "w": 5
+  },
+  {
+   "item": "jcl_gts:great_key",
+   "count": 1,
+   "w": 2
+  },
+  {
+   "item": "jcl_gts:style_key",
+   "count": 1,
+   "w": 1
+  },
+  {
+   "item": "cobblemon:exp_candy_l",
+   "count": 4,
+   "w": 8
+  }
+ ],
+ "shop": [
+  {
+   "name": "HP Silver Cap",
+   "item": "cobblemon_utility:hpsilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Atk Silver Cap",
+   "item": "cobblemon_utility:atksilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Def Silver Cap",
+   "item": "cobblemon_utility:defsilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Spatk Silver Cap",
+   "item": "cobblemon_utility:spatksilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Spdef Silver Cap",
+   "item": "cobblemon_utility:spdefsilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Speed Silver Cap",
+   "item": "cobblemon_utility:speedsilvercap",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Golden Cap",
+   "item": "cobblemon_utility:goldencap",
+   "count": 1,
+   "bp": 350,
+   "limit": 2,
+   "period": "week"
+  },
+  {
+   "name": "Ability Capsule",
+   "item": "cobblemon:ability_capsule",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Ability Patch",
+   "item": "cobblemon:ability_patch",
+   "count": 1,
+   "bp": 450,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Adamant Mint",
+   "item": "cobblemon:adamant_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Bold Mint",
+   "item": "cobblemon:bold_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Brave Mint",
+   "item": "cobblemon:brave_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Calm Mint",
+   "item": "cobblemon:calm_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Careful Mint",
+   "item": "cobblemon:careful_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Hasty Mint",
+   "item": "cobblemon:hasty_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Impish Mint",
+   "item": "cobblemon:impish_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Jolly Mint",
+   "item": "cobblemon:jolly_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Modest Mint",
+   "item": "cobblemon:modest_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Quiet Mint",
+   "item": "cobblemon:quiet_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Relaxed Mint",
+   "item": "cobblemon:relaxed_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Sassy Mint",
+   "item": "cobblemon:sassy_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Timid Mint",
+   "item": "cobblemon:timid_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Naive Mint",
+   "item": "cobblemon:naive_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Lonely Mint",
+   "item": "cobblemon:lonely_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Mild Mint",
+   "item": "cobblemon:mild_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Naughty Mint",
+   "item": "cobblemon:naughty_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Rash Mint",
+   "item": "cobblemon:rash_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Gentle Mint",
+   "item": "cobblemon:gentle_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Lax Mint",
+   "item": "cobblemon:lax_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Serious Mint",
+   "item": "cobblemon:serious_mint",
+   "count": 1,
+   "bp": 40,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Weight",
+   "item": "cobblemon:power_weight",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Bracer",
+   "item": "cobblemon:power_bracer",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Belt",
+   "item": "cobblemon:power_belt",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Lens",
+   "item": "cobblemon:power_lens",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Band",
+   "item": "cobblemon:power_band",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Power Anklet",
+   "item": "cobblemon:power_anklet",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Bright Powder",
+   "item": "cobblemon:bright_powder",
+   "count": 1,
+   "bp": 60,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Protective Pads",
+   "item": "cobblemon:protective_pads",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Expert Belt",
+   "item": "cobblemon:expert_belt",
+   "count": 1,
+   "bp": 150,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Big Root",
+   "item": "cobblemon:big_root",
+   "count": 1,
+   "bp": 60,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Shell Bell",
+   "item": "cobblemon:shell_bell",
+   "count": 1,
+   "bp": 100,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Throat Spray",
+   "item": "cobblemon:throat_spray",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Room Service",
+   "item": "cobblemon:room_service",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Blunder Policy",
+   "item": "cobblemon:blunder_policy",
+   "count": 1,
+   "bp": 150,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Rocky Helmet",
+   "item": "cobblemon:rocky_helmet",
+   "count": 1,
+   "bp": 150,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Air Balloon",
+   "item": "cobblemon:air_balloon",
+   "count": 1,
+   "bp": 80,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Raw Mega Stone",
+   "item": "mega_showdown:mega_stone",
+   "count": 1,
+   "bp": 100,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Keystone",
+   "item": "mega_showdown:keystone",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Blank-Z",
+   "item": "mega_showdown:blank_z",
+   "count": 1,
+   "bp": 90,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Light Sparkling Stone",
+   "item": "mega_showdown:sparkling_stone_light",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Dark Sparkling Stone",
+   "item": "mega_showdown:sparkling_stone_dark",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Wishing Star",
+   "item": "mega_showdown:wishing_star",
+   "count": 1,
+   "bp": 150,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Stellar Tera Shard",
+   "item": "mega_showdown:stellar_tera_shard",
+   "count": 1,
+   "bp": 180,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Choice Band",
+   "item": "cobblemon:choice_band",
+   "count": 1,
+   "bp": 750,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Choice Specs",
+   "item": "cobblemon:choice_specs",
+   "count": 1,
+   "bp": 750,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Choice Scarf",
+   "item": "cobblemon:choice_scarf",
+   "count": 1,
+   "bp": 750,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Life Orb",
+   "item": "cobblemon:life_orb",
+   "count": 1,
+   "bp": 750,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Focus Sash",
+   "item": "cobblemon:focus_sash",
+   "count": 1,
+   "bp": 750,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Poké Ball Key",
+   "item": "jcl_gts:poke_key",
+   "count": 1,
+   "bp": 60,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Great Ball Key",
+   "item": "jcl_gts:great_key",
+   "count": 1,
+   "bp": 180,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Ultra Ball Key",
+   "item": "jcl_gts:ultra_key",
+   "count": 1,
+   "bp": 900,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Master Ball Key",
+   "item": "jcl_gts:master_key",
+   "count": 1,
+   "bp": 4000,
+   "limit": 1,
+   "period": "month"
+  },
+  {
+   "name": "Style Key",
+   "item": "jcl_gts:style_key",
+   "count": 1,
+   "bp": 250,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Rare Candy",
+   "item": "cobblemon:rare_candy",
+   "count": 1,
+   "bp": 30,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "EXP Candy XL",
+   "item": "cobblemon:exp_candy_xl",
+   "count": 1,
+   "bp": 45,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "PP Max",
+   "item": "cobblemon:pp_max",
+   "count": 1,
+   "bp": 120,
+   "limit": 0,
+   "period": "none"
+  },
+  {
+   "name": "Destiny Knot",
+   "item": "cobblemon:destiny_knot",
+   "count": 1,
+   "bp": 600,
+   "limit": 1,
+   "period": "week"
+  },
+  {
+   "name": "Title: Tower Tycoon",
+   "item": "minecraft:name_tag",
+   "count": 1,
+   "bp": 1500,
+   "limit": 1,
+   "period": "once",
+   "commands": [
+    "titles grant {player} f_tower_tycoon"
+   ]
+  },
+  {
+   "name": "Title: Endless",
+   "item": "minecraft:name_tag",
+   "count": 1,
+   "bp": 2500,
+   "limit": 1,
+   "period": "once",
+   "commands": [
+    "titles grant {player} f_endless"
+   ]
+  },
+  {
+   "name": "Title: Brainbuster",
+   "item": "minecraft:name_tag",
+   "count": 1,
+   "bp": 2000,
+   "limit": 1,
+   "period": "once",
+   "commands": [
+    "titles grant {player} f_brainbuster"
+   ]
+  },
+  {
+   "name": "Trail: Champion Flame",
+   "item": "minecraft:blaze_rod",
+   "count": 1,
+   "bp": 900,
+   "limit": 1,
+   "period": "once",
+   "commands": [
+    "jcl cosmetic give {player} trail_flames"
+   ]
+  },
+  {
+   "name": "Aura: Brain Aura",
+   "item": "minecraft:end_rod",
+   "count": 1,
+   "bp": 1200,
+   "limit": 1,
+   "period": "once",
+   "commands": [
+    "jcl cosmetic give {player} aura_starlight"
+   ]
+  }
+ ],
+ "seasonPrizes": [
+  500,
+  300,
+  150
+ ],
+ "lobbyRadius": 96,
+ "gauntletBonus": 0.15
+}

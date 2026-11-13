@@ -1,0 +1,1378 @@
+{
+ "version": 2,
+ "tickets": [
+  {
+   "id": "style_mc_gardevoir_icedragon",
+   "name": "Ice Dragon Gardevoir",
+   "rarity": "epic",
+   "pokemon": [
+    "gardevoir"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_gardevoir_icedragon_alt",
+   "name": "Ice Dragon Gardevoir (Alt Colour)",
+   "rarity": "epic",
+   "pokemon": [
+    "gardevoir"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_golisopod_iceraider",
+   "name": "Ice Raider Golisopod",
+   "rarity": "rare",
+   "pokemon": [
+    "golisopod"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_greninja_winter",
+   "name": "Winter Greninja",
+   "rarity": "rare",
+   "pokemon": [
+    "greninja"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_greninja_winter_alt",
+   "name": "Winter Greninja (Alt Colour)",
+   "rarity": "rare",
+   "pokemon": [
+    "greninja"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_mewtwo_boundary",
+   "name": "Boundary Mewtwo",
+   "rarity": "legendary",
+   "pokemon": [
+    "mewtwo"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_mewtwo_boundary_alt",
+   "name": "Boundary Mewtwo (Alt Colour)",
+   "rarity": "legendary",
+   "pokemon": [
+    "mewtwo"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_ninetales_aurora",
+   "name": "Aurora Ninetales",
+   "rarity": "rare",
+   "pokemon": [
+    "ninetales"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_ninetales_aurora_alt",
+   "name": "Aurora Ninetales (Alt Colour)",
+   "rarity": "rare",
+   "pokemon": [
+    "ninetales"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_umbreon_aurora",
+   "name": "Aurora Umbreon",
+   "rarity": "rare",
+   "pokemon": [
+    "umbreon"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_vulpix_line_holiday",
+   "name": "Holiday Vulpix Line",
+   "rarity": "rare",
+   "pokemon": [
+    "ninetales",
+    "vulpix"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_weavile_skier",
+   "name": "Skier Weavile",
+   "rarity": "rare",
+   "pokemon": [
+    "weavile"
+   ],
+   "season": "winter"
+  },
+  {
+   "id": "style_mc_blissey_easter",
+   "name": "Easter Blissey",
+   "rarity": "rare",
+   "pokemon": [
+    "blissey"
+   ],
+   "season": "easter"
+  },
+  {
+   "id": "style_mc_buneary_line_easter",
+   "name": "Easter Buneary Line",
+   "rarity": "rare",
+   "pokemon": [
+    "buneary",
+    "lopunny"
+   ],
+   "season": "easter"
+  },
+  {
+   "id": "style_mc_cinderace_pastel",
+   "name": "Pastel Cinderace",
+   "rarity": "rare",
+   "pokemon": [
+    "cinderace"
+   ],
+   "season": "easter"
+  },
+  {
+   "id": "style_mc_togepi_line_easter",
+   "name": "Easter Togepi Line",
+   "rarity": "rare",
+   "pokemon": [
+    "togekiss",
+    "togepi",
+    "togetic"
+   ],
+   "season": "easter"
+  },
+  {
+   "id": "style_mc_charizard_sinnoh",
+   "name": "Sinnoh Charizard",
+   "rarity": "epic",
+   "pokemon": [
+    "charizard"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_decidueye_sinnoh",
+   "name": "Sinnoh Decidueye",
+   "rarity": "epic",
+   "pokemon": [
+    "decidueye"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_garchomp_sinnoh",
+   "name": "Sinnoh Garchomp",
+   "rarity": "epic",
+   "pokemon": [
+    "garchomp"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_gardevoir_sinnoh",
+   "name": "Sinnoh Gardevoir",
+   "rarity": "epic",
+   "pokemon": [
+    "gardevoir"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_greninja_sinnoh",
+   "name": "Sinnoh Greninja",
+   "rarity": "epic",
+   "pokemon": [
+    "greninja"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_lucario_sinnoh",
+   "name": "Sinnoh Lucario",
+   "rarity": "epic",
+   "pokemon": [
+    "lucario"
+   ],
+   "season": "broken"
+  },
+  {
+   "id": "style_mc_cinderace_captain",
+   "name": "Captain Cinderace",
+   "rarity": "rare",
+   "pokemon": [
+    "cinderace"
+   ]
+  },
+  {
+   "id": "style_mc_hooh_steampunk",
+   "name": "Steampunk Ho-Oh",
+   "rarity": "legendary",
+   "pokemon": [
+    "hooh"
+   ]
+  },
+  {
+   "id": "style_mc_sawk_festival",
+   "name": "Festival Sawk",
+   "rarity": "rare",
+   "pokemon": [
+    "sawk"
+   ]
+  },
+  {
+   "id": "style_mc_throh_festival",
+   "name": "Festival Throh",
+   "rarity": "rare",
+   "pokemon": [
+    "throh"
+   ]
+  },
+  {
+   "id": "style_mc_zoroark_ghost",
+   "name": "Ghost Zoroark",
+   "rarity": "rare",
+   "pokemon": [
+    "zoroark"
+   ]
+  },
+  {
+   "id": "style_mc_eevee_valentines",
+   "name": "Valentines Eevee",
+   "rarity": "rare",
+   "pokemon": [
+    "eevee"
+   ],
+   "season": "valentines"
+  },
+  {
+   "id": "style_mc_flareon_valentines",
+   "name": "Valentines Flareon",
+   "rarity": "rare",
+   "pokemon": [
+    "flareon"
+   ],
+   "season": "valentines"
+  },
+  {
+   "id": "style_mc_jolteon_valentines",
+   "name": "Valentines Jolteon",
+   "rarity": "rare",
+   "pokemon": [
+    "jolteon"
+   ],
+   "season": "valentines"
+  },
+  {
+   "id": "style_mc_roserade_valentines",
+   "name": "Valentines Roserade",
+   "rarity": "rare",
+   "pokemon": [
+    "roserade"
+   ],
+   "season": "valentines"
+  },
+  {
+   "id": "style_mc_vaporeon_valentines",
+   "name": "Valentines Vaporeon",
+   "rarity": "rare",
+   "pokemon": [
+    "vaporeon"
+   ],
+   "season": "valentines"
+  },
+  {
+   "id": "style_mc_articuno_steampunk",
+   "name": "Steampunk Articuno",
+   "rarity": "legendary",
+   "pokemon": [
+    "articuno"
+   ]
+  },
+  {
+   "id": "style_mc_blaziken_magma",
+   "name": "Magma Blaziken",
+   "rarity": "epic",
+   "pokemon": [
+    "blaziken"
+   ]
+  },
+  {
+   "id": "style_mc_carbink_royal",
+   "name": "Royal Carbink",
+   "rarity": "epic",
+   "pokemon": [
+    "carbink"
+   ]
+  },
+  {
+   "id": "style_mc_ceruledge_mgreninja",
+   "name": "Mega Greninja Ceruledge",
+   "rarity": "epic",
+   "pokemon": [
+    "ceruledge"
+   ]
+  },
+  {
+   "id": "style_mc_charizard_knight",
+   "name": "Knight Charizard",
+   "rarity": "epic",
+   "pokemon": [
+    "charizard"
+   ]
+  },
+  {
+   "id": "style_mc_cyclizar_ancient",
+   "name": "Ancient Cyclizar",
+   "rarity": "rare",
+   "pokemon": [
+    "cyclizar"
+   ]
+  },
+  {
+   "id": "style_mc_decidueye_ninja",
+   "name": "Ninja Decidueye",
+   "rarity": "rare",
+   "pokemon": [
+    "decidueye"
+   ]
+  },
+  {
+   "id": "style_mc_drampa_newyear",
+   "name": "New Year Drampa",
+   "rarity": "rare",
+   "pokemon": [
+    "drampa"
+   ],
+   "season": "new_year"
+  },
+  {
+   "id": "style_mc_grumpig_legend",
+   "name": "Legend Grumpig",
+   "rarity": "rare",
+   "pokemon": [
+    "grumpig"
+   ]
+  },
+  {
+   "id": "style_mc_haxorus_reaper",
+   "name": "Reaper Haxorus",
+   "rarity": "epic",
+   "pokemon": [
+    "haxorus"
+   ]
+  },
+  {
+   "id": "style_mc_incineroar_warmonger",
+   "name": "Warmonger Incineroar",
+   "rarity": "epic",
+   "pokemon": [
+    "incineroar"
+   ]
+  },
+  {
+   "id": "style_mc_latios_fighter",
+   "name": "Fighter Latios",
+   "rarity": "legendary",
+   "pokemon": [
+    "latios"
+   ]
+  },
+  {
+   "id": "style_mc_latios_fighter_alt",
+   "name": "Fighter Latios (Alt Colour)",
+   "rarity": "legendary",
+   "pokemon": [
+    "latios"
+   ]
+  },
+  {
+   "id": "style_mc_lucario_covert",
+   "name": "Covert Lucario",
+   "rarity": "epic",
+   "pokemon": [
+    "lucario"
+   ]
+  },
+  {
+   "id": "style_mc_magcargo_racer",
+   "name": "Racer Magcargo",
+   "rarity": "rare",
+   "pokemon": [
+    "magcargo"
+   ]
+  },
+  {
+   "id": "style_mc_meowscarada_darkmagician",
+   "name": "Dark Magician Meowscarada",
+   "rarity": "epic",
+   "pokemon": [
+    "meowscarada"
+   ]
+  },
+  {
+   "id": "style_mc_mewtwo_covert",
+   "name": "Covert Mewtwo",
+   "rarity": "legendary",
+   "pokemon": [
+    "mewtwo"
+   ]
+  },
+  {
+   "id": "style_mc_mimikyu_pawmi",
+   "name": "Pawmi Mimikyu",
+   "rarity": "rare",
+   "pokemon": [
+    "mimikyu"
+   ]
+  },
+  {
+   "id": "style_mc_minun_cheerleader",
+   "name": "Cheerleader Minun",
+   "rarity": "rare",
+   "pokemon": [
+    "minun"
+   ]
+  },
+  {
+   "id": "style_mc_moltres_steampunk",
+   "name": "Steampunk Moltres",
+   "rarity": "legendary",
+   "pokemon": [
+    "moltres"
+   ]
+  },
+  {
+   "id": "style_mc_pangoro_operator",
+   "name": "Operator Pangoro",
+   "rarity": "rare",
+   "pokemon": [
+    "operator"
+   ]
+  },
+  {
+   "id": "style_mc_pichu_line_yellowhat",
+   "name": "Yellow Hat Pichu Line",
+   "rarity": "rare",
+   "pokemon": [
+    "pichu",
+    "pikachu",
+    "raichu"
+   ]
+  },
+  {
+   "id": "style_mc_plusle_cheerleader",
+   "name": "Cheerleader Plusle",
+   "rarity": "rare",
+   "pokemon": [
+    "plusle"
+   ]
+  },
+  {
+   "id": "style_mc_smoliv_uva",
+   "name": "Uva Smoliv",
+   "rarity": "rare",
+   "pokemon": [
+    "smoliv"
+   ]
+  },
+  {
+   "id": "style_mc_snorlax_chef",
+   "name": "Chef Snorlax",
+   "rarity": "rare",
+   "pokemon": [
+    "snorlax"
+   ]
+  },
+  {
+   "id": "style_mc_tinkaton_eternal",
+   "name": "Eternal Tinkaton",
+   "rarity": "epic",
+   "pokemon": [
+    "tinkaton"
+   ]
+  },
+  {
+   "id": "style_mc_typhlosion_chef",
+   "name": "Chef Typhlosion",
+   "rarity": "rare",
+   "pokemon": [
+    "typhlosion"
+   ]
+  },
+  {
+   "id": "style_mc_wooper_dignified",
+   "name": "Dignified Wooper",
+   "rarity": "rare",
+   "pokemon": [
+    "wooper"
+   ]
+  },
+  {
+   "id": "style_mc_zapdos_steampunk",
+   "name": "Steampunk Zapdos",
+   "rarity": "legendary",
+   "pokemon": [
+    "zapdos"
+   ]
+  },
+  {
+   "id": "style_sus_charmander_super",
+   "name": "Super Charmander",
+   "rarity": "epic",
+   "pokemon": [
+    "charmander"
+   ]
+  },
+  {
+   "id": "style_sus_charmeleon_super",
+   "name": "Super Charmeleon",
+   "rarity": "epic",
+   "pokemon": [
+    "charmeleon"
+   ]
+  },
+  {
+   "id": "style_sus_charizard_super",
+   "name": "Super Charizard",
+   "rarity": "epic",
+   "pokemon": [
+    "charizard"
+   ]
+  },
+  {
+   "id": "style_sus_ninetales_summer",
+   "name": "Summer Ninetales",
+   "rarity": "common",
+   "pokemon": [
+    "ninetales"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_jigglypuff_summer",
+   "name": "Summer Jigglypuff",
+   "rarity": "common",
+   "pokemon": [
+    "jigglypuff"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_zubat_summer",
+   "name": "Summer Zubat",
+   "rarity": "common",
+   "pokemon": [
+    "zubat"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_psyduck_summer",
+   "name": "Summer Psyduck",
+   "rarity": "common",
+   "pokemon": [
+    "psyduck"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_golduck_summer",
+   "name": "Summer Golduck",
+   "rarity": "common",
+   "pokemon": [
+    "golduck"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_arcanine_summer",
+   "name": "Summer Arcanine",
+   "rarity": "common",
+   "pokemon": [
+    "arcanine"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_poliwrath_casual",
+   "name": "Casual Poliwrath",
+   "rarity": "common",
+   "pokemon": [
+    "poliwrath"
+   ]
+  },
+  {
+   "id": "style_sus_machamp_beach",
+   "name": "Beach Machamp",
+   "rarity": "common",
+   "pokemon": [
+    "machamp"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_gengar_mega_banette",
+   "name": "Mega Banette Gengar",
+   "rarity": "epic",
+   "pokemon": [
+    "gengar"
+   ]
+  },
+  {
+   "id": "style_sus_electrode_minecraft",
+   "name": "Minecraft Electrode",
+   "rarity": "rare",
+   "pokemon": [
+    "electrode"
+   ]
+  },
+  {
+   "id": "style_sus_lapras_sea_captain",
+   "name": "Sea Captain Lapras",
+   "rarity": "rare",
+   "pokemon": [
+    "lapras"
+   ]
+  },
+  {
+   "id": "style_sus_lapras_sea_captain_pirate",
+   "name": "Pirate Lapras",
+   "rarity": "rare",
+   "pokemon": [
+    "lapras"
+   ]
+  },
+  {
+   "id": "style_sus_eevee_starry_sky_style",
+   "name": "Starry Sky Eevee",
+   "rarity": "rare",
+   "pokemon": [
+    "eevee"
+   ]
+  },
+  {
+   "id": "style_sus_snorlax_beach",
+   "name": "Beach Snorlax",
+   "rarity": "common",
+   "pokemon": [
+    "snorlax"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_dragonite_champion",
+   "name": "Champion Dragonite",
+   "rarity": "legendary",
+   "pokemon": [
+    "dragonite"
+   ]
+  },
+  {
+   "id": "style_sus_dragonite_wizard",
+   "name": "Wizard Dragonite",
+   "rarity": "epic",
+   "pokemon": [
+    "dragonite"
+   ]
+  },
+  {
+   "id": "style_sus_mewtwo_dark_lord",
+   "name": "Dark Lord Mewtwo",
+   "rarity": "legendary",
+   "pokemon": [
+    "mewtwo"
+   ]
+  },
+  {
+   "id": "style_sus_mewtwo_dark_lord_alt",
+   "name": "Dark Lord Velvet Mewtwo (Alt Colour)",
+   "rarity": "legendary",
+   "pokemon": [
+    "mewtwo"
+   ]
+  },
+  {
+   "id": "style_sus_mew_armored",
+   "name": "Armored Mew",
+   "rarity": "legendary",
+   "pokemon": [
+    "mew"
+   ]
+  },
+  {
+   "id": "style_sus_totodile_rowdy_crew",
+   "name": "Rowdy Crew Totodile",
+   "rarity": "rare",
+   "pokemon": [
+    "totodile"
+   ]
+  },
+  {
+   "id": "style_sus_croconaw_rowdy_crew",
+   "name": "Rowdy Crew Croconaw",
+   "rarity": "rare",
+   "pokemon": [
+    "croconaw"
+   ]
+  },
+  {
+   "id": "style_sus_feraligatr_assault",
+   "name": "Assault Feraligatr",
+   "rarity": "rare",
+   "pokemon": [
+    "feraligatr"
+   ]
+  },
+  {
+   "id": "style_sus_feraligatr_rowdy_crew",
+   "name": "Rowdy Crew Feraligatr",
+   "rarity": "rare",
+   "pokemon": [
+    "feraligatr"
+   ]
+  },
+  {
+   "id": "style_sus_politoed_casual",
+   "name": "Casual Politoed",
+   "rarity": "common",
+   "pokemon": [
+    "politoed"
+   ]
+  },
+  {
+   "id": "style_sus_espeon_fairy_tale",
+   "name": "Fairy Tale Espeon",
+   "rarity": "rare",
+   "pokemon": [
+    "espeon"
+   ]
+  },
+  {
+   "id": "style_sus_espeon_starry_sky_style",
+   "name": "Starry Sky Espeon",
+   "rarity": "rare",
+   "pokemon": [
+    "espeon"
+   ]
+  },
+  {
+   "id": "style_sus_umbreon_starry_sky",
+   "name": "Starry Sky Umbreon",
+   "rarity": "rare",
+   "pokemon": [
+    "umbreon"
+   ]
+  },
+  {
+   "id": "style_sus_sneasel_sygna",
+   "name": "Sygna Sneasel",
+   "rarity": "epic",
+   "pokemon": [
+    "sneasel"
+   ]
+  },
+  {
+   "id": "style_sus_skarmory_samurai_style",
+   "name": "Samurai Skarmory",
+   "rarity": "epic",
+   "pokemon": [
+    "skarmory"
+   ]
+  },
+  {
+   "id": "style_sus_lugia_sygna",
+   "name": "Sygna Lugia",
+   "rarity": "legendary",
+   "pokemon": [
+    "lugia"
+   ]
+  },
+  {
+   "id": "style_sus_blaziken_punk_style",
+   "name": "Punk Blaziken",
+   "rarity": "rare",
+   "pokemon": [
+    "blaziken"
+   ]
+  },
+  {
+   "id": "style_sus_kirlia_hula",
+   "name": "Hula Kirlia",
+   "rarity": "common",
+   "pokemon": [
+    "kirlia"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_gardevoir_zelda",
+   "name": "Zelda Gardevoir",
+   "rarity": "epic",
+   "pokemon": [
+    "gardevoir"
+   ]
+  },
+  {
+   "id": "style_sus_sableye_noble",
+   "name": "Noble Sableye",
+   "rarity": "rare",
+   "pokemon": [
+    "sableye"
+   ]
+  },
+  {
+   "id": "style_sus_plusle_summer",
+   "name": "Summer Plusle",
+   "rarity": "common",
+   "pokemon": [
+    "plusle"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_minun_summer",
+   "name": "Summer Minun",
+   "rarity": "common",
+   "pokemon": [
+    "minun"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_flygon_aarune",
+   "name": "Aarune Flygon",
+   "rarity": "rare",
+   "pokemon": [
+    "flygon"
+   ]
+  },
+  {
+   "id": "style_sus_banette_mega_gengar",
+   "name": "Mega Gengar Banette",
+   "rarity": "epic",
+   "pokemon": [
+    "banette"
+   ]
+  },
+  {
+   "id": "style_sus_absol_antique_purple",
+   "name": "Antique Purple Absol",
+   "rarity": "rare",
+   "pokemon": [
+    "absol"
+   ]
+  },
+  {
+   "id": "style_sus_absol_dark_suit_style",
+   "name": "Dark Suit Absol",
+   "rarity": "rare",
+   "pokemon": [
+    "absol"
+   ]
+  },
+  {
+   "id": "style_sus_absol_reaper",
+   "name": "Reaper Absol",
+   "rarity": "epic",
+   "pokemon": [
+    "absol"
+   ]
+  },
+  {
+   "id": "style_sus_latios_sygna",
+   "name": "Sygna Latios",
+   "rarity": "legendary",
+   "pokemon": [
+    "latios"
+   ]
+  },
+  {
+   "id": "style_sus_infernape_explorer",
+   "name": "Explorer Infernape",
+   "rarity": "rare",
+   "pokemon": [
+    "infernape"
+   ]
+  },
+  {
+   "id": "style_sus_piplup_floatie",
+   "name": "Floatie Piplup",
+   "rarity": "common",
+   "pokemon": [
+    "piplup"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_prinplup_summer",
+   "name": "Summer Prinplup",
+   "rarity": "common",
+   "pokemon": [
+    "prinplup"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_empoleon_summer",
+   "name": "Summer Empoleon",
+   "rarity": "common",
+   "pokemon": [
+    "empoleon"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_floatzel_sailor",
+   "name": "Sailor Floatzel",
+   "rarity": "rare",
+   "pokemon": [
+    "floatzel"
+   ]
+  },
+  {
+   "id": "style_sus_floatzel_surf",
+   "name": "Surf Floatzel",
+   "rarity": "common",
+   "pokemon": [
+    "floatzel"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_lopunny_summer",
+   "name": "Summer Lopunny",
+   "rarity": "common",
+   "pokemon": [
+    "lopunny"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_gible_neoguardian",
+   "name": "Neo Guardian Gible",
+   "rarity": "epic",
+   "pokemon": [
+    "gible"
+   ]
+  },
+  {
+   "id": "style_sus_gabite_neoguardian",
+   "name": "Neo Guardian Gabite",
+   "rarity": "epic",
+   "pokemon": [
+    "gabite"
+   ]
+  },
+  {
+   "id": "style_sus_garchomp_neoguardian",
+   "name": "Neo Guardian Garchomp",
+   "rarity": "epic",
+   "pokemon": [
+    "garchomp"
+   ]
+  },
+  {
+   "id": "style_sus_munchlax_beach",
+   "name": "Beach Munchlax",
+   "rarity": "common",
+   "pokemon": [
+    "munchlax"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_riolu_ash",
+   "name": "Ash Ketchum Riolu",
+   "rarity": "epic",
+   "pokemon": [
+    "riolu"
+   ]
+  },
+  {
+   "id": "style_sus_lucario_ash_ketchum_style",
+   "name": "Ash Ketchum Lucario",
+   "rarity": "epic",
+   "pokemon": [
+    "lucario"
+   ]
+  },
+  {
+   "id": "style_sus_lucario_summer",
+   "name": "Summer Lucario",
+   "rarity": "common",
+   "pokemon": [
+    "lucario"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_weavile_sygna",
+   "name": "Sygna Weavile",
+   "rarity": "epic",
+   "pokemon": [
+    "weavile"
+   ]
+  },
+  {
+   "id": "style_sus_electivire_new_years",
+   "name": "New Years Electivire",
+   "rarity": "rare",
+   "pokemon": [
+    "electivire"
+   ],
+   "season": "new_year"
+  },
+  {
+   "id": "style_sus_gallade_knight",
+   "name": "Knight Gallade",
+   "rarity": "epic",
+   "pokemon": [
+    "gallade"
+   ]
+  },
+  {
+   "id": "style_sus_krookodile_lethal_league_style",
+   "name": "Lethal League Krookodile",
+   "rarity": "rare",
+   "pokemon": [
+    "krookodile"
+   ]
+  },
+  {
+   "id": "style_sus_zoroark_costume_party",
+   "name": "Costume Party Zoroark",
+   "rarity": "rare",
+   "pokemon": [
+    "zoroark"
+   ]
+  },
+  {
+   "id": "style_sus_zoroark_costume_party_alt",
+   "name": "Costume Party Green Zoroark (Alt Colour)",
+   "rarity": "rare",
+   "pokemon": [
+    "zoroark"
+   ]
+  },
+  {
+   "id": "style_sus_zoroark_starry_sky",
+   "name": "Starry Sky Zoroark",
+   "rarity": "rare",
+   "pokemon": [
+    "zoroark"
+   ]
+  },
+  {
+   "id": "style_sus_zoroark_summer",
+   "name": "Summer Zoroark",
+   "rarity": "common",
+   "pokemon": [
+    "zoroark"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_delphox_witch",
+   "name": "Witch Delphox",
+   "rarity": "epic",
+   "pokemon": [
+    "delphox"
+   ]
+  },
+  {
+   "id": "style_sus_greninja_hero_style",
+   "name": "Hero Greninja",
+   "rarity": "epic",
+   "pokemon": [
+    "greninja"
+   ]
+  },
+  {
+   "id": "style_sus_dedenne_beach",
+   "name": "Beach Dedenne",
+   "rarity": "common",
+   "pokemon": [
+    "dedenne"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_mudsdale_horse_armor",
+   "name": "Horse Armor Mudsdale",
+   "rarity": "rare",
+   "pokemon": [
+    "mudsdale"
+   ]
+  },
+  {
+   "id": "style_sus_yamper_halloween",
+   "name": "Halloween Yamper",
+   "rarity": "rare",
+   "pokemon": [
+    "yamper"
+   ],
+   "season": "halloween"
+  },
+  {
+   "id": "style_sus_boltund_halloween",
+   "name": "Halloween Boltund",
+   "rarity": "rare",
+   "pokemon": [
+    "boltund"
+   ],
+   "season": "halloween"
+  },
+  {
+   "id": "style_sus_obstagoon_piers_style",
+   "name": "Piers Obstagoon",
+   "rarity": "rare",
+   "pokemon": [
+    "obstagoon"
+   ]
+  },
+  {
+   "id": "style_sus_obstagoon_punk",
+   "name": "Punk Obstagoon",
+   "rarity": "rare",
+   "pokemon": [
+    "obstagoon"
+   ]
+  },
+  {
+   "id": "style_sus_sirfetchd_onion_knight_style",
+   "name": "Onion Knight Sirfetchd",
+   "rarity": "epic",
+   "pokemon": [
+    "sirfetchd"
+   ]
+  },
+  {
+   "id": "style_sus_meowscarada_beach",
+   "name": "Beach Meowscarada",
+   "rarity": "common",
+   "pokemon": [
+    "meowscarada"
+   ],
+   "season": "summer"
+  },
+  {
+   "id": "style_sus_meowscarada_champion",
+   "name": "Champion Meowscarada",
+   "rarity": "legendary",
+   "pokemon": [
+    "meowscarada"
+   ]
+  },
+  {
+   "id": "style_sus_armarouge_noble",
+   "name": "Noble Armarouge",
+   "rarity": "rare",
+   "pokemon": [
+    "armarouge"
+   ]
+  },
+  {
+   "id": "style_cafe_black_wool",
+   "name": "Café Outfit (Black)",
+   "rarity": "legendary",
+   "pokemon": [
+    "delphox",
+    "eevee",
+    "marshtomp",
+    "mew",
+    "ninetales",
+    "oshawott",
+    "raichu",
+    "skitty",
+    "sprigatito",
+    "typhlosion",
+    "vulpix"
+   ]
+  },
+  {
+   "id": "style_cafe_gold_nugget",
+   "name": "Café Outfit (Gold)",
+   "rarity": "legendary",
+   "pokemon": [
+    "braixen",
+    "chandelure",
+    "deino",
+    "dratini",
+    "ducklett",
+    "eevee",
+    "espeon",
+    "espurr",
+    "flareon",
+    "gengar",
+    "hattrem",
+    "hydrapple",
+    "jolteon",
+    "latias",
+    "latios",
+    "litwick",
+    "marill",
+    "mimikyu",
+    "mismagius",
+    "ponyta",
+    "rapidash",
+    "rayquaza",
+    "scolipede",
+    "slurpuff",
+    "spheal",
+    "vaporeon",
+    "zebstrika",
+    "zweilous"
+   ]
+  },
+  {
+   "id": "style_cafe_jukebox",
+   "name": "Café Idol Outfit",
+   "rarity": "common",
+   "pokemon": [
+    "eevee",
+    "espeon",
+    "flareon",
+    "glaceon",
+    "jolteon",
+    "leafeon",
+    "sylveon",
+    "umbreon",
+    "vaporeon"
+   ]
+  },
+  {
+   "id": "style_cafe_white_wool",
+   "name": "Café Outfit (White)",
+   "rarity": "legendary",
+   "pokemon": [
+    "alcremie",
+    "altaria",
+    "arbok",
+    "arctozolt",
+    "braixen",
+    "buizel",
+    "chandelure",
+    "chansey",
+    "charmander",
+    "chikorita",
+    "cutiefly",
+    "cyndaquil",
+    "dedenne",
+    "delphox",
+    "dracozolt",
+    "dragapult",
+    "ducklett",
+    "espurr",
+    "fennekin",
+    "floragato",
+    "flygon",
+    "froslass",
+    "fuecoco",
+    "gardevoir",
+    "gengar",
+    "gogoat",
+    "goodra",
+    "hattrem",
+    "hydreigon",
+    "inteleon",
+    "kirlia",
+    "lapras",
+    "lilligant",
+    "litten",
+    "litwick",
+    "marshtomp",
+    "mawile",
+    "meowscarada",
+    "mew",
+    "milotic",
+    "mimikyu",
+    "minccino",
+    "minun",
+    "mismagius",
+    "ninetales",
+    "noibat",
+    "oshawott",
+    "piplup",
+    "plusle",
+    "primarina",
+    "quilava",
+    "raichu",
+    "rowlet",
+    "salamence",
+    "skitty",
+    "snivy",
+    "snom",
+    "sobble",
+    "sprigatito",
+    "swablu",
+    "sylveon",
+    "tinkaton",
+    "togepi",
+    "totodile",
+    "trapinch",
+    "tropius",
+    "typhlosion",
+    "vibrava",
+    "vulpix",
+    "whimsicott",
+    "zweilous"
+   ]
+  },
+  {
+   "id": "style_pkp_ditto_trainer_blue",
+   "name": "Trainer Ditto (Blue)",
+   "rarity": "common",
+   "pokemon": [
+    "ditto"
+   ]
+  },
+  {
+   "id": "style_pkp_ditto_trainer_yellow",
+   "name": "Trainer Ditto (Yellow)",
+   "rarity": "common",
+   "pokemon": [
+    "ditto"
+   ]
+  },
+  {
+   "id": "style_pkp_mosslax",
+   "name": "Mosslax",
+   "rarity": "rare",
+   "pokemon": [
+    "snorlax"
+   ]
+  },
+  {
+   "id": "style_pkp_peakychu",
+   "name": "Peakychu",
+   "rarity": "rare",
+   "pokemon": [
+    "pikachu"
+   ]
+  },
+  {
+   "id": "style_pkp_professor",
+   "name": "Professor Tangrowth",
+   "rarity": "rare",
+   "pokemon": [
+    "tangrowth"
+   ]
+  },
+  {
+   "id": "style_pkp_smearguru",
+   "name": "Smearguru",
+   "rarity": "rare",
+   "pokemon": [
+    "smeargle"
+   ]
+  }
+ ]
+}

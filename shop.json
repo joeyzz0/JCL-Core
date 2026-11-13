@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 10,
   "categories": [
     {
       "name": "§c§lPoké Balls",
@@ -986,6 +986,2421 @@
       ]
     },
     {
+      "name": "§d§lMega Stones",
+      "icon": "mega_showdown:charizardite_x",
+      "items": [
+        {
+          "name": "Aerodactylite",
+          "icon": "mega_showdown:aerodactylite",
+          "price": 120000,
+          "item": "mega_showdown:aerodactylite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Aerodactyl Mega Evolve. Forge it from raw Mega Stones and Rock-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:rock_gem 2",
+            "minecraft:flint 16"
+          ]
+        },
+        {
+          "name": "Alakazite",
+          "icon": "mega_showdown:alakazite",
+          "price": 120000,
+          "item": "mega_showdown:alakazite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Alakazam Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:psychic_gem 2",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Blastoisinite",
+          "icon": "mega_showdown:blastoisinite",
+          "price": 120000,
+          "item": "mega_showdown:blastoisinite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Blastoise Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Blazikenite",
+          "icon": "mega_showdown:blazikenite",
+          "price": 120000,
+          "item": "mega_showdown:blazikenite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Blaziken Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Charizardite X",
+          "icon": "mega_showdown:charizardite_x",
+          "price": 120000,
+          "item": "mega_showdown:charizardite_x",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Charizard Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Charizardite Y",
+          "icon": "mega_showdown:charizardite_y",
+          "price": 120000,
+          "item": "mega_showdown:charizardite_y",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Charizard Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Dragoninite",
+          "icon": "mega_showdown:dragoninite",
+          "price": 120000,
+          "item": "mega_showdown:dragoninite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Dragonite Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Galladite",
+          "icon": "mega_showdown:galladite",
+          "price": 120000,
+          "item": "mega_showdown:galladite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Gallade Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:psychic_gem 2",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Garchompite",
+          "icon": "mega_showdown:garchompite",
+          "price": 120000,
+          "item": "mega_showdown:garchompite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Garchomp Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Garchompite Z",
+          "icon": "mega_showdown:garchompite_z",
+          "price": 120000,
+          "item": "mega_showdown:garchompite_z",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Garchomp Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Gardevoirite",
+          "icon": "mega_showdown:gardevoirite",
+          "price": 120000,
+          "item": "mega_showdown:gardevoirite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Gardevoir Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:psychic_gem 2",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Gengarite",
+          "icon": "mega_showdown:gengarite",
+          "price": 120000,
+          "item": "mega_showdown:gengarite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Gengar Mega Evolve. Forge it from raw Mega Stones and Ghost-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:ghost_gem 2",
+            "minecraft:soul_sand 16"
+          ]
+        },
+        {
+          "name": "Greninjite",
+          "icon": "mega_showdown:greninjite",
+          "price": 120000,
+          "item": "mega_showdown:greninjite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Greninja Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Gyaradosite",
+          "icon": "mega_showdown:gyaradosite",
+          "price": 120000,
+          "item": "mega_showdown:gyaradosite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Gyarados Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Kangaskhanite",
+          "icon": "mega_showdown:kangaskhanite",
+          "price": 120000,
+          "item": "mega_showdown:kangaskhanite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Kangaskhan Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Lopunnite",
+          "icon": "mega_showdown:lopunnite",
+          "price": 120000,
+          "item": "mega_showdown:lopunnite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Lopunny Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Lucarionite",
+          "icon": "mega_showdown:lucarionite",
+          "price": 120000,
+          "item": "mega_showdown:lucarionite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Lucario Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Lucarionite Z",
+          "icon": "mega_showdown:lucarionite_z",
+          "price": 120000,
+          "item": "mega_showdown:lucarionite_z",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Lucario Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Mawilite",
+          "icon": "mega_showdown:mawilite",
+          "price": 120000,
+          "item": "mega_showdown:mawilite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Mawile Mega Evolve. Forge it from raw Mega Stones and Steel-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:steel_gem 2",
+            "minecraft:iron_block 4"
+          ]
+        },
+        {
+          "name": "Medichamite",
+          "icon": "mega_showdown:medichamite",
+          "price": 120000,
+          "item": "mega_showdown:medichamite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Medicham Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Metagrossite",
+          "icon": "mega_showdown:metagrossite",
+          "price": 120000,
+          "item": "mega_showdown:metagrossite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Metagross Mega Evolve. Forge it from raw Mega Stones and Steel-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:steel_gem 2",
+            "minecraft:iron_block 4"
+          ]
+        },
+        {
+          "name": "Pinsirite",
+          "icon": "mega_showdown:pinsirite",
+          "price": 120000,
+          "item": "mega_showdown:pinsirite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Pinsir Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Salamencite",
+          "icon": "mega_showdown:salamencite",
+          "price": 120000,
+          "item": "mega_showdown:salamencite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Salamence Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Sceptilite",
+          "icon": "mega_showdown:sceptilite",
+          "price": 120000,
+          "item": "mega_showdown:sceptilite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Sceptile Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Scizorite",
+          "icon": "mega_showdown:scizorite",
+          "price": 120000,
+          "item": "mega_showdown:scizorite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Scizor Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Swampertite",
+          "icon": "mega_showdown:swampertite",
+          "price": 120000,
+          "item": "mega_showdown:swampertite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Swampert Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Tyranitarite",
+          "icon": "mega_showdown:tyranitarite",
+          "price": 120000,
+          "item": "mega_showdown:tyranitarite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Tyranitar Mega Evolve. Forge it from raw Mega Stones and Rock-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:rock_gem 2",
+            "minecraft:flint 16"
+          ]
+        },
+        {
+          "name": "Venusaurite",
+          "icon": "mega_showdown:venusaurite",
+          "price": 120000,
+          "item": "mega_showdown:venusaurite",
+          "count": 1,
+          "description": "Top-tier Mega Stone. Lets Venusaur Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 2",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Abomasite",
+          "icon": "mega_showdown:abomasite",
+          "price": 60000,
+          "item": "mega_showdown:abomasite",
+          "count": 1,
+          "description": "Lets Abomasnow Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Absolite",
+          "icon": "mega_showdown:absolite",
+          "price": 60000,
+          "item": "mega_showdown:absolite",
+          "count": 1,
+          "description": "Lets Absol Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Absolite Z",
+          "icon": "mega_showdown:absolite_z",
+          "price": 60000,
+          "item": "mega_showdown:absolite_z",
+          "count": 1,
+          "description": "Lets Absol Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Altarianite",
+          "icon": "mega_showdown:altarianite",
+          "price": 60000,
+          "item": "mega_showdown:altarianite",
+          "count": 1,
+          "description": "Lets Altaria Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Ampharosite",
+          "icon": "mega_showdown:ampharosite",
+          "price": 60000,
+          "item": "mega_showdown:ampharosite",
+          "count": 1,
+          "description": "Lets Ampharos Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:electric_gem 2",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Audinite",
+          "icon": "mega_showdown:audinite",
+          "price": 60000,
+          "item": "mega_showdown:audinite",
+          "count": 1,
+          "description": "Lets Audino Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Banettite",
+          "icon": "mega_showdown:banettite",
+          "price": 60000,
+          "item": "mega_showdown:banettite",
+          "count": 1,
+          "description": "Lets Banette Mega Evolve. Forge it from raw Mega Stones and Ghost-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ghost_gem 2",
+            "minecraft:soul_sand 16"
+          ]
+        },
+        {
+          "name": "Barbaracite",
+          "icon": "mega_showdown:barbaracite",
+          "price": 60000,
+          "item": "mega_showdown:barbaracite",
+          "count": 1,
+          "description": "Lets Barbaracle Mega Evolve. Forge it from raw Mega Stones and Rock-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:rock_gem 2",
+            "minecraft:flint 16"
+          ]
+        },
+        {
+          "name": "Baxcalibrite",
+          "icon": "mega_showdown:baxcalibrite",
+          "price": 60000,
+          "item": "mega_showdown:baxcalibrite",
+          "count": 1,
+          "description": "Lets Baxcalibur Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Beedrillite",
+          "icon": "mega_showdown:beedrillite",
+          "price": 60000,
+          "item": "mega_showdown:beedrillite",
+          "count": 1,
+          "description": "Lets Beedrill Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Cameruptite",
+          "icon": "mega_showdown:cameruptite",
+          "price": 60000,
+          "item": "mega_showdown:cameruptite",
+          "count": 1,
+          "description": "Lets Camerupt Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Chandelurite",
+          "icon": "mega_showdown:chandelurite",
+          "price": 60000,
+          "item": "mega_showdown:chandelurite",
+          "count": 1,
+          "description": "Lets Chandelure Mega Evolve. Forge it from raw Mega Stones and Ghost-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ghost_gem 2",
+            "minecraft:soul_sand 16"
+          ]
+        },
+        {
+          "name": "Chesnaughtite",
+          "icon": "mega_showdown:chesnaughtite",
+          "price": 60000,
+          "item": "mega_showdown:chesnaughtite",
+          "count": 1,
+          "description": "Lets Chesnaught Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Chimechite",
+          "icon": "mega_showdown:chimechite",
+          "price": 60000,
+          "item": "mega_showdown:chimechite",
+          "count": 1,
+          "description": "Lets Chimecho Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:psychic_gem 2",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Clefablite",
+          "icon": "mega_showdown:clefablite",
+          "price": 60000,
+          "item": "mega_showdown:clefablite",
+          "count": 1,
+          "description": "Lets Clefable Mega Evolve. Forge it from raw Mega Stones and Fairy-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fairy_gem 2",
+            "minecraft:glow_berries 16"
+          ]
+        },
+        {
+          "name": "Crabominite",
+          "icon": "mega_showdown:crabominite",
+          "price": 60000,
+          "item": "mega_showdown:crabominite",
+          "count": 1,
+          "description": "Lets Crabominable Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Delphoxite",
+          "icon": "mega_showdown:delphoxite",
+          "price": 60000,
+          "item": "mega_showdown:delphoxite",
+          "count": 1,
+          "description": "Lets Delphox Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Dragalgite",
+          "icon": "mega_showdown:dragalgite",
+          "price": 60000,
+          "item": "mega_showdown:dragalgite",
+          "count": 1,
+          "description": "Lets Dragalge Mega Evolve. Forge it from raw Mega Stones and Poison-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:poison_gem 2",
+            "minecraft:spider_eye 16"
+          ]
+        },
+        {
+          "name": "Drampanite",
+          "icon": "mega_showdown:drampanite",
+          "price": 60000,
+          "item": "mega_showdown:drampanite",
+          "count": 1,
+          "description": "Lets Drampa Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Eelektrossite",
+          "icon": "mega_showdown:eelektrossite",
+          "price": 60000,
+          "item": "mega_showdown:eelektrossite",
+          "count": 1,
+          "description": "Lets Eelektross Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:electric_gem 2",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Emboarite",
+          "icon": "mega_showdown:emboarite",
+          "price": 60000,
+          "item": "mega_showdown:emboarite",
+          "count": 1,
+          "description": "Lets Emboar Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Excadrite",
+          "icon": "mega_showdown:excadrite",
+          "price": 60000,
+          "item": "mega_showdown:excadrite",
+          "count": 1,
+          "description": "Lets Excadrill Mega Evolve. Forge it from raw Mega Stones and Ground-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ground_gem 2",
+            "minecraft:clay_ball 32"
+          ]
+        },
+        {
+          "name": "Falinksite",
+          "icon": "mega_showdown:falinksite",
+          "price": 60000,
+          "item": "mega_showdown:falinksite",
+          "count": 1,
+          "description": "Lets Falinks Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Feraligite",
+          "icon": "mega_showdown:feraligite",
+          "price": 60000,
+          "item": "mega_showdown:feraligite",
+          "count": 1,
+          "description": "Lets Feraligatr Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Floettite",
+          "icon": "mega_showdown:floettite",
+          "price": 60000,
+          "item": "mega_showdown:floettite",
+          "count": 1,
+          "description": "Lets Floette Mega Evolve. Forge it from raw Mega Stones and Fairy-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fairy_gem 2",
+            "minecraft:glow_berries 16"
+          ]
+        },
+        {
+          "name": "Froslassite",
+          "icon": "mega_showdown:froslassite",
+          "price": 60000,
+          "item": "mega_showdown:froslassite",
+          "count": 1,
+          "description": "Lets Froslass Mega Evolve. Forge it from raw Mega Stones and Ice-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ice_gem 2",
+            "minecraft:packed_ice 16"
+          ]
+        },
+        {
+          "name": "Glalitite",
+          "icon": "mega_showdown:glalitite",
+          "price": 60000,
+          "item": "mega_showdown:glalitite",
+          "count": 1,
+          "description": "Lets Glalie Mega Evolve. Forge it from raw Mega Stones and Ice-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ice_gem 2",
+            "minecraft:packed_ice 16"
+          ]
+        },
+        {
+          "name": "Glimmoranite",
+          "icon": "mega_showdown:glimmoranite",
+          "price": 60000,
+          "item": "mega_showdown:glimmoranite",
+          "count": 1,
+          "description": "Lets Glimmora Mega Evolve. Forge it from raw Mega Stones and Rock-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:rock_gem 2",
+            "minecraft:flint 16"
+          ]
+        },
+        {
+          "name": "Golisopite",
+          "icon": "mega_showdown:golisopite",
+          "price": 60000,
+          "item": "mega_showdown:golisopite",
+          "count": 1,
+          "description": "Lets Golisopod Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Golurkite",
+          "icon": "mega_showdown:golurkite",
+          "price": 60000,
+          "item": "mega_showdown:golurkite",
+          "count": 1,
+          "description": "Lets Golurk Mega Evolve. Forge it from raw Mega Stones and Ground-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:ground_gem 2",
+            "minecraft:clay_ball 32"
+          ]
+        },
+        {
+          "name": "Hawluchanite",
+          "icon": "mega_showdown:hawluchanite",
+          "price": 60000,
+          "item": "mega_showdown:hawluchanite",
+          "count": 1,
+          "description": "Lets Hawlucha Mega Evolve. Forge it from raw Mega Stones and Fighting-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fighting_gem 2",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Heracronite",
+          "icon": "mega_showdown:heracronite",
+          "price": 60000,
+          "item": "mega_showdown:heracronite",
+          "count": 1,
+          "description": "Lets Heracross Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Houndoominite",
+          "icon": "mega_showdown:houndoominite",
+          "price": 60000,
+          "item": "mega_showdown:houndoominite",
+          "count": 1,
+          "description": "Lets Houndoom Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Malamarite",
+          "icon": "mega_showdown:malamarite",
+          "price": 60000,
+          "item": "mega_showdown:malamarite",
+          "count": 1,
+          "description": "Lets Malamar Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Manectite",
+          "icon": "mega_showdown:manectite",
+          "price": 60000,
+          "item": "mega_showdown:manectite",
+          "count": 1,
+          "description": "Lets Manectric Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:electric_gem 2",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Meganiumite",
+          "icon": "mega_showdown:meganiumite",
+          "price": 60000,
+          "item": "mega_showdown:meganiumite",
+          "count": 1,
+          "description": "Lets Meganium Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Meowsticite",
+          "icon": "mega_showdown:meowsticite",
+          "price": 60000,
+          "item": "mega_showdown:meowsticite",
+          "count": 1,
+          "description": "Lets Meowstic Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:psychic_gem 2",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Pidgeotite",
+          "icon": "mega_showdown:pidgeotite",
+          "price": 60000,
+          "item": "mega_showdown:pidgeotite",
+          "count": 1,
+          "description": "Lets Pidgeot Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Pyroarite",
+          "icon": "mega_showdown:pyroarite",
+          "price": 60000,
+          "item": "mega_showdown:pyroarite",
+          "count": 1,
+          "description": "Lets Pyroar Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:fire_gem 2",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Raichunite X",
+          "icon": "mega_showdown:raichunite_x",
+          "price": 60000,
+          "item": "mega_showdown:raichunite_x",
+          "count": 1,
+          "description": "Lets Raichu Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:electric_gem 2",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Raichunite Y",
+          "icon": "mega_showdown:raichunite_y",
+          "price": 60000,
+          "item": "mega_showdown:raichunite_y",
+          "count": 1,
+          "description": "Lets Raichu Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:electric_gem 2",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Sablenite",
+          "icon": "mega_showdown:sablenite",
+          "price": 60000,
+          "item": "mega_showdown:sablenite",
+          "count": 1,
+          "description": "Lets Sableye Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Scolipite",
+          "icon": "mega_showdown:scolipite",
+          "price": 60000,
+          "item": "mega_showdown:scolipite",
+          "count": 1,
+          "description": "Lets Scolipede Mega Evolve. Forge it from raw Mega Stones and Bug-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:bug_gem 2",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Scovillainite",
+          "icon": "mega_showdown:scovillainite",
+          "price": 60000,
+          "item": "mega_showdown:scovillainite",
+          "count": 1,
+          "description": "Lets Scovillain Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Scraftinite",
+          "icon": "mega_showdown:scraftinite",
+          "price": 60000,
+          "item": "mega_showdown:scraftinite",
+          "count": 1,
+          "description": "Lets Scrafty Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dark_gem 2",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Sharpedonite",
+          "icon": "mega_showdown:sharpedonite",
+          "price": 60000,
+          "item": "mega_showdown:sharpedonite",
+          "count": 1,
+          "description": "Lets Sharpedo Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Skarmorite",
+          "icon": "mega_showdown:skarmorite",
+          "price": 60000,
+          "item": "mega_showdown:skarmorite",
+          "count": 1,
+          "description": "Lets Skarmory Mega Evolve. Forge it from raw Mega Stones and Steel-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:steel_gem 2",
+            "minecraft:iron_block 4"
+          ]
+        },
+        {
+          "name": "Slowbronite",
+          "icon": "mega_showdown:slowbronite",
+          "price": 60000,
+          "item": "mega_showdown:slowbronite",
+          "count": 1,
+          "description": "Lets Slowbro Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Staraptite",
+          "icon": "mega_showdown:staraptite",
+          "price": 60000,
+          "item": "mega_showdown:staraptite",
+          "count": 1,
+          "description": "Lets Staraptor Mega Evolve. Forge it from raw Mega Stones and Normal-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:normal_gem 2",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Starminite",
+          "icon": "mega_showdown:starminite",
+          "price": 60000,
+          "item": "mega_showdown:starminite",
+          "count": 1,
+          "description": "Lets Starmie Mega Evolve. Forge it from raw Mega Stones and Water-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:water_gem 2",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Steelixite",
+          "icon": "mega_showdown:steelixite",
+          "price": 60000,
+          "item": "mega_showdown:steelixite",
+          "count": 1,
+          "description": "Lets Steelix Mega Evolve. Forge it from raw Mega Stones and Steel-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:steel_gem 2",
+            "minecraft:iron_block 4"
+          ]
+        },
+        {
+          "name": "Victreebelite",
+          "icon": "mega_showdown:victreebelite",
+          "price": 60000,
+          "item": "mega_showdown:victreebelite",
+          "count": 1,
+          "description": "Lets Victreebel Mega Evolve. Forge it from raw Mega Stones and Grass-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:grass_gem 2",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Tatsugirinite",
+          "icon": "zamega:tatsugirinite",
+          "price": 60000,
+          "item": "zamega:tatsugirinite",
+          "count": 1,
+          "description": "Lets Tatsugiri Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 1",
+            "cobblemon:dragon_gem 2",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Diancite",
+          "icon": "mega_showdown:diancite",
+          "price": 300000,
+          "item": "mega_showdown:diancite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Diancie Mega Evolve. Forge it from raw Mega Stones and Rock-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:rock_gem 4",
+            "minecraft:flint 32",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Latiasite",
+          "icon": "mega_showdown:latiasite",
+          "price": 300000,
+          "item": "mega_showdown:latiasite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Latias Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:dragon_gem 4",
+            "minecraft:ender_pearl 16",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Latiosite",
+          "icon": "mega_showdown:latiosite",
+          "price": 300000,
+          "item": "mega_showdown:latiosite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Latios Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:dragon_gem 4",
+            "minecraft:ender_pearl 16",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Mewtwonite X",
+          "icon": "mega_showdown:mewtwonite_x",
+          "price": 300000,
+          "item": "mega_showdown:mewtwonite_x",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Mewtwo Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:psychic_gem 4",
+            "minecraft:amethyst_shard 32",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Mewtwonite Y",
+          "icon": "mega_showdown:mewtwonite_y",
+          "price": 300000,
+          "item": "mega_showdown:mewtwonite_y",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Mewtwo Mega Evolve. Forge it from raw Mega Stones and Psychic-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:psychic_gem 4",
+            "minecraft:amethyst_shard 32",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Darkranite",
+          "icon": "zamega:darkranite",
+          "price": 300000,
+          "item": "zamega:darkranite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Darkrai Mega Evolve. Forge it from raw Mega Stones and Dark-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:dark_gem 4",
+            "minecraft:obsidian 32",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Heatranite",
+          "icon": "zamega:heatranite",
+          "price": 300000,
+          "item": "zamega:heatranite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Heatran Mega Evolve. Forge it from raw Mega Stones and Fire-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:fire_gem 4",
+            "minecraft:blaze_powder 32",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Magearnite",
+          "icon": "zamega:magearnite",
+          "price": 300000,
+          "item": "zamega:magearnite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Magearna Mega Evolve. Forge it from raw Mega Stones and Steel-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:steel_gem 4",
+            "minecraft:iron_block 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Zeraorite",
+          "icon": "zamega:zeraorite",
+          "price": 300000,
+          "item": "zamega:zeraorite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Zeraora Mega Evolve. Forge it from raw Mega Stones and Electric-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:electric_gem 4",
+            "minecraft:redstone_block 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Zygardite",
+          "icon": "zamega:zygardite",
+          "price": 300000,
+          "item": "zamega:zygardite",
+          "count": 1,
+          "description": "Legendary Mega Stone. Lets Zygarde Mega Evolve. Forge it from raw Mega Stones and Dragon-type materials.",
+          "cost": [
+            "mega_showdown:mega_stone 3",
+            "cobblemon:dragon_gem 4",
+            "minecraft:ender_pearl 16",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        }
+      ]
+    },
+    {
+      "name": "§6§lHeld Items",
+      "icon": "cobblemon:life_orb",
+      "items": [
+        {
+          "name": "Choice Band",
+          "icon": "cobblemon:choice_band",
+          "price": 250000,
+          "item": "cobblemon:choice_band",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:gold_block 4",
+            "minecraft:leather 16",
+            "cobblemon:fighting_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Choice Specs",
+          "icon": "cobblemon:choice_specs",
+          "price": 250000,
+          "item": "cobblemon:choice_specs",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:gold_block 4",
+            "minecraft:glass 16",
+            "cobblemon:psychic_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Choice Scarf",
+          "icon": "cobblemon:choice_scarf",
+          "price": 250000,
+          "item": "cobblemon:choice_scarf",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:gold_block 4",
+            "minecraft:white_wool 32",
+            "cobblemon:flying_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Life Orb",
+          "icon": "cobblemon:life_orb",
+          "price": 300000,
+          "item": "cobblemon:life_orb",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:ender_eye 4",
+            "minecraft:redstone_block 8",
+            "cobblemon:dark_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Leftovers",
+          "icon": "cobblemon:leftovers",
+          "price": 200000,
+          "item": "cobblemon:leftovers",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:golden_apple 2",
+            "minecraft:cooked_beef 32",
+            "cobblemon:normal_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Focus Sash",
+          "icon": "cobblemon:focus_sash",
+          "price": 200000,
+          "item": "cobblemon:focus_sash",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:white_wool 32",
+            "minecraft:string 32",
+            "cobblemon:fighting_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Assault Vest",
+          "icon": "cobblemon:assault_vest",
+          "price": 250000,
+          "item": "cobblemon:assault_vest",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:iron_chestplate 1",
+            "minecraft:leather 32",
+            "cobblemon:steel_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Weakness Policy",
+          "icon": "cobblemon:weakness_policy",
+          "price": 200000,
+          "item": "cobblemon:weakness_policy",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:paper 32",
+            "minecraft:gold_ingot 16",
+            "cobblemon:psychic_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Heavy-Duty Boots",
+          "icon": "cobblemon:heavy_duty_boots",
+          "price": 200000,
+          "item": "cobblemon:heavy_duty_boots",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:iron_boots 1",
+            "minecraft:leather 16",
+            "cobblemon:rock_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Eviolite",
+          "icon": "cobblemon:eviolite",
+          "price": 200000,
+          "item": "cobblemon:eviolite",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:amethyst_block 8",
+            "minecraft:diamond 2",
+            "cobblemon:fairy_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Loaded Dice",
+          "icon": "cobblemon:loaded_dice",
+          "price": 150000,
+          "item": "cobblemon:loaded_dice",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:bone_block 8",
+            "minecraft:gold_ingot 8",
+            "cobblemon:normal_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Covert Cloak",
+          "icon": "cobblemon:covert_cloak",
+          "price": 150000,
+          "item": "cobblemon:covert_cloak",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:black_wool 32",
+            "minecraft:phantom_membrane 4",
+            "cobblemon:dark_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Clear Amulet",
+          "icon": "cobblemon:clear_amulet",
+          "price": 150000,
+          "item": "cobblemon:clear_amulet",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:quartz_block 8",
+            "minecraft:diamond 2",
+            "cobblemon:psychic_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Mirror Herb",
+          "icon": "cobblemon:mirror_herb",
+          "price": 150000,
+          "item": "cobblemon:mirror_herb",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:sweet_berries 32",
+            "minecraft:glass_pane 16",
+            "cobblemon:grass_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Punching Glove",
+          "icon": "cobblemon:punching_glove",
+          "price": 150000,
+          "item": "cobblemon:punching_glove",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:leather 32",
+            "minecraft:red_wool 16",
+            "cobblemon:fighting_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Ability Shield",
+          "icon": "cobblemon:ability_shield",
+          "price": 150000,
+          "item": "cobblemon:ability_shield",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:shield 1",
+            "minecraft:iron_block 2",
+            "cobblemon:steel_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Lucky Egg",
+          "icon": "cobblemon:lucky_egg",
+          "price": 150000,
+          "item": "cobblemon:lucky_egg",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:egg 16",
+            "minecraft:gold_ingot 16",
+            "cobblemon:normal_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        },
+        {
+          "name": "Destiny Knot",
+          "icon": "cobblemon:destiny_knot",
+          "price": 200000,
+          "item": "cobblemon:destiny_knot",
+          "count": 1,
+          "description": "A powerful held item. Hard to find anywhere else.",
+          "cost": [
+            "minecraft:string 64",
+            "minecraft:red_dye 16",
+            "cobblemon:fairy_gem 4"
+          ],
+          "limit": 2,
+          "period": "week"
+        }
+      ]
+    },
+    {
+      "name": "§b§lGimmick Gear",
+      "icon": "mega_showdown:omni_ring",
+      "items": [
+        {
+          "name": "Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet",
+          "price": 150000,
+          "item": "mega_showdown:mega_bracelet",
+          "count": 1,
+          "description": "Lets your Pokémon Mega Evolve. Forged from a raw Keystone.",
+          "cost": [
+            "mega_showdown:keystone 2",
+            "minecraft:iron_ingot 8",
+            "minecraft:leather 4"
+          ]
+        },
+        {
+          "name": "Mega Ring",
+          "icon": "mega_showdown:mega_ring",
+          "price": 250000,
+          "item": "mega_showdown:mega_ring",
+          "count": 1,
+          "description": "A stylish ring that works like a Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 3",
+            "minecraft:gold_ingot 8",
+            "minecraft:diamond 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "May's Bracelet",
+          "icon": "mega_showdown:may_bracelet",
+          "price": 250000,
+          "item": "mega_showdown:may_bracelet",
+          "count": 1,
+          "description": "May's own Mega Bracelet from Hoenn.",
+          "cost": [
+            "mega_showdown:keystone 3",
+            "minecraft:red_wool 8",
+            "minecraft:gold_ingot 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Brendan's Mega Cuff",
+          "icon": "mega_showdown:brendan_mega_cuff",
+          "price": 250000,
+          "item": "mega_showdown:brendan_mega_cuff",
+          "count": 1,
+          "description": "Brendan's Mega Cuff from Hoenn.",
+          "cost": [
+            "mega_showdown:keystone 3",
+            "minecraft:black_wool 8",
+            "minecraft:gold_ingot 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Lysandre's Ring",
+          "icon": "mega_showdown:lysandre_ring",
+          "price": 350000,
+          "item": "mega_showdown:lysandre_ring",
+          "count": 1,
+          "description": "The ring of the leader of Team Flare.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:red_dye 16",
+            "minecraft:netherite_scrap 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Red Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_red",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_red",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:red_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Pink Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_pink",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_pink",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:pink_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Yellow Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_yellow",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_yellow",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:yellow_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Green Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_green",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_green",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:green_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Blue Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_blue",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_blue",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:blue_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Black Mega Bracelet",
+          "icon": "mega_showdown:mega_bracelet_black",
+          "price": 400000,
+          "item": "mega_showdown:mega_bracelet_black",
+          "count": 1,
+          "description": "A rare coloured Mega Bracelet.",
+          "cost": [
+            "mega_showdown:keystone 4",
+            "minecraft:black_dye 16",
+            "minecraft:diamond 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Z-Ring",
+          "icon": "mega_showdown:z_ring",
+          "price": 150000,
+          "item": "mega_showdown:z_ring",
+          "count": 1,
+          "description": "Lets your Pokémon use Z-Moves. Set with a Sparkling Stone.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:white_apricorn 2",
+            "minecraft:iron_ingot 8"
+          ]
+        },
+        {
+          "name": "Red Z-Ring",
+          "icon": "mega_showdown:z_ring_red",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_red",
+          "count": 1,
+          "description": "A rare coloured Z-Ring.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:red_dye 16"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Pink Z-Ring",
+          "icon": "mega_showdown:z_ring_pink",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_pink",
+          "count": 1,
+          "description": "A rare coloured Z-Ring.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:pink_dye 16"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Yellow Z-Ring",
+          "icon": "mega_showdown:z_ring_yellow",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_yellow",
+          "count": 1,
+          "description": "A rare coloured Z-Ring.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:yellow_dye 16"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Green Z-Ring",
+          "icon": "mega_showdown:z_ring_green",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_green",
+          "count": 1,
+          "description": "A rare coloured Z-Ring.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:green_dye 16"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Blue Z-Ring",
+          "icon": "mega_showdown:z_ring_blue",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_blue",
+          "count": 1,
+          "description": "A rare coloured Z-Ring.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:blue_dye 16"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Nanu's Black Z-Ring",
+          "icon": "mega_showdown:z_ring_black",
+          "price": 300000,
+          "item": "mega_showdown:z_ring_black",
+          "count": 1,
+          "description": "A Kahuna-style Z-Ring from Alola.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:gold_ingot 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Olivia's Z-Ring",
+          "icon": "mega_showdown:olivias_z_ring",
+          "price": 300000,
+          "item": "mega_showdown:olivias_z_ring",
+          "count": 1,
+          "description": "A Kahuna-style Z-Ring from Alola.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:gold_ingot 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Hapu's Z-Ring",
+          "icon": "mega_showdown:hapus_z_ring",
+          "price": 300000,
+          "item": "mega_showdown:hapus_z_ring",
+          "count": 1,
+          "description": "A Kahuna-style Z-Ring from Alola.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 1",
+            "mega_showdown:sparkling_stone_dark 1",
+            "minecraft:gold_ingot 8"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Z-Power Ring",
+          "icon": "mega_showdown:z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Olivia's Z-Power Ring",
+          "icon": "mega_showdown:olivia_z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:olivia_z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Gladion's Z-Power Ring",
+          "icon": "mega_showdown:gladion_z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:gladion_z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Nanu's Z-Power Ring",
+          "icon": "mega_showdown:nanu_z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:nanu_z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Hapu's Z-Power Ring",
+          "icon": "mega_showdown:hapu_z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:hapu_z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Team Rocket's Z-Power Ring",
+          "icon": "mega_showdown:rocket_z_power_ring",
+          "price": 450000,
+          "item": "mega_showdown:rocket_z_power_ring",
+          "count": 1,
+          "description": "The upgraded Z-Power Ring from Ultra Sun and Ultra Moon.",
+          "cost": [
+            "mega_showdown:sparkling_stone_light 2",
+            "mega_showdown:sparkling_stone_dark 2",
+            "minecraft:diamond 4"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Dynamax Band",
+          "icon": "mega_showdown:dynamax_band",
+          "price": 300000,
+          "item": "mega_showdown:dynamax_band",
+          "count": 1,
+          "description": "Lets your Pokémon Dynamax. Holds the power of a Wishing Star.",
+          "cost": [
+            "mega_showdown:wishing_star 2",
+            "mega_showdown:max_mushroom 4",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Tera Orb",
+          "icon": "mega_showdown:tera_orb",
+          "price": 450000,
+          "item": "mega_showdown:tera_orb",
+          "count": 1,
+          "description": "Lets your Pokémon Terastallize. Grown from a Stellar Tera Shard around a crystal heart, the shards of six types, and echoes from the deep.",
+          "cost": [
+            "mega_showdown:stellar_tera_shard 1",
+            "mega_showdown:fire_tera_shard 4",
+            "mega_showdown:water_tera_shard 4",
+            "mega_showdown:grass_tera_shard 4",
+            "mega_showdown:electric_tera_shard 4",
+            "mega_showdown:dragon_tera_shard 4",
+            "mega_showdown:fairy_tera_shard 4",
+            "minecraft:amethyst_block 4",
+            "minecraft:echo_shard 2"
+          ]
+        },
+        {
+          "name": "Omni Ring",
+          "icon": "mega_showdown:omni_ring",
+          "price": 1000000,
+          "item": "mega_showdown:omni_ring",
+          "count": 1,
+          "description": "One ring for every battle gimmick: Mega Evolution, Z-Moves, Dynamax and Terastal. Merges all four into one. Any Mega Bracelet or Ring (Lysandre's Ring, coloured bracelets and the rest) and any Z-Ring or Z-Power Ring counts.",
+          "cost": [
+            "mega_showdown:mega_bracelet|mega_showdown:mega_bracelet_black|mega_showdown:mega_bracelet_blue|mega_showdown:mega_bracelet_green|mega_showdown:mega_bracelet_pink|mega_showdown:mega_bracelet_red|mega_showdown:mega_bracelet_yellow|mega_showdown:mega_ring|mega_showdown:lysandre_ring|mega_showdown:may_bracelet|mega_showdown:brendan_mega_cuff|mega_showdown:korrina_glove|mega_showdown:zinnia_mega_anklet 1",
+            "mega_showdown:z_ring|mega_showdown:z_ring_black|mega_showdown:z_ring_blue|mega_showdown:z_ring_green|mega_showdown:z_ring_pink|mega_showdown:z_ring_red|mega_showdown:z_ring_yellow|mega_showdown:z_power_ring|mega_showdown:gladion_z_power_ring|mega_showdown:hapu_z_power_ring|mega_showdown:hapus_z_ring|mega_showdown:nanu_z_power_ring|mega_showdown:olivia_z_power_ring|mega_showdown:olivias_z_ring|mega_showdown:rocket_z_power_ring 1",
+            "mega_showdown:dynamax_band 1",
+            "mega_showdown:tera_orb 1",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        }
+      ]
+    },
+    {
+      "name": "§e§lZ-Crystals",
+      "icon": "mega_showdown:firium_z",
+      "items": [
+        {
+          "name": "Buginium-Z",
+          "icon": "mega_showdown:buginium_z",
+          "price": 50000,
+          "item": "mega_showdown:buginium_z",
+          "count": 1,
+          "description": "Unlocks Bug-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:bug_gem 4",
+            "minecraft:slime_ball 16"
+          ]
+        },
+        {
+          "name": "Darkinium-Z",
+          "icon": "mega_showdown:darkinium_z",
+          "price": 50000,
+          "item": "mega_showdown:darkinium_z",
+          "count": 1,
+          "description": "Unlocks Dark-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:dark_gem 4",
+            "minecraft:obsidian 16"
+          ]
+        },
+        {
+          "name": "Dragonium-Z",
+          "icon": "mega_showdown:dragonium_z",
+          "price": 50000,
+          "item": "mega_showdown:dragonium_z",
+          "count": 1,
+          "description": "Unlocks Dragon-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:dragon_gem 4",
+            "minecraft:ender_pearl 8"
+          ]
+        },
+        {
+          "name": "Electrium-Z",
+          "icon": "mega_showdown:electrium_z",
+          "price": 50000,
+          "item": "mega_showdown:electrium_z",
+          "count": 1,
+          "description": "Unlocks Electric-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:electric_gem 4",
+            "minecraft:redstone_block 4"
+          ]
+        },
+        {
+          "name": "Fairium-Z",
+          "icon": "mega_showdown:fairium_z",
+          "price": 50000,
+          "item": "mega_showdown:fairium_z",
+          "count": 1,
+          "description": "Unlocks Fairy-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:fairy_gem 4",
+            "minecraft:glow_berries 16"
+          ]
+        },
+        {
+          "name": "Fightinium-Z",
+          "icon": "mega_showdown:fightinium_z",
+          "price": 50000,
+          "item": "mega_showdown:fightinium_z",
+          "count": 1,
+          "description": "Unlocks Fighting-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:fighting_gem 4",
+            "minecraft:iron_ingot 16"
+          ]
+        },
+        {
+          "name": "Firium-Z",
+          "icon": "mega_showdown:firium_z",
+          "price": 50000,
+          "item": "mega_showdown:firium_z",
+          "count": 1,
+          "description": "Unlocks Fire-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:fire_gem 4",
+            "minecraft:blaze_powder 16"
+          ]
+        },
+        {
+          "name": "Flyinium-Z",
+          "icon": "mega_showdown:flyinium_z",
+          "price": 50000,
+          "item": "mega_showdown:flyinium_z",
+          "count": 1,
+          "description": "Unlocks Flying-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:flying_gem 4",
+            "minecraft:feather 16"
+          ]
+        },
+        {
+          "name": "Ghostium-Z",
+          "icon": "mega_showdown:ghostium_z",
+          "price": 50000,
+          "item": "mega_showdown:ghostium_z",
+          "count": 1,
+          "description": "Unlocks Ghost-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:ghost_gem 4",
+            "minecraft:soul_sand 16"
+          ]
+        },
+        {
+          "name": "Grassium-Z",
+          "icon": "mega_showdown:grassium_z",
+          "price": 50000,
+          "item": "mega_showdown:grassium_z",
+          "count": 1,
+          "description": "Unlocks Grass-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:grass_gem 4",
+            "minecraft:moss_block 16"
+          ]
+        },
+        {
+          "name": "Groundium-Z",
+          "icon": "mega_showdown:groundium_z",
+          "price": 50000,
+          "item": "mega_showdown:groundium_z",
+          "count": 1,
+          "description": "Unlocks Ground-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:ground_gem 4",
+            "minecraft:clay_ball 32"
+          ]
+        },
+        {
+          "name": "Icium-Z",
+          "icon": "mega_showdown:icium_z",
+          "price": 50000,
+          "item": "mega_showdown:icium_z",
+          "count": 1,
+          "description": "Unlocks Ice-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:ice_gem 4",
+            "minecraft:packed_ice 16"
+          ]
+        },
+        {
+          "name": "Normalium-Z",
+          "icon": "mega_showdown:normalium_z",
+          "price": 50000,
+          "item": "mega_showdown:normalium_z",
+          "count": 1,
+          "description": "Unlocks Normal-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:normal_gem 4",
+            "minecraft:white_wool 16"
+          ]
+        },
+        {
+          "name": "Poisonium-Z",
+          "icon": "mega_showdown:poisonium_z",
+          "price": 50000,
+          "item": "mega_showdown:poisonium_z",
+          "count": 1,
+          "description": "Unlocks Poison-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:poison_gem 4",
+            "minecraft:spider_eye 16"
+          ]
+        },
+        {
+          "name": "Psychium-Z",
+          "icon": "mega_showdown:psychium_z",
+          "price": 50000,
+          "item": "mega_showdown:psychium_z",
+          "count": 1,
+          "description": "Unlocks Psychic-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:psychic_gem 4",
+            "minecraft:amethyst_shard 16"
+          ]
+        },
+        {
+          "name": "Rockium-Z",
+          "icon": "mega_showdown:rockium_z",
+          "price": 50000,
+          "item": "mega_showdown:rockium_z",
+          "count": 1,
+          "description": "Unlocks Rock-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:rock_gem 4",
+            "minecraft:flint 16"
+          ]
+        },
+        {
+          "name": "Steelium-Z",
+          "icon": "mega_showdown:steelium_z",
+          "price": 50000,
+          "item": "mega_showdown:steelium_z",
+          "count": 1,
+          "description": "Unlocks Steel-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:steel_gem 4",
+            "minecraft:iron_block 4"
+          ]
+        },
+        {
+          "name": "Waterium-Z",
+          "icon": "mega_showdown:waterium_z",
+          "price": 50000,
+          "item": "mega_showdown:waterium_z",
+          "count": 1,
+          "description": "Unlocks Water-type Z-Moves. Carved from a Blank-Z.",
+          "cost": [
+            "mega_showdown:blank_z 1",
+            "cobblemon:water_gem 4",
+            "minecraft:prismarine_shard 16"
+          ]
+        },
+        {
+          "name": "Aloraichium-Z",
+          "icon": "mega_showdown:aloraichium_z",
+          "price": 150000,
+          "item": "mega_showdown:aloraichium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:electric_gem 6"
+          ]
+        },
+        {
+          "name": "Decidium-Z",
+          "icon": "mega_showdown:decidium_z",
+          "price": 150000,
+          "item": "mega_showdown:decidium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:ghost_gem 6"
+          ]
+        },
+        {
+          "name": "Eevium-Z",
+          "icon": "mega_showdown:eevium_z",
+          "price": 150000,
+          "item": "mega_showdown:eevium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:normal_gem 6"
+          ]
+        },
+        {
+          "name": "Incinium-Z",
+          "icon": "mega_showdown:incinium_z",
+          "price": 150000,
+          "item": "mega_showdown:incinium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:dark_gem 6"
+          ]
+        },
+        {
+          "name": "Kommonium-Z",
+          "icon": "mega_showdown:kommonium_z",
+          "price": 150000,
+          "item": "mega_showdown:kommonium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:dragon_gem 6"
+          ]
+        },
+        {
+          "name": "Lycanium-Z",
+          "icon": "mega_showdown:lycanium_z",
+          "price": 150000,
+          "item": "mega_showdown:lycanium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:rock_gem 6"
+          ]
+        },
+        {
+          "name": "Mimikium-Z",
+          "icon": "mega_showdown:mimikium_z",
+          "price": 150000,
+          "item": "mega_showdown:mimikium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:fairy_gem 6"
+          ]
+        },
+        {
+          "name": "Pikanium-Z",
+          "icon": "mega_showdown:pikanium_z",
+          "price": 150000,
+          "item": "mega_showdown:pikanium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:electric_gem 6"
+          ]
+        },
+        {
+          "name": "Pikashunium-Z",
+          "icon": "mega_showdown:pikashunium_z",
+          "price": 150000,
+          "item": "mega_showdown:pikashunium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:electric_gem 6"
+          ]
+        },
+        {
+          "name": "Primarium-Z",
+          "icon": "mega_showdown:primarium_z",
+          "price": 150000,
+          "item": "mega_showdown:primarium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:water_gem 6"
+          ]
+        },
+        {
+          "name": "Snorlium-Z",
+          "icon": "mega_showdown:snorlium_z",
+          "price": 150000,
+          "item": "mega_showdown:snorlium_z",
+          "count": 1,
+          "description": "A signature Z-Crystal for one special Pokémon.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_light 1",
+            "cobblemon:normal_gem 6"
+          ]
+        },
+        {
+          "name": "Lunalium-Z",
+          "icon": "mega_showdown:lunalium_z",
+          "price": 300000,
+          "item": "mega_showdown:lunalium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:ghost_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Solganium-Z",
+          "icon": "mega_showdown:solganium_z",
+          "price": 300000,
+          "item": "mega_showdown:solganium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:steel_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Marshadium-Z",
+          "icon": "mega_showdown:marshadium_z",
+          "price": 300000,
+          "item": "mega_showdown:marshadium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:ghost_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Mewnium-Z",
+          "icon": "mega_showdown:mewnium_z",
+          "price": 300000,
+          "item": "mega_showdown:mewnium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:psychic_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Tapunium-Z",
+          "icon": "mega_showdown:tapunium_z",
+          "price": 300000,
+          "item": "mega_showdown:tapunium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:fairy_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        },
+        {
+          "name": "Ultranecrozium-Z",
+          "icon": "mega_showdown:ultranecrozium_z",
+          "price": 300000,
+          "item": "mega_showdown:ultranecrozium_z",
+          "count": 1,
+          "description": "A legendary signature Z-Crystal.",
+          "cost": [
+            "mega_showdown:blank_z 2",
+            "mega_showdown:sparkling_stone_dark 1",
+            "cobblemon:psychic_gem 8",
+            "minecraft:nether_star 1"
+          ],
+          "limit": 1,
+          "period": "month"
+        }
+      ]
+    },
+    {
       "name": "§3§lTrainer Gear",
       "icon": "cobblemon:pc",
       "items": [
@@ -1056,2672 +3471,6 @@
       ]
     },
     {
-      "name": "§d§lPoké Dolls",
-      "icon": "pokeblocks:pokedoll_eevee",
-      "items": [
-        {
-          "name": "Absol Doll",
-          "icon": "pokeblocks:pokedoll_absol",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_absol",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Ampharos Doll",
-          "icon": "pokeblocks:pokedoll_ampharos",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_ampharos",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Arboliva Doll",
-          "icon": "pokeblocks:pokedoll_arboliva",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_arboliva",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Beartic Doll",
-          "icon": "pokeblocks:pokedoll_beartic",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_beartic",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Bellossom Doll",
-          "icon": "pokeblocks:pokedoll_bellossom",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_bellossom",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Blastoise Doll",
-          "icon": "pokeblocks:pokedoll_blastoise",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_blastoise",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Bulbasaur Doll",
-          "icon": "pokeblocks:pokedoll_bulbasaur",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_bulbasaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Bulbasaur Posed Doll",
-          "icon": "pokeblocks:pokedoll_bulbasaur_posed",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_bulbasaur_posed",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Calyrex Doll",
-          "icon": "pokeblocks:pokedoll_calyrex",
-          "price": 25000,
-          "item": "pokeblocks:pokedoll_calyrex",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Calyrex (animated) Doll",
-          "icon": "pokeblocks:pokedoll_calyrex_animated",
-          "price": 35000,
-          "item": "pokeblocks:pokedoll_calyrex_animated",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Cetoddle Doll",
-          "icon": "pokeblocks:pokedoll_cetoddle",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_cetoddle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Charmander Doll",
-          "icon": "pokeblocks:pokedoll_charmander",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_charmander",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Charmeleon Doll",
-          "icon": "pokeblocks:pokedoll_charmeleon",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_charmeleon",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Clefairy Doll",
-          "icon": "pokeblocks:pokedoll_clefairy",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_clefairy",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Cloyster Doll",
-          "icon": "pokeblocks:pokedoll_cloyster",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_cloyster",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Corviknight Doll",
-          "icon": "pokeblocks:pokedoll_corviknight",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_corviknight",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Corvisquire Doll",
-          "icon": "pokeblocks:pokedoll_corvisquire",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_corvisquire",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Cubchoo Doll",
-          "icon": "pokeblocks:pokedoll_cubchoo",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_cubchoo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Cubchoo (animated) Doll",
-          "icon": "pokeblocks:pokedoll_cubchoo_animated",
-          "price": 9000,
-          "item": "pokeblocks:pokedoll_cubchoo_animated",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Cyndaquil Doll",
-          "icon": "pokeblocks:pokedoll_cyndaquil",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_cyndaquil",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Delibird Doll",
-          "icon": "pokeblocks:pokedoll_delibird",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_delibird",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Dolliv Doll",
-          "icon": "pokeblocks:pokedoll_dolliv",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_dolliv",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Drifloon Doll",
-          "icon": "pokeblocks:pokedoll_drifloon",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_drifloon",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Eevee Doll",
-          "icon": "pokeblocks:pokedoll_eevee",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_eevee",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Eiscue Doll",
-          "icon": "pokeblocks:pokedoll_eiscue",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_eiscue",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Eiscue Noice Doll",
-          "icon": "pokeblocks:pokedoll_eiscue_noice",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_eiscue_noice",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Flaaffy Doll",
-          "icon": "pokeblocks:pokedoll_flaaffy",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_flaaffy",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Frigibax Doll",
-          "icon": "pokeblocks:pokedoll_frigibax",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_frigibax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Froslass Doll",
-          "icon": "pokeblocks:pokedoll_froslass",
-          "price": 7000,
-          "item": "pokeblocks:pokedoll_froslass",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Furret Doll",
-          "icon": "pokeblocks:pokedoll_furret",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_furret",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Gastly Doll",
-          "icon": "pokeblocks:pokedoll_gastly",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_gastly",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Gengar Doll",
-          "icon": "pokeblocks:pokedoll_gengar",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_gengar",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Gholdengo Doll",
-          "icon": "pokeblocks:pokedoll_gholdengo",
-          "price": 10000,
-          "item": "pokeblocks:pokedoll_gholdengo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Glalie Doll",
-          "icon": "pokeblocks:pokedoll_glalie",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_glalie",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Happiny Doll",
-          "icon": "pokeblocks:pokedoll_happiny",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_happiny",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Igglybuff Doll",
-          "icon": "pokeblocks:pokedoll_igglybuff",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_igglybuff",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Ivysaur Doll",
-          "icon": "pokeblocks:pokedoll_ivysaur",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_ivysaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Jigglypuff Doll",
-          "icon": "pokeblocks:pokedoll_jigglypuff",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_jigglypuff",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Kyogre Doll",
-          "icon": "pokeblocks:pokedoll_kyogre",
-          "price": 30000,
-          "item": "pokeblocks:pokedoll_kyogre",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Lechonk Doll",
-          "icon": "pokeblocks:pokedoll_lechonk",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_lechonk",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Lickitung Doll",
-          "icon": "pokeblocks:pokedoll_lickitung",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_lickitung",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Luvdisc Doll",
-          "icon": "pokeblocks:pokedoll_luvdisc",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_luvdisc",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Mareep Doll",
-          "icon": "pokeblocks:pokedoll_mareep",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_mareep",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Marshadow Doll",
-          "icon": "pokeblocks:pokedoll_marshadow",
-          "price": 25000,
-          "item": "pokeblocks:pokedoll_marshadow",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Marshadow Zenith Doll",
-          "icon": "pokeblocks:pokedoll_marshadow_zenith",
-          "price": 35000,
-          "item": "pokeblocks:pokedoll_marshadow_zenith",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Mimikyu Doll",
-          "icon": "pokeblocks:pokedoll_mimikyu",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_mimikyu",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Munchlax Doll",
-          "icon": "pokeblocks:pokedoll_munchlax",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_munchlax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Netherite Gholdengo Doll",
-          "icon": "pokeblocks:pokedoll_netherite_gholdengo",
-          "price": 40000,
-          "item": "pokeblocks:pokedoll_netherite_gholdengo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Palossand Doll",
-          "icon": "pokeblocks:pokedoll_palossand",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_palossand",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Phantump Doll",
-          "icon": "pokeblocks:pokedoll_phantump",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_phantump",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Piloswine Doll",
-          "icon": "pokeblocks:pokedoll_piloswine",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_piloswine",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Pumpkaboo Doll",
-          "icon": "pokeblocks:pokedoll_pumpkaboo",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_pumpkaboo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Quagsire Doll",
-          "icon": "pokeblocks:pokedoll_quagsire",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_quagsire",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Rabsca Doll",
-          "icon": "pokeblocks:pokedoll_rabsca",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_rabsca",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Rellor Doll",
-          "icon": "pokeblocks:pokedoll_rellor",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_rellor",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Riolu Doll",
-          "icon": "pokeblocks:pokedoll_riolu",
-          "price": 7000,
-          "item": "pokeblocks:pokedoll_riolu",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Rookidee Doll",
-          "icon": "pokeblocks:pokedoll_rookidee",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_rookidee",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Rowlet Doll",
-          "icon": "pokeblocks:pokedoll_rowlet",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_rowlet",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Sableye Doll",
-          "icon": "pokeblocks:pokedoll_sableye",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_sableye",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Sandygast Doll",
-          "icon": "pokeblocks:pokedoll_sandygast",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_sandygast",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Sentret Doll",
-          "icon": "pokeblocks:pokedoll_sentret",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_sentret",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shellder Doll",
-          "icon": "pokeblocks:pokedoll_shellder",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_shellder",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shuckle Doll",
-          "icon": "pokeblocks:pokedoll_shuckle",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_shuckle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Skibidi Mewlet Doll",
-          "icon": "pokeblocks:pokedoll_skibidi_mewlet",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_skibidi_mewlet",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Smoliv Doll",
-          "icon": "pokeblocks:pokedoll_smoliv",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_smoliv",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Snorlax Doll",
-          "icon": "pokeblocks:pokedoll_snorlax",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_snorlax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Snorunt Doll",
-          "icon": "pokeblocks:pokedoll_snorunt",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_snorunt",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Snorunt Family Doll",
-          "icon": "pokeblocks:pokedoll_snorunt_family",
-          "price": 12000,
-          "item": "pokeblocks:pokedoll_snorunt_family",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Spheal Doll",
-          "icon": "pokeblocks:pokedoll_spheal",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_spheal",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Squirtle Doll",
-          "icon": "pokeblocks:pokedoll_squirtle",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_squirtle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Stonjourner Doll",
-          "icon": "pokeblocks:pokedoll_stonjourner",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_stonjourner",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Swinub Doll",
-          "icon": "pokeblocks:pokedoll_swinub",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_swinub",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Treecko Doll",
-          "icon": "pokeblocks:pokedoll_treecko",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_treecko",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Trevenant Doll",
-          "icon": "pokeblocks:pokedoll_trevenant",
-          "price": 7000,
-          "item": "pokeblocks:pokedoll_trevenant",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Tropius Doll",
-          "icon": "pokeblocks:pokedoll_tropius",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_tropius",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Venonat Doll",
-          "icon": "pokeblocks:pokedoll_venonat",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_venonat",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Venusaur Doll",
-          "icon": "pokeblocks:pokedoll_venusaur",
-          "price": 8000,
-          "item": "pokeblocks:pokedoll_venusaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Wailmer Doll",
-          "icon": "pokeblocks:pokedoll_wailmer",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_wailmer",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Wailord Doll",
-          "icon": "pokeblocks:pokedoll_wailord",
-          "price": 9000,
-          "item": "pokeblocks:pokedoll_wailord",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Wartortle Doll",
-          "icon": "pokeblocks:pokedoll_wartortle",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_wartortle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Washing Machine Doll",
-          "icon": "pokeblocks:pokedoll_washing_machine",
-          "price": 12000,
-          "item": "pokeblocks:pokedoll_washing_machine",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Wooper Doll",
-          "icon": "pokeblocks:pokedoll_wooper",
-          "price": 5000,
-          "item": "pokeblocks:pokedoll_wooper",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Magikarp Fishbowl",
-          "icon": "pokeblocks:magikarp_fishbowl",
-          "price": 8000,
-          "item": "pokeblocks:magikarp_fishbowl",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Luvdisc Cushion",
-          "icon": "pokeblocks:luvdisc_cushion",
-          "price": 6000,
-          "item": "pokeblocks:luvdisc_cushion",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Applin Basket",
-          "icon": "pokeblocks:applin_basket",
-          "price": 6000,
-          "item": "pokeblocks:applin_basket",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Pokémon Trophy",
-          "icon": "pokeblocks:pokemon_trophy",
-          "price": 20000,
-          "item": "pokeblocks:pokemon_trophy",
-          "count": 1,
-          "description": ""
-        }
-      ]
-    },
-    {
-      "name": "§e§lShiny Poké Dolls",
-      "icon": "pokeblocks:pokedoll_shiny_eevee",
-      "items": [
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_absol",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_absol",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Os Doll",
-          "icon": "pokeblocks:pokedoll_ampharos",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_ampharos",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Va Doll",
-          "icon": "pokeblocks:pokedoll_arboliva",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_arboliva",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny C Doll",
-          "icon": "pokeblocks:pokedoll_beartic",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_beartic",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Som Doll",
-          "icon": "pokeblocks:pokedoll_bellossom",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_bellossom",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ise Doll",
-          "icon": "pokeblocks:pokedoll_blastoise",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_blastoise",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Aur Doll",
-          "icon": "pokeblocks:pokedoll_bulbasaur",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_bulbasaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Aur Posed Doll",
-          "icon": "pokeblocks:pokedoll_bulbasaur_posed",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_bulbasaur_posed",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny X Doll",
-          "icon": "pokeblocks:pokedoll_calyrex",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_calyrex",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny X (animated) Doll",
-          "icon": "pokeblocks:pokedoll_calyrex_animated",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_calyrex_animated",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Le Doll",
-          "icon": "pokeblocks:pokedoll_cetoddle",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_cetoddle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Nder Doll",
-          "icon": "pokeblocks:pokedoll_charmander",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_charmander",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Leon Doll",
-          "icon": "pokeblocks:pokedoll_charmeleon",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_charmeleon",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ry Doll",
-          "icon": "pokeblocks:pokedoll_clefairy",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_clefairy",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Er Doll",
-          "icon": "pokeblocks:pokedoll_cloyster",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_cloyster",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Night Doll",
-          "icon": "pokeblocks:pokedoll_corviknight",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_corviknight",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Quire Doll",
-          "icon": "pokeblocks:pokedoll_corvisquire",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_corvisquire",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny O Doll",
-          "icon": "pokeblocks:pokedoll_cubchoo",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_cubchoo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny O (animated) Doll",
-          "icon": "pokeblocks:pokedoll_cubchoo_animated",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_cubchoo_animated",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Uil Doll",
-          "icon": "pokeblocks:pokedoll_cyndaquil",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_cyndaquil",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Rd Doll",
-          "icon": "pokeblocks:pokedoll_delibird",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_delibird",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_dolliv",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_dolliv",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny On Doll",
-          "icon": "pokeblocks:pokedoll_drifloon",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_drifloon",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_eevee",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_eevee",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_eiscue",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_eiscue",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Noice Doll",
-          "icon": "pokeblocks:pokedoll_eiscue_noice",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_eiscue_noice",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Y Doll",
-          "icon": "pokeblocks:pokedoll_flaaffy",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_flaaffy",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ax Doll",
-          "icon": "pokeblocks:pokedoll_frigibax",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_frigibax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ss Doll",
-          "icon": "pokeblocks:pokedoll_froslass",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_froslass",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_furret",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_furret",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_gastly",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_gastly",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_gengar",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_gengar",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ngo Doll",
-          "icon": "pokeblocks:pokedoll_gholdengo",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_gholdengo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_glalie",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_glalie",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Y Doll",
-          "icon": "pokeblocks:pokedoll_happiny",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_happiny",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Uff Doll",
-          "icon": "pokeblocks:pokedoll_igglybuff",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_igglybuff",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny R Doll",
-          "icon": "pokeblocks:pokedoll_ivysaur",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_ivysaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Puff Doll",
-          "icon": "pokeblocks:pokedoll_jigglypuff",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_jigglypuff",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_kyogre",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_kyogre",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny K Doll",
-          "icon": "pokeblocks:pokedoll_lechonk",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_lechonk",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ung Doll",
-          "icon": "pokeblocks:pokedoll_lickitung",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_lickitung",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny C Doll",
-          "icon": "pokeblocks:pokedoll_luvdisc",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_luvdisc",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_mareep",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_mareep",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Dow Doll",
-          "icon": "pokeblocks:pokedoll_marshadow",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_marshadow",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Dow Zenith Doll",
-          "icon": "pokeblocks:pokedoll_marshadow_zenith",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_marshadow_zenith",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny U Doll",
-          "icon": "pokeblocks:pokedoll_mimikyu",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_mimikyu",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ax Doll",
-          "icon": "pokeblocks:pokedoll_munchlax",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_munchlax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ite Gholdengo Doll",
-          "icon": "pokeblocks:pokedoll_netherite_gholdengo",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_netherite_gholdengo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny And Doll",
-          "icon": "pokeblocks:pokedoll_palossand",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_palossand",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Mp Doll",
-          "icon": "pokeblocks:pokedoll_phantump",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_phantump",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ine Doll",
-          "icon": "pokeblocks:pokedoll_piloswine",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_piloswine",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny N Trophy Doll",
-          "icon": "pokeblocks:pokedoll_pokemon_trophy",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_pokemon_trophy",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Boo Doll",
-          "icon": "pokeblocks:pokedoll_pumpkaboo",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_pumpkaboo",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Re Doll",
-          "icon": "pokeblocks:pokedoll_quagsire",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_quagsire",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_rabsca",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_rabsca",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_rellor",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_rellor",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_riolu",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_riolu",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ee Doll",
-          "icon": "pokeblocks:pokedoll_rookidee",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_rookidee",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_rowlet",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_rowlet",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny E Doll",
-          "icon": "pokeblocks:pokedoll_sableye",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_sableye",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ast Doll",
-          "icon": "pokeblocks:pokedoll_sandygast",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_sandygast",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny T Doll",
-          "icon": "pokeblocks:pokedoll_sentret",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_sentret",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Er Doll",
-          "icon": "pokeblocks:pokedoll_shellder",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_shellder",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny E Doll",
-          "icon": "pokeblocks:pokedoll_shuckle",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_shuckle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_smoliv",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_smoliv",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny X Doll",
-          "icon": "pokeblocks:pokedoll_snorlax",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_snorlax",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny T Doll",
-          "icon": "pokeblocks:pokedoll_snorunt",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_snorunt",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny T Family Doll",
-          "icon": "pokeblocks:pokedoll_snorunt_family",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_snorunt_family",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_spheal",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_spheal",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Le Doll",
-          "icon": "pokeblocks:pokedoll_squirtle",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_squirtle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Urner Doll",
-          "icon": "pokeblocks:pokedoll_stonjourner",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_stonjourner",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_swinub",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_swinub",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny O Doll",
-          "icon": "pokeblocks:pokedoll_treecko",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_treecko",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ant Doll",
-          "icon": "pokeblocks:pokedoll_trevenant",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_trevenant",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny S Doll",
-          "icon": "pokeblocks:pokedoll_tropius",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_tropius",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny T Doll",
-          "icon": "pokeblocks:pokedoll_venonat",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_venonat",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Ur Doll",
-          "icon": "pokeblocks:pokedoll_venusaur",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_venusaur",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny R Doll",
-          "icon": "pokeblocks:pokedoll_wailmer",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_wailmer",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny D Doll",
-          "icon": "pokeblocks:pokedoll_wailord",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_wailord",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny Tle Doll",
-          "icon": "pokeblocks:pokedoll_wartortle",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_wartortle",
-          "count": 1,
-          "description": ""
-        },
-        {
-          "name": "Shiny  Doll",
-          "icon": "pokeblocks:pokedoll_wooper",
-          "price": 15000,
-          "item": "pokeblocks:pokedoll_wooper",
-          "count": 1,
-          "description": ""
-        }
-      ]
-    },
-    {
-      "name": "§5§lGigantic Dolls",
-      "icon": "pokeblocks:gigantic_pokedoll_snorlax",
-      "items": [
-        {
-          "name": "Gigantic Absol Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_absol",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_absol",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Ampharos Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_ampharos",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_ampharos",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Arboliva Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_arboliva",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_arboliva",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Beartic Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_beartic",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_beartic",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Bellossom Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_bellossom",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_bellossom",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Blastoise Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_blastoise",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_blastoise",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Bulbasaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_bulbasaur",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_bulbasaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Bulbasaur Posed Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_bulbasaur_posed",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_bulbasaur_posed",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Calyrex Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_calyrex",
-          "price": 112500,
-          "item": "pokeblocks:gigantic_pokedoll_calyrex",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Calyrex (animated) Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_calyrex_animated",
-          "price": 157500,
-          "item": "pokeblocks:gigantic_pokedoll_calyrex_animated",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Cetoddle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_cetoddle",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_cetoddle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Charmander Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_charmander",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_charmander",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Charmeleon Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_charmeleon",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_charmeleon",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Clefairy Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_clefairy",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_clefairy",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Cloyster Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_cloyster",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_cloyster",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Corviknight Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_corviknight",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_corviknight",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Corvisquire Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_corvisquire",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_corvisquire",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Cubchoo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_cubchoo",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_cubchoo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Cubchoo (animated) Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_cubchoo_animated",
-          "price": 40500,
-          "item": "pokeblocks:gigantic_pokedoll_cubchoo_animated",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Cyndaquil Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_cyndaquil",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_cyndaquil",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Delibird Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_delibird",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_delibird",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Dolliv Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_dolliv",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_dolliv",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Drifloon Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_drifloon",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_drifloon",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Eevee Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_eevee",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_eevee",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Eiscue Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_eiscue",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_eiscue",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Eiscue Noice Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_eiscue_noice",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_eiscue_noice",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Flaaffy Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_flaaffy",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_flaaffy",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Frigibax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_frigibax",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_frigibax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Froslass Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_froslass",
-          "price": 31500,
-          "item": "pokeblocks:gigantic_pokedoll_froslass",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Furret Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_furret",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_furret",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Gastly Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_gastly",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_gastly",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Gengar Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_gengar",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_gengar",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Gholdengo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_gholdengo",
-          "price": 45000,
-          "item": "pokeblocks:gigantic_pokedoll_gholdengo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Glalie Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_glalie",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_glalie",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Happiny Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_happiny",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_happiny",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Headpile Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_headpile",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_headpile",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Igglybuff Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_igglybuff",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_igglybuff",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Ivysaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_ivysaur",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_ivysaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Jigglypuff Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_jigglypuff",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_jigglypuff",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Kyogre Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_kyogre",
-          "price": 135000,
-          "item": "pokeblocks:gigantic_pokedoll_kyogre",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Lechonk Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_lechonk",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_lechonk",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Lickitung Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_lickitung",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_lickitung",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Luvdisc Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_luvdisc",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_luvdisc",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Mareep Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_mareep",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_mareep",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Marshadow Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_marshadow",
-          "price": 112500,
-          "item": "pokeblocks:gigantic_pokedoll_marshadow",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Marshadow Zenith Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_marshadow_zenith",
-          "price": 157500,
-          "item": "pokeblocks:gigantic_pokedoll_marshadow_zenith",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Mimikyu Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_mimikyu",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_mimikyu",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Munchlax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_munchlax",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_munchlax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Netherite Gholdengo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_netherite_gholdengo",
-          "price": 180000,
-          "item": "pokeblocks:gigantic_pokedoll_netherite_gholdengo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Palossand Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_palossand",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_palossand",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Phantump Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_phantump",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_phantump",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Piloswine Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_piloswine",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_piloswine",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Pumpkaboo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_pumpkaboo",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_pumpkaboo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Quagsire Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_quagsire",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_quagsire",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Rabsca Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_rabsca",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_rabsca",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Rellor Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_rellor",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_rellor",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Riolu Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_riolu",
-          "price": 31500,
-          "item": "pokeblocks:gigantic_pokedoll_riolu",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Rookidee Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_rookidee",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_rookidee",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Rowlet Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_rowlet",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_rowlet",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Sableye Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_sableye",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_sableye",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Sandygast Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_sandygast",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_sandygast",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Sentret Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_sentret",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_sentret",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shellder Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shellder",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_shellder",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Absol Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_absol",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_absol",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Ampharos Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_ampharos",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_ampharos",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Arboliva Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_arboliva",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_arboliva",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Beartic Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_beartic",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_beartic",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Bellossom Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_bellossom",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_bellossom",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Blastoise Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_blastoise",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_blastoise",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Bulbasaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Bulbasaur Posed Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur_posed",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_bulbasaur_posed",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Calyrex Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_calyrex",
-          "price": 337500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_calyrex",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Calyrex (animated) Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_calyrex_animated",
-          "price": 472500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_calyrex_animated",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Cetoddle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_cetoddle",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_cetoddle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Charmander Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_charmander",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_charmander",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Charmeleon Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_charmeleon",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_charmeleon",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Clefairy Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_clefairy",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_clefairy",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Cloyster Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_cloyster",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_cloyster",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Corviknight Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_corviknight",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_corviknight",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Corvisquire Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_corvisquire",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_corvisquire",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Cubchoo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_cubchoo",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_cubchoo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Cubchoo (animated) Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_cubchoo_animated",
-          "price": 121500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_cubchoo_animated",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Cyndaquil Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_cyndaquil",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_cyndaquil",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Delibird Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_delibird",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_delibird",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Dolliv Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_dolliv",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_dolliv",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Drifloon Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_drifloon",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_drifloon",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Eevee Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_eevee",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_eevee",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Eiscue Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_eiscue",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_eiscue",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Eiscue Noice Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_eiscue_noice",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_eiscue_noice",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Flaaffy Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_flaaffy",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_flaaffy",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Frigibax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_frigibax",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_frigibax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Froslass Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_froslass",
-          "price": 94500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_froslass",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Furret Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_furret",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_furret",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Gastly Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_gastly",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_gastly",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Gengar Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_gengar",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_gengar",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Gholdengo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_gholdengo",
-          "price": 135000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_gholdengo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Glalie Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_glalie",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_glalie",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Happiny Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_happiny",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_happiny",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Headpile Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_headpile",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_headpile",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Igglybuff Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_igglybuff",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_igglybuff",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Ivysaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_ivysaur",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_ivysaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Jigglypuff Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_jigglypuff",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_jigglypuff",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Kyogre Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_kyogre",
-          "price": 405000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_kyogre",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Lechonk Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_lechonk",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_lechonk",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Lickitung Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_lickitung",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_lickitung",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Luvdisc Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_luvdisc",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_luvdisc",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Mareep Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_mareep",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_mareep",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Marshadow Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_marshadow",
-          "price": 337500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_marshadow",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Marshadow Zenith Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_marshadow_zenith",
-          "price": 472500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_marshadow_zenith",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Mimikyu Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_mimikyu",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_mimikyu",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Munchlax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_munchlax",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_munchlax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Netherite Gholdengo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_netherite_gholdengo",
-          "price": 540000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_netherite_gholdengo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Palossand Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_palossand",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_palossand",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Phantump Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_phantump",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_phantump",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Piloswine Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_piloswine",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_piloswine",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Pumpkaboo Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_pumpkaboo",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_pumpkaboo",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Quagsire Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_quagsire",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_quagsire",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Rabsca Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_rabsca",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_rabsca",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Rellor Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_rellor",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_rellor",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Riolu Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_riolu",
-          "price": 94500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_riolu",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Rookidee Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_rookidee",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_rookidee",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Rowlet Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_rowlet",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_rowlet",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Sableye Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_sableye",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_sableye",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Sandygast Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_sandygast",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_sandygast",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Sentret Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_sentret",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_sentret",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Shellder Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_shellder",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_shellder",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Shuckle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_shuckle",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_shuckle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Smoliv Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_smoliv",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_smoliv",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Snorlax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorlax",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_snorlax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Snorunt Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorunt",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_snorunt",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Snorunt Family Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_snorunt_family",
-          "price": 162000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_snorunt_family",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Spheal Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_spheal",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_spheal",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Squirtle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_squirtle",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_squirtle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Stonjourner Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_stonjourner",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_stonjourner",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Swinub Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_swinub",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_swinub",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Treecko Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_treecko",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_treecko",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Trevenant Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_trevenant",
-          "price": 94500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_trevenant",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Tropius Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_tropius",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_tropius",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Venonat Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_venonat",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_venonat",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Venusaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_venusaur",
-          "price": 108000,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_venusaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Wailmer Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_wailmer",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_wailmer",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Wailord Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_wailord",
-          "price": 121500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_wailord",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Wartortle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_wartortle",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_wartortle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shiny Wooper Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shiny_wooper",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_shiny_wooper",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Shuckle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_shuckle",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_shuckle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Skibidi Mewlet Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_skibidi_mewlet",
-          "price": 67500,
-          "item": "pokeblocks:gigantic_pokedoll_skibidi_mewlet",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Smoliv Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_smoliv",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_smoliv",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Snorlax Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_snorlax",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_snorlax",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Snorunt Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_snorunt",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_snorunt",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Snorunt Family Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_snorunt_family",
-          "price": 54000,
-          "item": "pokeblocks:gigantic_pokedoll_snorunt_family",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Spheal Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_spheal",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_spheal",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Squirtle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_squirtle",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_squirtle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Stonjourner Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_stonjourner",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_stonjourner",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Swinub Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_swinub",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_swinub",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Treecko Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_treecko",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_treecko",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Trevenant Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_trevenant",
-          "price": 31500,
-          "item": "pokeblocks:gigantic_pokedoll_trevenant",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Tropius Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_tropius",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_tropius",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Venonat Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_venonat",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_venonat",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Venusaur Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_venusaur",
-          "price": 36000,
-          "item": "pokeblocks:gigantic_pokedoll_venusaur",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Wailmer Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_wailmer",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_wailmer",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Wailord Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_wailord",
-          "price": 40500,
-          "item": "pokeblocks:gigantic_pokedoll_wailord",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Wartortle Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_wartortle",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_wartortle",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Washing Machine Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_washing_machine",
-          "price": 54000,
-          "item": "pokeblocks:gigantic_pokedoll_washing_machine",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        },
-        {
-          "name": "Gigantic Wooper Doll",
-          "icon": "pokeblocks:gigantic_pokedoll_wooper",
-          "price": 22500,
-          "item": "pokeblocks:gigantic_pokedoll_wooper",
-          "count": 1,
-          "description": "Costs more than 4 dolls, so crafting it yourself is always cheaper."
-        }
-      ]
-    },
-    {
       "name": "§6§lCrate Keys",
       "icon": "jcl_gts:master_key",
       "items": [
@@ -3762,6 +3511,14 @@
           "count": 1,
           "limit": 1,
           "period": "month"
+        },
+        {
+          "name": "Style Key",
+          "icon": "jcl_gts:style_key",
+          "price": 15000,
+          "description": "Opens the Style Crate: trails and auras for you and your Pokémon.",
+          "item": "jcl_gts:style_key",
+          "count": 1
         }
       ]
     },
@@ -4233,6 +3990,166 @@
           "description": "Colours your name in chat and the tab list. Use it with /titles color.",
           "commands": [
             "titles grantcolor {player} bold_red"
+          ],
+          "limit": 1,
+          "period": "once"
+        }
+      ]
+    },
+    {
+      "name": "§d§lCosmetics",
+      "icon": "minecraft:armor_stand",
+      "items": [
+        {
+          "name": "Trail: Footprints",
+          "icon": "minecraft:armor_stand",
+          "price": 12000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_footprints"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Sparkles",
+          "icon": "minecraft:armor_stand",
+          "price": 12000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_sparkles"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Bubbles",
+          "icon": "minecraft:armor_stand",
+          "price": 12000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_bubbles"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Falling Leaves",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_leaves"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Music Notes",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_notes"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Flames",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_flames"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Trail: Snowfall",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "A trail that follows you as you walk. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} trail_snow"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Shiny Sparkle",
+          "icon": "minecraft:armor_stand",
+          "price": 12000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_shiny"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Hearts",
+          "icon": "minecraft:armor_stand",
+          "price": 12000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_hearts"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Embers",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_embers"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Petals",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_petals"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Melody",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_notes"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Frost",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_frost"
+          ],
+          "limit": 1,
+          "period": "once"
+        },
+        {
+          "name": "Aura: Bubble Ring",
+          "icon": "minecraft:armor_stand",
+          "price": 35000,
+          "description": "An aura for one of your Pokémon. Equip it in /wardrobe. Epic and legendary styles only come from the Style Crate.",
+          "commands": [
+            "jcl cosmetic give {player} aura_bubbles"
           ],
           "limit": 1,
           "period": "once"

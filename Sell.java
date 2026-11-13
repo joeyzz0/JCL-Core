@@ -31,7 +31,7 @@ public final class Sell {
 
     static void open(ServerPlayer p) {
         SimpleContainer box = new SimpleContainer(54);
-        p.openMenu(new SimpleMenuProvider((id, inv, pl) -> new SellMenu(id, inv, box, (ServerPlayer) pl), Component.literal("§a§l💰 Sell Box §8· drop items in")));
+        p.openMenu(new SimpleMenuProvider((id, inv, pl) -> new SellMenu(id, inv, box, (ServerPlayer) pl), Component.literal("§a§l💰 Sell Box §8· Drop items in")));
     }
 
     static final class SellMenu extends ChestMenu {
