@@ -35,7 +35,16 @@ public final class Npcs {
     private Npcs() {}
 
     static final List<String> SKINS = List.of("guide", "nurse", "clerk", "crates", "archivist", "coach", "referee", "captain",
-            "ev_hp", "ev_atk", "ev_def", "ev_spa", "ev_spd", "ev_spe");
+            "ev_hp", "ev_atk", "ev_def", "ev_spa", "ev_spd", "ev_spe", "frontier_receptionist", "frontier_clerk", "frontier_loaner",
+            "professor", "librarian", "curator", "barista", "barista2", "contest_host",
+            "vendor_1", "vendor_2", "vendor_3", "vendor_4", "vendor_5", "vendor_6", "vendor_7", "vendor_8", "vendor_9", "vendor_10", "vendor_11", "vendor_12", "vendor_13", "vendor_14", "vendor_15", "vendor_16", "vendor_17", "vendor_18", "vendor_19", "vendor_20", "vendor_21", "vendor_22", "vendor_23", "vendor_24", "vendor_25", "vendor_26", "vendor_27", "vendor_28", "vendor_29", "vendor_30", "vendor_31", "vendor_32", "vendor_33", "vendor_34", "vendor_35", "vendor_36",
+            "local_1", "local_2", "local_3", "local_4", "local_5", "local_6", "local_7", "local_8", "local_9", "local_10", "local_11", "local_12", "local_13");
+    /** Skins that exist only for the Frontier's trainers and Brains (copied to config/jcl_skins too). */
+    static final int SKIN_SET = 11;
+
+    static final List<String> EXTRA_SKINS = List.of("brain_tycoon", "brain_tera", "brain_factory", "brain_mega", "brain_status", "brain_doubles", "brain_mono",
+            "ft_1", "ft_2", "ft_3", "ft_4", "ft_5", "ft_6", "ft_7", "ft_8", "ft_9", "ft_10", "ft_11", "ft_12",
+            "ft_13", "ft_14", "ft_15", "ft_16", "ft_17", "ft_18", "ft_19", "ft_20", "ft_21", "ft_22", "ft_23", "ft_24");
     static final List<String> EV = List.of("ev_hp", "ev_atk", "ev_def", "ev_spa", "ev_spd", "ev_spe");
     static final long EV_FEE = 1000;
     static MinecraftServer server;
@@ -47,11 +56,21 @@ public final class Npcs {
         server = e.getServer();
         try {
             Files.createDirectories(skinDir());
-            for (String s : SKINS) {
+            List<String> all = new java.util.ArrayList<>(SKINS); all.addAll(EXTRA_SKINS);
+            for (String c : new String[]{"red", "blue", "lance", "steven", "cynthia", "alder", "iris", "diantha", "geeta", "nemona", "n", "ghetsis", "giovanni", "archie", "maxie",
+                    "arven", "marlon", "leon", "ash", "gary", "paul", "tobias", "alain", "volo", "kieran", "gladion", "lusamine", "trip", "joey"}) all.add("champ_" + c);
+            // Skin set 2 (picked from the server's trainer textures) replaces the earlier drawn skins once; skins an
+            // admin added under other names are never touched, and after this, existing files are left alone again.
+            Path marker = skinDir().resolve(".skinset");
+            int have = 0;
+            try { if (Files.exists(marker)) have = Integer.parseInt(Files.readString(marker).trim()); } catch (Exception ignored) {}
+            boolean refresh = have < SKIN_SET;
+            for (String s : all) {
                 Path out = skinDir().resolve(s + ".png");
-                if (Files.exists(out)) continue;                       // an admin may have swapped in their own skin
-                try (InputStream in = Npcs.class.getResourceAsStream("/jcl_skins/" + s + ".png")) { if (in != null) Files.copy(in, out); }
+                if (Files.exists(out) && !refresh) continue;          // an admin may have swapped in their own skin
+                try (InputStream in = Npcs.class.getResourceAsStream("/jcl_skins/" + s + ".png")) { if (in != null) Files.copy(in, out, java.nio.file.StandardCopyOption.REPLACE_EXISTING); }
             }
+            if (refresh) { Files.writeString(marker, String.valueOf(SKIN_SET)); GtsMod.LOG.info("[JCL] Installed NPC skin set {}.", SKIN_SET); }
         } catch (Exception ex) { GtsMod.LOG.error("[JCL] Could not unpack NPC skins", ex); }
         hookBattles();
     }
@@ -60,14 +79,43 @@ public final class Npcs {
 
     static boolean isCobblemonNpc(Entity e) { return e != null && e.getClass().getSimpleName().equals("NPCEntity"); }
 
+    /** Applies a skin straight from a URL (the podium statues use the players' own Mojang skins). */
+    static void applySkinUrl(Entity e, String url, boolean slim) {
+        try {
+            Class<?> modelType = Class.forName("com.cobblemon.mod.common.entity.npc.NPCPlayerModelType");
+            Object type = modelType.getField(slim ? "SLIM" : "DEFAULT").get(null);
+            e.getClass().getMethod("loadTexture", java.net.URI.class, modelType).invoke(e, java.net.URI.create(url), type);
+        } catch (Throwable t) { GtsMod.LOG.warn("[JCL] Could not apply a skin from {}: {}", url, t.toString()); }
+    }
+
+    static boolean skinExists(String skin) { return Files.exists(skinDir().resolve(skin + ".png")); }
+
+    /** Finds a skin file by name, ignoring case ("Cynthia.png" and "champ_cynthia.png" both work for cynthia). */
+    static String findSkin(String... names) {
+        try (var files = Files.list(skinDir())) {
+            var all = files.map(p -> p.getFileName().toString()).filter(s -> s.toLowerCase(java.util.Locale.ROOT).endsWith(".png")).toList();
+            for (String want : names) for (String f : all) if (f.equalsIgnoreCase(want + ".png")) return f.substring(0, f.length() - 4);
+        } catch (Exception ignored) {}
+        return null;
+    }
+
+    /** Alex-style (slim-armed) skins have a transparent pixel where a classic arm would be. */
+    static boolean isSlim(Path f) {
+        try {
+            var img = javax.imageio.ImageIO.read(f.toFile());
+            if (img == null || img.getHeight() < 64) return false;
+            return ((img.getRGB(54, 20) >>> 24) & 0xFF) == 0;
+        } catch (Exception ex) { return false; }
+    }
+
     static void applySkin(Entity e, String skin) {
         try {
             Path f = skinDir().resolve(skin + ".png");
             if (!Files.exists(f)) { GtsMod.LOG.warn("[JCL] No skin file at {}", f); return; }
             Class<?> modelType = Class.forName("com.cobblemon.mod.common.entity.npc.NPCPlayerModelType");
-            Object def = modelType.getField("DEFAULT").get(null);
+            Object type = modelType.getField(isSlim(f) ? "SLIM" : "DEFAULT").get(null);
             Method load = e.getClass().getMethod("loadTexture", java.net.URI.class, modelType);
-            load.invoke(e, f.toUri(), def);
+            load.invoke(e, f.toUri(), type);
             GtsMod.LOG.info("[JCL] Applied skin {} to an NPC.", skin);
         } catch (Throwable t) { GtsMod.LOG.warn("[JCL] Could not apply skin {} to an NPC", skin, t); }
     }
@@ -83,6 +131,14 @@ public final class Npcs {
     /** Spawns Cobblemon NPC class jcl_gts:<cls> at a spot, facing yaw, tags it and gives it its skin.
      *  Built directly the same way Cobblemon's own /spawnnpc does it, so there's no searching for it afterwards. */
     static Entity spawn(ServerLevel level, String cls, double x, double y, double z, float yaw, String... tags) {
+        return spawnSkinned(level, cls, cls, x, y, z, yaw, tags);
+    }
+
+    /** If set, the next spawned NPC gets this UUID (the Frontier uses fixed UUIDs so tooltip mods can name the trainer). */
+    static java.util.UUID NEXT_UUID;
+
+    static Entity spawnSkinned(ServerLevel level, String cls, String skin, double x, double y, double z, float yaw, String... tags) {
+        java.util.UUID forced = NEXT_UUID; NEXT_UUID = null;
         try {
             Class<?> classes = Class.forName("com.cobblemon.mod.common.api.npc.NPCClasses");
             Object npcClass = classes.getMethod("getByIdentifier", net.minecraft.resources.ResourceLocation.class)
@@ -95,9 +151,10 @@ public final class Npcs {
             npcType.getMethod("initialize", int.class).invoke(npc, 1);
             if (npc instanceof LivingEntity le) { le.setYHeadRot(yaw); le.setYBodyRot(yaw); }
             for (String t : tags) npc.addTag(t);
-            npc.addTag("jcl_skin_" + cls);
+            npc.addTag("jcl_skin_" + skin);
+            if (forced != null) { Entity old = level.getEntity(forced); if (old != null) old.discard(); npc.setUUID(forced); }
             level.addFreshEntity(npc);
-            applySkin(npc, cls);
+            applySkin(npc, skin);
             return npc;
         } catch (Throwable t) {
             GtsMod.LOG.error("[JCL] Could not spawn NPC jcl_gts:{}", cls, t);

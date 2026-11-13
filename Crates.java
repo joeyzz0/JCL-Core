@@ -11,12 +11,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
@@ -65,7 +67,7 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 public final class Crates {
     private Crates() {}
 
-    static final List<String> TIERS = List.of("poke", "great", "ultra", "master");
+    static final List<String> TIERS = List.of("poke", "great", "ultra", "master", "style");
 
     // ================================================================== config + data
 
@@ -80,6 +82,11 @@ public final class Crates {
         public String title;
         public int level = 30;
         public boolean shiny, legendary, jackpot;
+        public String pool = "";                 // normal, legendary, mythical, ultra_beast, paradox
+        public List<String> species = new ArrayList<>();   // pick one of these species instead of a pool
+        public int perfectIvs;                         // how many stats get 31 IVs
+        public String cosmetic;                        // for type "cosmetic"
+        String poolName() { return pool != null && !pool.isEmpty() ? pool : legendary ? "legendary" : "normal"; }
     }
 
     public static final class Crate {
@@ -223,6 +230,30 @@ public final class Crates {
                 .then(Commands.literal("preview").then(Commands.argument("tier", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(TIERS, b))
                         .executes(c -> { String t = StringArgumentType.getString(c, "tier"); if (cfg.crates.containsKey(t)) preview(c.getSource().getPlayerOrException(), t); return 1; })))
                 .then(Commands.literal("merge").executes(c -> { mergeMenu(c.getSource().getPlayerOrException()); return 1; }))
+                // admin testing: /crate debug grant <tier> <prize #>, /crate debug roll <tier> [times], /crate debug list <tier>
+                .then(Commands.literal("debug").requires(s -> s.hasPermission(2))
+                        .then(Commands.literal("list").then(Commands.argument("tier", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(TIERS, b)).executes(c -> {
+                            ServerPlayer p = c.getSource().getPlayerOrException(); Crate cr = cfg.crates.get(StringArgumentType.getString(c, "tier"));
+                            if (cr == null) { p.sendSystemMessage(Component.literal("§cUnknown tier.")); return 0; }
+                            double tot = total(cr);
+                            for (int i = 0; i < cr.rewards.size(); i++) { Reward r = cr.rewards.get(i);
+                                p.sendSystemMessage(Component.literal("§8#" + (i + 1) + " " + rarityColor(r.rarity) + r.name + " §7(" + pct(r.weight, tot) + ")")
+                                        .withStyle(st -> st.withClickEvent(new net.minecraft.network.chat.ClickEvent(net.minecraft.network.chat.ClickEvent.Action.SUGGEST_COMMAND,
+                                                "/crate debug grant " + StringArgumentType.getString(c, "tier") + " " + (cr.rewards.indexOf(r) + 1))))); }
+                            p.sendSystemMessage(Component.literal("§7Click a prize to fill in its grant command."));
+                            return 1; })))
+                        .then(Commands.literal("grant").then(Commands.argument("tier", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(TIERS, b))
+                                .then(Commands.argument("prize", IntegerArgumentType.integer(1, 999)).executes(c -> {
+                                    ServerPlayer p = c.getSource().getPlayerOrException(); Crate cr = cfg.crates.get(StringArgumentType.getString(c, "tier"));
+                                    int i = IntegerArgumentType.getInteger(c, "prize") - 1;
+                                    if (cr == null || i >= cr.rewards.size()) { p.sendSystemMessage(Component.literal("§cNo such prize. Use /crate debug list <tier>.")); return 0; }
+                                    String got = grant(p, cr.rewards.get(i));
+                                    p.sendSystemMessage(Component.literal("§6[Crate debug] §7Granted §f" + cr.rewards.get(i).name + (got == null || got.isEmpty() ? "" : " §8(" + got + ")")));
+                                    return 1; }))))
+                        .then(Commands.literal("roll").then(Commands.argument("tier", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(TIERS, b))
+                                .executes(c -> debugRoll(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "tier"), 1))
+                                .then(Commands.argument("times", IntegerArgumentType.integer(1, 10000)).executes(c ->
+                                        debugRoll(c.getSource().getPlayerOrException(), StringArgumentType.getString(c, "tier"), IntegerArgumentType.getInteger(c, "times")))))))
                 .then(Commands.literal("give").requires(s -> s.hasPermission(2))
                         .then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("tier", StringArgumentType.word()).suggests((c, b) -> SharedSuggestionProvider.suggest(TIERS, b))
                                 .then(Commands.argument("amount", IntegerArgumentType.integer(1, 640)).executes(c -> {
@@ -299,8 +330,15 @@ public final class Crates {
         return switch (r.type) {
             case "money" -> new ItemStack(r.jackpot ? Items.GOLD_BLOCK : Items.SUNFLOWER);
             case "key" -> new ItemStack(Keys.item(r.key));
-            case "pokemon" -> new ItemStack(r.legendary ? Items.TOTEM_OF_UNDYING : Items.NETHER_STAR);
+            case "pokemon" -> new ItemStack(switch (r.poolName()) {
+                case "mythical" -> resolve("cobblemon:cherish_ball");
+                case "legendary" -> resolve("cobblemon:master_ball");
+                case "ultra_beast" -> resolve("cobblemon:beast_ball");
+                case "paradox" -> resolve("cobblemon:ancient_origin_ball");
+                default -> r.species != null && !r.species.isEmpty() ? resolve("cobblemon:premier_ball") : r.shiny ? Items.NETHER_STAR : resolve("cobblemon:poke_ball");
+            });
             case "command", "title" -> new ItemStack(Items.NAME_TAG);
+            case "cosmetic" -> new ItemStack(Cosmetics.DEFS.containsKey(r.cosmetic) ? Cosmetics.DEFS.get(r.cosmetic).icon() : Items.ARMOR_STAND);
             default -> r.items.isEmpty() ? new ItemStack(Items.CHEST) : new ItemStack(resolve(r.items.get(0)), Math.max(1, Math.min(64, r.count)));
         };
     }
@@ -337,12 +375,14 @@ public final class Crates {
 
     // ================================================================== preview
 
-    static void preview(ServerPlayer p, String tier) {
+    static void preview(ServerPlayer p, String tier) { preview(p, tier, 0); }
+
+    static void preview(ServerPlayer p, String tier, int page) {
         Crate c = cfg.crates.get(tier);
         if (c == null) return;
         double tot = total(c);
         Gui.Screen s = new Gui.Screen(c.color + "§l" + c.name, 6);
-        Item edge = switch (tier) { case "great" -> Items.BLUE_STAINED_GLASS_PANE; case "ultra" -> Items.YELLOW_STAINED_GLASS_PANE; case "master" -> Items.PURPLE_STAINED_GLASS_PANE; default -> Items.RED_STAINED_GLASS_PANE; };
+        Item edge = switch (tier) { case "great" -> Items.BLUE_STAINED_GLASS_PANE; case "ultra" -> Items.YELLOW_STAINED_GLASS_PANE; case "master" -> Items.PURPLE_STAINED_GLASS_PANE; case "style" -> Items.MAGENTA_STAINED_GLASS_PANE; default -> Items.RED_STAINED_GLASS_PANE; };
         s.frame(edge, Items.BLACK_STAINED_GLASS_PANE);
 
         Map<String, Double> byRarity = new LinkedHashMap<>();
@@ -361,15 +401,29 @@ public final class Crates {
         List<String> order = List.of("legendary", "epic", "rare", "common");
         sorted.sort((a, b) -> order.indexOf(a.rarity) != order.indexOf(b.rarity) ? order.indexOf(a.rarity) - order.indexOf(b.rarity) : Double.compare(a.weight, b.weight));
         int[] grid = gridSlots();
-        for (int i = 0; i < Math.min(grid.length, sorted.size()); i++) {
-            Reward r = sorted.get(i);
+        int pages = Math.max(1, (sorted.size() + grid.length - 1) / grid.length);
+        int pg = Math.max(0, Math.min(page, pages - 1));
+        if (pg > 0) s.set(0, Gui.icon(Items.ARROW, "§e« Previous page", "§7Page " + pg + " of " + pages), pl -> preview(pl, tier, pg - 1));
+        if (pg < pages - 1) s.set(8, Gui.icon(Items.ARROW, "§eNext page »", "§7Page " + (pg + 2) + " of " + pages), pl -> preview(pl, tier, pg + 1));
+        for (int i = 0; i < grid.length && pg * grid.length + i < sorted.size(); i++) {
+            Reward r = sorted.get(pg * grid.length + i);
             List<String> lore = new ArrayList<>();
             lore.add(rarityColor(r.rarity) + "§l" + rarityName(r.rarity).toUpperCase() + (r.jackpot ? " §e§l★ JACKPOT" : ""));
             lore.add("§7Chance: §f" + pct(r.weight, tot) + " §8(1 in " + Math.max(1, Math.round(tot / Math.max(r.weight, 0.0001))) + ")");
             if ("item".equals(r.type) && r.items.size() > 1) lore.add("§7One random pick from §f" + r.items.size() + "§7 items");
+            if ("bundle".equals(r.type)) { lore.add("§7The whole set, §f" + r.items.size() + "§7 pieces:"); for (String id : r.items) lore.add("§8 • §7" + new ItemStack(resolve(id)).getHoverName().getString()); }
             if ("item".equals(r.type) || "key".equals(r.type)) lore.add("§7Amount: §f" + r.count);
             if ("title".equals(r.type)) { lore.add("§7Unlocks a chat title. Equip it with §f/titles§7."); lore.add("§8Already have it? You get " + Fmt.cd(r.money) + " instead."); }
-            if ("pokemon".equals(r.type)) lore.add("§7Level §f" + r.level + (r.shiny ? " §e✦ Shiny" : "") + (r.legendary ? " §6Legendary" : ""));
+            if ("cosmetic".equals(r.type) && Cosmetics.DEFS.containsKey(r.cosmetic)) {
+                var d = Cosmetics.DEFS.get(r.cosmetic);
+                lore.add("§7" + (d.kind().equals("trail") ? "Trainer trail" : "Pokémon aura") + " §8· §7" + d.desc());
+                lore.add("§8Duplicates refund " + Fmt.cd(r.money));
+            }
+            if ("pokemon".equals(r.type)) {
+                String pn = r.poolName();
+                String kind = switch (pn) { case "legendary" -> " §6Legendary"; case "mythical" -> " §d§lMythical"; case "ultra_beast" -> " §bUltra Beast"; case "paradox" -> " §5Paradox"; default -> ""; };
+                lore.add("§7Level §f" + r.level + (r.shiny ? " §e✦ Shiny" : "") + kind + (r.perfectIvs > 0 ? " §a" + r.perfectIvs + " perfect IVs" : ""));
+            }
             if (r.jackpot) lore.add("§8Pity never gives a jackpot. Pure luck!");
             ItemStack icon = Gui.named(iconFor(r), rarityColor(r.rarity) + r.name, lore.toArray(new String[0]));
             s.set(grid[i], "legendary".equals(r.rarity) ? Gui.glow(icon) : icon);
@@ -437,6 +491,19 @@ public final class Crates {
         ANIMS.put(p.getUUID(), a);
     }
 
+    /** Simulates opening a crate many times (no keys used, nothing given) and shows how often each rarity and prize came up. */
+    static int debugRoll(ServerPlayer p, String tier, int times) {
+        Crate cr = cfg.crates.get(tier);
+        if (cr == null) { p.sendSystemMessage(Component.literal("§cUnknown tier.")); return 0; }
+        Map<String, Integer> byRarity = new TreeMap<>(), byPrize = new HashMap<>();
+        for (int i = 0; i < times; i++) { Reward r = pick(cr.rewards); byRarity.merge(r.rarity, 1, Integer::sum); byPrize.merge(r.name, 1, Integer::sum); }
+        p.sendSystemMessage(Component.literal("§6[Crate debug] §f" + times + "§7 simulated " + tier + " openings:"));
+        for (var en : byRarity.entrySet()) p.sendSystemMessage(Component.literal("  " + rarityColor(en.getKey()) + rarityName(en.getKey()) + " §7× " + en.getValue()));
+        byPrize.entrySet().stream().sorted((a, b) -> b.getValue() - a.getValue()).limit(times == 1 ? 1 : 8)
+                .forEach(en -> p.sendSystemMessage(Component.literal("  §8• §f" + en.getKey() + " §7× " + en.getValue())));
+        return 1;
+    }
+
     static Reward pick(List<Reward> pool) {
         double tot = 0; for (Reward r : pool) tot += r.weight;
         double x = RNG.nextDouble() * tot;
@@ -446,7 +513,8 @@ public final class Crates {
 
     static Reward pickPity(Crate c) {
         List<Reward> pool = new ArrayList<>();
-        for (Reward r : c.rewards) if ("legendary".equals(r.rarity) && !r.jackpot) pool.add(r);
+        // Pity always lands on a real legendary prize: never a jackpot, and never just a key for the next crate.
+        for (Reward r : c.rewards) if ("legendary".equals(r.rarity) && !r.jackpot && !"key".equals(r.type)) pool.add(r);
         return pool.isEmpty() ? null : pick(pool);
     }
 
@@ -460,14 +528,23 @@ public final class Crates {
                 Titles.grant(p, r.title);
                 return r.name;
             }
+            case "bundle" -> {
+                for (String id : r.items) giveStack(p, new ItemStack(resolve(id), Math.max(1, r.count)));
+                return r.name;
+            }
+            case "cosmetic" -> {
+                if (!Cosmetics.give(p, r.cosmetic)) { Economy.give(p, r.money); return r.name + " (already owned, refunded " + Fmt.cd(r.money) + ")"; }
+                return r.name;
+            }
             case "command" -> {
                 for (String cmd : r.commands) server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), cmd.replace("{player}", p.getGameProfile().getName()));
                 return r.name;
             }
             case "pokemon" -> {
-                Object pk = randomPokemon(r.level, r.legendary);
+                Object pk = r.species != null && !r.species.isEmpty() ? speciesPokemon(r.species.get(RNG.nextInt(r.species.size())), r.level) : randomPokemon(r.level, r.poolName());
                 if (pk == null) { Economy.give(p, 50000); return r.name + " (refunded: 50,000)"; }
                 if (r.shiny) try { call(pk, "setShiny", true); } catch (Throwable ignored) {}
+                if (r.perfectIvs > 0) perfectIvs(pk, r.perfectIvs);
                 String name = CobblemonBridge.snapshot(pk, server.registryAccess()).title;
                 if (!CobblemonBridge.give(p, pk)) try {
                     ClaimEntry ce = new ClaimEntry();
@@ -486,34 +563,69 @@ public final class Crates {
             }
             default -> {
                 if (r.items.isEmpty()) return r.name;
-                Item it = resolve(r.items.get(RNG.nextInt(r.items.size())));
-                ItemStack s = new ItemStack(it, r.count);
-                String nm = (r.count > 1 ? r.count + "x " : "") + s.getHoverName().getString();
-                giveStack(p, s);
-                return nm;
+                if (r.items.size() == 1 || r.count <= 1) {
+                    Item it = resolve(r.items.get(RNG.nextInt(r.items.size())));
+                    ItemStack s = new ItemStack(it, Math.max(1, r.count));
+                    LAST_WON.put(p.getUUID(), new ItemStack(it));
+                    giveStack(p, s);
+                    return (r.count > 1 ? r.count + "x " : "") + s.getHoverName().getString();
+                }
+                // "2 random Mega Stones": every one is its own roll, and never the same one twice while there are others to pick
+                List<String> bag = new ArrayList<>(r.items); Collections.shuffle(bag, RNG);
+                List<String> names = new ArrayList<>();
+                for (int k = 0; k < r.count; k++) {
+                    Item it = resolve(bag.get(k % bag.size()));
+                    ItemStack s = new ItemStack(it);
+                    if (k == 0) LAST_WON.put(p.getUUID(), s.copy());
+                    giveStack(p, s); names.add(s.getHoverName().getString());
+                }
+                return String.join(" + ", names);
             }
         }
     }
 
     private static final Set<String> SPECIAL = Set.of("legendary", "mythical", "ultra_beast", "paradox");
+    /** The item actually won from a random-pick reward, so the reveal shows that item rather than the list's first. */
+    static final Map<UUID, ItemStack> LAST_WON = new HashMap<>();
 
-    static Object randomPokemon(int level, boolean legendary) {
+    static Object randomPokemon(int level, String poolName) {
         try {
             Object inst = Class.forName("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").getField("INSTANCE").get(null);
             List<Object> pool = new ArrayList<>();
             for (Object sp : (Iterable<?>) call(inst, "getImplemented")) {
-                boolean special = false, legend = false;
-                Object labels = call(sp, "getLabels");
-                if (labels instanceof Iterable<?> it) for (Object l : it) {
-                    String s = String.valueOf(l);
-                    if (SPECIAL.contains(s)) special = true;
-                    if (s.equals("legendary")) legend = true;
-                }
-                if (legendary ? legend : !special) pool.add(sp);
+                Set<String> labels = new java.util.HashSet<>();
+                Object ls = call(sp, "getLabels");
+                if (ls instanceof Iterable<?> it) for (Object l : it) labels.add(String.valueOf(l));
+                boolean special = labels.stream().anyMatch(SPECIAL::contains);
+                boolean ok = "normal".equals(poolName) ? !special : labels.contains(poolName);
+                if (ok) pool.add(sp);
             }
             if (pool.isEmpty()) return null;
             return call(pool.get(RNG.nextInt(pool.size())), "create", level);
         } catch (Throwable t) { GtsMod.LOG.error("[JCL] Could not create a crate Pokémon", t); return null; }
+    }
+
+    static Object speciesPokemon(String name, int level) {
+        try {
+            Object inst = Class.forName("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").getField("INSTANCE").get(null);
+            Object sp = call(inst, "getByName", name);
+            return sp == null ? null : call(sp, "create", level);
+        } catch (Throwable t) { GtsMod.LOG.error("[JCL] Could not create crate Pokémon {}", name, t); return null; }
+    }
+
+    /** Sets `count` random stats to 31 IVs. */
+    static void perfectIvs(Object pk, int count) {
+        try {
+            Class<?> stats = Class.forName("com.cobblemon.mod.common.api.pokemon.stats.Stats");
+            List<Object> all = new ArrayList<>();
+            for (String n : List.of("HP", "ATTACK", "DEFENCE", "SPECIAL_ATTACK", "SPECIAL_DEFENCE", "SPEED")) all.add(stats.getField(n).get(null));
+            java.util.Collections.shuffle(all, RNG);
+            for (int i = 0; i < Math.min(count, all.size()); i++) {
+                Object stat = all.get(i);
+                for (Method m : pk.getClass().getMethods())
+                    if (m.getName().equals("setIV") && m.getParameterCount() == 2) { m.invoke(pk, stat, 31); break; }
+            }
+        } catch (Throwable t) { GtsMod.LOG.warn("[JCL] Could not set perfect IVs on a crate Pokémon", t); }
     }
 
     static Object call(Object target, String name, Object... args) throws Exception {
@@ -532,7 +644,7 @@ public final class Crates {
     }
 
     private static void discord(String text) {
-        String url = GtsConfig.INSTANCE.webhookUrl;
+        String url = DiscordBridge.hook("crates");
         if (url == null || url.isBlank()) return;
         try {
             JsonObject body = new JsonObject();
@@ -589,7 +701,8 @@ public final class Crates {
         s.fill(frame);
         String head = r.jackpot ? "§e§l★★★ JACKPOT! ★★★" : "legendary".equals(r.rarity) ? "§6§l✦ LEGENDARY! ✦" : "epic".equals(r.rarity) ? "§5§lEPIC!" : "rare".equals(r.rarity) ? "§9§lRare!" : "§fYou got...";
         s.set(4, Gui.icon(r.jackpot || "legendary".equals(r.rarity) ? Items.TOTEM_OF_UNDYING : Items.NETHER_STAR, head, a.forced ? "§8Pity kicked in. Your luck turned!" : "§8Good luck next time... or did you need it?"));
-        ItemStack prize = Gui.named(iconFor(r), rarityColor(r.rarity) + "§l" + a.detail, rarityColor(r.rarity) + rarityName(r.rarity));
+        ItemStack won = "item".equals(r.type) && r.items.size() > 1 ? LAST_WON.remove(a.player.getUUID()) : null;
+        ItemStack prize = Gui.named(won != null ? won : iconFor(r), rarityColor(r.rarity) + "§l" + a.detail, rarityColor(r.rarity) + rarityName(r.rarity));
         s.set(22, "legendary".equals(r.rarity) || "epic".equals(r.rarity) ? Gui.glow(prize) : prize);
         int keys = countKeys(a.player, a.tier);
         s.set(39, keys > 0 ? Gui.glow(Gui.icon(Keys.item(a.tier), "§a§lOpen another", "§7You have §f" + keys + "§7 keys left.")) : Gui.icon(Items.GRAY_DYE, "§7No keys left"),

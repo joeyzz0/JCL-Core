@@ -1,0 +1,20 @@
+{
+  "resourceIdentifier": "cobblemon:standard",
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": false,
+  "names": [
+    "Frontier Trainer"
+  ],
+  "interaction": {
+    "type": "none"
+  },
+  "battleConfiguration": {
+    "canChallenge": true,
+    "healAfterwards": false
+  }
+}

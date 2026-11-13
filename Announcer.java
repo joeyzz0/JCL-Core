@@ -32,7 +32,7 @@ public final class Announcer {
     }
 
     public static final class Config {
-        public int version = 4;
+        public int version = 8;
         public boolean enabled = true;
         public int intervalMinutes = 8;
         public int minPlayersOnline = 1;
@@ -40,13 +40,24 @@ public final class Announcer {
         public String prefix = "§6✦ ";
         public List<Message> messages = List.of(
                 new Message(true,
+                        "§b§lThe Battle Frontier",
+                        "§7Grind CobbleDollars and BP in a dungeon of battles, from Lv. 15 to Lv. 100.",
+                        "§7Harder rules pay more. Take §f/warp frontier§7 to begin!"),
+                new Message(true,
+                        "§b§lBP Exchange",
+                        "§7Spend Battle Points on Ability Patches, Mints, raw gimmick materials",
+                        "§7and even crate keys at the Battle Frontier."),
+                new Message(true,
+                        "§d§lStyle your Pokémon",
+                        "§7Open §f/cosmetics§7 to see every cosmetic, and §f/wardrobe§7 to equip trails and auras."),
+                new Message(true,
                         "§5§lLive on Twitch",
                         "§7Legendary summons, shiny hunts and server events happen on stream.",
                         "§d▶ [twitch.tv/joeyzz0](https://twitch.tv/joeyzz0)"),
                 new Message(true,
                         "§9§lJoin the Discord",
                         "§7Live auctions, update news, events and the community all live there.",
-                        "§b▶ [Click to join](https://discord.gg/4hHNvcJagV)"),
+                        "§b▶ [Click to join](https://discord.gg/QgD4WfJ9t6)"),
                 new Message(false,
                         "§a§lVote for the server",
                         "§7Every vote helps new trainers find us, and earns you rewards.",
@@ -64,7 +75,7 @@ public final class Announcer {
                         "§7Left-click any crate to see every reward, its exact chance and your pity progress."),
                 new Message(true,
                         "§a§lTip: The shop",
-                        "§7Poké Balls, healing, training items, keys, titles and name colours are all in §f/shop§7."),
+                        "§7Poké Balls, healing, training items, keys, titles and name colors are all in §f/shop§7."),
                 new Message(true,
                         "§a§lTip: Selling",
                         "§7Hold an item and type §f/sell§7 to sell it. §f/sell all§7 sells every one you're carrying."),
@@ -88,12 +99,16 @@ public final class Announcer {
                         "§e§lTip: Shiny alerts",
                         "§7You get a ping when something rare spawns near you. Keep a Poké Ball ready!"),
                 new Message(true,
-                        "§0§l◆ §8§lThe Black Sharestone",
-                        "§7The black sharestone at spawn links every §fofficial§7 safe zone on the server.",
-                        "§7Craft your own, or use the one in Port Azure to travel."),
+                        "§b§lTip: Homes",
+                        "§7Type §f/sethome§7 anywhere to save a home, and §f/home§7 to go back.",
+                        "§7You get 3 homes, and can buy more in §f/homes§7 (up to 30)."),
                 new Message(true,
-                        "§c§l◆ Red Sharestones",
-                        "§7Red sharestones mark §fcommunity-built§7 safe zones. Both kinds can take you back to spawn."),
+                        "§b§lTip: Safe zones",
+                        "§7Official safe zones are in the §f/warp§7 menu, and player-built ones are under §cCommunity Warps§7."),
+                new Message(true,
+                        "§c§l◆ Community Warps",
+                        "§7Built a safe zone everyone can enjoy? Ask an admin or mod to make it a",
+                        "§7Community Warp, and it'll appear in §f/warp§7 for the whole server."),
                 new Message(true,
                         "§b§lTip: Getting around",
                         "§7Use §f/warp§7 for spawn, EV training, crates and the shop, §f/rtp§7 for the wild,",

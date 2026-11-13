@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 13,
   "npcs": [
     {
       "id": "guide",
@@ -8,12 +8,13 @@
       "idle": [
         "Lovely day in Port Azure, isn't it?|The sea breeze keeps the Wingull happy.",
         "Lost? Type /help any time.|And /warp will take you anywhere important.",
-        "See the black sharestone near the plaza?|It links every official safe zone. Red ones are built by the community!"
+        "Want to save a spot?|Type /sethome and /home will always bring you back!"
       ],
       "done": [
-        "Look at you, a real local now!|If you ever get lost, the black sharestone will bring you home.",
+        "Look at you, a real local now!|If you ever get lost, /spawn will bring you right back here.",
         "Off on an adventure? Remember, /spawn brings you right back here."
-      ]
+      ],
+      "service": "help"
     },
     {
       "id": "nurse",
@@ -25,7 +26,8 @@
       ],
       "done": [
         "Back again? Rest easy, your team's in good hands.|We hope to see you again!"
-      ]
+      ],
+      "service": "heal"
     },
     {
       "id": "clerk",
@@ -36,8 +38,9 @@
         "Got too much stuff?|Open /sell and drop it all in the box."
       ],
       "done": [
-        "Keys, balls, dolls... we've got it all.|Come back when your wallet's full!"
-      ]
+        "Keys, Poké Balls, Mega Stones... we've got it all.|Come back when your Wallet's full!"
+      ],
+      "service": "shop"
     },
     {
       "id": "crates",
@@ -73,7 +76,7 @@
         "Each pillar marks a stat.|HP, Attack, Defense, Sp. Atk, Sp. Def and Speed."
       ],
       "done": [
-        "Ready for another session?|Step through the gate and get to work!"
+        "Ready for another session?|The six stations are all yours. Go and get to work!"
       ]
     },
     {
@@ -99,6 +102,1213 @@
       ],
       "done": [
         "How's that Lapras treating you?|Fair winds, trainer!"
+      ],
+      "service": "warp"
+    },
+    {
+      "id": "professor",
+      "name": "&aProfessor Cedar",
+      "profession": "minecraft:librarian",
+      "idle": [
+        "Welcome to my lab! I study how Pokémon and people live together on this island.|Every entry you add to your Pokédex helps my research.",
+        "Pokémon from every region wash up on our shores.|That's what makes Port Azure such a wonderful place to study."
+      ],
+      "done": [
+        "My favourite field researcher!|How is your Pokédex coming along?"
+      ]
+    },
+    {
+      "id": "librarian",
+      "name": "&6Librarian Paige",
+      "profession": "minecraft:librarian",
+      "idle": [
+        "Shh... this is a library.|But I'll always make an exception for a curious trainer.",
+        "Looking for something?|Type /help for a guide to everything in town. It's like a book you carry in your pocket."
+      ],
+      "done": [
+        "Back for more reading?|The shelves on the left are my favourites."
+      ]
+    },
+    {
+      "id": "curator",
+      "name": "&3Curator Hale",
+      "profession": "minecraft:cartographer",
+      "idle": [
+        "Welcome to the Oceanic Museum.|Every exhibit here was found in the waters around our island.",
+        "The fossil in the main hall is our pride and joy.|The sea gives up its secrets slowly, but it always gives them up."
+      ],
+      "done": [
+        "Ah, our seasoned traveller returns.|Have you found anything worth an exhibit out there?"
+      ]
+    },
+    {
+      "id": "barista",
+      "name": "&eBarista Nina",
+      "profession": "minecraft:butcher",
+      "idle": [
+        "Welcome to the café! The sea view is on the house.|Grab a seat on the terrace and watch the ships come in.",
+        "Today's special is a berry latte.|Don't ask what's in it. Just trust me.",
+        "Hungry? Thirsty? I've got Moomoo Milk, Aprijuice, Poké Puffs and cake.|Take a look at the menu!"
+      ],
+      "done": [
+        "The usual?|Coming right up!"
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:moomoo_milk",
+          "count": 1,
+          "price": 300,
+          "name": "Moomoo Milk"
+        },
+        {
+          "item": "cobblemon:berry_juice",
+          "count": 1,
+          "price": 250,
+          "name": "Berry Juice"
+        },
+        {
+          "item": "cobblemon:aprijuice_green",
+          "count": 1,
+          "price": 350,
+          "name": "Green Aprijuice"
+        },
+        {
+          "item": "cobblemon:aprijuice_pink",
+          "count": 1,
+          "price": 350,
+          "name": "Pink Aprijuice"
+        },
+        {
+          "item": "cobblemon:poke_puff",
+          "count": 1,
+          "price": 400,
+          "name": "Poké Puff"
+        },
+        {
+          "item": "cobblemon:sweet_heart",
+          "count": 1,
+          "price": 450,
+          "name": "Sweet Heart"
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400,
+          "name": "Slice of Cake"
+        },
+        {
+          "item": "minecraft:cookie",
+          "count": 4,
+          "price": 80,
+          "name": "Cookies"
+        },
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 1,
+          "price": 120,
+          "name": "Pumpkin Pie"
+        }
+      ]
+    },
+    {
+      "id": "barista2",
+      "name": "&eBarista Leo",
+      "profession": "minecraft:butcher",
+      "idle": [
+        "Afternoon! Coffee, tea, or a glass of Moomoo Milk?|Every trainer needs a break between battles.",
+        "See the big ship by the pier?|That's the S.S. Seabreeze. She sails all over the world.",
+        "Hungry? Thirsty? I've got Moomoo Milk, Aprijuice, Poké Puffs and cake.|Take a look at the menu!"
+      ],
+      "done": [
+        "Good to see you again!|Your table by the window is free."
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:moomoo_milk",
+          "count": 1,
+          "price": 300,
+          "name": "Moomoo Milk"
+        },
+        {
+          "item": "cobblemon:berry_juice",
+          "count": 1,
+          "price": 250,
+          "name": "Berry Juice"
+        },
+        {
+          "item": "cobblemon:aprijuice_green",
+          "count": 1,
+          "price": 350,
+          "name": "Green Aprijuice"
+        },
+        {
+          "item": "cobblemon:aprijuice_pink",
+          "count": 1,
+          "price": 350,
+          "name": "Pink Aprijuice"
+        },
+        {
+          "item": "cobblemon:poke_puff",
+          "count": 1,
+          "price": 400,
+          "name": "Poké Puff"
+        },
+        {
+          "item": "cobblemon:sweet_heart",
+          "count": 1,
+          "price": 450,
+          "name": "Sweet Heart"
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400,
+          "name": "Slice of Cake"
+        },
+        {
+          "item": "minecraft:cookie",
+          "count": 4,
+          "price": 80,
+          "name": "Cookies"
+        },
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 1,
+          "price": 120,
+          "name": "Pumpkin Pie"
+        }
+      ]
+    },
+    {
+      "id": "contest_host",
+      "name": "&dHost Lumi",
+      "profession": "minecraft:cleric",
+      "idle": [
+        "Welcome to the Contest Hall!|One day this stage will host the most dazzling Pokémon shows in the league.",
+        "Beauty, cuteness, coolness, cleverness, toughness...|Every Pokémon shines in its own way!"
+      ],
+      "done": [
+        "Our star is back!|The stage is always ready for you."
+      ]
+    },
+    {
+      "id": "vendor_1",
+      "name": "&eFruit Seller Amaya",
+      "profession": "minecraft:none",
+      "idle": [
+        "Fresh from the orchard this morning!|Nothing beats a crisp apple on a long walk.",
+        "Melons are sweet this season.|Your Pokémon will love them too."
+      ],
+      "done": [
+        "Fresh from the orchard this morning!|Nothing beats a crisp apple on a long walk."
+      ],
+      "gift": {
+        "item": "minecraft:apple",
+        "count": 2,
+        "message": "First time at my stall? Here, an apple's on me!"
+      },
+      "shop": [
+        {
+          "item": "minecraft:apple",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:melon_slice",
+          "count": 8,
+          "price": 40
+        },
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 8,
+          "price": 40
+        },
+        {
+          "item": "minecraft:glow_berries",
+          "count": 4,
+          "price": 80
+        }
+      ]
+    },
+    {
+      "id": "vendor_2",
+      "name": "&eFlorist Oskar",
+      "profession": "minecraft:none",
+      "idle": [
+        "A bouquet brightens any home.",
+        "These cornflowers match the harbour on a clear day."
+      ],
+      "done": [
+        "A bouquet brightens any home."
+      ],
+      "gift": {
+        "item": "minecraft:poppy",
+        "count": 2,
+        "message": "A flower for you, to welcome you to town."
+      },
+      "shop": [
+        {
+          "item": "minecraft:poppy",
+          "count": 4,
+          "price": 40
+        },
+        {
+          "item": "minecraft:cornflower",
+          "count": 4,
+          "price": 40
+        },
+        {
+          "item": "minecraft:allium",
+          "count": 4,
+          "price": 40
+        },
+        {
+          "item": "minecraft:oxeye_daisy",
+          "count": 4,
+          "price": 40
+        }
+      ]
+    },
+    {
+      "id": "vendor_3",
+      "name": "&eBerry Picker Lucia",
+      "profession": "minecraft:none",
+      "idle": [
+        "Oran Berries are a trainer's best friend.|Keep a few on your Pokémon!",
+        "Pecha for poison, Cheri for paralysis.|I could recite them in my sleep."
+      ],
+      "done": [
+        "Oran Berries are a trainer's best friend.|Keep a few on your Pokémon!"
+      ],
+      "gift": {
+        "item": "cobblemon:oran_berry",
+        "count": 1,
+        "message": "New face! Take a berry for your partner."
+      },
+      "shop": [
+        {
+          "item": "cobblemon:oran_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:pecha_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:cheri_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:rawst_berry",
+          "count": 3,
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "vendor_4",
+      "name": "&eBaker Teo",
+      "profession": "minecraft:none",
+      "idle": [
+        "Bread's still warm. Go on, smell it!",
+        "Every cake here is baked before sunrise.|That's the secret."
+      ],
+      "done": [
+        "Bread's still warm. Go on, smell it!"
+      ],
+      "gift": {
+        "item": "minecraft:bread",
+        "count": 2,
+        "message": "A cookie for the newcomer. Fresh out of the oven!"
+      },
+      "shop": [
+        {
+          "item": "minecraft:bread",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:cookie",
+          "count": 8,
+          "price": 60
+        },
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 2,
+          "price": 120
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": "vendor_5",
+      "name": "&eApricorn Grower Mabel",
+      "profession": "minecraft:none",
+      "idle": [
+        "Every Poké Ball starts as an Apricorn.|Mine are the finest on the island!",
+        "Black Apricorns are the hardest to grow.|Worth the wait, though."
+      ],
+      "done": [
+        "Every Poké Ball starts as an Apricorn.|Mine are the finest on the island!"
+      ],
+      "gift": {
+        "item": "cobblemon:red_apricorn",
+        "count": 2,
+        "message": "Here, an Apricorn to get you started."
+      },
+      "shop": [
+        {
+          "item": "cobblemon:red_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:blue_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:yellow_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:green_apricorn",
+          "count": 4,
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "vendor_6",
+      "name": "&eTrinket Trader Rory",
+      "profession": "minecraft:none",
+      "idle": [
+        "Souvenirs from every corner of the world!|Brought back on the Seabreeze.",
+        "Fireworks for a celebration?|Or just because. Both are good reasons."
+      ],
+      "done": [
+        "Souvenirs from every corner of the world!|Brought back on the Seabreeze."
+      ],
+      "gift": {
+        "item": "minecraft:firework_rocket",
+        "count": 4,
+        "message": "Welcome to Port Azure! A little souvenir, on the house."
+      },
+      "shop": [
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 8,
+          "price": 200
+        },
+        {
+          "item": "minecraft:spyglass",
+          "count": 1,
+          "price": 600
+        },
+        {
+          "item": "minecraft:goat_horn",
+          "count": 1,
+          "price": 900
+        },
+        {
+          "item": "minecraft:name_tag",
+          "count": 1,
+          "price": 800
+        }
+      ]
+    },
+    {
+      "id": "vendor_7",
+      "name": "&eFruit Seller Ines",
+      "profession": "minecraft:none",
+      "idle": [
+        "My grandmother planted these trees.|Every bite tastes like home.",
+        "Fruit for the road?|Trainers walk a long way, you know."
+      ],
+      "done": [
+        "My grandmother planted these trees.|Every bite tastes like home."
+      ]
+    },
+    {
+      "id": "vendor_8",
+      "name": "&eFlorist Bram",
+      "profession": "minecraft:none",
+      "idle": [
+        "Flowers for someone special?|I won't ask who.",
+        "I grow them all in the gardens up north."
+      ],
+      "done": [
+        "Flowers for someone special?|I won't ask who."
+      ]
+    },
+    {
+      "id": "vendor_9",
+      "name": "&eBerry Picker Clara",
+      "profession": "minecraft:none",
+      "idle": [
+        "I grow every berry on this island myself.|The soil here is something special.",
+        "A Sitrus Berry has saved more battles than I can count."
+      ],
+      "done": [
+        "I grow every berry on this island myself.|The soil here is something special."
+      ]
+    },
+    {
+      "id": "vendor_10",
+      "name": "&eBaker Dario",
+      "profession": "minecraft:none",
+      "idle": [
+        "My cookies are famous all the way to the lighthouse.",
+        "A slice of pie after a long battle?|You've earned it."
+      ],
+      "done": [
+        "My cookies are famous all the way to the lighthouse."
+      ]
+    },
+    {
+      "id": "vendor_11",
+      "name": "&eApricorn Grower Elsie",
+      "profession": "minecraft:none",
+      "idle": [
+        "Take these to the Ball Workshop and see what they become.",
+        "Every Poké Ball starts as an Apricorn.|Mine are the finest on the island!"
+      ],
+      "done": [
+        "Take these to the Ball Workshop and see what they become."
+      ]
+    },
+    {
+      "id": "vendor_12",
+      "name": "&eTrinket Trader Felix",
+      "profession": "minecraft:none",
+      "idle": [
+        "This spyglass came from a real pirate ship.|Probably.",
+        "Something to remember Port Azure by?"
+      ],
+      "done": [
+        "This spyglass came from a real pirate ship.|Probably."
+      ]
+    },
+    {
+      "id": "vendor_13",
+      "name": "&eFruit Seller Greta",
+      "profession": "minecraft:none",
+      "idle": [
+        "The glow berries came in from the caves.|They light up a dark night, too.",
+        "Ask any Nurse Joy: a balanced diet makes a happy trainer."
+      ],
+      "done": [
+        "The glow berries came in from the caves.|They light up a dark night, too."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 8,
+          "price": 40
+        },
+        {
+          "item": "minecraft:glow_berries",
+          "count": 4,
+          "price": 80
+        },
+        {
+          "item": "minecraft:golden_apple",
+          "count": 1,
+          "price": 2500
+        },
+        {
+          "item": "minecraft:apple",
+          "count": 4,
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "vendor_14",
+      "name": "&eFlorist Hamish",
+      "profession": "minecraft:none",
+      "idle": [
+        "A bouquet brightens any home.",
+        "These cornflowers match the harbour on a clear day."
+      ],
+      "done": [
+        "A bouquet brightens any home."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:allium",
+          "count": 4,
+          "price": 40
+        },
+        {
+          "item": "minecraft:oxeye_daisy",
+          "count": 4,
+          "price": 40
+        },
+        {
+          "item": "minecraft:sunflower",
+          "count": 2,
+          "price": 80
+        },
+        {
+          "item": "minecraft:flowering_azalea",
+          "count": 1,
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "vendor_15",
+      "name": "&eBerry Picker Iris",
+      "profession": "minecraft:none",
+      "idle": [
+        "Berries taste different to every Pokémon.|Watch their faces when they eat!",
+        "Plant one, and you'll have a whole bush by next week."
+      ],
+      "done": [
+        "Berries taste different to every Pokémon.|Watch their faces when they eat!"
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:cheri_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:rawst_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:sitrus_berry",
+          "count": 2,
+          "price": 400
+        },
+        {
+          "item": "cobblemon:leppa_berry",
+          "count": 2,
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "vendor_16",
+      "name": "&eBaker Jonah",
+      "profession": "minecraft:none",
+      "idle": [
+        "Flour, butter and a little Moomoo Milk.|That's all it takes.",
+        "The baristas buy my cookies for the café.|Don't tell them I told you!"
+      ],
+      "done": [
+        "Flour, butter and a little Moomoo Milk.|That's all it takes."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 2,
+          "price": 120
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:cookie",
+          "count": 8,
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "vendor_17",
+      "name": "&eApricorn Grower Kenji",
+      "profession": "minecraft:none",
+      "idle": [
+        "Black Apricorns are the hardest to grow.|Worth the wait, though.",
+        "Take these to the Ball Workshop and see what they become."
+      ],
+      "done": [
+        "Black Apricorns are the hardest to grow.|Worth the wait, though."
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:yellow_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:green_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:pink_apricorn",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "cobblemon:black_apricorn",
+          "count": 2,
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "vendor_18",
+      "name": "&eTrinket Trader Lottie",
+      "profession": "minecraft:none",
+      "idle": [
+        "Every trinket here has a story.|Ask me about any of them!",
+        "Goat horns! Very loud. Very popular with children."
+      ],
+      "done": [
+        "Every trinket here has a story.|Ask me about any of them!"
+      ],
+      "shop": [
+        {
+          "item": "minecraft:goat_horn",
+          "count": 1,
+          "price": 900
+        },
+        {
+          "item": "minecraft:name_tag",
+          "count": 1,
+          "price": 800
+        },
+        {
+          "item": "minecraft:painting",
+          "count": 1,
+          "price": 150
+        },
+        {
+          "item": "minecraft:bundle",
+          "count": 1,
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "vendor_19",
+      "name": "&eFishmonger Mateo",
+      "profession": "minecraft:none",
+      "idle": [
+        "Caught at dawn off the east pier!",
+        "The fish practically jump into the boat around here."
+      ],
+      "done": [
+        "Caught at dawn off the east pier!"
+      ],
+      "gift": {
+        "item": "minecraft:cod",
+        "count": 2,
+        "message": "A fresh catch for a fresh face!"
+      },
+      "shop": [
+        {
+          "item": "minecraft:cod",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:salmon",
+          "count": 4,
+          "price": 80
+        },
+        {
+          "item": "minecraft:cooked_cod",
+          "count": 4,
+          "price": 100
+        },
+        {
+          "item": "minecraft:cooked_salmon",
+          "count": 4,
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "vendor_20",
+      "name": "&eApothecary Nell",
+      "profession": "minecraft:none",
+      "idle": [
+        "A Potion for every problem.|Well, almost every problem.",
+        "Never leave town without an Antidote.|Trust an old apothecary."
+      ],
+      "done": [
+        "A Potion for every problem.|Well, almost every problem."
+      ],
+      "gift": {
+        "item": "cobblemon:potion",
+        "count": 1,
+        "message": "A Potion for the road. Every trainer should carry one."
+      },
+      "shop": [
+        {
+          "item": "cobblemon:potion",
+          "count": 2,
+          "price": 300
+        },
+        {
+          "item": "cobblemon:super_potion",
+          "count": 1,
+          "price": 700
+        },
+        {
+          "item": "cobblemon:antidote",
+          "count": 2,
+          "price": 200
+        },
+        {
+          "item": "cobblemon:burn_heal",
+          "count": 2,
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "vendor_21",
+      "name": "&eTrinket Trader Otis",
+      "profession": "minecraft:none",
+      "idle": [
+        "Souvenirs from every corner of the world!|Brought back on the Seabreeze.",
+        "Fireworks for a celebration?|Or just because. Both are good reasons."
+      ],
+      "done": [
+        "Souvenirs from every corner of the world!|Brought back on the Seabreeze."
+      ],
+      "gift": {
+        "item": "minecraft:name_tag",
+        "count": 1,
+        "message": "Welcome to Port Azure! A little souvenir, on the house."
+      },
+      "shop": [
+        {
+          "item": "minecraft:name_tag",
+          "count": 1,
+          "price": 800
+        },
+        {
+          "item": "minecraft:painting",
+          "count": 1,
+          "price": 150
+        },
+        {
+          "item": "minecraft:bundle",
+          "count": 1,
+          "price": 300
+        },
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 8,
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "vendor_22",
+      "name": "&eFruit Seller Priya",
+      "profession": "minecraft:none",
+      "idle": [
+        "Fresh from the orchard this morning!|Nothing beats a crisp apple on a long walk.",
+        "Melons are sweet this season.|Your Pokémon will love them too."
+      ],
+      "done": [
+        "Fresh from the orchard this morning!|Nothing beats a crisp apple on a long walk."
+      ],
+      "gift": {
+        "item": "minecraft:glow_berries",
+        "count": 2,
+        "message": "First time at my stall? Here, an apple's on me!"
+      },
+      "shop": [
+        {
+          "item": "minecraft:glow_berries",
+          "count": 4,
+          "price": 80
+        },
+        {
+          "item": "minecraft:golden_apple",
+          "count": 1,
+          "price": 2500
+        },
+        {
+          "item": "minecraft:apple",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:melon_slice",
+          "count": 8,
+          "price": 40
+        }
+      ]
+    },
+    {
+      "id": "vendor_23",
+      "name": "&eBerry Picker Quinn",
+      "profession": "minecraft:none",
+      "idle": [
+        "Oran Berries are a trainer's best friend.|Keep a few on your Pokémon!",
+        "Pecha for poison, Cheri for paralysis.|I could recite them in my sleep."
+      ],
+      "done": [
+        "Oran Berries are a trainer's best friend.|Keep a few on your Pokémon!"
+      ],
+      "gift": {
+        "item": "cobblemon:rawst_berry",
+        "count": 1,
+        "message": "New face! Take a berry for your partner."
+      },
+      "shop": [
+        {
+          "item": "cobblemon:rawst_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:sitrus_berry",
+          "count": 2,
+          "price": 400
+        },
+        {
+          "item": "cobblemon:leppa_berry",
+          "count": 2,
+          "price": 300
+        },
+        {
+          "item": "cobblemon:oran_berry",
+          "count": 3,
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "vendor_24",
+      "name": "&eBaker Rosa",
+      "profession": "minecraft:none",
+      "idle": [
+        "Bread's still warm. Go on, smell it!",
+        "Every cake here is baked before sunrise.|That's the secret."
+      ],
+      "done": [
+        "Bread's still warm. Go on, smell it!"
+      ],
+      "gift": {
+        "item": "minecraft:cake",
+        "count": 1,
+        "message": "A cookie for the newcomer. Fresh out of the oven!"
+      },
+      "shop": [
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:cookie",
+          "count": 8,
+          "price": 60
+        },
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 2,
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "vendor_25",
+      "name": "&eFishmonger Silas",
+      "profession": "minecraft:none",
+      "idle": [
+        "Salmon, cod, something tropical?|The sea's been generous today.",
+        "Caught at dawn off the east pier!"
+      ],
+      "done": [
+        "Salmon, cod, something tropical?|The sea's been generous today."
+      ]
+    },
+    {
+      "id": "vendor_26",
+      "name": "&eApothecary Tamsin",
+      "profession": "minecraft:none",
+      "idle": [
+        "Nurse Joy and I trade notes.|Don't tell her I said that.",
+        "A Potion for every problem.|Well, almost every problem."
+      ],
+      "done": [
+        "Nurse Joy and I trade notes.|Don't tell her I said that."
+      ]
+    },
+    {
+      "id": "vendor_27",
+      "name": "&eTrinket Trader Ugo",
+      "profession": "minecraft:none",
+      "idle": [
+        "This spyglass came from a real pirate ship.|Probably.",
+        "Something to remember Port Azure by?"
+      ],
+      "done": [
+        "This spyglass came from a real pirate ship.|Probably."
+      ]
+    },
+    {
+      "id": "vendor_28",
+      "name": "&eFruit Seller Vera",
+      "profession": "minecraft:none",
+      "idle": [
+        "My grandmother planted these trees.|Every bite tastes like home.",
+        "Fruit for the road?|Trainers walk a long way, you know."
+      ],
+      "done": [
+        "My grandmother planted these trees.|Every bite tastes like home."
+      ]
+    },
+    {
+      "id": "vendor_29",
+      "name": "&eBerry Picker Wes",
+      "profession": "minecraft:none",
+      "idle": [
+        "I grow every berry on this island myself.|The soil here is something special.",
+        "A Sitrus Berry has saved more battles than I can count."
+      ],
+      "done": [
+        "I grow every berry on this island myself.|The soil here is something special."
+      ]
+    },
+    {
+      "id": "vendor_30",
+      "name": "&eBaker Yara",
+      "profession": "minecraft:none",
+      "idle": [
+        "My cookies are famous all the way to the lighthouse.",
+        "A slice of pie after a long battle?|You've earned it."
+      ],
+      "done": [
+        "My cookies are famous all the way to the lighthouse."
+      ]
+    },
+    {
+      "id": "vendor_31",
+      "name": "&eFishmonger Zane",
+      "profession": "minecraft:none",
+      "idle": [
+        "The fish practically jump into the boat around here.",
+        "Salmon, cod, something tropical?|The sea's been generous today."
+      ],
+      "done": [
+        "The fish practically jump into the boat around here."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:cooked_cod",
+          "count": 4,
+          "price": 100
+        },
+        {
+          "item": "minecraft:cooked_salmon",
+          "count": 4,
+          "price": 120
+        },
+        {
+          "item": "minecraft:tropical_fish",
+          "count": 1,
+          "price": 150
+        },
+        {
+          "item": "minecraft:cod",
+          "count": 4,
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "vendor_32",
+      "name": "&eApothecary Ada",
+      "profession": "minecraft:none",
+      "idle": [
+        "Never leave town without an Antidote.|Trust an old apothecary.",
+        "Nurse Joy and I trade notes.|Don't tell her I said that."
+      ],
+      "done": [
+        "Never leave town without an Antidote.|Trust an old apothecary."
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:antidote",
+          "count": 2,
+          "price": 200
+        },
+        {
+          "item": "cobblemon:burn_heal",
+          "count": 2,
+          "price": 200
+        },
+        {
+          "item": "cobblemon:paralyze_heal",
+          "count": 2,
+          "price": 200
+        },
+        {
+          "item": "cobblemon:awakening",
+          "count": 2,
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "vendor_33",
+      "name": "&eTrinket Trader Bodhi",
+      "profession": "minecraft:none",
+      "idle": [
+        "Every trinket here has a story.|Ask me about any of them!",
+        "Goat horns! Very loud. Very popular with children."
+      ],
+      "done": [
+        "Every trinket here has a story.|Ask me about any of them!"
+      ],
+      "shop": [
+        {
+          "item": "minecraft:bundle",
+          "count": 1,
+          "price": 300
+        },
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 8,
+          "price": 200
+        },
+        {
+          "item": "minecraft:spyglass",
+          "count": 1,
+          "price": 600
+        },
+        {
+          "item": "minecraft:goat_horn",
+          "count": 1,
+          "price": 900
+        }
+      ]
+    },
+    {
+      "id": "vendor_34",
+      "name": "&eFruit Seller Cleo",
+      "profession": "minecraft:none",
+      "idle": [
+        "The glow berries came in from the caves.|They light up a dark night, too.",
+        "Ask any Nurse Joy: a balanced diet makes a happy trainer."
+      ],
+      "done": [
+        "The glow berries came in from the caves.|They light up a dark night, too."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:apple",
+          "count": 4,
+          "price": 60
+        },
+        {
+          "item": "minecraft:melon_slice",
+          "count": 8,
+          "price": 40
+        },
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 8,
+          "price": 40
+        },
+        {
+          "item": "minecraft:glow_berries",
+          "count": 4,
+          "price": 80
+        }
+      ]
+    },
+    {
+      "id": "vendor_35",
+      "name": "&eBerry Picker Dex",
+      "profession": "minecraft:none",
+      "idle": [
+        "Berries taste different to every Pokémon.|Watch their faces when they eat!",
+        "Plant one, and you'll have a whole bush by next week."
+      ],
+      "done": [
+        "Berries taste different to every Pokémon.|Watch their faces when they eat!"
+      ],
+      "shop": [
+        {
+          "item": "cobblemon:leppa_berry",
+          "count": 2,
+          "price": 300
+        },
+        {
+          "item": "cobblemon:oran_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:pecha_berry",
+          "count": 3,
+          "price": 150
+        },
+        {
+          "item": "cobblemon:cheri_berry",
+          "count": 3,
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "vendor_36",
+      "name": "&eBaker Esme",
+      "profession": "minecraft:none",
+      "idle": [
+        "Flour, butter and a little Moomoo Milk.|That's all it takes.",
+        "The baristas buy my cookies for the café.|Don't tell them I told you!"
+      ],
+      "done": [
+        "Flour, butter and a little Moomoo Milk.|That's all it takes."
+      ],
+      "shop": [
+        {
+          "item": "minecraft:cookie",
+          "count": 8,
+          "price": 60
+        },
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 2,
+          "price": 120
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 1,
+          "price": 400
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4,
+          "price": 60
+        }
       ]
     }
   ],
@@ -111,48 +1321,48 @@
       "steps": [
         {
           "npc": "guide",
-          "where": "by the fountain in the Grand Plaza",
+          "where": "at the info pavilion, north-west of the plaza",
           "lines": [
             "Oh! A new face! Welcome to Port Azure, {player}!",
             "> Thanks! Where am I?",
             "You're on our little island town in the middle of the sea.",
             "I'm Mae, the town guide. I help new trainers find their feet.",
             "The best way to learn the town is to meet everyone who runs it.",
-            "Start with Nurse Joy at the Pokémon Center. It's the big building with the red roof, north of here.",
+            "Start with Nurse Joy at the Pokémon Center. It's the big building with the red roof, at the north end of the Grand Avenue.",
             "Oh, and one more thing...",
-            "Once you've met everyone, find Captain Marlo down at the docks. He has a surprise for you!"
+            "Once you've met everyone, find Captain Marlo down at the ferry pier. He has a surprise for you!"
           ],
           "after": []
         },
         {
           "npc": "nurse",
-          "where": "inside the Pokémon Center (red roof, north of the plaza)",
+          "where": "inside the Pokémon Center (red roof, at the north end of the Grand Avenue)",
           "lines": [
             "Hello, and welcome to the Pokémon Center!",
             "> Mae sent me. I'm new in town!",
             "How wonderful! We heal Pokémon here, free of charge, any time you need.",
-            "You'll find the GTS and Wonder Trade kiosks here too, for trading with other trainers.",
-            "And please do read the server rules on the wall.",
-            "Next, you should meet Ollie at the Poké Mart. It's the building with the blue roof, to the north-west."
+            "You'll find the GTS and Wonder Trade machines along the east wall, for trading with other trainers.",
+            "And please do read the server rules on the board in the plaza.",
+            "Next, you should meet Ollie at the department store. It's the big building with the blue band, west of the plaza."
           ],
           "after": []
         },
         {
           "npc": "clerk",
-          "where": "inside the Poké Mart (blue roof, north-west of the plaza)",
+          "where": "inside the department store (blue band, west of the plaza)",
           "lines": [
-            "Welcome to the Poké Mart! What can I get you?",
+            "Welcome to the department store! What can I get you?",
             "> Just looking around. Nurse Joy sent me.",
             "Ah, a newcomer! Let me tell you how things work.",
             "Type /shop to see everything we sell: Poké Balls, healing, keys, titles, all sorts.",
             "And if your bag's getting heavy, /sell opens a box you can drop everything into.",
-            "Rin runs the crates across the plaza. Go and try your luck!"
+            "Rin runs the Crate Pavilion, north-east of the plaza. Go and try your luck!"
           ],
           "after": []
         },
         {
           "npc": "crates",
-          "where": "at the Crate Pavilion (east of the plaza)",
+          "where": "at the Crate Pavilion (north-east of the plaza)",
           "lines": [
             "Step right up! Feeling lucky?",
             "> What are these crates?",
@@ -160,55 +1370,55 @@
             "Left-click any crate to see every reward and its exact chance.",
             "Hold the matching key and right-click to open it.",
             "Keys come from chores, quests, loot balls and the shop.",
-            "Wren keeps the Hall of Fame up north-east. Go see who's on top!"
+            "Wren keeps the Hall of Champions, on the north side of the plaza. Go see who's on top!"
           ],
           "after": []
         },
         {
           "npc": "archivist",
-          "where": "at the Hall of Fame (north-east)",
+          "where": "at the Hall of Champions (north side of the plaza)",
           "lines": [
-            "Ah, a visitor to the Hall of Fame.",
+            "Ah, a visitor to the Hall of Champions.",
             "> What are all these boards?",
             "These boards track the town's greatest trainers.",
             "Most Pokémon caught, most trainers beaten, and the richest trainers of all time.",
             "The first two reset every month, so anyone can make it up here.",
-            "The world map board sits by the south road, if you want to pin your base.",
-            "Tess trains Pokémon at the EV gate on the west side of town. She can make your team stronger."
+            "The world map hangs in the Warp Station, east of the plaza, if you want to pin your base.",
+            "Tess trains Pokémon at the EV Training Center on North Row. Look for the orange band. She can make your team stronger."
           ],
           "after": []
         },
         {
           "npc": "coach",
-          "where": "at the EV Training gate (west side of town)",
+          "where": "inside the EV Training Center (orange band, on North Row)",
           "lines": [
             "Ready to get stronger?",
             "> Wren said you could help me train.",
             "She's right! Do you know about EVs?",
             "Every Pokémon you defeat gives your team a little training in one stat.",
-            "Step through this gate to reach the training grounds. Each area trains a different stat.",
+            "Each of the six stations in here trains a different stat.",
             "Pair it with a Power item and you'll train twice as fast.",
-            "Kai referees battles at the Trainer Court. Go and say hi!"
+            "Kai referees battles at the Tournament Arena, in the north-east corner of the island. Go and say hi!"
           ],
           "after": []
         },
         {
           "npc": "referee",
-          "where": "at the Trainer Court (south-east)",
+          "where": "at the Tournament Arena (north-east corner of the island)",
           "lines": [
             "Halt! Who goes there?",
             "> I'm {player}. I'm new in town.",
             "Ha! Just kidding. Welcome!",
-            "This is the Trainer Court, where trainers settle their battles.",
+            "This is the Tournament Arena, where trainers settle their battles.",
             "Challenge a friend any time. Battle fair, and shake hands after.",
             "I think you've met just about everyone now.",
-            "Except one. Head down to the harbour and find Captain Marlo at the end of the pier."
+            "Except one. Head down to the harbour and find Captain Marlo at the ferry pier."
           ],
           "after": []
         },
         {
           "npc": "captain",
-          "where": "at the end of the harbour pier (south)",
+          "where": "at the ferry pier, by the S.S. Seabreeze (south harbour)",
           "lines": [
             "Ahoy there! You must be the newcomer everyone's talking about.",
             "> Mae said you had a surprise for me?",
@@ -234,6 +1444,96 @@
           "maxRideStats": true
         },
         "message": "Captain Marlo gave you a Lapras with maxed riding stats, and 2,500 CobbleDollars!"
+      }
+    },
+    {
+      "id": "frontier_ticket",
+      "name": "Ticket to the Frontier",
+      "description": "Earn your passage to the Battle Frontier.",
+      "requires": "welcome_tour",
+      "repeatable": false,
+      "steps": [
+        {
+          "npc": "captain",
+          "where": "at the ferry pier, by the S.S. Seabreeze",
+          "lines": [
+            "Ahoy, {player}! Settling in all right?",
+            "> I keep hearing about a place called the Battle Frontier.",
+            "Ha! Every trainer does, sooner or later.",
+            "The Seabreeze sails there, but only stamped tickets go up the gangway. Captain's rules.",
+            "Here's a blank one. Three boxes, three stamps.",
+            "Referee Kai, Nurse Joy and Curator Hale. Earn all three, then bring it back to me."
+          ],
+          "after": []
+        },
+        {
+          "npc": "referee",
+          "where": "at the Tournament Arena (north-east corner of the island)",
+          "require": "win_battle",
+          "task": "Win a battle against a trainer or another player",
+          "notyet": [
+            "A Frontier ticket? Blank as the day it was printed!",
+            "> Marlo said you could stamp it.",
+            "Only once you've earned it. Win a battle against a trainer or another player, then come back to me.",
+            "Wild Pokémon don't count. I want to see you outbattle someone!"
+          ],
+          "lines": [
+            "There it is! You battled like a real competitor.",
+            "> So you'll stamp it?",
+            "One stamp, right there. Wear it proudly.",
+            "Nurse Joy will want to check your team before a long voyage. Go and see her."
+          ],
+          "after": []
+        },
+        {
+          "npc": "nurse",
+          "where": "inside the Pokémon Center",
+          "heal": true,
+          "lines": [
+            "Oh my, a voyage to the Battle Frontier?",
+            "> Kai said you'd check my team first.",
+            "Of course! Let me take a look...",
+            "Happy, healthy and ready for anything. I'll heal them up for the trip all the same.",
+            "There's your second stamp. Curator Hale at the Oceanic Museum has the last one."
+          ],
+          "after": []
+        },
+        {
+          "npc": "curator",
+          "where": "inside the Oceanic Museum (north-west corner of the island)",
+          "require": "visit:frontier_plaque",
+          "task": "Find the Battle Frontier exhibit in the museum",
+          "notyet": [
+            "The Battle Frontier? Now there's a story.",
+            "> I need your stamp for my ticket.",
+            "Not so fast! A traveller should know where they're going.",
+            "Find the Battle Frontier exhibit here in the museum and read it. Then come back to me."
+          ],
+          "lines": [
+            "So, you found the exhibit. What did you make of it?",
+            "> An island where the battles never stop?",
+            "Built by trainers who wanted to face the very best. Few have ever reached the end.",
+            "Here's your final stamp. Captain Marlo will be waiting at the pier."
+          ],
+          "after": []
+        },
+        {
+          "npc": "captain",
+          "where": "at the ferry pier, by the S.S. Seabreeze",
+          "lines": [
+            "Three stamps! Kai, Joy and Hale. You did it, {player}.",
+            "> So I can come aboard?",
+            "Hand it over... There. The ticket's mine now, and your cabin's ready.",
+            "All aboard the S.S. Seabreeze! Next stop: the Battle Frontier!"
+          ],
+          "after": []
+        }
+      ],
+      "reward": {
+        "money": 0,
+        "commands": [],
+        "message": "From now on, /warp frontier takes you straight to the Battle Frontier.",
+        "sailTo": "frontier"
       }
     }
   ]

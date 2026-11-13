@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.78'
 }
 
-version = '2.0.0'
+version = '2.4.28'
 group = 'net.joeyscobblemon'
 
 base {
@@ -30,20 +30,48 @@ sourceSets {
     }
 }
 
+// One item model per Style Ticket, generated from tickets.json at build time
+tasks.register('genTicketModels') {
+    def src = file('tickets.json')
+    def outDir = file("$buildDir/generated/tickets")
+    inputs.file src
+    outputs.dir outDir
+    doLast {
+        def list = new groovy.json.JsonSlurper().parse(src).tickets
+        list.each { t ->
+            def f = new File(outDir, "assets/jcl_gts/models/item/${t.id}.json")
+            f.parentFile.mkdirs()
+            f.text = '{"parent":"minecraft:item/generated","textures":{"layer0":"jcl_gts:item/style_ticket_' + t.rarity + '"}}'
+        }
+    }
+}
+
 processResources {
+    dependsOn 'genTicketModels'
+    from("$buildDir/generated/tickets")
+    from('tickets.json') { into 'jcl' }
+    from('cosmetics_free.json') { into 'jcl' }
+    from('frontier_rooms') { into 'jcl/frontier_rooms' }
+    from(['style_ticket_common.png', 'style_ticket_rare.png', 'style_ticket_epic.png', 'style_ticket_legendary.png']) { into 'assets/jcl_gts/textures/item' }
     from('neoforge.mods.toml') { into 'META-INF' }
-    from(['poke_key.png', 'great_key.png', 'ultra_key.png', 'master_key.png', 'crate_remover.png']) { into 'assets/jcl_gts/textures/item' }
-    from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json', 'crate_remover.json']) { into 'assets/jcl_gts/models/item' }
+    from(['poke_key.png', 'great_key.png', 'ultra_key.png', 'master_key.png', 'style_key.png', 'crate_remover.png']) { into 'assets/jcl_gts/textures/item' }
+    from(['poke_key.json', 'great_key.json', 'ultra_key.json', 'master_key.json', 'style_key.json', 'crate_remover.json']) { into 'assets/jcl_gts/models/item' }
     from('en_us.json') { into 'assets/jcl_gts/lang' }
-    from(['crates.json', 'shop.json', 'titles.json', 'jobs.json', 'help.json']) { into 'jcl_defaults' }
+    from(['crates.json', 'shop.json', 'titles.json', 'jobs.json', 'help.json', 'locked_items.json', 'frontier.json']) { into 'jcl_defaults' }
     from('.') { include 'npc_*.json'; into 'data/jcl_gts/npcs'; rename('npc_(.*)', '$1') }
     from('.') { include 'dialogue_*.json'; into 'data/jcl_gts/dialogues'; rename('dialogue_(.*)', '$1') }
     from('.') { include 'skin_*.png'; into 'jcl_skins'; rename('skin_(.*)', '$1') }
     from('spawn_layout.json') { into 'jcl' }
+    from('jcl_gts.mixins.json')
+    from(['frontier_teams.json', 'frontier_quests.json']) { into 'jcl' }
+    from('dim_frontier.json') { into 'data/jcl_gts/dimension'; rename { 'frontier.json' } }
+    from('dimtype_frontier.json') { into 'data/jcl_gts/dimension_type'; rename { 'frontier.json' } }
+    from('glm_strip_locked.json') { into 'data/jcl_gts/loot_modifiers'; rename { 'strip_locked.json' } }
+    from('glm_list.json') { into 'data/neoforge/loot_modifiers'; rename { 'global_loot_modifiers.json' } }
 }
 
 neoForge {
-    version = '21.1.262'
+    version = '21.1.265'
     runs {
         server {
             server()

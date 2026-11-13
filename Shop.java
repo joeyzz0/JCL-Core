@@ -44,6 +44,47 @@ public final class Shop {
         public List<String> commands = new ArrayList<>();
         public int limit;              // 0 = no limit
         public String period = "none"; // none, week, month, once
+        public List<String> cost = new ArrayList<>();   // items taken on purchase, e.g. "mega_showdown:mega_stone 1"
+    }
+
+    /** A material: any one of several accepted items ("a|b|c 1" in the cost list), so any variety counts. */
+    record Need(List<net.minecraft.world.item.Item> items, int count) {
+        net.minecraft.world.item.Item item() { return items.get(0); }
+        boolean matches(ItemStack st) { for (var it : items) if (st.is(it)) return true; return false; }
+    }
+
+    static List<Need> needs(Entry e) {
+        List<Need> out = new ArrayList<>();
+        if (e.cost != null) for (String c : e.cost) {
+            String[] parts = c.trim().split("\\s+");
+            int n = parts.length > 1 ? Integer.parseInt(parts[1]) : 1;
+            List<net.minecraft.world.item.Item> alts = new ArrayList<>();
+            for (String id : parts[0].split("\\|")) { var it = Crates.resolve(id); if (it != null && it != net.minecraft.world.item.Items.AIR) alts.add(it); }
+            if (!alts.isEmpty()) out.add(new Need(alts, n));
+        }
+        return out;
+    }
+
+    static int have(ServerPlayer p, Need nd) {
+        int n = 0;
+        for (ItemStack st : p.getInventory().items) if (nd.matches(st)) n += st.getCount();
+        return n;
+    }
+
+    static boolean hasAll(ServerPlayer p, Entry e) {
+        for (Need nd : needs(e)) if (have(p, nd) < nd.count()) return false;
+        return true;
+    }
+
+    static void takeAll(ServerPlayer p, Entry e) {
+        for (Need nd : needs(e)) {
+            int left = nd.count();
+            for (ItemStack st : p.getInventory().items) {
+                if (left <= 0) break;
+                if (!nd.matches(st)) continue;
+                int t = Math.min(left, st.getCount()); st.shrink(t); left -= t;
+            }
+        }
     }
 
     public static final class Category {
@@ -123,19 +164,19 @@ public final class Shop {
     // ================================================================== screens
 
     static void main(ServerPlayer p) {
-        Gui.Screen s = new Gui.Screen("§6§l🛒 League Shop", 4);
+        Gui.Screen s = new Gui.Screen("§6§l🛒 League Shop", 5);
         s.frame(Items.ORANGE_STAINED_GLASS_PANE, Items.YELLOW_STAINED_GLASS_PANE);
         long bal = Economy.balance(p);
         s.set(4, Gui.glow(Gui.icon(Items.GOLD_INGOT, "§6§lLeague Shop", "§7Your balance: §6" + (bal >= 0 ? Fmt.cd(bal) : "?"), "",
                 "§7Everything here costs CobbleDollars", "§7you earn by playing. §lNever pay-to-win.")));
-        int[] slots = {10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25};
+        int[] slots = {10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34};
         for (int i = 0; i < Math.min(slots.length, cfg.categories.size()); i++) {
             Category c = cfg.categories.get(i);
             int idx = i;
             s.set(slots[i], Gui.icon(Crates.resolve(c.icon), c.name, "§7" + c.items.size() + " items", "", "§e▶ Click to browse"), pl -> category(pl, idx));
         }
-        s.set(30, Gui.icon(Items.ANVIL, "§d§lMerge crate keys", "§7Upgrade your keys for a fee."), pl -> Crates.mergeMenu(pl));
-        s.set(32, Gui.glow(Gui.icon(Items.HOPPER, "§a§lSell items", "§7Open the sell box and drop", "§7in everything you want to sell.", "", "§8Also: /sell, /sell hand, /sell all")), Sell::open);
+        s.set(39, Gui.icon(Items.ANVIL, "§d§lMerge crate keys", "§7Upgrade your keys for a fee."), pl -> Crates.mergeMenu(pl));
+        s.set(41, Gui.glow(Gui.icon(Items.HOPPER, "§a§lSell items", "§7Open the sell box and drop", "§7in everything you want to sell.", "", "§8Also: /sell, /sell hand, /sell all")), Sell::open);
         Gui.open(p, s);
     }
 
@@ -157,15 +198,27 @@ public final class Shop {
             List<String> lore = new ArrayList<>();
             if (!e.description.isEmpty()) { lore.add("§7" + e.description); lore.add(""); }
             lore.add("§7Price: §6" + Fmt.cd(e.price));
+            boolean items = true;
+            List<Need> nds = needs(e);
+            if (!nds.isEmpty()) {
+                lore.add("§7Also needs:");
+                for (Need nd : nds) {
+                    int h = have(p, nd);
+                    if (h < nd.count()) items = false;
+                    lore.add((h >= nd.count() ? " §a✔ " : " §c✘ ") + "§f" + nd.count() + "× " + new ItemStack(nd.item()).getHoverName().getString()
+                            + (nd.items().size() > 1 ? " §7(or any variety)" : "") + " §8(" + Math.min(h, 999) + "/" + nd.count() + ")");
+                }
+            }
             if (e.limit > 0) {
                 int b = bought(p, cat, e);
                 lore.add("§7Limit: §f" + b + " / " + e.limit + " " + periodWord(e.period));
             }
             boolean armed = (cat + "/" + e.name).equals(CONFIRM.get(p.getUUID().toString()));
             lore.add("");
-            lore.add(armed ? "§6§l⚠ Click again to confirm" : bal >= e.price ? "§a▶ Click to buy" : "§cYou can't afford this yet.");
+            lore.add(armed ? "§6§l⚠ Click again to confirm" : bal < e.price ? "§cYou can't afford this yet." : !items ? "§cYou're missing some items." : "§a▶ Click to buy");
             ItemStack icon = Gui.named(new ItemStack(Crates.resolve(e.icon), Math.max(1, Math.min(64, e.count))), "§f" + e.name, lore.toArray(new String[0]));
-            s.set(slot, armed ? Gui.glow(icon) : icon, pl -> buy(pl, cat, e, pg));
+            boolean bulk = (e.commands == null || e.commands.isEmpty()) && e.limit != 1;
+            s.set(slot, armed ? Gui.glow(icon) : icon, pl -> { if (bulk) quantity(pl, cat, e, pg); else buy(pl, cat, e, pg); });
         }
         if (pg > 0) s.set(48, Gui.icon(Items.ARROW, "§e« Previous page", "§7Page " + pg + " of " + pages), pl -> category(pl, cat, pg - 1));
         if (pg < pages - 1) s.set(50, Gui.icon(Items.ARROW, "§eNext page »", "§7Page " + (pg + 2) + " of " + pages), pl -> category(pl, cat, pg + 1));
@@ -181,12 +234,53 @@ public final class Shop {
         if (e.limit > 0 && bought(p, cat, e) >= e.limit) { fail(p, "You've reached the limit for " + e.name + " " + periodWord(e.period) + "."); category(p, cat, page); return; }
         long bal = Economy.balance(p);
         if (bal < e.price) { fail(p, "You need " + Fmt.cd(e.price) + " but have " + Fmt.cd(Math.max(0, bal)) + "."); category(p, cat, page); return; }
+        if (!hasAll(p, e)) { fail(p, "You're missing some of the items " + e.name + " needs. Hover over it to see the list."); category(p, cat, page); return; }
         if (!Economy.take(p, e.price)) { fail(p, "The payment didn't go through. You weren't charged."); category(p, cat, page); return; }
+        takeAll(p, e);
         if (e.item != null && !e.item.isEmpty()) Crates.giveStack(p, new ItemStack(Crates.resolve(e.item), e.count));
         for (String cmd : e.commands) server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), cmd.replace("{player}", p.getGameProfile().getName()));
         if (e.limit > 0) { data.bought.computeIfAbsent(id, k -> new HashMap<>()).merge(key(cat, e), 1, Integer::sum); save(); }
         p.playNotifySound(SoundEvents.PLAYER_LEVELUP, SoundSource.MASTER, 0.6f, 1.3f);
         p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aYou bought §f" + e.name + "§a for §6" + Fmt.cd(e.price) + "§a."));
+        category(p, cat, page);
+    }
+
+    /** Bulk buying: pick how many, and they're bought one after another (stopping at a limit or when money runs out). */
+    static void quantity(ServerPlayer p, int cat, Entry e, int page) {
+        Gui.Screen g = new Gui.Screen("§6§lBuy " + e.name, 3);
+        for (int i = 0; i < 27; i++) g.set(i, Gui.icon(Items.BLACK_STAINED_GLASS_PANE, " "));
+        long bal = Economy.balance(p);
+        int afford = e.price <= 0 ? 64 : (int) Math.min(64, bal / Math.max(1, e.price));
+        int left = e.limit > 0 ? Math.max(0, e.limit - bought(p, cat, e)) : 64;
+        int[] amounts = {1, 4, 16, 64};
+        int[] slots = {10, 11, 12, 13};
+        for (int k = 0; k < 4; k++) { final int n = amounts[k];
+            boolean ok = n <= afford && n <= left;
+            g.set(slots[k], Gui.named(new ItemStack(Crates.resolve(e.icon), Math.max(1, Math.min(64, n))), (ok ? "§a§l" : "§8§l") + "Buy ×" + n,
+                    "§7Costs §6" + Fmt.cd(e.price * (long) n), ok ? "§a▶ Click to buy" : "§cCan't buy this many"), pl -> buyMany(pl, cat, e, page, n)); }
+        int max = Math.min(afford, left);
+        g.set(15, Gui.icon(Items.GOLD_INGOT, "§6§lBuy as many as I can §8(×" + Math.max(0, max) + ")", "§7Costs §6" + Fmt.cd(e.price * (long) Math.max(0, max))), pl -> { if (max > 0) buyMany(pl, cat, e, page, max); });
+        g.set(22, Gui.icon(Items.ARROW, "§e« Back"), pl -> category(pl, cat, page));
+        Gui.open(p, g);
+    }
+
+    static void buyMany(ServerPlayer p, int cat, Entry e, int page, int n) {
+        String id = p.getUUID().toString();
+        int done = 0;
+        for (int i = 0; i < n; i++) {
+            if (e.limit > 0 && bought(p, cat, e) >= e.limit) break;
+            if (Economy.balance(p) < e.price || !hasAll(p, e)) break;
+            if (!Economy.take(p, e.price)) break;
+            takeAll(p, e);
+            if (e.item != null && !e.item.isEmpty()) Crates.giveStack(p, new ItemStack(Crates.resolve(e.item), e.count));
+            if (e.limit > 0) data.bought.computeIfAbsent(id, k -> new HashMap<>()).merge(key(cat, e), 1, Integer::sum);
+            done++;
+        }
+        if (e.limit > 0) save();
+        if (done == 0) { fail(p, "You couldn't buy any (check your balance, items or limit)."); quantity(p, cat, e, page); return; }
+        p.playNotifySound(SoundEvents.PLAYER_LEVELUP, SoundSource.MASTER, 0.6f, 1.3f);
+        p.sendSystemMessage(Component.literal("§6§l[Shop] §r§aYou bought §f" + done + "× " + e.name + "§a for §6" + Fmt.cd(e.price * (long) done) + "§a."
+                + (done < n ? " §7(stopped early: limit, money or items)" : "")));
         category(p, cat, page);
     }
 

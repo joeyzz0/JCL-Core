@@ -291,7 +291,7 @@ public final class WonderTrade {
         String what = shiny && legend ? "a shiny legend" : shiny ? "a shiny" : "a legend";
         server.getPlayerList().broadcastSystemMessage(tag()
                 .append(Component.literal("§eSomeone just pulled " + what + ": " + title + "§e!")), false);
-        String url = GtsConfig.INSTANCE.webhookUrl;
+        String url = DiscordBridge.hook("wondertrade");
         if (url == null || url.isBlank()) return;
         try {
             JsonObject body = new JsonObject();

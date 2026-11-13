@@ -18,12 +18,17 @@ import org.slf4j.Logger;
 @Mod(GtsMod.MODID)
 public class GtsMod {
     public static final String MODID = "jcl_gts";
+    public static final String VERSION = "2.4.41";
+    public static final String BUILD = "2026-11-13 spawn-snapshot";
     public static final Logger LOG = LogUtils.getLogger();
 
     public GtsMod(IEventBus modBus) {
         GtsConfig.load();
         Keys.ITEMS.register(modBus);
-        LOG.info("[JCL] JCL Core loaded.");
+        Badges.MENUS.register(modBus); Badges.TABS.register(modBus);
+        Locked.register(modBus);
+        StyleTickets.register(modBus);
+        LOG.info("[JCL] JCL Core loaded. Version " + VERSION + " (build " + BUILD + ")");
     }
 
     @EventBusSubscriber(modid = MODID)
